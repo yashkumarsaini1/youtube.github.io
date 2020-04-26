@@ -83,7 +83,7 @@ h2{
     width: 80%;
     margin-left: 10%;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 560px) {
   .loginBox {
     width: 90%;
     margin-left: 5%;
