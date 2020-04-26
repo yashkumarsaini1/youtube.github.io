@@ -1,10 +1,10 @@
 .loginBox{
-    width:30%;
+    width:97%;
     height:350px;
     box-sizing:border-box;
     border-radius: 0px;
     background:black;
-    margin-left: 35%;
+    margin-left: 1.5%;
 }
 h2{
     color: blue;
