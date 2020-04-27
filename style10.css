@@ -38,7 +38,7 @@ header
 }
 table {
 	width: 100%;
-	font-size: 16pt;
+	font-size: 20pt;
 	text-align: center;
 	border-color: white;
 	border:none;
@@ -48,7 +48,10 @@ table,th, td{
 	border-collapse: collapse;
 	text-align: center;
 	table-layout: fixed;
-	background-color:skyblue;
+	background-color: azure;
+	border-width: 2px;
+	border-color: white;
+
 
 }
 .number
@@ -77,7 +80,7 @@ table,th, td{
 }
 table {
 	width: 100%;
-	font-size: 12pt;
+	font-size: 16pt;
 	text-align: center;
 	border-color: white;
 	border:none;
@@ -87,7 +90,9 @@ table,th, td{
 	border-collapse: collapse;
 	text-align: center;
 	table-layout: fixed;
-	background-color:skyblue;
+	background-color: azure;
+	border-width: 2px;
+	border-color: white;
 
 }
 }
