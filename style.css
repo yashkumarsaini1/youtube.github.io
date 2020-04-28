@@ -3,6 +3,9 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+body{
+	background-color: red;
+}
 header
 {
 	background-color: blue;
@@ -88,7 +91,7 @@ footer
 	background-color: black;
 	height: 250px;
 	width: 100%;
-	
+
 }
 .copyright
 {
@@ -134,6 +137,8 @@ footer
 }
 @media only screen and (max-width: 1100px){
 	.main-nav{display: none;}
+
+	
 
 	.mobile-icon
 	{ 
@@ -224,7 +229,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 
 .col-xs-7
@@ -233,7 +238,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 .col-xs-3
 {
@@ -241,7 +246,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 
 
@@ -318,7 +323,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 10px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 
 .col-xs-7
@@ -327,7 +332,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 10px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 .col-xs-3
 {
@@ -335,7 +340,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 10px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 
 }
@@ -347,7 +352,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 
 .col-xs-7
@@ -356,7 +361,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 .col-xs-3
 {
@@ -364,7 +369,7 @@ th
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
-	background-color: SkyBlue;
+	background-color: azure;
 }
 .col-xs-3 a:hover
 {
