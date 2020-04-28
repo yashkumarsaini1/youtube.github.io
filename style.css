@@ -225,7 +225,7 @@ th
 /* SCHOOL*/
 .col-xs-2
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
@@ -234,7 +234,7 @@ th
 
 .col-xs-7
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
@@ -242,7 +242,7 @@ th
 }
 .col-xs-3
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 16px;
@@ -336,7 +336,7 @@ th
 }
 .col-xs-3
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 10px;
@@ -348,7 +348,7 @@ th
 
 .col-xs-2
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
@@ -357,7 +357,7 @@ th
 
 .col-xs-7
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
@@ -365,7 +365,7 @@ th
 }
 .col-xs-3
 {
-	border: 2px solid white;
+	border: 2px solid grey;
 	text-align: center;
 	border-radius:5px;
 	font-size: 20px;
