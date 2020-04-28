@@ -1,19 +1,19 @@
 .head
 {
-	font-size:50px;
+	font-size:40px;
 	text-align: center; 
 	color:blue;
 }
 .inst
 {
-	font-size: 40px;
+	font-size: 30px;
 	text-align: center;
 }
 
 
 .qone p
 {
-	font-size:40px;
+	font-size:30px;
 	padding-left: 40px;
 	color: black;
 	text-align: center;
@@ -37,7 +37,7 @@
 
 .qone button
 {
-	font-size: 30px;
+	font-size: 40px;
 	background-color: black;
 	color: white;
 	border-radius:20px;
