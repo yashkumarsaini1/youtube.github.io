@@ -1,19 +1,19 @@
 .head
 {
-	font-size:40px;
+	font-size:30px;
 	text-align: center; 
 	color:blue;
 }
 .inst
 {
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
 }
 
 
 .qone p
 {
-	font-size:30px;
+	font-size:20px;
 	padding-left: 40px;
 	color: black;
 	text-align: center;
@@ -59,7 +59,7 @@
 .result
 {
 	color:red ;
-	font-size: 50px;
+	font-size: 30px;
 	text-align: center;
 
 }
