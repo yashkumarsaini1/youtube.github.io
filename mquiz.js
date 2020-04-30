@@ -20,12 +20,28 @@ function startquiz()
     que4.style.display="none";
     que5.style.display="none";
 
-    var secondsDown = 300;
-    var timeIntervalUp = setInterval(function(){startTimer()}, 1000);
+    var secondsDown;
+    var minutesDown;
+    var sec;
+
+     secondsDown = 180;
+     minutesDown = secondsDown/60;
+     sec = secondsDown%60;
+     timeIntervalUp = setInterval(function(){startTimer()}, 1000);
 
     function startTimer(){ 
-            document.getElementById("start").innerHTML = "Time Remaining: " + secondsDown;
+            document.getElementById("start").innerHTML = "Time Remaining: " +minutesDown+":"+sec;
             secondsDown--;
+            minutesDown = Math.floor(secondsDown/60);
+            sec = secondsDown%60;
+            if(minutesDown<=9)
+            {
+                minutesDown="0"+minutesDown;
+            }
+            if(sec<=9)
+            {
+                sec="0"+sec;
+            }
             
              if (secondsDown == 3) {
                 time1();}
