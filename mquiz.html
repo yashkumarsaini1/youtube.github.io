@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Quiz</title>
+    <link rel="stylesheet" href="mquiz.css">
+    <script src="mquiz.js"></script>
+</head>
+<body>
+    <div class="head" id="head">
+        <p>This is a multiple choice Quiz</p>
+        <p>All questions contains four options :</p>
+        <p>For each Correct answer You Get <strong>+4</strong>Marks.</p>
+        <p>For each Wrong answer You Get <strong>-1</strong>  Marks.</p>
+        <p>TIME For the Test: 300 s or 5min .</p>
+    </div>
+
+    <div class="startbtn">
+        <button type="submit" id="start" onclick="startquiz()" >START</button>
+    </div>
+
+    <div class="block" id="block" style="display: none;">
+        <p>Hello</p>
+    <div class="result">
+    <p id="result"></p></div>
+
+
+    <div class="ques" id="que1" style="display: none;">
+
+    <div class="choices" id="choices">
+        <p><strong>Q1.</strong> Find the area Of Square Whose side length is 4cm: </p>
+                <div class="choice" id="A1" onclick="checkAnswer1('A')">
+                    <p> 12 cm square</p>
+                </div> <br/>
+                <div class="choice" id="B1" onclick="checkAnswer1('B')">
+                    <p> 25 cm square</p>
+                </div> <br/>
+                <div class="choice" id="C1" onclick="checkAnswer1('C')">
+                    <p> 16 cm square</p>
+                </div> <br/>
+                <div class="choice" id="D1" onclick="checkAnswer1('D')">
+                    <p> 9 cm square</p>
+                </div><br/>
+            <div class="button">
+                <button type="submit" id="button" onclick="time1()" >NEXT</button>
+            </div><br/>
+    </div></div>
+
+        <div class="ques" id="que2" style="display: none;">
+
+    <div class="choices" id="choices">
+        <p><strong>Q2.</strong> Find the HCF of 221 and 481 </p>
+                <div class="choice" id="A2" onclick="checkAnswer2('A')">
+                    <p> 13</p>
+                </div> <br/>
+                <div class="choice" id="B2" onclick="checkAnswer2('B')">
+                    <p> 1</p>
+                </div> <br/>
+                <div class="choice" id="C2" onclick="checkAnswer2('C')">
+                    <p> 37</p>
+                </div> <br/>
+                <div class="choice" id="D2" onclick="checkAnswer2('D')">
+                    <p> 11</p>
+                </div><br/>
+            <div class="button">
+                <button type="submit" id="button" onclick="time2()" >NEXT</button>
+            </div><br/>
+    </div></div>
+
+        <div class="ques" id="que3" style="display: none;">
+
+    <div class="choices" id="choices">
+        <p><strong>Q3.</strong> Add 841 to the 3 times of 45 and subtract the result from 1000</p>
+                <div class="choice" id="A3" onclick="checkAnswer3('A')">
+                    <p>12</p>
+                </div> <br/>
+                <div class="choice" id="B3" onclick="checkAnswer3('B')">
+                    <p> 35</p>
+                </div> <br/>
+                <div class="choice" id="C3" onclick="checkAnswer3('C')">
+                    <p> 25</p>
+                </div> <br/>
+                <div class="choice" id="D3" onclick="checkAnswer3('D')">
+                    <p> 15</p>
+                </div><br/>
+            <div class="button">
+                <button type="submit" id="button" onclick="time3()" >NEXT</button>
+            </div><br/>
+    </div></div>
+
+        <div class="ques" id="que4" style="display: none;">
+
+    <div class="choices" id="choices">
+        <p><strong>Q4.</strong> Find the surface area of cuboid with lengths 12cm, 5cm, 3cm </p>
+                <div class="choice" id="A4" onclick="checkAnswer4('A')">
+                    <p> 222 cm cube</p>
+                </div> <br/>
+                <div class="choice" id="B4" onclick="checkAnswer4('B')">
+                    <p> 180 square</p>
+                </div> <br/>
+                <div class="choice" id="C4" onclick="checkAnswer4('C')">
+                    <p> 222 cm square</p>
+                </div> <br/>
+                <div class="choice" id="D4" onclick="checkAnswer4('D')">
+                    <p> 180 cm cube</p>
+                </div><br/>
+            <div class="button">
+                <button type="submit" id="button" onclick="time4()" >NEXT</button>
+            </div><br/>
+    </div></div>
+
+    
+
+
+<div class="que" id="que5" style="display: none;">
+    <div class="choices" id="choices" >
+        <p><strong>Q5.</strong> Find the LCM of 14,586 and 2508 : </p>
+        <div id="que">
+                <div class="choice" id="A5" onclick="checkAnswer5('A')">
+                    <p> 33</p>
+                </div> <br/>
+                <div class="choice" id="B5" onclick="checkAnswer5('B')">
+                    <p> 66</p>
+                </div> <br/>
+                <div class="choice" id="C5" onclick="checkAnswer5('C')">
+                    <p> 45</p>
+                </div> <br/>
+                <div class="choice" id="D5" onclick="checkAnswer5('D')">
+                    <p> 34</p>
+                </div><br/>
+                <div class="button">
+                <button type="submit" id="button" onclick="time5()" >SUBMIT</button>
+            </div><br/>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+
+
+</body>
+</html>

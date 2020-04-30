@@ -1,0 +1,91 @@
+.head
+{
+	font-size: 20px;
+	text-align: center;
+}
+.startbtn button
+{
+	font-size:25px;
+	width:20%;
+	margin-left: 40%;
+	border: none;
+	border-radius: 10px;
+	background-color: #80FF00;
+	color: white;
+	text-align: center;
+}
+.startbtn button[type="submit"]:hover
+{
+    background:black;
+    cursor: pointer;
+}
+.button button
+{
+	font-size:25px;
+	width:20%;
+	border: none;
+	border-radius: 10px;
+	background-color: #80FF00;
+	color: white;
+	text-align: center;
+}
+.button button[type="submit"]:hover
+{
+    background:black;
+    cursor: pointer;
+}
+
+.block
+{
+	font-size: 20px;
+	text-align: center;
+}
+.choices
+{
+	border-style: solid;
+	width:60%;
+	margin-left: 20%;
+	border-radius:25px;
+	border-color:#2EFE64;
+}
+.choices p
+{
+	font-size: 20px;
+	text-align: center;
+	color:black;
+}
+.choice
+{
+	border-style: solid;
+	width:40%;
+	margin-left: 30%;
+	border-radius:20px;
+	border-color:#5858FA;
+	background-color: white;
+}
+.choice p
+{
+	font-size: 20px;
+	text-align: center;
+}
+.choices div :hover
+{
+	cursor:pointer;
+	color: blue;
+	background-color: white;
+	font-size:25px;
+}
+.result
+{
+	font-size: 30px;
+	text-align: center;
+	border-style: solid;
+	color: black;
+	background-color: darkgrey;
+	border-radius:20px;
+	border-color:black;
+	width: 50%;
+	margin-left: 25%;
+}
+
+
