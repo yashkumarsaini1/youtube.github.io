@@ -188,14 +188,14 @@
 function check(){
 if ((count>=5)&&((x1+x2+x3==3)||(x4+x5+x6==3)||(x7+x8+x9==3)||(x1+x4+x7==3)||(x1+x5+x9==3)||(x2+x5+x8==3)||(x3+x6+x9==3)||(x3+x5+x7==3))) 
 {
-	alert("PLAYER 1 Wins");
+	document.getElementById("result").innerHTML ="Player 1 Wins";
 }
  else if ((count>=5)&&((y1+y2+y3==3)||(y4+y5+y6==3)||(y7+y8+y9==3)||(y1+y4+y7==3)||(y1+y5+y9==3)||(y2+y5+y8==3)||(y3+y6+y9==3)||(y3+y5+y7==3)))
 {
-	alert("PLAYER 2 Wins");
+	document.getElementById("result").innerHTML ="Player 2 Wins";
 }
 else if ((count==9))
 {
-	alert("Its a Draw");
+	document.getElementById("result").innerHTML ="It's a Draw ";
 }
 }
