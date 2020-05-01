@@ -194,7 +194,7 @@ if ((count>=5)&&((x1+x2+x3==3)||(x4+x5+x6==3)||(x7+x8+x9==3)||(x1+x4+x7==3)||(x1
 {
 	alert("PLAYER 2 Wins");
 }
-else if ((count>=8))
+else if ((count==9))
 {
 	alert("Its a Draw");
 }
