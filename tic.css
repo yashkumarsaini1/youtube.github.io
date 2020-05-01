@@ -172,6 +172,11 @@ body
 	background-color : lightgreen;
 }
 /*********Box hover end**************/
+.win 
+{
+	text-align: center;
+	color: red;
+}
 .reset button
 {
 	font-size: 40px;
@@ -189,5 +194,11 @@ body
 .reset
 {
 	text-align: center;
+}
+.name
+{
+	font-size: 30px;
+	color: black;
+	text-align: right;
 }
 
