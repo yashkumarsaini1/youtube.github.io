@@ -1,0 +1,75 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Drag and Drop </title>
+	<link rel="stylesheet"  href="drag2.css">
+	<script src="drag2.js"></script>
+</head>
+<body> 
+<div class="head">
+<p>Drag and Drop at the right place</p>
+</div>
+	<div class="q1">
+		<div id="que1">
+			<p> Straight Angle</p>
+		</div>
+        <div id="demo1" ondrop="drop1()" ondragover="dover1()">
+        </div>
+    </div>
+    <div class="q2">
+    	<div id="que2">
+			<p> Right Angle</p>
+		</div>
+        <div id="demo2" ondrop="drop2()" ondragover="dover2()">
+        </div>
+    </div>
+    <div class="q3">
+    	<div id="que3">
+			<p> Acute Angle</p>
+		</div>
+        <div id="demo3" ondrop="drop3()" ondragover="dover3()">
+        </div>
+    </div>
+    <div class="q4">
+    	<div id="que4">
+    		<p> Obtuse Angle</p>
+		</div>
+        <div id="demo4" ondrop="drop4()" ondragover="dover4()">
+        </div>
+    </div>
+    <div class="q5">
+    	<div id="que5">
+    		<p> Reflex Angle</p>
+		</div>
+        <div id="demo5" ondrop="drop5()" ondragover="dover5()">
+        </div>
+    </div>
+    <br/>
+
+
+    <div class="options1">
+        <div id="drag1" draggable="true" ondragstart="dstart1()" ondragend="dend1()">
+        	180 Degree
+        </div>
+        <div id="drag2" draggable="true" ondragstart="dstart2()"  ondragend="dend2()">
+        	90 Degree
+        </div>
+         <div id="drag3" draggable="true" ondragstart="dstart3()"  ondragend="dend3()">
+        	60 Degree
+        </div>
+    </div>
+    <div class="options2">
+        <div id="drag4" draggable="true" ondragstart="dstart4()"  ondragend="dend4()">
+        	105 Degree
+        </div>
+        <div id="drag5" draggable="true" ondragstart="dstart5()"  ondragend="dend5()">
+        	235 Degree
+        </div>
+        <div id="drag6" draggable="true" ondragstart="dstart6()"  ondragend="dend6()">
+        	360 Degree
+        </div>
+    </div>
+</body>
+
+</html>
