@@ -1,0 +1,30 @@
+#button
+{
+	border-color: black;
+	border-radius: 20px;
+	background-color: black;
+	font-size: 30px;
+	color: white;
+}
+
+#textbox
+{
+	border-color: black;
+	border-radius: 20px;
+	background-color: white;
+	font-size: 30px;
+	text-align: center;
+	color: black;
+	width: 25%;
+}
+#messages li
+{
+	border-style: solid;
+	border-color: black;
+	background-color: lightblue ;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	width: 15%;
+	border-radius: 10px;
+}
