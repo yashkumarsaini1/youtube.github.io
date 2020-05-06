@@ -2,6 +2,31 @@
     var x1,x2,x3,x4,x5,x6,x7,x8,x9; 
     var count = 0 ;
 
+    function blocka()
+	{   
+		document.getElementById("boxa").style.background="#FF4B4B";
+		document.getElementById("boxa").disabled = true;
+	}
+	function blockb()
+	{   
+		document.getElementById("boxb").style.background="#FF4B4B";
+		document.getElementById("boxb").disabled = true;
+	}
+	function blockc()
+	{   
+		document.getElementById("boxc").style.background="#FF4B4B";
+		document.getElementById("boxc").disabled = true;
+	}
+	function blockd()
+	{   
+		document.getElementById("boxd").style.background="#FF4B4B";
+		document.getElementById("boxd").disabled = true;
+	}
+	function blocke()
+	{   
+		document.getElementById("boxe").style.background="#FF4B4B";
+		document.getElementById("boxe").disabled = true;
+	}
 	function block1()
 	{   
 		document.getElementById("box1").style.background="#36FF0D";
@@ -130,6 +155,11 @@
 
 function setvalue()
 {
+	document.getElementById("boxa").addEventListener("click", blocka);
+	document.getElementById("boxb").addEventListener("click", blockb);
+	document.getElementById("boxc").addEventListener("click", blockc);
+	document.getElementById("boxd").addEventListener("click", blockd);
+	document.getElementById("boxe").addEventListener("click", blocke);
 	document.getElementById("box1").addEventListener("click", block1);
 	document.getElementById("box2").addEventListener("click", block2);
 	document.getElementById("box3").addEventListener("click", block3);
