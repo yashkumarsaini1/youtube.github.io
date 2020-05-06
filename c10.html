@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CHAT</title>
-	<link rel="stylesheet" href="c10.css">
+	<meta charset="utf-8">
+	<title>HTML5 Editable Content - Demo</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-	<ul id="messages"></ul>
-	<input id="textbox" type="number">
-	<button id="button">Send</button>
-	<script src="c10.js"></script>
+<!-- begin the markup -->
+<div class="wrapper">
+<h1>Enter the number here to send</h1>
 
+<article id="content1" contenteditable="true">
+	<p> </p>
+</article>
+<button id="save">Send</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	var theContent = $('#content2');// set the content
+	
+	$('#save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent 	= theContent.html();
+		localStorage.newContent = editedContent;
+	});
+
+	if(localStorage.getItem('newContent')) { // apply the newContent when it is exist ini localStorage
+		theContent.html(localStorage.getItem('newContent'));
+	}
+</script>
 </body>
 </html>
