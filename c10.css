@@ -1,30 +1,40 @@
-#button
-{
-	border-color: black;
-	border-radius: 20px;
-	background-color: black;
-	font-size: 30px;
-	color: white;
+body{ 
+  font-family: "Dosis"; 
+  font-size: 1.3em;
+  line-height: 1.6em;
 }
 
-#textbox
-{
-	border-color: black;
-	border-radius: 20px;
-	background-color: white;
-	font-size: 30px;
-	text-align: center;
-	color: black;
-	width: 25%;
+.headline{
+  font-size: 2em;
+  text-align: center;
 }
-#messages li
-{
-	border-style: solid;
-	border-color: black;
-	background-color: lightblue ;
-	font-size: 30px;
-	color: black;
-	text-align: center;
-	width: 15%;
-	border-radius: 10px;
+
+#wrapper {
+  width: 600px;
+  background: #FFF;
+  padding: 1em;
+  margin: 1em auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+button {
+  border: none;
+  padding: 0.8em;
+  background: #F96;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+#editor {
+  padding: 1em;
+  background: #E6E6E6;
+  border-radius: 3px;
 }
