@@ -8,13 +8,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box1").value="X";
+          document.getElementById("box1").style.background="red";
           x1=1;
           y1=0;
 		}
 		else
 		{
-		  document.getElementById("box1").value="O";
+		  document.getElementById("box1").value="O";document.getElementById("box1").style.background="#4F83F1";
 		  x1=0;
 		  y1=1;
 		}
@@ -28,13 +28,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box2").value="X";
+          document.getElementById("box2").style.background="red";
           x2=1;
           y2=0;
 		}
 		else
 		{
-		  document.getElementById("box2").value="O";
+		  document.getElementById("box2").value="O";document.getElementById("box2").style.background="#4F83F1";
 		  x2=0;
           y2=1;
 		}
@@ -48,13 +48,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box3").value="X";
+          document.getElementById("box3").style.background="red";
           x3=1;
           y3=0;
 		}
 		else
 		{
-		  document.getElementById("box3").value="O";
+		  document.getElementById("box3").value="O";document.getElementById("box3").style.background="#4F83F1";
 		  x3=0;
           y3=1;
 
@@ -69,13 +69,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box4").value="X";
+          document.getElementById("box4").style.background="red";
           x4=1;
           y4=0;
 		}
 		else
 		{
-		  document.getElementById("box4").value="O";
+		  document.getElementById("box4").value="O";document.getElementById("box4").style.background="#4F83F1";
 		  x4=0;
           y4=1;
 		}
@@ -89,13 +89,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box5").value="X";
+          document.getElementById("box5").style.background="red";
           x5=1;
           y5=0;
 		}
 		else
 		{
-		  document.getElementById("box5").value="O";
+		  document.getElementById("box5").value="O";document.getElementById("box5").style.background="#4F83F1";
 		  x5=0;
           y5=1;
 		}
@@ -109,13 +109,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box6").value="X";
+          document.getElementById("box6").style.background="red";
           x6=1;
           y6=0;
 		}
 		else
 		{
-		  document.getElementById("box6").value="O";
+		  document.getElementById("box6").value="O";document.getElementById("box6").style.background="#4F83F1";
 		  x6=0;
           y6=1;
 		}
@@ -129,13 +129,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box7").value="X";
+          document.getElementById("box7").style.background="red";
           x7=1;
           y7=0;
 		}
 		else
 		{
-		  document.getElementById("box7").value="O";
+		  document.getElementById("box7").value="O";document.getElementById("box7").style.background="#4F83F1";
 		  x7=0;
           y7=1;
 		}
@@ -150,13 +150,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box8").value="X";
+          document.getElementById("box8").style.background="red";
           x8=1;
           y8=0;
 		}
 		else
 		{
-		  document.getElementById("box8").value="O";
+		  document.getElementById("box8").value="O";document.getElementById("box8").style.background="#4F83F1";
 		  x8=0;
           y8=1;
 		}
@@ -170,13 +170,13 @@
 		count=count+1;
 		if(count%2!=0)
 		{
-          document.getElementById("box9").value="X";
+          document.getElementById("box9").style.background="red";
           x9=1;
           y9=0;
 		}
 		else
 		{
-		  document.getElementById("box9").value="O";
+		  document.getElementById("box9").value="O";document.getElementById("box9").style.background="#4F83F1";
 		  x9=0;
           y9=1;
 		}
