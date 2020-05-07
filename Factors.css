@@ -91,3 +91,9 @@
 {
 	text-align: center;
 }
+.name
+{
+	font-size: 30px;
+	color: black;
+	text-align: right;
+}
