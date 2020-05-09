@@ -1,0 +1,205 @@
+body
+{
+	background-color: lightgrey;
+}
+.head
+{
+	font-size: 30px;
+	text-align: center;
+	color: blue;
+}
+
+/*********Box start *********************/
+#box1
+{
+	
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 24%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+
+}
+#box2
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+
+}
+#box3
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+#box4
+{
+	
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 24%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+#box5
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+#box6
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+
+#box7
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 24%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+#box8
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+#box9
+{
+	font-size: 80px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 1%;
+	width:16%;
+	line-height: 200%;
+	border-width: 2px;
+	
+}
+/*********Box End *********************/
+
+/*********Box hover start**************/
+#box1:hover
+{
+	background-color : lightgreen;
+}
+#box2:hover
+{
+	background-color : lightgreen;
+}
+#box3:hover
+{
+	background-color : lightgreen;
+}
+#box4:hover
+{
+	background-color : lightgreen;
+}
+#box5:hover
+{
+	background-color : lightgreen;
+}
+#box6:hover
+{
+	background-color : lightgreen;
+}
+#box7:hover
+{
+	background-color : lightgreen;
+}
+#box8:hover
+{
+	background-color : lightgreen;
+}
+#box9:hover
+{
+	background-color : lightgreen;
+}
+/*********Box hover end**************/
+.win 
+{
+	text-align: center;
+	color: red;
+	font-size: 40px;
+}
+.reset button
+{
+	font-size: 40px;
+	text-align: center;
+	border-color: black;
+	background-color: black;
+	color:white;
+	border-radius: 50px;
+	width: 20%;
+}
+.reset button:hover
+{
+	background-color: blue;
+}
+.reset
+{
+	text-align: center;
+}
+.name
+{
+	font-size: 20px;
+	color: black;
+	text-align: right;
+}
+
