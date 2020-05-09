@@ -1,0 +1,99 @@
+.head
+{
+	font-size: 35px;
+	text-align: center;
+}
+.startbtn button
+{
+	font-size:80px;
+	width:70%;
+	margin-left: 15%;
+	border-color: black;
+	border-radius: 100px;
+	background-color: #80FF00;
+	color: black;
+	text-align: center;
+}
+.startbtn button[type="submit"]:hover
+{
+    background:black;
+    cursor: pointer;
+    color: white;
+
+}
+.button button
+{
+	font-size:80px;
+	width:45%;
+	border-color: black;
+	border-radius: 100px;
+	background-color: blue;
+	color: black;
+	text-align: center;
+}
+.button button[type="submit"]:hover
+{
+    background:black;
+    cursor: pointer;
+    color: white;
+    font-size:80px;
+}
+
+.block
+{
+	font-size: 60px;
+	text-align: center;
+}
+.choices
+{
+	border-style: solid;
+	width:80%;
+	margin-left: 10%;
+	border-radius:25px;
+	border-color:black;
+}
+.choices p
+{
+	font-size: 60px;
+	text-align: center;
+	color:black;
+}
+.choice
+{
+	border-style: solid;
+	width:70%;
+	margin-left: 15%;
+	border-radius:100px;
+	border-color:#5858FA;
+	background-color: white;
+}
+.choice p
+{
+	font-size: 40px;
+	text-align: center;
+}
+#choices{
+	background-color: lightgrey;
+}
+
+.choices div :hover
+{
+	cursor:pointer;
+	color: black;
+	background-color: none;
+	font-size:42px;
+}
+.result
+{
+	font-size: 60px;
+	text-align: center;
+	border-style: solid;
+	color: black;
+	background-color: darkgrey;
+	border-radius:20px;
+	border-color:black;
+	width: 70%;
+	margin-left: 15%;
+}
+
+
