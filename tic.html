@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIC-TAK-TOE</title>
+	<link rel="stylesheet" href="tic.css">
+	<script src="tic.js"></script>
+</head>
+<body>
+
+	<div class="head">
+    <p>TIC-TAK-TOE</p>
+	<p>Player 1 : "X"<strong>-----v/s-----</strong>Player 2 : "O"</p>
+	<p>Player 1 Start First</p>
+	</div>
+	<div class="button1" id="box">
+		<input type="button" value="  " id="box1"onclick="block1()"></input>
+		<input type="button" value="  " id="box2"onclick="block2()"></input>
+		<input type="button" value="  " id="box3"onclick="block3()"></input>
+	</div>
+	<br/>
+
+	<div class="button2" id="box">
+		<input type="button" value="  " id="box4" onclick="block4()"></input>
+		<input type="button" value="  " id="box5" onclick="block5()"></input>
+		<input type="button" value="  " id="box6" onclick="block6()"></input>
+	</div>
+	<br/>
+
+	<div class="button3" id="box">
+		<input type="button" value="  " id="box7" onclick="block7()"></input>
+		<input type="button" value="  " id="box8" onclick="block8()"></input>
+		<input type="button" value="  " id="box9" onclick="block9()"></input>
+	</div>
+	<br/>
+	<div class="win" >
+		<p id="result"></p>
+	</div>
+	<div class="reset">
+		<button onClick="window.location.reload();">RESET</button>
+	</div>
+	<div class="name">
+		<p><strong>Created By: Yash Kumar Saini</strong></p>
+	</div>
+</body>
+</html>
