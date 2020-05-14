@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Quiz</title>
+    <link rel="stylesheet" href="iquiz.css">
+    <script src="iquiz.js"></script>
+</head>
+<body>
+    <div class="head" id="head">
+        <p>This is a multiple choice Quiz</p>
+        <p>All questions contains four options :</p>
+        <p>There are <strong>5 QUESTIONS</strong> in this test.</p>
+        <p>For each Correct answer You Get <strong>+1</strong>Marks.</p>
+        <p>TIME For the Test: 300 s or 5min .</p>
+    </div>
+    <div >
+        <p id="result">All The Best</p>
+    </div>
+
+    <div class="startbtn"id="start">
+        <button type="submit" id="start" onclick="startquiz()" >START</button>
+    </div>
+<div class="questions">
+    <div id="q1" style="display: none;"  >
+        <p>Question 1 (Choose Correct Option)</p>
+        <img id="image" src="https://gdurl.com/dOAvy"><br/>
+        <input name="q" type="radio"  id="A" onclick="check1('A')"><label for="A"> A </label>
+        <input name="q" type="radio"  id="B" onclick="check1('B')"><label for="B"> B </label>
+        <input name="q" type="radio"  id="C" onclick="check1('C')"><label for="C"> C </label>
+        <input name="q" type="radio"  id="D" onclick="check1('D')"><label for="D"> D </label>
+        <br/><br/><br/>
+        <button  type="submit"  onclick="time1(id)" >NEXT</button>
+    </div>
+    <div id="q2" style="display: none;" >
+        <p>Question 2 (Choose Correct Option)</p>
+        <img id="image" src="https://gdurl.com/4RSc"><br/>
+        <input name="q" type="radio"  id="A" onclick="check2('A')"><label for="A"> A </label>
+        <input name="q" type="radio"  id="B" onclick="check2('B')"><label for="B"> B </label>
+        <input name="q" type="radio"  id="C" onclick="check2('C')"><label for="C"> C </label>
+        <input name="q" type="radio"  id="D" onclick="check2('D')"><label for="D"> D </label>
+        <br/><br/><br/>
+        <button  type="submit" onclick="time2()">NEXT</button> 
+    </div>
+    <div id="q3" style="display: none;"  >
+        <p>Question 3 (Choose Correct Option)</p>
+        <img id="image" src="https://gdurl.com/4rFE"><br/>
+        <input name="q" type="radio"  id="A" onclick="check3('A')"><label for="A"> A </label>
+        <input name="q" type="radio"  id="B" onclick="check3('B')"><label for="B"> B </label>
+        <input name="q" type="radio"  id="C" onclick="check3('C')"><label for="C"> C </label>
+        <input name="q" type="radio"  id="D" onclick="check3('D')"><label for="D"> D </label>
+        <br/><br/><br/>
+        <button  type="submit" onclick="time3()">NEXT</button>  
+    </div>
+<div id="q4" style="display: none;"  >
+        <p>Question 4 (Choose Correct Option)</p>
+        <img id="image" src="https://gdurl.com/rdCv"><br/>
+        <input name="q" type="radio"  id="A" onclick="check4('A')"><label for="A"> A </label>
+        <input name="q" type="radio"  id="B" onclick="check4('B')"><label for="B"> B </label>
+        <input name="q" type="radio"  id="C" onclick="check4('C')"><label for="C"> C </label>
+        <input name="q" type="radio"  id="D" onclick="check4('D')"><label for="D"> D </label>
+        <br/><br/><br/>
+        <button  type="submit" onclick="time4()">NEXT</button> 
+</div>
+    <div id="q5" style="display: none;"  >
+        <p>Question 5 (Choose Correct Option)</p>
+        <img id="image" src="https://gdurl.com/Hb4y"><br/>
+        <input name="q" type="radio"  id="A" onclick="check5('A')"><label for="A"> A </label>
+        <input name="q" type="radio"  id="B" onclick="check5('B')"><label for="B"> B </label>
+        <input name="q" type="radio"  id="C" onclick="check5('C')"><label for="C"> C </label>
+        <input name="q" type="radio"  id="D" onclick="check5('D')"><label for="D"> D </label>
+        <br/><br/><br/>
+        <button  type="submit" onclick="time5()">SUBMIT</button>  
+    </div>
+</div>
+</body>
+</html>

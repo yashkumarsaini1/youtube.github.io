@@ -1,0 +1,187 @@
+.head
+{
+	font-size: 15px;
+	text-align: center;
+}
+#image
+{
+	width:80%;
+	height: auto;
+	margin-left: 10%;
+}
+.startbtn button
+{
+	font-size:40px;
+	width:30%;
+	margin-left: 35%;
+	border-color: black;
+	border-radius: 40px;
+	background-color: #80FF00;
+	color: black;
+	text-align: center;
+}
+.startbtn button[type="submit"]:hover
+{
+    background:black;
+    cursor: pointer;
+    color: white;
+}
+#start
+{
+	font-size: 20px;
+}
+#result
+{
+	text-align: center;
+	font-size: 40px;
+	color: blue;
+}
+button
+{
+	border-color: black;
+	background-color: blue;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	border-radius:20px;
+}
+button:hover
+{
+	background-color: black;
+}
+label
+{
+	
+	border-radius: 10px;
+	color: black;
+	text-align: center;
+	margin-right: 4%;
+	background-color: lightblue;
+	border-color: black;
+	color:black;
+}
+#q1
+{
+	text-align: center;
+	font-size: 50px;
+}
+#q1 input
+{
+	font-size: 40px;
+	border-color: black;
+	border-radius: 30px;
+	background-color: blue;
+	color:white;
+}
+#q1 input:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+#q1 input[type="radio"]
+{
+	width:40px;
+	height:40px;
+}
+
+#q2
+{
+	text-align: center;
+	font-size: 50px;
+}
+#q2 input
+{
+	font-size: 40px;
+	border-color: black;
+	border-radius: 30px;
+	background-color: blue;
+	color:white;
+}
+#q2 input:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+#q2 input[type="radio"]
+{
+	width:40px;
+	height:40px;
+}
+
+#q3
+{
+	text-align: center;
+	font-size: 50px;
+}
+#q3 input
+{
+	font-size: 40px;
+	border-color: black;
+	border-radius: 30px;
+	background-color: blue;
+	color:white;
+}
+#q3 input:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+#q3 input[type="radio"]
+{
+	width:40px;
+	height:40px;
+}
+
+#q4
+{
+	text-align: center;
+	font-size: 50px;
+}
+#q4 input
+{
+	font-size: 40px;
+	border-color: black;
+	border-radius: 30px;
+	background-color: blue;
+	color:white;
+}
+#q4 input:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+#q4 input[type="radio"]
+{
+	width:40px;
+	height:40px;
+}
+
+#q5
+{
+	text-align: center;
+	font-size: 50px;
+}
+#q5 input
+{
+	font-size: 40px;
+	border-color: black;
+	border-radius: 30px;
+	background-color: blue;
+	color:white;
+}
+#q5 input:hover
+{
+	cursor: pointer;
+	background-color: black;
+}
+#q5 input[type="radio"]
+{
+	width:40px;
+	height:40px;
+}
+.questions p
+{
+	font-size:30px;
+	text-align: center;
+	color: blue;
+}
