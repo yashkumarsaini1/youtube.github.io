@@ -1,13 +1,13 @@
 .head
 {
-	font-size: 15px;
+	font-size: 30px;
 	text-align: center;
 }
 #image
 {
-	width:80%;
+	width:90%;
 	height: auto;
-	margin-left: 10%;
+	margin-left: 5%;
 }
 .startbtn button
 {
