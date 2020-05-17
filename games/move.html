@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<link rel="stylesheet" href="block.css">
+	<script src="block.js"></script>
+</head>
+<body>
+	<div id="road"></div>
+	<div id="line"></div>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<button onclick="moveleft()">LEFT</button>
+	<button onclick="moveright()">RIGHT</button>
+
+	<style>
+		#line
+{
+	height: 100px;
+	width:275px;
+	background-color: blue;
+	margin-left: 100px;
+	margin-top:100px;
+	position: absolute;
+	border-radius: 50px;
+}
+#road
+{
+	height: 150px;
+	width:1000px;
+	background-color: black;
+	margin-top:75px;
+	position: absolute;
+}
+
+#box1
+{
+	width: 50px;
+	height: 25px;
+	border-radius:25px;
+	background-color: red;
+	margin-left:150px;
+	margin-top:75px;
+	position: absolute;
+}
+#box2
+{
+	width: 50px;
+	height: 25px;
+	border-radius:25px;
+	background-color: red;
+	margin-left:275px;
+	margin-top:75px;
+	position: absolute;
+}
+
+#box3
+{
+	width: 50px;
+	height: 25px;
+	border-radius:25px;
+	background-color: red;
+	margin-left:150px;
+	margin-top:200px;
+	position: absolute;
+}
+#box4
+{
+	width: 50px;
+	height: 25px;
+	border-radius:25px;
+	background-color: red;
+	margin-left:275px;
+	margin-top:200px;
+	position: absolute;
+}
+button
+{
+	border-radius: 40px;
+	font-size: 40px;
+	width: 40%;
+}
+	</style>
+
+	<script>
+		 var lines = 100;
+ var boxa = 150;
+ var boxb = 275;
+function moveleft()
+{
+	lines=lines-10;
+	boxa=boxa-10;
+	boxb=boxb-10;
+	line.style.marginLeft=lines+"px";
+	box1.style.marginLeft=boxa+"px";
+	box3.style.marginLeft=boxa+"px";
+	box2.style.marginLeft=boxb+"px";
+	box4.style.marginLeft=boxb+"px";
+}
+function moveright()
+{
+	lines=lines+10;
+	boxa=boxa+10;
+	boxb=boxb+10;
+	line.style.marginLeft=lines+"px";
+	box1.style.marginLeft=boxa+"px";
+	box3.style.marginLeft=boxa+"px";
+	box2.style.marginLeft=boxb+"px";
+	box4.style.marginLeft=boxb+"px";
+}
+
+	</script>
+</body>
+</html>
