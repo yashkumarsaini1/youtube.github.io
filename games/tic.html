@@ -1,45 +1,337 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TIC-TAK-TOE</title>
-	<link rel="stylesheet" href="tic.css">
-	<script src="tic.js"></script>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Mathematics</title>
+  </head>
+  <style>
+ 
+  .card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+  }
+  .navbar
+  {
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+  }
+  .card-title
+  {
+    text-align: center;
+  }
+  footer{
+    background-color: black;
+    color:white;
+    height: 70px;
+  }
+  body
+{
+	background-color: lightgrey;
+}
+.head
+{
+	font-size: 20px;
+	text-align: center;
+	color: blue;
+}
+
+/*********Box start *********************/
+#box1
+{
+	
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+
+}
+#box2
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+
+}
+#box3
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+#box4
+{
+	
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+#box5
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+#box6
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+
+#box7
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+    margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+#box8
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+#box9
+{
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	border-color: black;
+	text-align:center;
+	margin-left: 0%;
+	width:32%;
+	line-height: 400%;
+	border-width: 1px;
+	border-radius:15px;
+}
+/*********Box End *********************/
+
+/*********Box hover start**************/
+#box1:hover
+{
+	background-color : lightgreen;
+}
+#box2:hover
+{
+	background-color : lightgreen;
+}
+#box3:hover
+{
+	background-color : lightgreen;
+}
+#box4:hover
+{
+	background-color : lightgreen;
+}
+#box5:hover
+{
+	background-color : lightgreen;
+}
+#box6:hover
+{
+	background-color : lightgreen;
+}
+#box7:hover
+{
+	background-color : lightgreen;
+}
+#box8:hover
+{
+	background-color : lightgreen;
+}
+#box9:hover
+{
+	background-color : lightgreen;
+}
+/*********Box hover end**************/
+.win 
+{
+	text-align: center;
+	color: red;
+	font-size: 20px;
+}
+.reset button
+{
+	font-size: 20px;
+	text-align: center;
+	border-color: black;
+	background-color: black;
+	color:white;
+	border-radius: 15px;
+	width: 50%;
+	border-width: 1px;
+}
+.reset button:hover
+{
+	background-color: blue;
+}
+.reset
+{
+	text-align: center;
+}
+.name
+{
+	font-size: 12px;
+	color: black;
+	text-align: right;
+}
+  </style>
+  <script>
+  	var _0x3072=['box1','box2','#4F83F1','box9','box5','background','box6','Player\x202\x20Wins','box3','innerHTML','It\x27s\x20a\x20Draw\x20','red','box7','style','disabled','value','box8','getElementById','result','box4'];(function(_0x4b3ccf,_0x3072f7){var _0x4890f7=function(_0x25b696){while(--_0x25b696){_0x4b3ccf['push'](_0x4b3ccf['shift']());}};_0x4890f7(++_0x3072f7);}(_0x3072,0x1a0));var _0x4890=function(_0x4b3ccf,_0x3072f7){_0x4b3ccf=_0x4b3ccf-0x0;var _0x4890f7=_0x3072[_0x4b3ccf];return _0x4890f7;};var y1,y2,y3,y4,y5,y6,y7,y8,y9;var x1,x2,x3,x4,x5,x6,x7,x8,x9;var count=0x0;function block1(){document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x13')]='X';document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x11')]['background']=_0x4890('0xf');x1=0x1;y1=0x0;}else{document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x11')]['background']=_0x4890('0x6');x1=0x0;y1=0x1;}document[_0x4890('0x1')](_0x4890('0x4'))[_0x4890('0x12')]=!![];check();}function block2(){document[_0x4890('0x1')](_0x4890('0x5'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x5'))['value']='X';document[_0x4890('0x1')](_0x4890('0x5'))[_0x4890('0x11')]['background']=_0x4890('0xf');x2=0x1;y2=0x0;}else{document[_0x4890('0x1')](_0x4890('0x5'))[_0x4890('0x13')]='O';document['getElementById'](_0x4890('0x5'))['style']['background']=_0x4890('0x6');x2=0x0;y2=0x1;}document[_0x4890('0x1')](_0x4890('0x5'))[_0x4890('0x12')]=!![];check();}function block3(){document[_0x4890('0x1')](_0x4890('0xc'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0xc'))[_0x4890('0x13')]='X';document['getElementById'](_0x4890('0xc'))[_0x4890('0x11')][_0x4890('0x9')]='red';x3=0x1;y3=0x0;}else{document[_0x4890('0x1')](_0x4890('0xc'))[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0xc'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0x6');x3=0x0;y3=0x1;}document[_0x4890('0x1')](_0x4890('0xc'))['disabled']=!![];check();}function block4(){document[_0x4890('0x1')](_0x4890('0x3'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x3'))[_0x4890('0x13')]='X';document[_0x4890('0x1')](_0x4890('0x3'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0xf');x4=0x1;y4=0x0;}else{document[_0x4890('0x1')](_0x4890('0x3'))[_0x4890('0x13')]='O';document[_0x4890('0x1')]('box4')[_0x4890('0x11')][_0x4890('0x9')]='#4F83F1';x4=0x0;y4=0x1;}document['getElementById'](_0x4890('0x3'))[_0x4890('0x12')]=!![];check();}function block5(){document[_0x4890('0x1')](_0x4890('0x8'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document['getElementById'](_0x4890('0x8'))[_0x4890('0x13')]='X';document[_0x4890('0x1')]('box5')[_0x4890('0x11')][_0x4890('0x9')]='red';x5=0x1;y5=0x0;}else{document[_0x4890('0x1')](_0x4890('0x8'))[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0x8'))['style'][_0x4890('0x9')]='#4F83F1';x5=0x0;y5=0x1;}document[_0x4890('0x1')]('box5')[_0x4890('0x12')]=!![];check();}function block6(){document[_0x4890('0x1')](_0x4890('0xa'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0xa'))[_0x4890('0x13')]='X';document[_0x4890('0x1')](_0x4890('0xa'))[_0x4890('0x11')]['background']=_0x4890('0xf');x6=0x1;y6=0x0;}else{document[_0x4890('0x1')](_0x4890('0xa'))['value']='O';document[_0x4890('0x1')]('box6')['style'][_0x4890('0x9')]=_0x4890('0x6');x6=0x0;y6=0x1;}document[_0x4890('0x1')]('box6')[_0x4890('0x12')]=!![];check();}function block7(){document[_0x4890('0x1')](_0x4890('0x10'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x10'))['value']='X';document[_0x4890('0x1')](_0x4890('0x10'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0xf');x7=0x1;y7=0x0;}else{document[_0x4890('0x1')](_0x4890('0x10'))[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0x10'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0x6');x7=0x0;y7=0x1;}document[_0x4890('0x1')](_0x4890('0x10'))[_0x4890('0x12')]=!![];check();}function block8(){document[_0x4890('0x1')]('box8')[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x0'))['value']='X';document[_0x4890('0x1')](_0x4890('0x0'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0xf');x8=0x1;y8=0x0;}else{document[_0x4890('0x1')](_0x4890('0x0'))[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0x0'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0x6');x8=0x0;y8=0x1;}document[_0x4890('0x1')](_0x4890('0x0'))[_0x4890('0x12')]=!![];check();}function block9(){document[_0x4890('0x1')](_0x4890('0x7'))[_0x4890('0x13')]='X';count=count+0x1;if(count%0x2!=0x0){document[_0x4890('0x1')](_0x4890('0x7'))[_0x4890('0x13')]='X';document['getElementById'](_0x4890('0x7'))[_0x4890('0x11')][_0x4890('0x9')]=_0x4890('0xf');x9=0x1;y9=0x0;}else{document[_0x4890('0x1')]('box9')[_0x4890('0x13')]='O';document[_0x4890('0x1')](_0x4890('0x7'))['style'][_0x4890('0x9')]=_0x4890('0x6');x9=0x0;y9=0x1;}document[_0x4890('0x1')](_0x4890('0x7'))[_0x4890('0x12')]=!![];check();}function check(){if(count>=0x5&&(x1+x2+x3==0x3||x4+x5+x6==0x3||x7+x8+x9==0x3||x1+x4+x7==0x3||x1+x5+x9==0x3||x2+x5+x8==0x3||x3+x6+x9==0x3||x3+x5+x7==0x3)){document[_0x4890('0x1')](_0x4890('0x2'))[_0x4890('0xd')]='Player\x201\x20Wins';}else if(count>=0x5&&(y1+y2+y3==0x3||y4+y5+y6==0x3||y7+y8+y9==0x3||y1+y4+y7==0x3||y1+y5+y9==0x3||y2+y5+y8==0x3||y3+y6+y9==0x3||y3+y5+y7==0x3)){document['getElementById'](_0x4890('0x2'))['innerHTML']=_0x4890('0xb');}else if(count==0x9){document[_0x4890('0x1')](_0x4890('0x2'))[_0x4890('0xd')]=_0x4890('0xe');}}
+  </script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning mb-3">
+  <a class="navbar-brand" href="https://yashkumarsaini1.github.io/youtube.github.io/">MATEMATICS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="../main/about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Student
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../student/class10.html">Class 10</a>
+          <a class="dropdown-item" href="../student/class12.html">Class 12</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../student/intc.html">Interactive Content</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../main/school.html" tabindex="-1" aria-disabled="false">School</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
 	<div class="head">
     <p>TIC-TAK-TOE</p>
-	<p>Player 1 : "X"<strong>-----v/s-----</strong>Player 2 : "O"</p>
-	<p>Player 1 Start First</p>
-	</div>
-	<div class="button1" id="box">
-		<input type="button" value="  " id="box1"onclick="block1()"></input>
-		<input type="button" value="  " id="box2"onclick="block2()"></input>
-		<input type="button" value="  " id="box3"onclick="block3()"></input>
-	</div>
-	<br/>
+  <p>Player 1 : "X"<strong>-----v/s-----</strong>Player 2 : "O"</p>
+  <p>Player 1 Start First</p>
+  </div>
+  <div class="button1" id="box">
+    <input type="button" value="  " id="box1"onclick="block1()"></input>
+    <input type="button" value="  " id="box2"onclick="block2()"></input>
+    <input type="button" value="  " id="box3"onclick="block3()"></input>
+  </div>
+  <br/>
 
-	<div class="button2" id="box">
-		<input type="button" value="  " id="box4" onclick="block4()"></input>
-		<input type="button" value="  " id="box5" onclick="block5()"></input>
-		<input type="button" value="  " id="box6" onclick="block6()"></input>
-	</div>
-	<br/>
+  <div class="button2" id="box">
+    <input type="button" value="  " id="box4" onclick="block4()"></input>
+    <input type="button" value="  " id="box5" onclick="block5()"></input>
+    <input type="button" value="  " id="box6" onclick="block6()"></input>
+  </div>
+  <br/>
 
-	<div class="button3" id="box">
-		<input type="button" value="  " id="box7" onclick="block7()"></input>
-		<input type="button" value="  " id="box8" onclick="block8()"></input>
-		<input type="button" value="  " id="box9" onclick="block9()"></input>
-	</div>
-	<br/>
-	<div class="win" >
-		<p id="result"></p>
-	</div>
-	<div class="reset">
-		<button onClick="window.location.reload();">RESET</button>
-	</div>
-	<div class="name">
-		<p><strong>Created By: Yash Kumar Saini</strong></p>
-	</div>
-</body>
+  <div class="button3" id="box">
+    <input type="button" value="  " id="box7" onclick="block7()"></input>
+    <input type="button" value="  " id="box8" onclick="block8()"></input>
+    <input type="button" value="  " id="box9" onclick="block9()"></input>
+  </div>
+  <br/>
+  <div class="win" >
+    <p id="result"></p>
+  </div>
+  <div class="reset">
+    <button onClick="window.location.reload();">RESET</button>
+  </div>
+  <div class="name">
+    <p><strong>Created By: Yash Kumar Saini</strong></p>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p> E-mail : yashallendms@gmail.com</p>
+      </div>
+      <div class="col-sm-6">
+         &copy;  All rights are reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
