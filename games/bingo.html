@@ -1,76 +1,381 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>BINGO</title>
-	<link rel="stylesheet" href="bingo.css">
-	<script src="bingo.js"></script>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<div class="head">
-    <p>BINGO</p>
-	<p>This is a 2 Player Game Which require 2 Devices</p>
-	<p>Fill out these blocks with numbers from 1 to 25 </p>
-	<p>Do not repeat any number in the block.</p>
-	<p>Click on the <strong>START BUTTON</strong> after filling all blocks to start Playing</p>
-	<p>Click on the number to cut it.</p>
-	<p>Click on the blue buttons if you complete one line.</p>
-	<p>Say BINGO!! if you complete it.</p>
-	</div>
-	<div class="button0" id="box">
-		<input type="button" value="B" id="boxa"></input>
-		<input type="button" value="I" id="boxb"></input>
-		<input type="button" value="N" id="boxc"></input>
-		<input type="button" value="G" id="boxd"></input>
-		<input type="button" value="O" id="boxe"></input>
-	</div>
-	<div class="button1" id="box">
-		<input type="number" value="  " id="box1"  ></input>
-		<input type="number" value="  " id="box2"  ></input>
-		<input type="number" value="  " id="box3"  ></input>
-		<input type="number" value="  " id="box4"  ></input>
-		<input type="number" value="  " id="box5"  ></input>
-	</div>
-	<div class="button2" id="box">
-		<input type="number" value="  " id="box6"  ></input>
-		<input type="number" value="  " id="box7"  ></input>
-		<input type="number" value="  " id="box8"  ></input>
-		<input type="number" value="  " id="box9"  ></input>
-		<input type="number" value="  " id="box10"  ></input>
-	</div>
-	<div class="button3" id="box">
-		<input type="number" value="  " id="box11"  ></input>
-		<input type="number" value="  " id="box12"  ></input>
-		<input type="number" value="  " id="box13"  ></input>
-		<input type="number" value="  " id="box14"  ></input>
-		<input type="number" value="  " id="box15"  ></input>
-	</div>
-	<div class="button4" id="box">
-		<input type="number" value="  " id="box16"  ></input>
-		<input type="number" value="  " id="box17"  ></input>
-		<input type="number" value="  " id="box18"  ></input>
-		<input type="number" value="  " id="box19"  ></input>
-		<input type="number" value="  " id="box20"  ></input>
-	</div>
-	<div class="button" id="box">
-		<input type="number" value="  " id="box21"  ></input>
-		<input type="number" value="  " id="box22"  ></input>
-		<input type="number" value="  " id="box23"  ></input>
-		<input type="number" value="  " id="box24"  ></input>
-		<input type="number" value="  " id="box25"  ></input>
-	</div>
-	<div class="win" >
-		<p id="result"></p>
-	</div>
-	<div class="reset">
-		<button onClick="setvalue()">START</button>
-	</div>
-	<br/><br/><br/>
-	<div class="reset">
-		<button onClick="window.location.reload();">RESET</button>
-	</div>
-	<div class="name">
-		<p><strong>Created By: Yash Kumar Saini</strong></p>
-	</div>
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Mathematics</title>
+  </head>
+  <style>
+ 
+  .card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+  }
+  .navbar
+  {
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+  }
+  .card-title
+  {
+    text-align: center;
+  }
+  footer{
+    background-color: black;
+    color:white;
+    height: 70px;
+  }
+  /*********Box start *********************/
+#boxa
+{
+  
+  font-size: 30px;
+  background-color: #4FB9F1;
+  color: black;
+  border-color: black;
+  text-align:center;
+    margin-left: 20%;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+
+}
+#boxb
+{
+  font-size: 30px;
+  background-color: #4FB9F1;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+
+}
+#boxc
+{
+  font-size: 30px;
+  background-color: #4FB9F1;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;}
+#boxd
+{
+  
+  font-size: 30px;
+  background-color: #4FB9F1;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+}
+#boxe
+{
+  font-size: 30px;
+  background-color: #4FB9F1;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+}
+
+
+.first
+{
+  
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  text-align:center;
+    margin-left: 20%;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+
+}
+.Second
+{
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+
+}
+.third
+{
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;}
+.forth
+{
+  
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+}
+.fifth
+{
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  text-align:center;
+  width:12%;
+  line-height: 300%;
+  border-width: 1px;
+  border-radius:15px;
+}
+@media only screen and (max-width: 900px) {
+ .first {
+    margin-left: 0%;
+    width:19%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  .Second{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  .third{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  .forth{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  .fifth{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  #boxa{
+    margin-left: 0%;
+    width:19%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  #boxb{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  #boxc{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  #boxd{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+  #boxe{
+    width: 18.5%;
+    font-size: 20px;
+    border-width: 1px;
+  }
+} 
+
+
+/*********Box End *********************/
+
+.win 
+{
+  text-align: center;
+  color: red;
+  font-size: 40px;
+}
+.reset button
+{
+  font-size: 40px;
+  text-align: center;
+  border-color: black;
+  background-color: black;
+  color:white;
+  border-radius: 15px;
+  width: 50%;
+}
+.reset button:hover
+{
+  background-color: blue;
+}
+.reset
+{
+  text-align: center;
+}
+.name
+{
+  font-size: 30px;
+  color: black;
+  text-align: right;
+}
+  </style>
+  <script>
+    var _0x4eef=['boxe','style','disabled','box14','box22','box24','box18','box19','box12','box1','box10','box9','boxb','box7','getElementById','click','addEventListener','box6','box4','box8','box25','boxd','box5','boxa','box17','box3','box21','box23','box20','box11','box13','boxc','box16','background','box15','box2','#FF4B4B','#36FF0D'];(function(_0x315e1c,_0x4eef27){var _0x38340e=function(_0x200b6d){while(--_0x200b6d){_0x315e1c['push'](_0x315e1c['shift']());}};_0x38340e(++_0x4eef27);}(_0x4eef,0x133));var _0x3834=function(_0x315e1c,_0x4eef27){_0x315e1c=_0x315e1c-0x0;var _0x38340e=_0x4eef[_0x315e1c];return _0x38340e;};var y1,y2,y3,y4,y5,y6,y7,y8,y9;var x1,x2,x3,x4,x5,x6,x7,x8,x9;var count=0x0;function blocka(){document[_0x3834('0xb')](_0x3834('0x14'))['style'][_0x3834('0x1e')]=_0x3834('0x21');document[_0x3834('0xb')](_0x3834('0x14'))[_0x3834('0x25')]=!![];}function blockb(){document['getElementById'](_0x3834('0x9'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x21');document['getElementById'](_0x3834('0x9'))[_0x3834('0x25')]=!![];}function blockc(){document[_0x3834('0xb')](_0x3834('0x1c'))[_0x3834('0x24')][_0x3834('0x1e')]='#FF4B4B';document[_0x3834('0xb')]('boxc')[_0x3834('0x25')]=!![];}function blockd(){document['getElementById'](_0x3834('0x12'))['style']['background']=_0x3834('0x21');document[_0x3834('0xb')](_0x3834('0x12'))[_0x3834('0x25')]=!![];}function blocke(){document['getElementById'](_0x3834('0x23'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x21');document[_0x3834('0xb')]('boxe')[_0x3834('0x25')]=!![];}function block1(){document['getElementById'](_0x3834('0x6'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x6'))[_0x3834('0x25')]=!![];}function block2(){document[_0x3834('0xb')]('box2')[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x20'))[_0x3834('0x25')]=!![];}function block3(){document['getElementById'](_0x3834('0x16'))[_0x3834('0x24')]['background']='#36FF0D';document[_0x3834('0xb')](_0x3834('0x16'))[_0x3834('0x25')]=!![];}function block4(){document[_0x3834('0xb')](_0x3834('0xf'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0xf'))[_0x3834('0x25')]=!![];}function block5(){document[_0x3834('0xb')](_0x3834('0x13'))[_0x3834('0x24')]['background']=_0x3834('0x22');document[_0x3834('0xb')]('box5')[_0x3834('0x25')]=!![];}function block6(){document[_0x3834('0xb')](_0x3834('0xe'))['style'][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0xe'))[_0x3834('0x25')]=!![];}function block7(){document[_0x3834('0xb')](_0x3834('0xa'))['style'][_0x3834('0x1e')]=_0x3834('0x22');document['getElementById'](_0x3834('0xa'))[_0x3834('0x25')]=!![];}function block8(){document[_0x3834('0xb')](_0x3834('0x10'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x10'))[_0x3834('0x25')]=!![];}function block9(){document[_0x3834('0xb')](_0x3834('0x8'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x8'))[_0x3834('0x25')]=!![];}function block10(){document['getElementById'](_0x3834('0x7'))[_0x3834('0x24')]['background']='#36FF0D';document[_0x3834('0xb')](_0x3834('0x7'))[_0x3834('0x25')]=!![];}function block11(){document[_0x3834('0xb')]('box11')[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')]('box11')[_0x3834('0x25')]=!![];}function block12(){document[_0x3834('0xb')](_0x3834('0x5'))[_0x3834('0x24')]['background']=_0x3834('0x22');document[_0x3834('0xb')]('box12')[_0x3834('0x25')]=!![];}function block13(){document[_0x3834('0xb')](_0x3834('0x1b'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x1b'))[_0x3834('0x25')]=!![];}function block14(){document['getElementById'](_0x3834('0x0'))[_0x3834('0x24')]['background']='#36FF0D';document[_0x3834('0xb')](_0x3834('0x0'))['disabled']=!![];}function block15(){document[_0x3834('0xb')]('box15')[_0x3834('0x24')][_0x3834('0x1e')]='#36FF0D';document[_0x3834('0xb')](_0x3834('0x1f'))[_0x3834('0x25')]=!![];}function block16(){document[_0x3834('0xb')](_0x3834('0x1d'))[_0x3834('0x24')]['background']=_0x3834('0x22');document['getElementById'](_0x3834('0x1d'))[_0x3834('0x25')]=!![];}function block17(){document['getElementById'](_0x3834('0x15'))[_0x3834('0x24')]['background']=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x15'))[_0x3834('0x25')]=!![];}function block18(){document[_0x3834('0xb')](_0x3834('0x3'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x3'))['disabled']=!![];}function block19(){document[_0x3834('0xb')](_0x3834('0x4'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x4'))['disabled']=!![];}function block20(){document[_0x3834('0xb')]('box20')[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x19'))['disabled']=!![];}function block21(){document[_0x3834('0xb')](_0x3834('0x17'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x17'))[_0x3834('0x25')]=!![];}function block22(){document[_0x3834('0xb')](_0x3834('0x1'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')](_0x3834('0x1'))['disabled']=!![];}function block23(){document['getElementById'](_0x3834('0x18'))[_0x3834('0x24')]['background']='#36FF0D';document[_0x3834('0xb')](_0x3834('0x18'))[_0x3834('0x25')]=!![];}function block24(){document[_0x3834('0xb')](_0x3834('0x2'))[_0x3834('0x24')]['background']=_0x3834('0x22');document['getElementById'](_0x3834('0x2'))['disabled']=!![];}function block25(){document[_0x3834('0xb')](_0x3834('0x11'))[_0x3834('0x24')][_0x3834('0x1e')]=_0x3834('0x22');document[_0x3834('0xb')]('box25')[_0x3834('0x25')]=!![];}function setvalue(){document[_0x3834('0xb')]('boxa')[_0x3834('0xd')]('click',blocka);document[_0x3834('0xb')](_0x3834('0x9'))['addEventListener'](_0x3834('0xc'),blockb);document['getElementById'](_0x3834('0x1c'))[_0x3834('0xd')](_0x3834('0xc'),blockc);document[_0x3834('0xb')](_0x3834('0x12'))[_0x3834('0xd')]('click',blockd);document[_0x3834('0xb')](_0x3834('0x23'))[_0x3834('0xd')](_0x3834('0xc'),blocke);document[_0x3834('0xb')]('box1')[_0x3834('0xd')](_0x3834('0xc'),block1);document['getElementById'](_0x3834('0x20'))[_0x3834('0xd')]('click',block2);document['getElementById']('box3')['addEventListener']('click',block3);document['getElementById']('box4')['addEventListener'](_0x3834('0xc'),block4);document['getElementById'](_0x3834('0x13'))[_0x3834('0xd')](_0x3834('0xc'),block5);document[_0x3834('0xb')]('box6')['addEventListener'](_0x3834('0xc'),block6);document[_0x3834('0xb')](_0x3834('0xa'))[_0x3834('0xd')](_0x3834('0xc'),block7);document[_0x3834('0xb')](_0x3834('0x10'))[_0x3834('0xd')](_0x3834('0xc'),block8);document[_0x3834('0xb')](_0x3834('0x8'))[_0x3834('0xd')](_0x3834('0xc'),block9);document[_0x3834('0xb')](_0x3834('0x7'))[_0x3834('0xd')](_0x3834('0xc'),block10);document[_0x3834('0xb')](_0x3834('0x1a'))[_0x3834('0xd')](_0x3834('0xc'),block11);document[_0x3834('0xb')](_0x3834('0x5'))[_0x3834('0xd')](_0x3834('0xc'),block12);document['getElementById'](_0x3834('0x1b'))[_0x3834('0xd')](_0x3834('0xc'),block13);document[_0x3834('0xb')]('box14')[_0x3834('0xd')]('click',block14);document[_0x3834('0xb')](_0x3834('0x1f'))[_0x3834('0xd')](_0x3834('0xc'),block15);document[_0x3834('0xb')](_0x3834('0x1d'))[_0x3834('0xd')](_0x3834('0xc'),block16);document['getElementById'](_0x3834('0x15'))['addEventListener']('click',block17);document[_0x3834('0xb')](_0x3834('0x3'))[_0x3834('0xd')](_0x3834('0xc'),block18);document['getElementById']('box19')[_0x3834('0xd')](_0x3834('0xc'),block19);document[_0x3834('0xb')](_0x3834('0x19'))[_0x3834('0xd')](_0x3834('0xc'),block20);document[_0x3834('0xb')](_0x3834('0x17'))[_0x3834('0xd')](_0x3834('0xc'),block21);document[_0x3834('0xb')](_0x3834('0x1'))[_0x3834('0xd')](_0x3834('0xc'),block22);document[_0x3834('0xb')](_0x3834('0x18'))['addEventListener'](_0x3834('0xc'),block23);document[_0x3834('0xb')](_0x3834('0x2'))[_0x3834('0xd')](_0x3834('0xc'),block24);document['getElementById'](_0x3834('0x11'))[_0x3834('0xd')](_0x3834('0xc'),block25);}
+  </script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning mb-3">
+  <a class="navbar-brand" href="https://yashkumarsaini1.github.io/youtube.github.io/">MATEMATICS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../main/about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Student
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../student/class10.html">Class 10</a>
+          <a class="dropdown-item" href="../student/class12.html">Class 12</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../student/intc.html">Interactive Content</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../main/school.html" tabindex="-1" aria-disabled="false">School</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+<h1>BINGO</h1>
+ <p>This is a 2 Player Game Which require 2 Devices</p>
+  <p>Fill out these blocks with numbers from 1 to 25 </p>
+  <p>Do not repeat any number in the block.</p>
+  <p>Click on the <strong>START BUTTON</strong> after filling all blocks to start Playing</p>
+  <p>Click on the number to cut it.</p>
+  <p>Click on the blue buttons if you complete one line.</p>
+  <p>Say BINGO!! if you complete it.</p>
+</div>
+  <div class="button0" id="box">
+    <input class="first" type="button" value="B" id="boxa"></input>
+    <input class="Second" type="button" value="I" id="boxb"></input>
+    <input class="third" type="button" value="N" id="boxc"></input>
+    <input class="forth" type="button" value="G" id="boxd"></input>
+    <input class="fifth" type="button" value="O" id="boxe"></input>
+  </div>
+  <div class="button1" id="box">
+    <input class="first" type="number" value="  " id="box1"  ></input>
+    <input class="Second" type="number" value="  " id="box2"  ></input>
+    <input class="third" type="number" value="  " id="box3"  ></input>
+    <input class="forth" type="number" value="  " id="box4"  ></input>
+    <input class="fifth" type="number" value="  " id="box5"  ></input>
+  </div>
+  <div class="button2" id="box">
+    <input class="first" type="number" value="  " id="box6"  ></input>
+    <input class="Second" type="number" value="  " id="box7"  ></input>
+    <input class="third" type="number" value="  " id="box8"  ></input>
+    <input class="forth" type="number" value="  " id="box9"  ></input>
+    <input class="fifth" type="number" value="  " id="box10"  ></input>
+  </div>
+  <div class="button3" id="box">
+    <input class="first" type="number" value="  " id="box11"  ></input>
+    <input class="Second" type="number" value="  " id="box12"  ></input>
+    <input class="third" type="number" value="  " id="box13"  ></input>
+    <input class="forth" type="number" value="  " id="box14"  ></input>
+    <input class="fifth" type="number" value="  " id="box15"  ></input>
+  </div>
+  <div class="button4" id="box">
+    <input class="first" type="number" value="  " id="box16"  ></input>
+    <input class="Second" type="number" value="  " id="box17"  ></input>
+    <input class="third" type="number" value="  " id="box18"  ></input>
+    <input class="forth" type="number" value="  " id="box19"  ></input>
+    <input class="fifth" type="number" value="  " id="box20"  ></input>
+  </div>
+  <div class="button" id="box">
+    <input class="first" type="number" value="  " id="box21"  ></input>
+    <input class="Second" type="number" value="  " id="box22"  ></input>
+    <input class="third" type="number" value="  " id="box23"  ></input>
+    <input class="forth" type="number" value="  " id="box24"  ></input>
+    <input class="fifth" type="number" value="  " id="box25"  ></input>
+  </div>
+  <div class="win" >
+    <p id="result"></p>
+  </div>
+  <div class="reset">
+    <button onClick="setvalue()">START</button>
+  </div>
+  <br/><br/><br/>
+  <div class="reset">
+    <button onClick="window.location.reload();">RESET</button>
+  </div>
+  <div class="name">
+    <p><strong>Created By: Yash Kumar Saini</strong></p>
+  </div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p> E-mail : yashallendms@gmail.com</p>
+      </div>
+      <div class="col-sm-6">
+         &copy;  All rights are reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
