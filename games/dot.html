@@ -1,113 +1,1015 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DOTS GAME</title>
-	<link rel="stylesheet" type="text/css" href="dot.css">
-	<script src="dot.js"></script>
+  <title>DOTS GAME</title>
+  <script src="dot.js"></script>
+  <style>
+  .head
+{
+	font-size: 30px;
+	text-align: center;
+	color: blue;
+	margin-top: 300px;
+}
+.top
+{
+	font-size: 80px;
+	text-align: right;
+	color: blue;
+}
+#dot1
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 100px;
+	top: 100px;
+	position: absolute;
+}
+#dot2
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 220px;
+	top: 100px;
+	position: absolute;
+}
+#dot3
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 340px;
+	top: 100px;
+	position: absolute;
+}
+#dot4
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 460px;
+	top: 100px;
+	position: absolute;
+}
+#dot5
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 580px;
+	top: 100px;
+	position: absolute;
+}
+
+#dot6
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 100px;
+	top: 220px;
+	position: absolute;
+}
+#dot7
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 220px;
+	top: 220px;
+	position: absolute;
+}
+#dot8
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 340px;
+	top: 220px;
+	position: absolute;
+}
+#dot9
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 460px;
+	top: 220px;
+	position: absolute;
+}
+#dot10
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 580px;
+	top: 220px;
+	position: absolute;
+}
+#dot11
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 100px;
+	top: 340px;
+	position: absolute;
+}
+#dot12
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 220px;
+	top: 340px;
+	position: absolute;
+}
+#dot13
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 340px;
+	top: 340px;
+	position: absolute;
+}
+#dot14
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 460px;
+	top: 340px;
+	position: absolute;
+}
+#dot15
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 580px;
+	top: 340px;
+	position: absolute;
+}
+
+#dot16
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 100px;
+	top: 460px;
+	position: absolute;
+}
+#dot17
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 220px;
+	top: 460px;
+	position: absolute;
+}
+#dot18
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 340px;
+	top: 460px;
+	position: absolute;
+}
+#dot19
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 460px;
+	top: 460px;
+	position: absolute;
+}
+#dot20
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 580px;
+	top: 460px;
+	position: absolute;
+}
+
+#dot21
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 100px;
+	top: 580px;
+	position: absolute;
+}
+#dot22
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 220px;
+	top: 580px;
+	position: absolute;
+}
+#dot23
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 340px;
+	top: 580px;
+	position: absolute;
+}
+#dot24
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 460px;
+	top: 580px;
+	position: absolute;
+}
+#dot25
+{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+	left: 580px;
+	top: 580px;
+	position: absolute;
+}
+
+
+#line1
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 120px;
+	top: 100px;
+	position: absolute;
+}
+#line2
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 240px;
+	top: 100px;
+	position: absolute;
+}
+#line3
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 360px;
+	top: 100px;
+	position: absolute;
+}
+#line4
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 480px;
+	top: 100px;
+	position: absolute;
+}
+#line5
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 120px;
+	top: 220px;
+	position: absolute;
+}
+#line6
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 240px;
+	top: 220px;
+	position: absolute;
+}
+#line7
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 360px;
+	top: 220px;
+	position: absolute;
+}
+#line8
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 480px;
+	top: 220px;
+	position: absolute;
+}
+
+#line9
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 120px;
+	top: 340px;
+	position: absolute;
+}
+#line10
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 240px;
+	top: 340px;
+	position: absolute;
+}
+#line11
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 360px;
+	top: 340px;
+	position: absolute;
+}
+#line12
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 480px;
+	top: 340px;
+	position: absolute;
+}
+#line13
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 120px;
+	top: 460px;
+	position: absolute;
+}
+#line14
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 240px;
+	top: 460px;
+	position: absolute;
+}
+#line15
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 360px;
+	top: 460px;
+	position: absolute;
+}
+#line16
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 480px;
+	top: 460px;
+	position: absolute;
+}
+#line17
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 360px;
+	top: 580px;
+	position: absolute;
+}
+#line18
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 480px;
+	top: 580px;
+	position: absolute;
+}
+
+#line19
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 120px;
+	top: 580px;
+	position: absolute;
+}
+#line20
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 240px;
+	top: 580px;
+	position: absolute;
+}
+
+#l1
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 100px;
+	top: 120px;
+	position: absolute;
+}
+#l2
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 220px;
+	top: 120px;
+	position: absolute;
+}
+#l3
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 340px;
+	top: 120px;
+	position: absolute;
+}
+#l4
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 460px;
+	top: 120px;
+	position: absolute;
+}
+#l5
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 580px;
+	top: 120px;
+	position: absolute;
+}
+#l6
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 100px;
+	top: 240px;
+	position: absolute;
+}
+#l7
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 220px;
+	top: 240px;
+	position: absolute;
+}
+#l8
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 340px;
+	top: 240px;
+	position: absolute;
+}
+#l9
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 460px;
+	top: 240px;
+	position: absolute;
+}
+#l10
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 580px;
+	top: 240px;
+	position: absolute;
+}
+#l11
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 100px;
+	top: 360px;
+	position: absolute;
+}
+#l12
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 220px;
+	top: 360px;
+	position: absolute;
+}
+#l13
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 340px;
+	top: 360px;
+	position: absolute;
+}
+#l14
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 460px;
+	top: 360px;
+	position: absolute;
+}
+#l15
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 580px;
+	top: 360px;
+	position: absolute;
+}
+#l16
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 100px;
+	top: 480px;
+	position: absolute;
+}
+#l17
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 220px;
+	top: 480px;
+	position: absolute;
+}
+#l18
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 340px;
+	top: 480px;
+	position: absolute;
+}
+#l19
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 460px;
+	top: 480px;
+	position: absolute;
+}
+#l20
+{
+	width: 20px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	left: 580px;
+	top: 480px;
+	position: absolute;
+}
+#box1
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 120px;
+	top: 120px;
+	position: absolute;
+}
+#box2
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 240px;
+	top: 120px;
+	position: absolute;
+}
+#box3
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 360px;
+	top: 120px;
+	position: absolute;
+}
+#box4
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 480px;
+	top: 120px;
+	position: absolute;
+}
+#box5
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 120px;
+	top: 240px;
+	position: absolute;
+}
+#box6
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 240px;
+	top: 240px;
+	position: absolute;
+}
+#box7
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 360px;
+	top: 240px;
+	position: absolute;
+}
+#box8
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 480px;
+	top: 240px;
+	position: absolute;
+}
+#box9
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 120px;
+	top: 360px;
+	position: absolute;
+}
+#box10
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 240px;
+	top: 360px;
+	position: absolute;
+}
+#box11
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 360px;
+	top: 360px;
+	position: absolute;
+}
+#box12
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 480px;
+	top: 360px;
+	position: absolute;
+}
+#box13
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 120px;
+	top: 480px;
+	position: absolute;
+}
+#box14
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 240px;
+	top: 480px;
+	position: absolute;
+}
+#box15
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 360px;
+	top: 480px;
+	position: absolute;
+}
+#box16
+{
+	width: 96px;
+	height: 96px;
+	border-radius: 10px;
+	font-size:80px;
+	text-align: center;
+	border-style: dashed;
+	border-color: white;
+	
+	left: 480px;
+	top: 480px;
+	position: absolute;
+}
+#line :hover
+{
+	background-color: orange;
+}
+</style>
+<script>var _0x3d2b=['line7','line15','line20','line6','l10','l14','l11','line9','l15','line10','line8','l12','l18','line14','line1','line17','background','line19','line3','line2','line13','l16','l13','black','l19','line18','style','getElementById','vl18','line11','l20','line5','l17','disabled','line16','line4','line12'];(function(_0x12fc4b,_0x3d2bf4){var _0x14d2d5=function(_0x177f7f){while(--_0x177f7f){_0x12fc4b['push'](_0x12fc4b['shift']());}};_0x14d2d5(++_0x3d2bf4);}(_0x3d2b,0xb3));var _0x14d2=function(_0x12fc4b,_0x3d2bf4){_0x12fc4b=_0x12fc4b-0x0;var _0x14d2d5=_0x3d2b[_0x12fc4b];return _0x14d2d5;};var x1=0x0,x2=0x0,x3=0x0,x4=0x0,x5=0x0,x6=0x0,x7=0x0,x8=0x0,x9=0x0,x10=0x0,x11=0x0,x12=0x0,x13=0x0,x14=0x0,x15=0x0,x16=0x0,x17=0x0,x18=0x0,x19=0x0,x20=0x0;var l1=0x0,l2=0x0,l3=0x0,l4=0x0,l5=0x0,l6=0x0,l7=0x0,l8=0x0,l9=0x0,l10=0x0,l11=0x0,l12=0x0,l13=0x0,l14=0x0,l15=0x0,l16=0x0,l17=0x0,l18=0x0,l19=0x0,l20=0x0;count=0x0;function line1(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x14'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x1=0x1;}else{document['getElementById'](_0x14d2('0x14'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x1=0x1;}document[_0x14d2('0x21')](_0x14d2('0x14'))[_0x14d2('0x2')]=!![];check1();}function line2(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x19'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x2=0x1;}else{document[_0x14d2('0x21')]('line2')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');x2=0x1;}document[_0x14d2('0x21')]('line2')[_0x14d2('0x2')]=!![];check2();}function line3(){count++;if(count%0x2!=0x0){document['getElementById']('line3')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x3=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x18'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x3=0x1;}document[_0x14d2('0x21')](_0x14d2('0x18'))[_0x14d2('0x2')]=!![];check3();}function line4(){count++;if(count%0x2!=0x0){document['getElementById'](_0x14d2('0x4'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x4=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x4'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x4=0x1;}document[_0x14d2('0x21')](_0x14d2('0x4'))['disabled']=!![];check4();}function line5(){count++;if(count%0x2!=0x0){document['getElementById']('line5')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');x5=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x0'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x5=0x1;}document[_0x14d2('0x21')](_0x14d2('0x0'))[_0x14d2('0x2')]=!![];check1();}function line6(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x9'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x6=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x9'))[_0x14d2('0x20')]['background']=_0x14d2('0x1d');x6=0x1;}document[_0x14d2('0x21')](_0x14d2('0x9'))[_0x14d2('0x2')]=!![];check2();}function line7(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x6'))['style'][_0x14d2('0x16')]=_0x14d2('0x1d');x7=0x1;}else{document[_0x14d2('0x21')]('line7')[_0x14d2('0x20')][_0x14d2('0x16')]='black';x7=0x1;}document[_0x14d2('0x21')](_0x14d2('0x6'))[_0x14d2('0x2')]=!![];check3();}function line8(){count++;if(count%0x2!=0x0){document['getElementById'](_0x14d2('0x10'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x8=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x10'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x8=0x1;}document[_0x14d2('0x21')](_0x14d2('0x10'))['disabled']=!![];check4();}function line9(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0xd'))['style']['background']=_0x14d2('0x1d');x9=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0xd'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x9=0x1;}document['getElementById'](_0x14d2('0xd'))[_0x14d2('0x2')]=!![];check5();}function line10(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0xf'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x10=0x1;}else{document['getElementById'](_0x14d2('0xf'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x10=0x1;}document[_0x14d2('0x21')](_0x14d2('0xf'))[_0x14d2('0x2')]=!![];check6();}function line11(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x23'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x11=0x1;}else{document[_0x14d2('0x21')]('line11')[_0x14d2('0x20')][_0x14d2('0x16')]='black';x11=0x1;}document[_0x14d2('0x21')](_0x14d2('0x23'))[_0x14d2('0x2')]=!![];check7();}function line12(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x5'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x12=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x5'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x12=0x1;}document[_0x14d2('0x21')](_0x14d2('0x5'))[_0x14d2('0x2')]=!![];check8();}function line13(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x1a'))[_0x14d2('0x20')]['background']=_0x14d2('0x1d');x13=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x1a'))['style']['background']='black';x13=0x1;}document[_0x14d2('0x21')]('line13')[_0x14d2('0x2')]=!![];check9();}function line14(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x13'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x14=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x13'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x14=0x1;}document[_0x14d2('0x21')](_0x14d2('0x13'))[_0x14d2('0x2')]=!![];check10();}function line15(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('line15')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x15=0x1;}else{document['getElementById']('line15')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');x15=0x1;}document[_0x14d2('0x21')](_0x14d2('0x7'))['disabled']=!![];check11();}function line16(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x3'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x16=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x3'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x16=0x1;}document[_0x14d2('0x21')](_0x14d2('0x3'))[_0x14d2('0x2')]=!![];check12();}function line17(){count++;if(count%0x2!=0x0){document['getElementById'](_0x14d2('0x15'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';x17=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x15'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x17=0x1;}document[_0x14d2('0x21')](_0x14d2('0x15'))[_0x14d2('0x2')]=!![];check13();}function line18(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x1f'))['style'][_0x14d2('0x16')]='black';x18=0x1;}else{document['getElementById'](_0x14d2('0x1f'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x18=0x1;}document[_0x14d2('0x21')]('line18')[_0x14d2('0x2')]=!![];check14();}function line19(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x17'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x19=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x17'))['style'][_0x14d2('0x16')]=_0x14d2('0x1d');x19=0x1;}document[_0x14d2('0x21')](_0x14d2('0x17'))[_0x14d2('0x2')]=!![];check15();}function line20(){count++;if(count%0x2!=0x0){document['getElementById']('line20')['style'][_0x14d2('0x16')]=_0x14d2('0x1d');x20=0x1;}else{document['getElementById'](_0x14d2('0x8'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');x20=0x1;}document[_0x14d2('0x21')](_0x14d2('0x8'))[_0x14d2('0x2')]=!![];check16();}function verti1(){count++;if(count%0x2!=0x0){document['getElementById']('l1')[_0x14d2('0x20')]['background']='black';l1=0x1;}else{document[_0x14d2('0x21')]('l1')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l1=0x1;}document['getElementById']('l1')[_0x14d2('0x2')]=!![];check1();}function verti2(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l2')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l2=0x1;}else{document[_0x14d2('0x21')]('l2')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l2=0x1;}document[_0x14d2('0x21')]('l2')[_0x14d2('0x2')]=!![];check2();}function verti3(){count++;if(count%0x2!=0x0){document['getElementById']('l3')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l3=0x1;}else{document['getElementById']('l3')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l3=0x1;}document[_0x14d2('0x21')]('l3')['disabled']=!![];check3();}function verti4(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l4')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');l4=0x1;}else{document['getElementById']('l4')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');l4=0x1;}document[_0x14d2('0x21')]('l4')['disabled']=!![];check4();}function verti5(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l5')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');l5=0x1;}else{document[_0x14d2('0x21')]('l5')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l5=0x1;}document[_0x14d2('0x21')]('l5')[_0x14d2('0x2')]=!![];check1();}function verti6(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l6')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l6=0x1;}else{document[_0x14d2('0x21')]('l6')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l6=0x1;}document['getElementById']('l6')[_0x14d2('0x2')]=!![];check2();}function verti7(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l7')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l7=0x1;}else{document['getElementById']('l7')['style'][_0x14d2('0x16')]=_0x14d2('0x1d');l7=0x1;}document['getElementById']('l7')[_0x14d2('0x2')]=!![];check3();}function verti8(){count++;if(count%0x2!=0x0){document['getElementById']('l8')[_0x14d2('0x20')]['background']=_0x14d2('0x1d');l8=0x1;}else{document[_0x14d2('0x21')]('l8')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l8=0x1;}document[_0x14d2('0x21')]('l8')[_0x14d2('0x2')]=!![];check4();}function verti9(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l9')[_0x14d2('0x20')][_0x14d2('0x16')]='black';l9=0x1;}else{document[_0x14d2('0x21')]('l9')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l9=0x1;}document[_0x14d2('0x21')]('l9')[_0x14d2('0x2')]=!![];check5();}function verti10(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l10')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l10=0x1;}else{document[_0x14d2('0x21')]('l10')[_0x14d2('0x20')][_0x14d2('0x16')]='black';l10=0x1;}document['getElementById'](_0x14d2('0xa'))[_0x14d2('0x2')]=!![];check6();}function verti11(){count++;if(count%0x2!=0x0){document['getElementById'](_0x14d2('0xc'))[_0x14d2('0x20')][_0x14d2('0x16')]='black';l11=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0xc'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l11=0x1;}document['getElementById'](_0x14d2('0xc'))[_0x14d2('0x2')]=!![];check7();}function verti12(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x11'))['style'][_0x14d2('0x16')]='black';l12=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x11'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l12=0x1;}document[_0x14d2('0x21')](_0x14d2('0x11'))[_0x14d2('0x2')]=!![];check8();}function verti13(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x1c'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l13=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x1c'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l13=0x1;}document[_0x14d2('0x21')]('l13')[_0x14d2('0x2')]=!![];check9();}function verti14(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0xb'))['style'][_0x14d2('0x16')]=_0x14d2('0x1d');l14=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0xb'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l14=0x1;}document[_0x14d2('0x21')]('l14')[_0x14d2('0x2')]=!![];check10();}function verti15(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0xe'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l15=0x1;}else{document[_0x14d2('0x21')]('l15')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l15=0x1;}document[_0x14d2('0x21')]('l15')[_0x14d2('0x2')]=!![];check11();}function verti16(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')]('l16')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l16=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x1b'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l16=0x1;}document['getElementById'](_0x14d2('0x1b'))['disabled']=!![];check12();}function verti17(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x1'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l17=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x1'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l17=0x1;}document[_0x14d2('0x21')]('l17')[_0x14d2('0x2')]=!![];check13();}function verti18(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x12'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l18=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x12'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l18=0x1;}document[_0x14d2('0x21')](_0x14d2('0x22'))[_0x14d2('0x2')]=!![];check14();}function verti19(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x1e'))['style']['background']=_0x14d2('0x1d');l19=0x1;}else{document[_0x14d2('0x21')]('l19')[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l19=0x1;}document[_0x14d2('0x21')](_0x14d2('0x1e'))[_0x14d2('0x2')]=!![];check15();}function verti20(){count++;if(count%0x2!=0x0){document[_0x14d2('0x21')](_0x14d2('0x24'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l20=0x1;}else{document[_0x14d2('0x21')](_0x14d2('0x24'))[_0x14d2('0x20')][_0x14d2('0x16')]=_0x14d2('0x1d');l20=0x1;}document[_0x14d2('0x21')](_0x14d2('0x24'))[_0x14d2('0x2')]=!![];check16();}
+</script>
 </head>
 <body>
-	<div class="top">
-		<p><strong>DOT</strong></p>
-		<p><strong>GAME</strong></p>
-	</div>
+  <div class="top">
+    <p><strong>DOT</strong></p>
+    <p><strong>GAME</strong></p>
+  </div>
 
-	<div id="dot1"></div>
-	<div id="dot2"></div>
-	<div id="dot3"></div>
-	<div id="dot4"></div>
-	<div id="dot5"></div>
-	<div id="dot6"></div>
-	<div id="dot7"></div>
-	<div id="dot8"></div>
-	<div id="dot9"></div>
-	<div id="dot10"></div>
-	<div id="dot11"></div>
-	<div id="dot12"></div>
-	<div id="dot13"></div>
-	<div id="dot14"></div>
-	<div id="dot15"></div>
-	<div id="dot16"></div>
-	<div id="dot17"></div>
-	<div id="dot18"></div>
-	<div id="dot19"></div>
-	<div id="dot20"></div>
-	<div id="dot21"></div>
-	<div id="dot22"></div>
-	<div id="dot23"></div>
-	<div id="dot24"></div>
-	<div id="dot25"></div>
+  <div id="dot1"></div>
+  <div id="dot2"></div>
+  <div id="dot3"></div>
+  <div id="dot4"></div>
+  <div id="dot5"></div>
+  <div id="dot6"></div>
+  <div id="dot7"></div>
+  <div id="dot8"></div>
+  <div id="dot9"></div>
+  <div id="dot10"></div>
+  <div id="dot11"></div>
+  <div id="dot12"></div>
+  <div id="dot13"></div>
+  <div id="dot14"></div>
+  <div id="dot15"></div>
+  <div id="dot16"></div>
+  <div id="dot17"></div>
+  <div id="dot18"></div>
+  <div id="dot19"></div>
+  <div id="dot20"></div>
+  <div id="dot21"></div>
+  <div id="dot22"></div>
+  <div id="dot23"></div>
+  <div id="dot24"></div>
+  <div id="dot25"></div>
 <div class="line" id="line">
-	<div id="l1" onclick="verti1()"></div>
-	<div id="l2" onclick="verti2()"></div>
-	<div id="l3" onclick="verti3()"></div>
-	<div id="l4" onclick="verti4()"></div>
-	<div id="l5" onclick="verti5()"></div>
-	<div id="l6" onclick="verti6()"></div>
-	<div id="l7" onclick="verti7()"></div>
-	<div id="l8" onclick="verti8()"></div>
-	<div id="l9" onclick="verti9()"></div>
-	<div id="l10" onclick="verti10()"></div>
-	<div id="l11" onclick="verti11()"></div>
-	<div id="l12" onclick="verti12()"></div>
-	<div id="l13" onclick="verti13()"></div>
-	<div id="l14" onclick="verti14()"></div>
-	<div id="l15" onclick="verti15()"></div>
-	<div id="l16" onclick="verti16()"></div>
-	<div id="l17" onclick="verti17()"></div>
-	<div id="l18" onclick="verti18()"></div>
-	<div id="l19" onclick="verti19()"></div>
-	<div id="l20" onclick="verti20()"></div>
+  <div id="l1" onclick="verti1()"></div>
+  <div id="l2" onclick="verti2()"></div>
+  <div id="l3" onclick="verti3()"></div>
+  <div id="l4" onclick="verti4()"></div>
+  <div id="l5" onclick="verti5()"></div>
+  <div id="l6" onclick="verti6()"></div>
+  <div id="l7" onclick="verti7()"></div>
+  <div id="l8" onclick="verti8()"></div>
+  <div id="l9" onclick="verti9()"></div>
+  <div id="l10" onclick="verti10()"></div>
+  <div id="l11" onclick="verti11()"></div>
+  <div id="l12" onclick="verti12()"></div>
+  <div id="l13" onclick="verti13()"></div>
+  <div id="l14" onclick="verti14()"></div>
+  <div id="l15" onclick="verti15()"></div>
+  <div id="l16" onclick="verti16()"></div>
+  <div id="l17" onclick="verti17()"></div>
+  <div id="l18" onclick="verti18()"></div>
+  <div id="l19" onclick="verti19()"></div>
+  <div id="l20" onclick="verti20()"></div>
 
 
-	<div id="line1" onclick="line1()"></div>
-	<div id="line2" onclick="line2()"></div>
-	<div id="line3" onclick="line3()"></div>
-	<div id="line4" onclick="line4()"></div>
-	<div id="line5" onclick="line5()"></div>
-	<div id="line6" onclick="line6()"></div>
-	<div id="line7" onclick="line7()"></div>
-	<div id="line8" onclick="line8()"></div>
-	<div id="line9" onclick="line9()"></div>
-	<div id="line10" onclick="line10()"></div>
-	<div id="line11" onclick="line11()"></div>
-	<div id="line12" onclick="line12()"></div>
-	<div id="line13" onclick="line13()"></div>
-	<div id="line14" onclick="line14()"></div>
-	<div id="line15" onclick="line15()"></div>
-	<div id="line16" onclick="line16()"></div>
-	<div id="line17" onclick="line17()"></div>
-	<div id="line18" onclick="line18()"></div>
-	<div id="line19" onclick="line19()"></div>
-	<div id="line20" onclick="line20()"></div>
+  <div id="line1" onclick="line1()"></div>
+  <div id="line2" onclick="line2()"></div>
+  <div id="line3" onclick="line3()"></div>
+  <div id="line4" onclick="line4()"></div>
+  <div id="line5" onclick="line5()"></div>
+  <div id="line6" onclick="line6()"></div>
+  <div id="line7" onclick="line7()"></div>
+  <div id="line8" onclick="line8()"></div>
+  <div id="line9" onclick="line9()"></div>
+  <div id="line10" onclick="line10()"></div>
+  <div id="line11" onclick="line11()"></div>
+  <div id="line12" onclick="line12()"></div>
+  <div id="line13" onclick="line13()"></div>
+  <div id="line14" onclick="line14()"></div>
+  <div id="line15" onclick="line15()"></div>
+  <div id="line16" onclick="line16()"></div>
+  <div id="line17" onclick="line17()"></div>
+  <div id="line18" onclick="line18()"></div>
+  <div id="line19" onclick="line19()"></div>
+  <div id="line20" onclick="line20()"></div>
 </div>
 
 
 
-	<input type="text" id="box1">
-	<input type="text" id="box2">
-	<input type="text" id="box3">
-	<input type="text" id="box4">
-	<input type="text" id="box5">
-	<input type="text" id="box6">
-	<input type="text" id="box7">
-	<input type="text" id="box8">
-	<input type="text" id="box9">
-	<input type="text" id="box10">
-	<input type="text" id="box11">
-	<input type="text" id="box12">
-	<input type="text" id="box13">
-	<input type="text" id="box14">
-	<input type="text" id="box15">
-	<input type="text" id="box16">
-	<div class="head">
-		<p>This is a dot Game</p>
-		<p>This is a 2 Player Game</p>
-		<p>Click on the line to draw it</p>
-		<p>After completing a box write a letter </p>
-		<p>in it for the identification of yours.</p>
-		<p>The player who make more boxes will win the game .</p>
-		<p><strong>Created By:</strong> Yash Kumar Saini</p>
-	</div>
+  <input type="text" id="box1">
+  <input type="text" id="box2">
+  <input type="text" id="box3">
+  <input type="text" id="box4">
+  <input type="text" id="box5">
+  <input type="text" id="box6">
+  <input type="text" id="box7">
+  <input type="text" id="box8">
+  <input type="text" id="box9">
+  <input type="text" id="box10">
+  <input type="text" id="box11">
+  <input type="text" id="box12">
+  <input type="text" id="box13">
+  <input type="text" id="box14">
+  <input type="text" id="box15">
+  <input type="text" id="box16">
+  <div class="head">
+    <p>This is a dot Game</p>
+    <p>This is a 2 Player Game</p>
+    <p>Click on the line to draw it</p>
+    <p>After completing a box write a letter </p>
+    <p>in it for the identification of yours.</p>
+    <p>The player who make more boxes will win the game .</p>
+    <p><strong>Created By:</strong> Yash Kumar Saini</p>
+  </div>
 
 </body>
 </html>
