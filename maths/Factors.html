@@ -1,33 +1,220 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Factor Calculator</title>
-	<link rel="stylesheet" type="text/css" href="Factors.css">
-	<script src="Factors.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
-<body>
-<div class="head">
-	<p><strong>FACTOR CALCULATOR</strong></p>
-	<p>Put the number in the box to calculate its factor.</p>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Mathematics</title>
+  </head>
+  <style>
+ 
+  .card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-color: black;
+    border-width: 2px;
+  }
+  .navbar
+  {
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+  }
+  .card-title
+  {
+    text-align: center;
+  }
+  footer{
+    background-color: black;
+    color:white;
+    height: 70px;
+  }
+  .head
+{
+	font-size: 20px;
+	text-align: center;
+	color:blue;
+}
+
+#number
+{
+	font-size: 20px;
+	border-color: black;
+	color:black;
+	border-radius: 15px;
+	width: 25%;
+	margin-left: 25%;
+	text-align: center;
+}
+#number1
+{
+	font-size: 20px;
+	border-color: black;
+	color:black;
+	border-radius: 15px;
+	width: 25%;
+	margin-left: 12.5%;
+	text-align: center;
+}
+#number2
+{
+	font-size: 20px;
+	border-color: black;
+	color:black;
+	border-radius: 15px;
+	width: 25%;
+	text-align: center;
+}
+#button
+{
+	font-size: 20px;
+	border-color: black;
+	background-color: black;
+	color:white;
+	border-radius: 15px;
+	width: 30%;
+	text-align: center;
+}
+#button:hover
+{
+	background-color: blue;
+}
+#result
+{
+	font-size: 20px;
+	border-color: black;
+	border-style: solid;
+	color:black;
+	border-width: 1px;
+	border-radius: 15px;
+	width: 100%;
+	text-align: center;
+}
+#result1
+{
+	font-size: 20px;
+	border-color: black;
+	border-style: solid;
+	color:black;
+	border-radius: 15px;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-width: 1px;
+}
+
+.reset button
+{
+	font-size: 20px;
+	text-align: center;
+	border-color: black;
+	background-color: black;
+	color:white;
+	border-radius: 15px;
+	width: 40%;
+}
+.reset button:hover
+{
+	background-color: blue;
+}
+.reset
+{
+	text-align: center;
+}
+.name
+{
+	font-size: 15px;
+	color: black;
+	text-align: right;
+}
+
+
+  </style>
+  <script>
+var _0x41fc=[':\x20\x20</strong>','\x20,\x20','result1','result','<br/>','value','number2','<strong>\x20\x20Total\x20Factors\x20=</strong>\x20','<strong>Factors\x20of\x20','getElementById','innerHTML'];(function(_0x33727e,_0x41fcae){var _0x7b694e=function(_0x599b9c){while(--_0x599b9c){_0x33727e['push'](_0x33727e['shift']());}};_0x7b694e(++_0x41fcae);}(_0x41fc,0x13c));var _0x7b69=function(_0x33727e,_0x41fcae){_0x33727e=_0x33727e-0x0;var _0x7b694e=_0x41fc[_0x33727e];return _0x7b694e;};var count=0x0;var a;var i;var p;var q;var j;var k;function Myfunction(){a=document['getElementById']('number')[_0x7b69('0x8')];document[_0x7b69('0x1')]('result')[_0x7b69('0x2')]=_0x7b69('0x0')+a+_0x7b69('0x3');for(i=0x1;i<=a;i++){if(a%i==0x0){document[_0x7b69('0x1')](_0x7b69('0x6'))[_0x7b69('0x2')]=document[_0x7b69('0x1')]('result')[_0x7b69('0x2')]+i+_0x7b69('0x4');count++;}}document[_0x7b69('0x1')](_0x7b69('0x6'))[_0x7b69('0x2')]=document[_0x7b69('0x1')](_0x7b69('0x6'))[_0x7b69('0x2')]+'<br/>'+_0x7b69('0xa')+count;if(count==0x2){document[_0x7b69('0x1')](_0x7b69('0x6'))[_0x7b69('0x2')]=document[_0x7b69('0x1')](_0x7b69('0x6'))[_0x7b69('0x2')]+_0x7b69('0x7')+'<strong>It\x27s\x20a\x20Prime\x20Number\x20</strong>';}count=0x0;}function Myfunction1(){p=0x1;q=document['getElementById'](_0x7b69('0x9'))[_0x7b69('0x8')];for(j=p;j<=q;j++){document[_0x7b69('0x1')](_0x7b69('0x5'))[_0x7b69('0x2')]=document[_0x7b69('0x1')](_0x7b69('0x5'))[_0x7b69('0x2')]+_0x7b69('0x0')+j+_0x7b69('0x3');for(k=0x1;k<=j;k++){if(j%k==0x0)document['getElementById'](_0x7b69('0x5'))[_0x7b69('0x2')]=document['getElementById'](_0x7b69('0x5'))[_0x7b69('0x2')]+k+_0x7b69('0x4');}document[_0x7b69('0x1')](_0x7b69('0x5'))[_0x7b69('0x2')]=document[_0x7b69('0x1')]('result1')[_0x7b69('0x2')]+_0x7b69('0x7');}}
+  </script>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning mb-3">
+  <a class="navbar-brand" href="https://yashkumarsaini1.github.io/youtube.github.io/">MATEMATICS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="../main/about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Student
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../student/class10.html">Class 10</a>
+          <a class="dropdown-item" href="../student/class12.html">Class 12</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../student/intc.html">Interactive Content</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../main/school.html" tabindex="-1" aria-disabled="false">School</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+  <div class="head">
+  <p><strong>FACTOR CALCULATOR</strong></p>
+  <p>Put the number in the box to calculate its factor.</p>
 </div>
 <input id="number" type="number" >
 <button  id="button" onclick=" Myfunction()">Enter</button>
 <p id="result"></p>
 
 <div class="head">
-	<p>Give the starting and ending values to calucate factors of a range.</p>
-	<p>If you choose large range, your device may take some time in processing.</p>
+  <p>Give the ending value to calucate factors of a range.</p>
+  <p>If you choose large range, your device may take some time in processing.</p>
 </div>
-<input id="number1" type="number" placeholder="Start">
+<button id="number1">1</button>
 <input id="number2" type="number" placeholder="End">
 <button  id="button" onclick=" Myfunction1()">Enter</button><br/><br/>
 <div class="reset">
-		<button onClick="window.location.reload();">RESET</button>
+    <button onClick="window.location.reload();">RESET</button>
 </div>
 <p id="result1"></p>
 <div class="name">
-		<p><strong>Created By: Yash Kumar Saini</strong></p>
-	</div>
-</body>
+    <p><strong>Created By: Yash Kumar Saini</strong></p>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p> E-mail : yashallendms@gmail.com</p>
+      </div>
+      <div class="col-sm-6">
+         &copy;  All rights are reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
