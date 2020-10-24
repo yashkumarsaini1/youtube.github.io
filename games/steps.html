@@ -38,12 +38,12 @@
     </style>
    
   </head>
-  <body onload="boxes()">
+  <body onload="boxes()" style="font-family: arial">
     <div id="tap">
-    <h5 class="mt-2" style="text-align: center;">Follow the Steps<p id="p"></p></h5>
+    <h5 class="mt-2" style="text-align: center;">Follow the Steps <span class="mr-2" style="text-align: right;font-size: 30px;color: green;" id="p"></span></h5>
     <h5 style="text-align: center;">Move Down for rules</h5>
     <button class="btn btn-dark mb-2" style="width: 40%;margin-left: 30%;" onclick="start()">Start</button>
-    <div id="big_box" class="mb-5">
+    <div id="big_box" class="mb-5 shadow-lg">
         <div id="move_box1" class="small_box" onclick="check(1)"  >
         </div>
         <div id="move_box2" class="small_box" onclick="check(2)"  >
@@ -135,7 +135,8 @@
         var count  = 0;
         var countt = 0;
         var time = 0;
-    
+        var level = 1;
+
         function check(box)
     {
         var element = "move_box" + box;
