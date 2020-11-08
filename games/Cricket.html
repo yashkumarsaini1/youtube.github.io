@@ -32,7 +32,7 @@
   	<div class="container  bg-white shadow-lg mt-5 mb-5" id="team_select">
   		<h3 style="text-align: center;" class="mt-3"> Player 1 Will Bat First </h3>
   		<div class="row bg-white shadow-lg ">
-  			<div class="col-sm-4 bg-white shadow-lg mt-2">
+  			<div class="col-sm-6 bg-white shadow-lg mt-2">
   				<h4 style="text-align: center;">Select Player 1 Team</h4>
   				<select id="p_1_team" class="btn btn-dark btn-block mt-2 mb-2 ">
 				  <option value="1">CSK</option>
@@ -45,9 +45,9 @@
 				  <option value="8">MI</option>
 				</select>
   			</div>
-  			<div class="col-sm-4 bg-white shadow-lg mt-2">
+  			<div class="col-sm-6 bg-white shadow-lg mt-2">
   				<h4 style="text-align: center;">Select Player 2 Team</h4>
-  				<select id="p_2_team" class="btn btn-secondary btn-block mt-2 mb-2 ">
+  				<select id="p_2_team" class="btn btn-dark  btn-block mt-2 mb-2 ">
 				  <option value="1">CSK</option>
 				  <option value="2" >RCB</option>
 				  <option value="3">DC</option>
@@ -59,10 +59,6 @@
 				</select>
 				<button class="btn btn-success float-right ml-3 mt-2 mb-3" onclick="select_teams()"> Start Match </button>
   			</div>
-  			<div class="col-sm-4 bg-white shadow-lg mt-2">
-  				<h4 style="text-align: center;">Set Runs if You are chasing </h4>
-  				<input type="number" min="1" id="chase_runs" name="chase_runs" class="form-control">
-  			</div>
   		</div>
   		<div class="row mt-2">
   			<div class="col-sm-6">
@@ -70,10 +66,6 @@
   				<ul>
   					<li> Toss and Decide who will bat first.</li><br>
   					<li> Select First Team which is batting and second for bowling.</li><br>
-  					<li> If you are giving target then leave the box empty and start.</li><br>
-  					<li> First Player 2 Select Bowler and then Player 1 will bat</li><br>
-  					<li> Switch the teams in 2nd Innings.</li><br>
-  					<li> Enter Runs to chase in second innings and put in the above box.</li><br>
   					<li> Select Your Favorite IPL team and play.</li><br>
   				</ul>
   			</div>
@@ -83,7 +75,7 @@
   	<div class="container mt-3 bg-white shadow-lg">
   		<div class="row">
   			<div class="col-sm-6">
-  <button class="btn btn-info mt-2 mb-2 " style="width: 40%;margin-left: 0%;" onclick="show_scorecard()" >Scorecard</button>
+  <button id="scorecard_btn" class="btn btn-dark btn-block mt-2 mb-2 " onclick="show_scorecard()" >1st Innings Scorecard</button>
 </div>
 <div class="col-sm-6">
 	<h4 id="target"></h4>  <span id="req_rr"></span>
@@ -178,7 +170,7 @@
     				Select Bowler
   				</button>
 			  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-			  	<a href="" style="display:  none;" id="bowler_select">123</a>
+			  	<a style="display:  none;" id="bowler_select">123</a>
 			  	</div>
 				</div>
 
@@ -254,7 +246,68 @@
   		</div>
   		</div>
   	</div></div>
-  	
+  	<div class="container mt-3 bg-white shadow-lg" id="score_btn" style="display: none;">
+  		<div class="row">
+  			<div class="col-sm-6">
+			  <button class="btn btn-block btn-dark mt-2 mb-2  " onclick="show_scorecard2()" >1st Innings Scorecard</button>
+			</div>
+			<div class="col-sm-6">
+
+			</div>
+			</div>
+</div>
+  	<div class="container mt-3 mb-3" id="scorecard2" style="display: none">
+  		
+  		<div class="row" >
+  			<div class="col-sm-6" >
+  				<div class="table-responsive bg-white shadow-lg"  >  					
+  					<h4 style="color:black;" class="ml-3 "><span id="bat2_team_name">-</span>  <span id="b2_sc" style="padding: 10px;" class="badge badge-dark mt-2">( 0 / 0) </span> <span  id="b2_ov" style="padding: 10px;" class="badge badge-dark mt-2"> ( 0 . 0 )</span></h4>
+  <table  class="table rounded" style="vertical-align: middle;font-size:12px;text-align: center;">
+	<tr>
+		<th scope="col" >Player</th>
+		<th scope="col" ><span class="badge badge-dark">Runs</span></th>
+		<th scope="col" ><span class="badge badge-secondary">Balls</span></th>
+		<th scope="col" ><span class="badge badge-success">SR</span></th>
+		<th scope="col" ><span class="badge badge-primary">4s</span></th>
+		<th scope="col" ><span class="badge badge-danger">6s</span></th>
+	</tr>
+	<tr id="score_batting2" style="display: none;">
+		<td>P Shaw<br> <span class="badge badge-danger" style="border-radius: 0px;">b siraj</span></td>
+		<td>50</td>
+		<td>40</td>
+		<td>125</td>
+		<td>5</td>
+		<td>2</td>
+	</tr>	
+
+	</table>
+</div>
+  			</div>
+  			<div class="col-sm-6 mt-3" >
+  				<div class="table-responsive bg-white shadow-lg"  >  					
+  					<h4 style="color:black;" class="ml-3"><span id="bowl2_team_name">-</span> <span style="color:orange">Bowling Scorecard</span></h4>
+  <table  class="table rounded" style="vertical-align: middle;font-size:12px;text-align: center;">
+	<tr>
+		<th scope="col" >Bowler</th>
+		<th scope="col"> Over </th>
+		<th scope="col" ><span class="badge badge-primary">Runs</span></th>
+		<th scope="col" ><span class="badge badge-danger">Wickects</span></th>
+		<th scope="col" ><span class="badge badge-success">Economy</span></th>
+	</tr>
+	<tr id="score_bowling2" style="display: none;">
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+
+	</table>
+</div>
+  			</div>
+  		</div>
+  	</div>
   	<footer>
   <div class="container">
     <div class="row">
@@ -274,7 +327,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     -->
     <script type="text/javascript">
-    	
+    	var coun_inn = 0;
     	var last_bowler = 0;
     	var strike = 1;
     	var wickect =0;
@@ -333,15 +386,26 @@
  		var team1 = [...team4];
     	var team2 = [...team5];
 var chase_runs = 0;
-
+var c_scorecard2 = 0;
+var a;
+var b;
 var batsman = [];
+var batsman_after = [];
+var bowler_after = [];
 var c_p= 1;
 var bowler = [];
+var Switch_value = 0;
+
  function select_teams()
 {
-	var a = document.getElementById("p_1_team").value;
-	var b = document.getElementById("p_2_team").value;
-	chase_runs = document.getElementById("chase_runs").value;
+	if(Switch_value==0){
+		 a = document.getElementById("p_1_team").value;
+		 b = document.getElementById("p_2_team").value;}
+		else
+		{
+			a = document.getElementById("p_2_team").value;
+			b = document.getElementById("p_1_team").value;
+		}
 
 	if(a==b)
 	{
@@ -508,6 +572,16 @@ for(var i=0;i<11;i++)
     		else
     		{
     			document.getElementById('scorecard').style.display = "block";
+    		}
+    	}
+    	function show_scorecard2()
+    	{
+    		c_scorecard2++;
+    		if(c_scorecard2%2!=0){
+    		    		document.getElementById('scorecard2').style.display = "none";}
+    		else
+    		{
+    			document.getElementById('scorecard2').style.display = "block";
     		}
     	}
     	function c_ball()
@@ -1001,6 +1075,8 @@ for(var i=0;i<11;i++)
     			var a = (bowler[last_bowler].b_run*6)/bowler[last_bowler].b_balls;
     				bowler[last_bowler].b_eco = a.toFixed(2);
     				document.getElementById('b_eco').innerHTML=bowler[last_bowler].b_eco;
+
+    				if(wickect!=10){
     			if(strike==1)
     			{
     					if(c_run==4)
@@ -1170,11 +1246,18 @@ for(var i=0;i<11;i++)
     			    			}
     			    		}
     			 }
+    			}
     			if(click == 20)
     			{
+    				if(coun_inn==0){
+    				    				switch_innings();}
+    				else
+    				{
+    					document.getElementById("dropdownMenuButton").style.display = "none";
+    				}
+    				    				coun_inn++;
 
     				document.getElementById('hit').style.display ="none";
-    				document.getElementById('dropdownMenuButton').style.display ="none";
 
     				document.getElementById("c_four").innerHTML = "4s - "+four;
     				document.getElementById("c_six").innerHTML = "6s - "+six;
@@ -1194,8 +1277,14 @@ for(var i=0;i<11;i++)
     			}
     			if(wickect==10)
     			{
+    				if(coun_inn==0){
+    				    				switch_innings();}
+    				else
+    				{
+    					document.getElementById("dropdownMenuButton").style.display = "none";
+    				}
+    				    				coun_inn++;
     				document.getElementById('hit').style.display ="none";
-    				document.getElementById('dropdownMenuButton').style.display ="none";
 
     				document.getElementById("c_four").innerHTML = "4s - "+four;
     				document.getElementById("c_six").innerHTML = "6s - "+six;
@@ -1241,10 +1330,7 @@ $(function(){
     	
     	$(function(){
     	for(var k=4;k<11;k++){
-    	$("#bowler_select").after("<a class='dropdown-item' onclick = "+"Select_bowler('"+k+"')"+">"+team2[k]+"</a>");
-
-
-    		    		    			
+    	$("#bowler_select").after("<a class='dropdown-item bowler_list' onclick = "+"Select_bowler('"+k+"')"+">"+team2[k]+"</a>");  		    			
     	}});
 
     	$(function(){
@@ -1278,6 +1364,102 @@ $(function(){
 		    document.getElementById("b_eco").innerHTML = bowler[check].b_eco;
 		    document.getElementById("b_over").innerHTML = bowler[check].b_over;
 		}
+    	}
+
+    	function switch_innings()
+    	{
+    		batsman_after = [...batsman];
+    		bowler_after = [...bowler];
+
+    		document.getElementById("scorecard2").style.display = "block";
+    		document.getElementById("score_btn").style.display = "block";
+    		document.getElementById("player2").style.display = "table-row";
+    		document.getElementById("star_1").style.display = "inline";
+    		document.getElementById("star_2").style.display = "none";
+
+
+
+
+
+    		$(function(){
+    	for(var j=0;j<11;j++){
+    	$("#score_batting2").before("<tr><td>"+batsman_after[j].b_name+"<br><span class='badge badge-"+batsman_after[j].b_status+"' style='border-radius: 0px;'>"+ batsman_after[j].b_out+"</span></td><td>"+batsman_after[j].b_run+"</td><td>"+batsman_after[j].b_balls+"</td><td>"+batsman_after[j].b_sr+"</td><td>"+batsman_after[j].b_four+"</td><td>"+batsman_after[j].b_six+"</td></tr>");    		    		    			
+    	}});
+
+    	$(function(){
+    	for(var j=4;j<11;j++){
+    	$("#score_bowling2").after("<tr><td>"+bowler_after[j].b_name+"</td><td>"+bowler_after[j].b_over+"."+bowler_after[j].b_ball+"</td><td>"+bowler_after[j].b_run+"</td><td>"+bowler_after[j].b_wick+"</td><td>"+bowler_after[j].b_eco+"</td></tr>");    		    		    			
+    	}});
+
+    	batsman.length = 0;
+    	bowler.length = 0;
+
+
+		chase_runs = live_score+1;
+ 		last_bowler = 0;
+    	 strike = 1;
+    	 wickect =0;
+    	 four = 0;
+    	 six = 0;
+    	 over_score=0;
+    	 live_score =0;
+    	 click =0;
+    	 ball_1 = 0;
+    	 ball_2 = 0;
+    	 ball_3 = 0;
+    	 ball_4 = 0;
+    	 ball_5 = 0;
+    	 ball_6 = 0;
+    	 ball =0;
+    	 c_run =0 ;
+    	 total =0;
+    	 total_balls=0;
+    	 p_ship = 0;
+    	 p_ship_ball = 0;
+    	 ball1 ;
+    	 ball2 ;
+    	 ball3;
+    	 ball4;
+    	 ball5;
+    	 ball6;
+    	 b1_crr = 0;
+    	 score;
+    	 rotate=  0;
+    	 c_scorecard = 0;
+    	 p1_run = 0;
+    	 p1_ball = 0;
+    	 p1_four = 0;
+    	 p1_six = 0;
+
+    	 p2_run = 0;
+    	 p2_ball = 0;
+    	 p2_four = 0;
+    	 p2_six = 0;
+    	 p1_sr = 0;
+    	 p2_sr = 0;
+    	 b1_ps = 0;
+    	 batting1 = 0;
+    	 batting2 = 1;
+ 		c_p= 1;
+    	Switch_value = 1;
+    	$(function(){
+    	$(".bowler_list").remove();});
+    	document.getElementById("dropdownMenuButton").style.display = "block";
+    	document.getElementById("bat2_team_name").innerHTML = document.getElementById("bat_team_name1").innerHTML;
+    	document.getElementById("b2_sc").innerHTML = document.getElementById("b1_sc").innerHTML;
+    	document.getElementById("b2_ov").innerHTML = document.getElementById("b1_ov").innerHTML;
+    	document.getElementById("bowl2_team_name").innerHTML = document.getElementById("bowl_team_name").innerHTML;
+    	document.getElementById("scorecard_btn").innerHTML ="2nd Innings Scorecard";
+
+    	document.getElementById("b1_sc").innerHTML = "( 0 / 0 )";
+    	document.getElementById("b1_ov").innerHTML = "( 0 . 0 )";
+    	document.getElementById("b1_crr").innerHTML = "CRR 0.00";
+    	document.getElementById("b1_sc").innerHTML = "( 0 / 0 )";
+    	document.getElementById("b1_ps").style.display = "none";
+
+
+    	select_teams();
+
     	}
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
