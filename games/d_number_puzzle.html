@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Number Puzzle</title>
+    <style type="text/css">
+      .btn1
+      {
+        width: 32.5%;
+        height: 100px;
+        border-width: 1px;
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+    </style>
+<body style="font-family: arial;" onload="random_num()">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 bg-white shadow-lg mt-3">
+
+  <h2 style="text-align: center;color: blue;">NUMBER PUZZLE</h2>
+  <p>Arrange these numbers in this order.</p>
+  <div>
+        <div class="row1">
+          <button class="btn btn-dark" style="background-color: white;color: black;" >1</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >2</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >3</button>
+        </div>
+        <div class="row2">
+          <button class="btn btn-dark" style="background-color: white;color: black;" >4</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >5</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >6</button>
+        </div>
+        <div class="row3">
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >7</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >8</button>
+          <button class="btn  btn-dark" style="background-color: white;color: black;" >..</button>
+        </div>
+      </div>
+  <p>Click on the block to move it </p>
+  <p>Only Vertical and Horizontal Movement of block is allowed</p>
+  <div class="row">
+    <div class="col-sm-4">
+  <button class="btn btn-dark btn-block" onClick="window.location.reload();">New Puzzle</button>
+</div>
+<div class="col-sm-4">
+  <button class="btn btn-warning btn-block" onclick="again()">Again <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+</svg></button>
+  </div>
+<div class="col-sm-4">
+      <div id="result" class="alert alert-success" style="text-align: center;display: none;"></div>
+    </div>
+  </div>
+    </div>
+
+      <div class="col-sm-6 mt-3  bg-white shadow-lg">
+        <div class="row1 mt-4">
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b1" onclick="change('1')">5</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b2" onclick="change('2')">2</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b3" onclick="change('3')">7</button>
+        </div>
+        <div class="row2">
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b4" onclick="change('4')">4</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b5" onclick="change('5')">1</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b6" onclick="change('6')">6</button>
+        </div>
+        <div class="row3 mb-4">
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b7" onclick="change('7')">3</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b8" onclick="change('8')">8</button>
+          <button class="btn btn1 btn-dark" style="background-color: white;color: black;" id="b9" onclick="change('9')"> </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  <footer>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-sm-6">
+        <p style="text-align: center;"> E-mail : yashallendms@gmail.com</p>
+      </div>
+      <div class="col-sm-6 mb-3" style="text-align: center;">
+         &copy;  All rights are reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script type="text/javascript">
+
+
+    let arr = [1,2,3,4,5,6,7,8];
+    function shuffle(array) {
+      array.sort(() => Math.random() - 0.5);
+      }
+    function random_num()
+    {
+      shuffle(arr);
+      for(var i=1;i<9;i++)
+      {
+        var z = "b"+i;
+        var y = i-1;
+        document.getElementById(z).innerHTML = arr[y];
+      }
+    }
+    function again()
+    {
+       for(var i=1;i<9;i++)
+      {
+        var z = "b"+i;
+        var y = i-1;
+        document.getElementById(z).innerHTML = arr[y];
+      }
+      document.getElementById("b9").innerHTML = " ";
+      count=0;
+      document.getElementById("result").innerHTML ="Steps: " + count;
+    }
+    var count = 0;
+    var bx = 0;
+    var x1 = document.getElementById("b1").innerHTML;
+    var x2 = document.getElementById("b2").innerHTML;
+    var x3 = document.getElementById("b3").innerHTML;
+    var x4 = document.getElementById("b4").innerHTML;
+    var x5 = document.getElementById("b5").innerHTML;
+    var x6 = document.getElementById("b6").innerHTML;
+    var x7 = document.getElementById("b7").innerHTML;
+    var x8 = document.getElementById("b8").innerHTML;
+    var x9 = document.getElementById("b9").innerHTML;
+
+
+    function change(box)
+    {
+     x1 = document.getElementById("b1").innerHTML;
+     x2 = document.getElementById("b2").innerHTML;
+     x3 = document.getElementById("b3").innerHTML;
+     x4 = document.getElementById("b4").innerHTML;
+     x5 = document.getElementById("b5").innerHTML;
+     x6 = document.getElementById("b6").innerHTML;
+     x7 = document.getElementById("b7").innerHTML;
+     x8 = document.getElementById("b8").innerHTML;
+     x9 = document.getElementById("b9").innerHTML;
+
+    if(x1== " ")
+    {
+      bx = 1;
+    }
+    else if (x2==" ")
+    {
+      bx = 2;
+    }
+     else if (x3==" ")
+    {
+      bx = 3;
+    }
+     else if (x4==" ")
+    {
+      bx = 4;
+    }
+     else if (x5==" ")
+    {
+      bx = 5;
+    }
+     else if (x6==" ")
+    {
+      bx = 6;
+    }
+     else if (x7==" ")
+    {
+      bx = 7;
+    }
+     else if (x8==" ")
+    {
+      bx = 8;
+    }
+     else if (x9==" ")
+    {
+      bx = 9;
+    }
+      for(var i=1;i<10;i++)
+      {
+        var y = "b"+i;
+        document.getElementById(y).style.backgroundColor = "white";
+      }
+      var x = "b"+box;
+      document.getElementById(x).style.backgroundColor = "lightgreen";
+
+      if(box==1)
+      {
+        if(bx==2 || bx==4)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+
+      else if(box==2)
+      {
+        if(bx==1||bx==3||bx==5)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+
+      else if(box==3)
+      {
+        if(bx==2||bx==6)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+
+      else if(box==4)
+      {
+        if(bx==1||bx==7||bx==5)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+
+      else if(box==5)
+      {
+        if(bx==2||bx==4||bx==6||bx==8)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+
+      else if(box==6)
+      {
+        if(bx==3||bx==5||bx==9)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+       else if(box==7)
+      {
+        if(bx==4||bx==8)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+      else if(box==8)
+      {
+        if(bx==5||bx==7||bx==9)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+      else if(box==9)
+      {
+        if(bx==6||bx==8)
+        {
+          var p = "b"+bx;
+          var q = "b"+box;
+          document.getElementById(p).innerHTML = document.getElementById(q).innerHTML;
+          document.getElementById(q).innerHTML = " ";
+        }
+      }
+      count++;
+      check();
+    }
+    function check()
+    {
+    document.getElementById("result").innerHTML ="Steps: " + count;
+    document.getElementById("result").style.display = "block";
+     x1 = document.getElementById("b1").innerHTML;
+     x2 = document.getElementById("b2").innerHTML;
+     x3 = document.getElementById("b3").innerHTML;
+     x4 = document.getElementById("b4").innerHTML;
+     x5 = document.getElementById("b5").innerHTML;
+     x6 = document.getElementById("b6").innerHTML;
+     x7 = document.getElementById("b7").innerHTML;
+     x8 = document.getElementById("b8").innerHTML;
+     x9 = document.getElementById("b9").innerHTML;
+
+
+      if ((x1=="1")&&(x2=="2")&&(x3=="3")&&(x4=="4")&&(x5=="5")&&(x6=="6")&&(x7=="7")&&(x8=="8")) 
+    {
+        document.getElementById("result").innerHTML ="You have completed this puzzle"+"<br/>"+"Steps: " + count;
+    }
+      
+    }
+  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
