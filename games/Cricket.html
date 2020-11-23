@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -344,7 +345,7 @@
     	var ball_6 = 0;
     	var ball =0;
     	var c_run =0 ;
-    	var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,3,4,4,4,4,4,4,4,6,6,6,6,'W','W','W'];
+    	var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,4,6,6,6,4,4,4,6,'W','W','W'];
     	var total =0;
     	var total_balls=0;
     	var p_ship = 0;
@@ -995,6 +996,17 @@ for(var i=0;i<11;i++)
     		    		    			$("#e_over").after("<tr><th scope='col'  style='vertical-align: middle;font-size: 12px;'>( "+z+" ) "+bowler[last_bowler].b_name+"<br><span class='badge badge-dark' >"+over_score+" runs</span></th><th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b1+"'>"+ball1+"</span></th>		<th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b2+"'>"+ball2+"</span></th>		<th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b3+"'>"+ball3+"</span></th><th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b4+"'>"+ball4+"</span></th>		<th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b5+"'>"+ball5+"</span></th>		<th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b6+"'>"+ball6+"</span></th>	</tr>");
     		    		    			
     		    		    		});  }
+                        if(click>=12&&wickect<6)
+                        {
+                          myArray.length = 0;
+                          myArray = [0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,4,4,4,6,6,6,4,4,4,6,6,6,'W','W','W'];
+
+                        }
+                        else if(wickect>6)
+                        {
+                          myArray.length = 0;
+                        myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,6,'W','W'];
+                        }
     		    		click++;
     		    		  	}
 
@@ -1030,10 +1042,7 @@ for(var i=0;i<11;i++)
     					if(c_p<11){
     					batsman[batting1].b_out = "batting";
     					batsman[batting1].b_status = "success";}
-    					if(wickect==10)
-    					{
-    						document.getElementById("player1").style.display = "none";
-    					}
+    					
     					document.getElementById("p_name1").innerHTML = team1[c_p];
     					document.getElementById("p_run1").innerHTML = p1_run +" ( "+p1_ball +" ) ";
 		    			document.getElementById('p_four1').innerHTML = p1_four;
@@ -1393,6 +1402,8 @@ $(function(){
 
     	batsman.length = 0;
     	bowler.length = 0;
+       myArray.length = 0;
+      myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,4,6,6,6,4,4,4,6,'W','W','W'];
 
 
 		chase_runs = live_score+1;
