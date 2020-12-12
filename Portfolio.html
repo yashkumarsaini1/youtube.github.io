@@ -156,12 +156,37 @@
 
 .s_icon
 {
-    width: 80px;
+    width:80px;
     height: auto;
+    width: 80px;
+    background-color: #f1f1f1;
+    border-radius: 30%;
+    box-shadow: 5px 5px 20px -5px ;
+    
 }
 .s_icon:hover
 {
     cursor: pointer;
+    animation-name: shadowmove;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes shadowmove {
+  0% 
+  {
+    box-shadow: 5px 5px 20px -5px ;
+    width: 80px;
+  }
+  5% 
+  {
+    box-shadow: 5px 5px 40px -5px blue;
+    width: 95px;
+  }
+  100% 
+  {
+    box-shadow: 5px 5px 40px -5px blue;
+    width: 95px;
+  }
 }
     </style>
 
@@ -329,23 +354,32 @@
         <div style="height: 10px"></div>
        
         <div class="container-fluid" style="margin-top: 20px;padding: 20px;">
-            <h1 style="text-align: center;" data-aos="zoom-in-down">GET IN TOUCH</h1>
+            <h1 style="text-align: center;" data-aos="zoom-in-down"><b>GET IN TOUCH</b></h1>
             <div class="row">
             <div class="col-sm-5" >
                 <img src="https://img.freepik.com/free-vector/hotline-operator-advises-client_7737-1766.jpg?size=626&ext=jpg" class="img-fluid"  data-aos="zoom-in-down"  >
             </div>
-            <div class="col-sm-7" style="margin-top: 80px;">
-                <h1 style="text-align: center;" data-aos="zoom-in-down">CONNECT WITH ME</h1>
+            <div class="col-sm-7" style="margin-top: 40px; text-align: center;">
+                <h1 style="text-align: center;" data-aos="zoom-in-down"><b>CONNECT WITH ME</b></h1>
                 <div class="row">
-                    <div class ="ski">
+                    <div class ="ski" style="margin-top: 30px;">
                     <div>
-                    <a href="#"><img class="s_icon" src="https://img.icons8.com/color/144/000000/instagram-new.png" data-aos="zoom-in-down"/></a>
+                    <a href="#" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/instagram-new.png" data-aos="zoom-in-down"></a>
                 </div>
                 <div>
-                    <a href="mailto:yashallendms@gmail.com"><img class="s_icon" src="https://img.icons8.com/color/144/000000/apple-mail.png" data-aos="zoom-in-up"/></a>
+                    <a href="mailto:yashallendms@gmail.com" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/apple-mail.png" data-aos="zoom-in-down"></a>
                 </div>
                 <div>
-                    <a href="https://github.com/yashkumarsaini1"><img class="s_icon" src="https://img.icons8.com/color/144/000000/github--v1.png" data-aos="zoom-in-down"/></a>
+                    <a href="https://github.com/yashkumarsaini1" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/github--v1.png" data-aos="zoom-in-down"></a>
+                </div>
+            </div>
+            <div class="ski" style="margin-top: 30px;">
+                
+                <div>
+                    <a href="#" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/twitter.png" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: 35%;"></a>
+                </div>
+                <div>
+                    <a href="https://www.sololearn.com/Profile/17462625" class="myu"><img class="s_icon" src="https://i.imgur.com/Cf0SfOk.jpg" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: -35%;"></a>
                 </div>
             </div>
                 </div>
@@ -366,6 +400,7 @@
     <a href="https://icons8.com/icon/3AYCSzCO85Qw/mail">Mail icon by Icons8</a>
     <a href="https://icons8.com/icon/32323/instagram">Instagram icon by Icons8</a>
     <a href="https://icons8.com/icon/63777/github">GitHub icon by Icons8</a>
+    <a href="https://icons8.com/icon/13963/twitter">Twitter icon by Icons8</a>
     </div>
 
 
