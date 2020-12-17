@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Tab Icon Image -->
+
+    <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/photos/cricket-ball-picture-id871741538?k=6&m=871741538&s=170667a&w=0&h=fRQJ6XG28PkMvFKh-HYNYzkXWZHb07MuyNe69O40aK8=">
+
+    <!-- Animation -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+     <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <title>Player Detail</title>
+    <style type="text/css">
+    body
+    {
+        font-family:'Roboto', sans-serif;
+    }
+   .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .flex-container > div {
+      margin: 2px;
+}
+    input[type="search"], input[type="password"], textarea, select 
+    { 
+          outline: none;
+    }
+    .name
+    {
+        width: 100%;
+        border-style: solid;
+        border-width: 0px;
+        padding: 5px;
+        border-bottom-width: 1px;
+
+    }
+    .s_btn
+    {
+      display: inline;
+      color: black;
+      border-radius: 0px;
+      background-color: white;
+      border-radius: 50px;
+    }
+    .s_btn1
+    {
+      display: inline;
+      color: black;
+      border-radius: 0px;
+      background-color: white;
+    }
+    .img_icon
+    {
+      height: 60px;
+      width: 60px;
+      border-radius: 100px;
+
+    }
+    .box1{
+      width: 20px;
+      margin-top: -10px;
+      height: 20px;
+      margin-left: 0px;
+      background-color: blue;
+    }
+    .line1{
+      width: 100%;
+      height: 1px;
+      background-color: black;
+    }
+    .line2{
+      width: 60%;
+      margin-left: 40%;
+      height: 1px;
+      margin-bottom: 10px;
+      background-color: black;
+    }
+    .line3{
+      width: 30%;
+      margin-left: 70%;
+      height: 1px;
+      margin-bottom: 10px;
+      background-color: black;
+    }
+
+    </style>
+  </head>
+  <body>
+<div class="container mt-2 mb-3">
+  <div class="row">
+    <div class="col-sm-6 d-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="margin-top: 5px;margin-right:5px;color: blue">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+        </svg>
+        <input class="form-group name me-2" id="name" type="search" placeholder="Cricketer Name Here..." aria-label="Search" required>
+        <button class="btn btn-outline-primary s_btn " type="submit" onclick="playerE()">Search</button>
+  </div>
+  </div>
+</div>
+<div class="container" style="padding: 20px;" id="home">
+  <div class="row d-flex">
+    <div class="col-sm-5">
+      <img src="https://media.istockphoto.com/vectors/magnifying-glass-search-people-vector-id871028496?k=6&m=871028496&s=612x612&w=0&h=vpYpp547Arpm03MfYcdqcaqNqxrRtg7iAK7vYnDlVGU=" class="img-fluid">
+    </div>
+    <div class="col-sm-7">
+      <h1 data-aos="fade-down" style="margin-top: 10px;"><b>Search Your Favourite Cricketer Details</b></h1>
+                <div class="box1"></div>
+                <div class="line1"></div>
+                <h5  data-aos="zoom-in" style="margin-top: 10px;margin-bottom: 40px;" >Just put the name of the cricketer in the above section <br> to search that circketer. <br> You get details of that cricketer on viewing its profile.<br> In the Profile section you get the matches he played in different formats like T-20s , ODIs and Tests in his career. </h5>
+                <div data-aos="fade-down" class="line5"></div>
+                <div data-aos="fade-up" class="line6"></div>
+                <h4 data-aos="fade-down" style="text-align: right;margin-top: 5px;" >Search Your Favourite One.</h4>
+
+                        <div  class="line2"></div>
+                    <div  class="line3"></div>
+    </div>
+  </div>
+</div>
+<div class="container" style="padding: 20px;" id="all_names">
+    <div class="row">
+      <div id="player"></div>
+    </div>
+</div>
+
+<!-- Player Introduction Start -->
+
+<div class=" animated fadeInDown container" style="padding: 20px; display: none;" id="intro">
+  <div class=' row d-flex' >
+    <div class=' col-sm-5' style='text-align: center;margin-top: 60px;'>
+
+    <div class=' line1'></div>
+
+    <div class=' line2' style='margin-left: 0%;margin-top: 10px;'></div>
+    <div class=' line3' style='margin-left: 0%;margin-top: 10px;'></div>
+    <div class=' box1' style='margin-top: 0px;margin-left: 90%;'></div>
+    <img src='' id="img_src" style='width: 250px;height: 250px;border-radius: 250px;margin-bottom: 20px;box-shadow: 0 0 5px;'>
+    <h1><b><span id="player_name"></span></b></h1>
+    <div class=' box1' style='margin-right: 0px'></div>
+    <div class=' line3'></div>
+    <div class=' line2'></div>
+    <div class=' line1'></div>
+  </div>
+  <div class=' col-sm-7'>
+
+    <div class=' line1'></div>
+    <h1 style='margin-top: 20px;text-align: center;'><b><span id="full_name"></span> </b></h1> 
+    <div class=' line2' style='background-color: red;'></div>
+    <p><b>Born On : </b> <span id="born"></span>  </p>
+    <p><b>Birth place : </b> <span id="birth_place"></span>  </p>
+    <div class=' box1' style='margin-left: 92%;background-color: red;'></div>
+    <div class=' line1' style='margin-bottom: 10px;'></div>
+    <h4><b>Country : </b><span id="country"></span> </h4>
+    <p><b>Batting Style: </b><span id="battingStyle"></span>  </p>
+    <p><b>Bowling Style: </b> <span id="bowlingStyle"></span> </p>
+    <p><b>Playing Role: </b> <span id="playing_role"></span> </p> 
+
+    <div class=' box1' style='margin-left: 92%;background-color: red;'></div>
+    <div class=' line1' style='margin-bottom: 10px;'></div>
+    <p><b>About: </b> <span id="about"></span> </p>
+
+    <div class=' box1' style='background-color: black;'></div>
+    <div class=' line1' style='margin-bottom: 10px;'></div>
+  </div>
+  </div>
+</div>
+
+<!-- Player Introduction Stop -->
+
+<!-- Batting Summary Start -->
+
+<div class="container" style="padding: 20px;display: none;" id="all_details">
+  <div class="mt-5"><h1 style="text-align: center;"><b><b>BATTING SUMMARY</b></b></h1></div>
+  <div class="box1" ></div><div class="line2"></div><div class="line3"></div><div class="line1"></div>
+  <div class="row d-flex"  style="margin-top: 30px;">
+
+    <div class="col-sm-4 mt-4" >
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+        <div style="text-align: center;"><img src="https://st3.depositphotos.com/9543826/14526/v/1600/depositphotos_145266097-stock-illustration-letter-and-digit-t20-logo.jpg" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>T - 20s</h1></div>
+        <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="t1"></span> </h3>
+          <h3><b>Innings : </b><span id="t2"></span> </h3>
+          <h5><b>Runs : </b><span id="t3"></span> </h5>
+          <h5><b>Balls Faced : </b><span id="t4"></span> </h5>
+          <h4><b>Strike Rate : </b><span id="t5"></span> </h4>
+          <h4><b>Average : </b><span id="t6"></span></h4>
+          <h5><b>Catches : </b><span id="t7"></span></h5>
+          <h5><b>50s : </b><span id="t8"></span></h5>
+          <h5><b>100s : </b><span id="t9"></span></h5>
+          <h5><b>Not Out : </b> <span id="t10"></span></h5>
+          <h4><b>Highest Score : </b> <span id="t11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+
+        </div>
+      </div>
+    <div class="col-sm-4 mt-4 ">
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+      <div style="text-align: center;"><img src="https://media.istockphoto.com/vectors/cricket-leather-ball-white-realistic-vector-vector-id1160516744?b=1&k=6&m=1160516744&s=612x612&w=0&h=paz2sGY_DYhqNJ8y-TADhOGwlbJYwKNgabL4t9OlQgo=" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>ODIs</h1></div>
+      <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="o1"></span> </h3>
+          <h3><b>Innings : </b><span id="o2"></span> </h3>
+          <h5><b>Runs : </b><span id="o3"></span> </h5>
+          <h5><b>Balls Faced : </b><span id="o4"></span> </h5>
+          <h4><b>Strike Rate : </b><span id="o5"></span> </h4>
+          <h4><b>Average : </b><span id="o6"></span></h4>
+          <h5><b>Catches : </b><span id="o7"></span></h5>
+          <h5><b>50s : </b><span id="o8"></span></h5>
+          <h5><b>100s : </b><span id="o9"></span></h5>
+          <h5><b>Not Out : </b> <span id="o10"></span></h5>
+          <h4><b>Highest Score : </b> <span id="o11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+      </div>
+      </div>
+    <div class="col-sm-4 mt-4 ">
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+      <div style="text-align: center;"><img src="https://media.istockphoto.com/photos/cricket-ball-picture-id871741538?k=6&m=871741538&s=170667a&w=0&h=fRQJ6XG28PkMvFKh-HYNYzkXWZHb07MuyNe69O40aK8=" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>TESTs</h1></div>
+      <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="te1"></span> </h3>
+          <h3><b>Innings : </b><span id="te2"></span> </h3>
+          <h5><b>Runs : </b><span id="te3"></span> </h5>
+          <h5><b>Balls Faced : </b><span id="te4"></span> </h5>
+          <h4><b>Strike Rate : </b><span id="te5"></span> </h4>
+          <h4><b>Average : </b><span id="te6"></span></h4>
+          <h5><b>Catches : </b><span id="te7"></span></h5>
+          <h5><b>50s : </b><span id="te8"></span></h5>
+          <h5><b>100s : </b><span id="te9"></span></h5>
+          <h5><b>Not Out : </b> <span id="te10"></span></h5>
+          <h4><b>Highest Score : </b> <span id="te11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1"></div><div class="line1" style="margin-bottom: 10px;"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Batting Summary End -->
+
+<!-- Bowling Summary Start -->
+
+<div class="container" style="padding: 20px;display: none;" id="bowling_all">
+  <div class="mt-5"><h1 style="text-align: center;"><b>BOWLING SUMMARY</b></h1></div>
+  <div class="box1" style="background-color: orange"></div><div class="line2"></div><div class="line3"></div><div class="line1"></div>
+  <div class="row d-flex"  style="margin-top: 30px;">
+
+    <div class="col-sm-4 mt-4" >
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+        <div style="text-align: center;"><img src="https://st3.depositphotos.com/9543826/14526/v/1600/depositphotos_145266097-stock-illustration-letter-and-digit-t20-logo.jpg" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>T - 20s</h1></div>
+        <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="bt1"></span> </h3>
+          <h3><b>Innings : </b><span id="bt2"></span> </h3>
+          <h5><b>Wickets:  </b><span id="bt3"></span> </h5>
+          <h5><b>Balls Delivered: </b><span id="bt4"></span> </h5>
+          <h4><b>Runs : </b><span id="bt5"></span> </h4>
+          <h4><b>Average : </b><span id="bt6"></span></h4>
+          <h5><b>Economy : </b><span id="bt7"></span></h5>
+          <h5><b>Strike Rate : </b><span id="bt8"></span></h5>
+          <h5><b>5 Wickets : </b><span id="bt9"></span></h5>
+          <h5><b>Best Bowl In Innings : </b> <span id="bt10"></span></h5>
+          <h4><b>Best Bowl In Match: </b> <span id="bt11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+
+        </div>
+      </div>
+    <div class="col-sm-4 mt-4 ">
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+      <div style="text-align: center;"><img src="https://media.istockphoto.com/vectors/cricket-leather-ball-white-realistic-vector-vector-id1160516744?b=1&k=6&m=1160516744&s=612x612&w=0&h=paz2sGY_DYhqNJ8y-TADhOGwlbJYwKNgabL4t9OlQgo=" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>ODIs</h1></div>
+      <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="bo1"></span> </h3>
+          <h3><b>Innings : </b><span id="bo2"></span> </h3>
+          <h5><b>Wickets:  </b><span id="bo3"></span> </h5>
+          <h5><b>Balls Delivered: </b><span id="bo4"></span> </h5>
+          <h4><b>Runs : </b><span id="bo5"></span> </h4>
+          <h4><b>Average : </b><span id="bo6"></span></h4>
+          <h5><b>Economy : </b><span id="bo7"></span></h5>
+          <h5><b>Strike Rate : </b><span id="bo8"></span></h5>
+          <h5><b>5 Wickets : </b><span id="bo9"></span></h5>
+          <h5><b>Best Bowl In Innings : </b> <span id="bo10"></span></h5>
+          <h4><b>Best Bowl In Match: </b> <span id="bo11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+      </div>
+      </div>
+    <div class="col-sm-4 mt-4 ">
+      <div style="padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;" class="bg-white">
+      <div style="text-align: center;"><img src="https://media.istockphoto.com/photos/cricket-ball-picture-id871741538?k=6&m=871741538&s=170667a&w=0&h=fRQJ6XG28PkMvFKh-HYNYzkXWZHb07MuyNe69O40aK8=" style="width: 120px;height:120px;border-radius: 120px;margin-bottom: 20px;box-shadow: 0 0 5px;"><h1>TESTs</h1></div>
+      <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+          <h3><b>Matches : </b><span id="bte1"></span> </h3>
+          <h3><b>Innings : </b><span id="bte2"></span> </h3>
+          <h5><b>Wickets:  </b><span id="bte3"></span> </h5>
+          <h5><b>Balls Delivered: </b><span id="bte4"></span> </h5>
+          <h4><b>Runs : </b><span id="bte5"></span> </h4>
+          <h4><b>Average : </b><span id="bte6"></span></h4>
+          <h5><b>Economy : </b><span id="bte7"></span></h5>
+          <h5><b>Strike Rate : </b><span id="bte8"></span></h5>
+          <h5><b>5 Wickets : </b><span id="bte9"></span></h5>
+          <h5><b>Best Bowl In Innings : </b> <span id="bte10"></span></h5>
+          <h4><b>Best Bowl In Match: </b> <span id="bte11"></span></h4>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:-25px;font-size: 20px; padding: 20px;">
+        <p style="text-align: center;">© 2020 Created By Yash Kumar Saini All Rights Reserved.</p>
+    </div>
+
+<!-- Bowling Summary End -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+     Option 2: Separate Popper and Bootstrap JS -->
+    <script type="text/javascript">
+      var details;
+      var part;
+      var part_1;
+      var p_name = "Dhoni";
+      var F_Name;
+      var f_detail;
+      var curr;
+      var i=-1;
+
+      function playerE()
+      {
+          document.getElementById("all_names").style.display ="block";
+          document.getElementById("intro").style.display = "none";
+          document.getElementById("all_details").style.display = "none";
+          document.getElementById("bowling_all").style.display = "none";
+        $(function(){
+            $(".Player_list").remove();});
+
+        i=-1;
+        p_name = document.getElementById("name").value ;
+        if(p_name){
+                setup();}
+      }
+      function setup()
+      {
+        part = "https://cricapi.com/api/playerFinder?apikey=MUKn28qKUnUzFhioZUSkldBIZbo1&name="+p_name;
+        $(function(){
+        $.getJSON(part, gotData);});
+      }
+      function gotData(p_data)
+      {
+        detail = p_data;
+        getoutput();
+      }
+      function getoutput()
+      {
+        i++;
+        if(i<detail.data.length){
+          part_1 = "https://cricapi.com/api/playerStats?apikey=MUKn28qKUnUzFhioZUSkldBIZbo1&pid="+ detail.data[i].pid;
+          
+          curr = i;
+
+        $(function(){
+        $.getJSON(part_1, gotData2);});
+      }
+      }
+
+      function gotData2(p1_data)
+      {
+        f_detail = p1_data;
+        getoutput2();
+      }
+      function getoutput2()
+      {
+        $(function(){
+            var s = f_detail.majorTeams;
+            var match = s.split(',');
+            var teams = "<h5 style='color:black;'>"+match[0]+"</h5>";
+
+            if(f_detail.imageURL){
+        
+                $("#player").before("<div data-aos='zoom-in-up' class='col-sm-3 mt-4 Player_list ' style='text-align: center;border-radius: 5px;'><div style='padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;' class='bg-white'><img src='"+f_detail.imageURL+"' style='width: 80px;height: 80px;border-radius: 80px;'><h5 class='mt-2 mb-2'>"+f_detail.name+"</h5><p style='text-align: left;color:red;font-size:16px;'><span style='color:blue;'>Country: "+f_detail.country+"</span><br>"+teams+" </p><a onclick='completep("+f_detail.pid+")' class='btn btn-outline-dark s_btn '>View Profile</a></div></div> ");
+              }
+
+        else
+        {
+          $("#player").before("<div data-aos='zoom-in-down' class='col-sm-3 mt-4 Player_list ' style='text-align: center;border-radius: 5px;'><div style='padding: 20px;border-radius: 5px;box-shadow: 0 0 5px;' class='bg-white'><div style='background-color:#A3A6E1;width: 80px;height: 80px;border-radius: 80px;margin:auto;'></div><h5 class='mt-2 mb-2'>"+f_detail.name+"</h5><p style='text-align: left;color:red;font-size:16px;'><span style='color:blue;'>Country: "+f_detail.country+"</span><br> "+teams+" </p><a onclick='completep("+f_detail.pid +")' class='btn btn-outline-dark s_btn '>View Profile</a></div></div>  ");
+              }
+              getoutput();
+            });
+        }
+
+        function completep(c_id)
+        {
+          document.getElementById("all_names").style.display ="none";
+          document.getElementById("all_details").style.display ="block";
+          document.getElementById("bowling_all").style.display ="block";
+
+          
+          part_2 = "https://cricapi.com/api/playerStats?apikey=MUKn28qKUnUzFhioZUSkldBIZbo1&pid="+c_id;
+
+          $(function(){
+            $.getJSON(part_2, gotData3);});
+        }
+        function gotData3(p2_data)
+      {
+        full_detail = p2_data;
+        getoutput3();
+      }
+      function getoutput3()
+      {
+        var b_place=" ";
+        var z =full_detail.born;
+        var y = z.split(',');
+        var born_on = y[0]+" , "+y[1] ;
+        for(var v=2;v<y.length;v++)
+        {
+          b_place+= y[v] +" , ";
+        }
+
+      /* Putting Values of Choosen Player Start */
+      document.getElementById("intro").style.display = "block";
+
+        document.getElementById("player_name").innerHTML = full_detail.name;
+        document.getElementById("img_src").src = full_detail.imageURL;
+        document.getElementById("full_name").innerHTML = full_detail.fullName;
+        document.getElementById("born").innerHTML = born_on;
+        document.getElementById("birth_place").innerHTML = b_place;
+        document.getElementById("country").innerHTML = full_detail.country;
+        document.getElementById("battingStyle").innerHTML = full_detail.battingStyle;
+        document.getElementById("bowlingStyle").innerHTML = full_detail.bowlingStyle;
+        document.getElementById("playing_role").innerHTML = full_detail.playingRole;
+        document.getElementById("about").innerHTML = full_detail.profile;
+
+
+        for(var z=0;z<11;z++)
+        {
+          var ms = z+1;
+          var t = "t"+ms;
+          var o = "o"+ms;
+          var te = "te"+ms;
+          document.getElementById(t).innerHTML = " - ";
+          document.getElementById(o).innerHTML = " - ";
+          document.getElementById(te).innerHTML = " - ";
+        }
+
+        if(full_detail.data.batting.T20Is)
+        {
+          document.getElementById("t1").innerHTML = full_detail.data.batting.T20Is.Mat;
+          document.getElementById("t2").innerHTML = full_detail.data.batting.T20Is.Inns;
+          document.getElementById("t3").innerHTML = full_detail.data.batting.T20Is.Runs;
+          document.getElementById("t4").innerHTML = full_detail.data.batting.T20Is.BF;
+          document.getElementById("t5").innerHTML = full_detail.data.batting.T20Is.SR;
+          document.getElementById("t6").innerHTML = full_detail.data.batting.T20Is.Ave;
+          document.getElementById("t7").innerHTML = full_detail.data.batting.T20Is.Ct;
+          document.getElementById("t8").innerHTML = full_detail.data.batting.T20Is[50];
+          document.getElementById("t9").innerHTML = full_detail.data.batting.T20Is[100];
+          document.getElementById("t10").innerHTML = full_detail.data.batting.T20Is.NO;
+          document.getElementById("t11").innerHTML = full_detail.data.batting.T20Is.HS;
+        }
+        if(full_detail.data.batting.ODIs)
+        {
+          document.getElementById("o1").innerHTML = full_detail.data.batting.ODIs.Mat;
+          document.getElementById("o2").innerHTML = full_detail.data.batting.ODIs.Inns;
+          document.getElementById("o3").innerHTML = full_detail.data.batting.ODIs.Runs;
+          document.getElementById("o4").innerHTML = full_detail.data.batting.ODIs.BF;
+          document.getElementById("o5").innerHTML = full_detail.data.batting.ODIs.SR;
+          document.getElementById("o6").innerHTML = full_detail.data.batting.ODIs.Ave;
+          document.getElementById("o7").innerHTML = full_detail.data.batting.ODIs.Ct;
+          document.getElementById("o8").innerHTML = full_detail.data.batting.ODIs[50];
+          document.getElementById("o9").innerHTML = full_detail.data.batting.ODIs[100];
+          document.getElementById("o10").innerHTML = full_detail.data.batting.ODIs.NO;
+          document.getElementById("o11").innerHTML = full_detail.data.batting.ODIs.HS;
+
+        }
+        if(full_detail.data.batting.tests)
+        {
+          document.getElementById("te1").innerHTML = full_detail.data.batting.tests.Mat;
+          document.getElementById("te2").innerHTML = full_detail.data.batting.tests.Inns;
+          document.getElementById("te3").innerHTML = full_detail.data.batting.tests.Runs;
+          document.getElementById("te4").innerHTML = full_detail.data.batting.tests.BF;
+          document.getElementById("te5").innerHTML = full_detail.data.batting.tests.SR;
+          document.getElementById("te6").innerHTML = full_detail.data.batting.tests.Ave;
+          document.getElementById("te7").innerHTML = full_detail.data.batting.tests.Ct;
+          document.getElementById("te8").innerHTML = full_detail.data.batting.tests[50];
+          document.getElementById("te9").innerHTML = full_detail.data.batting.tests[100];
+          document.getElementById("te10").innerHTML = full_detail.data.batting.tests.NO;
+          document.getElementById("te11").innerHTML = full_detail.data.batting.tests.HS;
+
+        }
+        for(var z=0;z<11;z++)
+        {
+          var ms = z+1;
+          var bt = "bt"+ms;
+          var bo = "bo"+ms;
+          var bte = "bte"+ms;
+          document.getElementById(bt).innerHTML = " - ";
+          document.getElementById(bo).innerHTML = " - ";
+          document.getElementById(bte).innerHTML = " - ";
+        }
+        /*
+
+          <h3><b>Matches : </b><span id="bte1"></span> </h3>
+          <h3><b>Innings : </b><span id="bte2"></span> </h3>
+          <h5><b>Wickets:  </b><span id="bte3"></span> </h5>
+          <h5><b>Balls Delivered: </b><span id="bte4"></span> </h5>
+          <h4><b>Runs : </b><span id="bte5"></span> </h4>
+          <h4><b>Average : </b><span id="bte6"></span></h4>
+          <h5><b>Economy : </b><span id="bte7"></span></h5>
+          <h5><b>Strike Rate : </b><span id="bte8"></span></h5>
+          <h5><b>5 Wickets : </b><span id="bte9"></span></h5>
+          <h5><b>Best Bowl In Innings : </b> <span id="bte10"></span></h5>
+          <h4><b>Best Bowl In Match: </b> <span id="bte11"></span></h4>*/
+
+        if(full_detail.data.bowling.T20Is)
+        {
+          document.getElementById("bt1").innerHTML = full_detail.data.bowling.T20Is.Mat;
+          document.getElementById("bt2").innerHTML = full_detail.data.bowling.T20Is.Inns;
+          document.getElementById("bt3").innerHTML = full_detail.data.bowling.T20Is.Wkts;
+          document.getElementById("bt4").innerHTML = full_detail.data.bowling.T20Is.Balls;
+          document.getElementById("bt5").innerHTML = full_detail.data.bowling.T20Is.Runs;
+          document.getElementById("bt6").innerHTML = full_detail.data.bowling.T20Is.Ave;
+          document.getElementById("bt7").innerHTML = full_detail.data.bowling.T20Is.Econ;
+          document.getElementById("bt8").innerHTML = full_detail.data.bowling.T20Is.SR;
+          document.getElementById("bt9").innerHTML = full_detail.data.bowling.T20Is['5w'];
+          document.getElementById("bt10").innerHTML = full_detail.data.bowling.T20Is.BBI;
+          document.getElementById("bt11").innerHTML = full_detail.data.bowling.T20Is.BBM;
+        }
+
+        if(full_detail.data.bowling.ODIs)
+        {
+          document.getElementById("bo1").innerHTML = full_detail.data.bowling.ODIs.Mat;
+          document.getElementById("bo2").innerHTML = full_detail.data.bowling.ODIs.Inns;
+          document.getElementById("bo3").innerHTML = full_detail.data.bowling.ODIs.Wkts;
+          document.getElementById("bo4").innerHTML = full_detail.data.bowling.ODIs.Balls;
+          document.getElementById("bo5").innerHTML = full_detail.data.bowling.ODIs.Runs;
+          document.getElementById("bo6").innerHTML = full_detail.data.bowling.ODIs.Ave;
+          document.getElementById("bo7").innerHTML = full_detail.data.bowling.ODIs.Econ;
+          document.getElementById("bo8").innerHTML = full_detail.data.bowling.ODIs.SR;
+          document.getElementById("bo9").innerHTML = full_detail.data.bowling.ODIs['5w'];
+          document.getElementById("bo10").innerHTML = full_detail.data.bowling.ODIs.BBI;
+          document.getElementById("bo11").innerHTML = full_detail.data.bowling.ODIs.BBM;
+        }
+      /* Putting Values of Choosen Player End */
+
+
+        if(full_detail.data.bowling.tests)
+        {
+          document.getElementById("bte1").innerHTML = full_detail.data.bowling.tests.Mat;
+          document.getElementById("bte2").innerHTML = full_detail.data.bowling.tests.Inns;
+          document.getElementById("bte3").innerHTML = full_detail.data.bowling.tests.Wkts;
+          document.getElementById("bte4").innerHTML = full_detail.data.bowling.tests.Balls;
+          document.getElementById("bte5").innerHTML = full_detail.data.bowling.tests.Runs;
+          document.getElementById("bte6").innerHTML = full_detail.data.bowling.tests.Ave;
+          document.getElementById("bte7").innerHTML = full_detail.data.bowling.tests.Econ;
+          document.getElementById("bte8").innerHTML = full_detail.data.bowling.tests.SR;
+          document.getElementById("bte9").innerHTML = full_detail.data.bowling.tests['5w'];
+          document.getElementById("bte10").innerHTML = full_detail.data.bowling.tests.BBI;
+          document.getElementById("bte11").innerHTML = full_detail.data.bowling.tests.BBM;
+        }
+      }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init({duration : 1000});
+</script>
+
+  </body>
+</html>
