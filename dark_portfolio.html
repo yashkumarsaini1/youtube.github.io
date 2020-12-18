@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 
-<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-general-link" href="chrome-extension://dmghijelimhndkbmpgbldicpogfkceaj/data/content_script/general/dark_40.css"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><head>
+<!doctype html>
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +12,10 @@
     <!-- Google Font -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- Tab Icon Image -->
 
-    <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/vectors/moon-in-flat-dasign-style-vector-id1028815204?k=6&m=1028815204&s=612x612&w=0&h=L8KEguQrTuHASJDqZlHnYu9rp8DRxJKt-lKB9UeNfdY=">
+    <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20190804/ourlarge/pngtree-avatar-male-people-profile-blue-icon-on-abstract-cloud-backgr-png-image_1650274.jpg">
 
     <!-- Animation -->
 
@@ -28,6 +29,8 @@
     body
     {
         font-family:'Roboto', sans-serif;
+        filter: grayscale(40%);
+        background-color: white;
     }
     #main div 
     {
@@ -90,41 +93,41 @@
     .line1{
         width: 80%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .line2{
         width: 50%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .line5{
         width: 80%;
         margin-left: 20%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .line6{
         margin-left: 20%;
         width: 50%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .line4{
         margin-left: 20%;
         width: 80%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .line3{
         margin-left: 50%;
         width: 50%;
         height: 1px;
-        background-color: white;
+        background-color: grey;
         margin-top: 5px;
     }
     .centered {
@@ -139,11 +142,27 @@
     width: 10px;
     height: 10px;
 }
+.box .img_box
+{
+    clip-path: circle(2000px at center 1000px);
+    transition: clip-path 0.5s;
+    transition-delay: 0.5s;
+    height: 55%;
+}
+.box:hover .img_box
+{
+    clip-path: circle(60px at center 80px);
+    cursor: pointer;
+    height: 55%;
+}
 
 .s_icon
 {
     width:80px;
     height: auto;
+    width: 80px;
+    background-color: #f1f1f1;
+    border-radius: 30%;
     box-shadow: 5px 5px 20px -5px ;
     
 }
@@ -157,17 +176,17 @@
 @keyframes shadowmove {
   0% 
   {
-    box-shadow: 5px 5px 20px -5px white;
+    box-shadow: 5px 5px 20px -5px ;
     width: 80px;
   }
   5% 
   {
-    box-shadow: 5px 5px 40px -5px white;
+    box-shadow: 5px 5px 40px -5px blue;
     width: 95px;
   }
   100% 
   {
-    box-shadow: 5px 5px 40px -5px white;
+    box-shadow: 5px 5px 40px -5px blue;
     width: 95px;
   }
 }
@@ -175,29 +194,29 @@
 
     <title>Y.K.S</title>
 
-</head><body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+<body>
     <section id="header">
-        <div style="text-align: left;"><h1><span class="animated fadeInUp " style="font-size: 30px;padding: 10px;color: red;"><span style="font-size: 60px;background-color: black;">Y.</span>K.S</span> </h1></div>
-    <div class="container-fluid fixed-top" id="main">
+        <div style="text-align: left;"><h1><span class="animated fadeInUp " style="font-size: 30px;padding: 10px;color: red;"><span style="font-size: 60px;background-color: white;">Y.</span>K.S</span> </h1></div>
+    <div class="container-fluid fixed-top" id="main"  >
 
         
         <div style="text-align: right;">
-            <svg id="menu_btn" style="margin-right: 10px;background-color: white" onclick="menu('1')" class="menu_btn animated fadeInRight" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+            <svg  id="menu_btn" style="margin-right: 10px;background-color: white"  onclick="menu('1')" class="menu_btn animated fadeInRight" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
-            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg style="margin-right: 10px;background-color: white" class="menu_btn animated fadeInDown" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg></span>
+            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg style="margin-right: 10px;background-color: white" class="menu_btn animated fadeInDown" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div class="row">
-            <div class="col-sm-5 ">
+            <div class="col-sm-5 " >
         <img src="https://image.freepik.com/free-vector/boy-studying-with-book_113065-238.jpg" class="img-fluid animated zoomIn">
 
     </div>
             <div class="col-sm-7 " style="padding: 15px">
         <h1><b>WELCOME</b>, <br><span style="color: blue">I am <b>Yash Kumar Saini</b>,</span><br></h1>
         <h2 style="color: red">Web Developer</h2>
-        <h3>I have passion for <i style="color: blue">designing and developing</i><br> web pages using<br> <span class="badge bg-secondary animated fadeInDown"> HTML</span>, <span class="badge bg-secondary animated fadeInUp">CSS</span> and <span class="badge bg-secondary animated fadeInDown">JavaScript</span>.</h3>
+        <h3>I have passion for <i style="color: blue">designing and developing</i><br> web pages using<br> <span class="badge bg-primary animated fadeInDown"> HTML</span>, <span class="badge bg-danger animated fadeInUp">CSS</span> and <span class="badge bg-dark animated fadeInDown">JavaScript</span>.</h3>
         <div class="line1 animated fadeInLeft"></div><div class="line2 animated fadeInRight"></div>
         <h3 style="color: grey;margin-top: 10px;margin-bottom: 10px;">I am young enthusiastic and dedicated to work with full energy.</h3>
         <div class="line3 animated fadeInRight"></div><div class="line4 animated fadeInLeft"></div>
@@ -208,13 +227,13 @@
     </div>
 
     </section>
-     <nav id="menu_block_item" class="menu_block_item animated fadeInRight">
+     <nav  id="menu_block_item" class="menu_block_item animated fadeInRight">
         <ul class="list-group" style="text-align: center;cursor: pointer;border-width: 1px;background-color: white;height: 100%;">
             <br>
             <br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#header" onclick="menu('2')"> HOME </a></li><br>
-          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#about" onclick="menu('2')"> ABOUT-US</a></li><br>
-          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#skills" onclick="menu('2')"> SKILLS</a></li><br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#about" onclick="menu('2')"> ABOUT-US</li></a><br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#skills" onclick="menu('2')"> SKILLS</li></a><br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#my_work" onclick="menu('2')"> MY WORK</a></li><br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#contact" onclick="menu('2')"> CONTACT </a></li><br>
         </ul>
@@ -223,25 +242,25 @@
     <!-- About Section Start -->
 
     <section id="about">
-         <div style="height: 30px"></div>
+         <div style="height: 10px"></div>
         <div class="container-fluid" style="margin-top: 20px;padding: 20px;">
             <div class="row">
             <div class="col-sm-7">
-                <h1 data-aos="fade-down" style="margin-top: 10px;" class="aos-init"><b>Let's Introduce Myself</b></h1>
+                <h1 data-aos="fade-down" style="margin-top: 10px;"><b>Let's Introduce Myself</b></h1>
                 <div class="box_1"></div>
                 <div class="line1"></div>
-                <h5 data-aos="zoom-in" style="margin-top: 10px;margin-bottom: 40px;" class="aos-init">I am <b>Yash Kumar Saini.</b><br> Presently, I am doing engineering<br> in the field of <span style="color: orange"><b>Computer Science</b></span> (2019 - 2023)<br> from  <b>Government Engineering College,</b><br> Ajmer ( Rajasthan ). I am giving my time in developing <br> <span id="st_dy" style="color: red">  </span><span style=" font-size: 30px;">|</span> web pages<br> using HTML, CSS, JavaScript and PHP. </h5>
-                <div data-aos="fade-down" class="line5 aos-init"></div>
-                <div data-aos="fade-up" class="line6 aos-init"></div>
-                <h4 data-aos="fade-down" style="text-align: right;margin-top: 5px;" class="aos-init">There Is No Substitute Of Hard Work.</h4>
-                <h5 data-aos="fade-up" style="text-align: right;color: gray" class="aos-init">--- <i><b>Yash Kumar Saini </b></i></h5>
+                <h5  data-aos="zoom-in" style="margin-top: 10px;margin-bottom: 40px;" >I am <b>Yash Kumar Saini.</b><br> Presently, I am doing engineering<br> in the field of <span style="color: orange"><b>Computer Science</b></span> (2019 - 2023)<br> from  <b>Government Engineering College,</b><br> Ajmer ( Rajasthan ). I am giving my time in developing <br> <span id="st_dy" style="color: red"></span><span style=" font-size: 30px;">|</span> web pages<br> using HTML, CSS, JavaScript and PHP. </h5>
+                <div data-aos="fade-down" class="line5"></div>
+                <div data-aos="fade-up" class="line6"></div>
+                <h4 data-aos="fade-down" style="text-align: right;margin-top: 5px;" >There Is No Substitute Of Hard Work.</h4>
+                <h5 data-aos="fade-up" style="text-align: right;color: gray" >--- <i><b>Yash Kumar Saini </b></i></h5>
 
-                        <div class="line3"></div>
-                    <div class="line4"></div>
+                        <div  class="line3"></div>
+                    <div  class="line4"></div>
 
             </div>
-            <div class="col-sm-5 mt-2">
-                <img src="https://images.all-free-download.com/images/graphiclarge/job_interview_background_candidate_icon_cartoon_character_6838338.jpg" class="img-fluid aos-init" data-aos="zoom-in-down">
+            <div class="col-sm-5 mt-2" >
+                <img src="https://images.all-free-download.com/images/graphiclarge/job_interview_background_candidate_icon_cartoon_character_6838338.jpg" class="img-fluid"  data-aos="zoom-in-down"  >
             </div>
             </div>
         </div>
@@ -251,45 +270,44 @@
 
     <!-- Skills Section Start -->
     <section id="skills">
-        <div style="height: 10px;"></div>
         <div class="container-fluid" style="margin-top: 60px;padding: 40px;">
             <div class="row">
                 <div class="col-sm-5" style="position: relative;">
-                    <img src="https://image.freepik.com/free-vector/education-online-training-courses-distance-education_1200-391.jpg" class="img-fluid aos-init" data-aos="zoom-out">
-                    
+                    <img src="https://image.freepik.com/free-vector/education-online-training-courses-distance-education_1200-391.jpg" class="img-fluid"  data-aos="zoom-out">
+                    <div class="centered"data-aos="fade-up" ><h1><b>SKILLS</b></h1></div>
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-5 shadow-lg aos-init" style="color: white;background-color: black;padding: 10px;" data-aos="fade-down">
-                    <h1 style="text-align: center; " data-aos="zoom-in-down" class="aos-init"><b>WEB SKILLS</b></h1>
-                    <div class="ski">
+                <div class="col-sm-5  shadow-lg" style="color: white;background-color: black;padding: 10px;" data-aos="fade-down">
+                    <h1 style="text-align: center; "data-aos="zoom-in-down" ><b>WEB SKILLS</b></h1>
+                    <div class="ski" >
                         <div style="text-align: left;"><h4>HTML5</h4></div>
                         <div style="text-align: right"><h4>90%</h4></div>
                     </div>
-                    <div class="progress" style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px; margin-bottom: 10px;">
+                    <div class="progress"style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px; margin-bottom: 10px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                     <div class="ski">
+                     <div class="ski" >
                         <div style="text-align: left;"><h4>CSS3</h4></div>
                         <div style="text-align: right"><h4>80%</h4></div>
                     </div>
-                    <div class="progress" style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
+                    <div class="progress"style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="ski">
+                    <div class="ski" >
                         <div style="text-align: left;"><h4>JavaScript</h4></div>
                         <div style="text-align: right"><h4>85%</h4></div>
                     </div>
-                    <div class="progress" style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
+                    <div class="progress"style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="ski">
+                    <div class="ski" >
                         <div style="text-align: left;"><h4>MY SQL</h4></div>
                         <div style="text-align: right"><h4>70%</h4></div>
                     </div>
-                    <div class="progress" style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
+                    <div class="progress"style="border-style: solid;border-color: gray;border-width: 1px;padding: 5px;height: 30px;margin-bottom: 10px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="ski">
+                    <div class="ski" >
                         <div style="text-align: left;"><h4>PHP</h4></div>
                         <div style="text-align: right"><h4>75%</h4></div>
                     </div>
@@ -309,25 +327,23 @@
     <!-- My Work Section Start -->
 
     <section id="my_work">
-
-         <div style="height: 30px"></div>
         <div class="container-fluid" style="padding: 40px;">
-            <h1 style="text-align: center;" data-aos="fade-down" class="aos-init"><b>MY WEBSITES</b></h1>
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-sm-4" style="text-align: center;">
-                    <h3 data-aos="fade-down" style="margin-top: 30px;" class="aos-init"><b>Classroom Website</b></h3>
-                     <img src="img_2.png" class="img-fluid aos-init" data-aos="fade-down">
-                     <button data-aos="zoom-out" class="btn btn-primary mt-4 aos-init"><a href="https://signup-cbcaa.firebaseapp.com/" style="color: white;"> Go to Website </a></button>
+            <h1 style="text-align: center;" data-aos="fade-down"><b>MY WEBSITES</b></h1>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-sm-4" style="text-align: center;" >
+                    <h3  data-aos="fade-down" style="margin-top: 30px;"><b>Classroom Website</b></h3>
+                     <img  src="img_2.png" class="img-fluid" data-aos="fade-down" >
+                     <button data-aos="zoom-out" class="btn btn-primary mt-4"><a href="https://signup-cbcaa.firebaseapp.com/" style="color: white;"> Go to Website </a></button>
                 </div>
-                <div class="col-sm-4" style="text-align: center;">
-                    <h3 data-aos="fade-down" style="margin-top: 30px;" class="aos-init"><b>Mathematics Website</b></h3>
-                     <img src="img_3.png" class="img-fluid aos-init" data-aos="fade-up">
-                     <button data-aos="zoom-out" class="btn btn-primary mt-4 aos-init"><a href="https://babulaldms.github.io/maths/" style="color: white;"> Go to Website </a></button>
+                <div class="col-sm-4" style="text-align: center;" >
+                    <h3  data-aos="fade-down" style="margin-top: 30px;"><b>Mathematics Website</b></h3>
+                     <img src="img_3.png" class="img-fluid " data-aos="fade-up" >
+                     <button data-aos="zoom-out" class="btn btn-primary mt-4"><a href="https://babulaldms.github.io/maths/" style="color: white;"> Go to Website </a></button>
                 </div>
-                <div class="col-sm-4" style="text-align: center;">
-                    <h3 data-aos="fade-down" style="margin-top: 30px;" class="aos-init"><b>Portfolio Website</b></h3>
-                     <img src="Portfolio_img.png" class="img-fluid aos-init" data-aos="fade-down">
-                     <button data-aos="zoom-out" class="btn btn-primary mt-4 aos-init"><a href="#" style="color: white;"> Go to Website </a></button>
+                <div class="col-sm-4" style="text-align: center;" >
+                    <h3  data-aos="fade-down" style="margin-top: 30px;"><b>Portfolio Website</b></h3>
+                     <img src="Portfolio_img.png" class="img-fluid " data-aos="fade-down" >
+                     <button data-aos="zoom-out" class="btn btn-primary mt-4" ><a href="#" style="color: white;"> Go to Website </a></button>
                 </div>
             </div>
         </div>
@@ -337,35 +353,35 @@
 
     <!-- Contact Section Start -->
     <section id="contact">
-        <div style="height: 30px"></div>
+        <div style="height: 10px"></div>
        
         <div class="container-fluid" style="margin-top: 20px;padding: 20px;">
-            <h1 style="text-align: center;" data-aos="zoom-in-down" class="aos-init"><b>GET IN TOUCH</b></h1>
+            <h1 style="text-align: center;" data-aos="zoom-in-down"><b>GET IN TOUCH</b></h1>
             <div class="row">
-            <div class="col-sm-5">
-                <img src="https://img.freepik.com/free-vector/hotline-operator-advises-client_7737-1766.jpg?size=626&amp;ext=jpg" class="img-fluid aos-init" data-aos="zoom-in-down">
+            <div class="col-sm-5" >
+                <img src="https://img.freepik.com/free-vector/hotline-operator-advises-client_7737-1766.jpg?size=626&ext=jpg" class="img-fluid"  data-aos="zoom-in-down"  >
             </div>
             <div class="col-sm-7" style="margin-top: 40px; text-align: center;">
-                <h1 style="text-align: center;" data-aos="zoom-in-down" class="aos-init"><b>CONNECT WITH ME</b></h1>
+                <h1 style="text-align: center;" data-aos="zoom-in-down"><b>CONNECT WITH ME</b></h1>
                 <div class="row">
-                    <div class="ski" style="margin-top: 30px;">
+                    <div class ="ski" style="margin-top: 30px;">
                     <div>
-                    <a href="https://www.linkedin.com/in/yash-kumar-saini-890a95201/" class="myu"><img class="s_icon aos-init" src="https://img.icons8.com/fluent/144/000000/linkedin.png" data-aos="zoom-in-down"></a>
+                    <a href="https://www.linkedin.com/in/yash-kumar-saini-890a95201/" class="myu"><img class="s_icon" src="https://img.icons8.com/fluent/144/000000/linkedin.png" data-aos="zoom-in-down"></a>
                 </div>
                 <div>
-                    <a href="mailto:yashallendms@gmail.com" class="myu"><img class="s_icon aos-init" src="https://img.icons8.com/color/144/000000/apple-mail.png" data-aos="zoom-in-down"></a>
+                    <a href="mailto:yashallendms@gmail.com" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/apple-mail.png" data-aos="zoom-in-down"></a>
                 </div>
                 <div>
-                    <a href="https://github.com/yashkumarsaini1" class="myu"><img class="s_icon aos-init" src="https://img.icons8.com/color/144/000000/github--v1.png" data-aos="zoom-in-down"></a>
+                    <a href="https://github.com/yashkumarsaini1" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/github--v1.png" data-aos="zoom-in-down"></a>
                 </div>
             </div>
             <div class="ski" style="margin-top: 30px;">
                 
                 <div>
-                    <a href="https://twitter.com/Yash_0606" class="myu"><img class="s_icon aos-init" src="https://img.icons8.com/color/144/000000/twitter.png" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: 35%;"></a>
+                    <a href="https://twitter.com/Yash_0606" class="myu"><img class="s_icon" src="https://img.icons8.com/color/144/000000/twitter.png" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: 35%;"></a>
                 </div>
                 <div>
-                    <a href="https://www.sololearn.com/Profile/17462625" class="myu"><img class="s_icon aos-init" src="sololearn.png" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: -35%;padding: 10px;"></a>
+                    <a href="https://www.sololearn.com/Profile/17462625" class="myu"><img class="s_icon" src="sololearn.png" data-aos="zoom-in-up" style="border-radius: 20px;margin-left: -35%;padding: 10px;"></a>
                 </div>
 
             </div>
@@ -377,7 +393,7 @@
     </section>
     <!-- Contact Section End -->
     
-    <div style="font-size: 20px;padding: 10px;">
+    <div style="margin-top: 40px;margin-bottom: 40px;font-size: 20px;">
         <p style="text-align: center;">© 2020 Created By Yash Kumar Saini All Rights Reserved.</p>
     </div>
     <div class="ski">
@@ -457,5 +473,5 @@
      Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-
-</div></body></html>
+</body>
+</html>
