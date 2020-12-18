@@ -115,7 +115,7 @@
   </div>
   </div>
 </div>
-<div class="container" style="padding: 20px;" id="home">
+<div class="container" style="padding: 20px;" id="home_file">
   <div class="row d-flex">
     <div class="col-sm-5">
       <img src="https://media.istockphoto.com/vectors/magnifying-glass-search-people-vector-id871028496?k=6&m=871028496&s=612x612&w=0&h=vpYpp547Arpm03MfYcdqcaqNqxrRtg7iAK7vYnDlVGU=" class="img-fluid">
@@ -127,7 +127,7 @@
                 <h5  data-aos="zoom-in" style="margin-top: 10px;margin-bottom: 40px;" >Just put the name of the cricketer in the above section <br> to search that circketer. <br> You get details of that cricketer on viewing its profile.<br> In the Profile section you get the matches he played in different formats like T-20s , ODIs and Tests in his career. </h5>
                 <div data-aos="fade-down" class="line5"></div>
                 <div data-aos="fade-up" class="line6"></div>
-                <h4 data-aos="fade-down" style="text-align: right;margin-top: 5px;" >Search Your Favourite One.</h4>
+                <h4 data-aos="fade-down" style="text-align: right;margin-top: 5px;" >Search Your Favourite One and Explore More.</h4>
 
                         <div  class="line2"></div>
                     <div  class="line3"></div>
@@ -270,7 +270,7 @@
         <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
           <h3><b>Matches : </b><span id="bt1"></span> </h3>
           <h3><b>Innings : </b><span id="bt2"></span> </h3>
-          <h5><b>Wickets:  </b><span id="bt3"></span> </h5>
+          <h2><b>Wickets:  </b><span id="bt3"></span> </h2>
           <h5><b>Balls Delivered: </b><span id="bt4"></span> </h5>
           <h4><b>Runs : </b><span id="bt5"></span> </h4>
           <h4><b>Average : </b><span id="bt6"></span></h4>
@@ -291,7 +291,7 @@
       <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
           <h3><b>Matches : </b><span id="bo1"></span> </h3>
           <h3><b>Innings : </b><span id="bo2"></span> </h3>
-          <h5><b>Wickets:  </b><span id="bo3"></span> </h5>
+          <h2><b>Wickets:  </b><span id="bo3"></span> </h2>
           <h5><b>Balls Delivered: </b><span id="bo4"></span> </h5>
           <h4><b>Runs : </b><span id="bo5"></span> </h4>
           <h4><b>Average : </b><span id="bo6"></span></h4>
@@ -311,7 +311,7 @@
       <div class="box1" style="background-color: orange;"></div><div class="line1" style="margin-bottom: 10px;"></div>
           <h3><b>Matches : </b><span id="bte1"></span> </h3>
           <h3><b>Innings : </b><span id="bte2"></span> </h3>
-          <h5><b>Wickets:  </b><span id="bte3"></span> </h5>
+          <h2><b>Wickets:  </b><span id="bte3"></span> </h2>
           <h5><b>Balls Delivered: </b><span id="bte4"></span> </h5>
           <h4><b>Runs : </b><span id="bte5"></span> </h4>
           <h4><b>Average : </b><span id="bte6"></span></h4>
@@ -352,6 +352,7 @@
 
       function playerE()
       {
+          document.getElementById("home_file").style.display = "none";
           document.getElementById("all_names").style.display ="block";
           document.getElementById("intro").style.display = "none";
           document.getElementById("all_details").style.display = "none";
