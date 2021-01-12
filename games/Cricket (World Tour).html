@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -366,7 +367,7 @@
       var ball_6 = 0;
       var ball =0;
       var c_run =0 ;
-      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,3,4,6,'W','W','W'];
+      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,4,6,'W','W','W'];
       var total =0;
       var total_balls=0;
       var p_ship = 0;
@@ -397,15 +398,15 @@
       var batting2 = 1;
       
       var selection = 0;
-   var team3 = ["R Sharma","S Dhawan","V Kholi","KL Rahul","S Iyer","H Pandya","B Kumar","K Yadav","M Shami","Y Chahal","J Bumrah"];
-   var team4 = ["A Finch","D Warner","S Smith","A Carey","G Maxwell","M Stoinis","A Agar","M Starc","P Cummins","J Hazlewood","A Zampa"];
-   var team5= ["M Guptill","T Latham","R Taylor","K Williomson","C Munro","M Santner","J Neesham","L Ferguson","M Henry","T Boult","T Southee"];
-   var team6 =["J Roy","J Bairstow","E Morgan","J Buttler","J Root","B Stokes","C Woakes","M Ali","J Archer","A Rashid","L Plunkett"];
-  var team7 = ["H Amla","Q De Kock","Faf Du Plessis","Ab De Villiers","D Millar","C Morris","A Phehlukwayo","I Tahir","K Rabada","A Nortje","T Shamsi"];
-  var team8 =["S Hope","C Gyale","S Hetmyer","N Pooran","K Pollard","A Russell","S Narine","J Holder","Williams","S Cotrell","O Thomas"];
-  var team9 = ["Imam U Haq","F Zaman","B Azam","S Ahmed","S Malik","M Hafeez","M Amir","H Ali","W Riaz","Shadab Khan","S Afridi"];
- var team10 = ["D Karunaratne","K Parera","A Fernando","K Mendis","A Mathews","T Parera","De Silva","I Udana","K Rajitha","L Malinga","S Lakmal"];
- var team11 = ["L Das","T Iqbal","S Rahman","M Mitthun","S Sarkar","M Mahmudullah","M Hasan","M Mortaza","R Hossian","M Rahman","A Jayed"];
+   var team3 = ["R Sharma","S Dhawan","V Kholi(c)","KL Rahul(wk)","S Iyer","H Pandya","B Kumar","K Yadav","M Shami","Y Chahal","J Bumrah"];
+   var team4 = ["A Finch(c)","D Warner","S Smith","A Carey(wk)","G Maxwell","M Stoinis","A Agar","M Starc","P Cummins","J Hazlewood","A Zampa"];
+   var team5= ["M Guptill","T Latham(wk)","R Taylor","K Williomson(c)","C Munro","M Santner","J Neesham","L Ferguson","M Henry","T Boult","T Southee"];
+   var team6 =["J Roy","J Bairstow","E Morgan(c)","J Buttler(wk)","J Root","B Stokes","C Woakes","M Ali","J Archer","A Rashid","L Plunkett"];
+  var team7 = ["H Amla","Q De Kock(wk)","Faf Du Plessis","Ab De Villiers(c)","D Millar","C Morris","A Phehlukwayo","I Tahir","K Rabada","A Nortje","T Shamsi"];
+  var team8 =["S Hope(wk)","C Gyale","S Hetmyer","N Pooran","K Pollard","A Russell","S Narine","J Holder(c)","Williams","S Cotrell","O Thomas"];
+  var team9 = ["Imam U Haq","F Zaman","B Azam","S Ahmed(c,wk)","S Malik","M Hafeez","M Amir","H Ali","W Riaz","Shadab Khan","S Afridi"];
+ var team10 = ["D Karunaratne","K Parera","A Fernando","K Mendis(wk)","A Mathews","T Parera(c)","De Silva","I Udana","K Rajitha","L Malinga","S Lakmal"];
+ var team11 = ["L Das","T Iqbal","S Rahman(wk)","M Mitthun","S Sarkar","M Mahmudullah","M Hasan","M Mortaza(c)","R Hossian","M Rahman","A Jayed"];
     var team1 = [...team4];
       var team2 = [...team5];
 var chase_runs = 0;
@@ -1030,16 +1031,26 @@ for(var i=0;i<11;i++)
                           $("#e_over").after("<tr><th scope='col'  style='vertical-align: middle;font-size: 12px;'>( "+z+" ) "+bowler[last_bowler].b_name+"<br><span class='badge badge-dark' >"+over_score+" runs</span></th><th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b1+"'>"+ball1+"</span></th>   <th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b2+"'>"+ball2+"</span></th>   <th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b3+"'>"+ball3+"</span></th><th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b4+"'>"+ball4+"</span></th>    <th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b5+"'>"+ball5+"</span></th>   <th scope='col' style='vertical-align: middle;font-size:15px;'><span class='badge badge-"+b6+"'>"+ball6+"</span></th> </tr>");
                           
                         });  }
-                        if(click>=12&&wickect<6)
+                        if(click>=14&&wickect<7)
                         {
                           myArray.length = 0;
-                          myArray = [0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,3,4,6,6,6,'W','W','W'];
+                          myArray = [0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,3,4,6,6,6,'W','W'];
 
+                        }
+                        else if(click>9&&wickect<1)
+                        {
+                          myArray.length = 0;
+                          myArray = [0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,4,6,6,6,4,4,3,4,6,6,6,6,6,6,6,6,6,4,4,4,4,4,4,4,4,'W','W'];
+                        }
+                        else if(click<6 &&wickect>=3)
+                        {
+                          myArray.length = 0;
+                          myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,4,4,3,6,'W','W','W','W'];
                         }
                         else if(wickect>6)
                         {
                           myArray.length = 0;
-                        myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,6,'W','W'];
+                        myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,4,4,3,6,'W','W','W','W'];
                         }
                 click++;
                     }
