@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>Tic Tac Toe</title>
+  </head>
+  <style type="text/css">
+      body
+    {
+      font-family: 'Varela Round', sans-serif;
+    }
+    .back
+    {
+      margin:auto;
+    }
+    .block
+    {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border-color: black;
+      border-radius: 0px;
+      font-size: 40px;
+    }
+    #btn1{
+      border-left-color: white;
+      border-top-color: white;
+    }
+    #btn2{
+       border-top-color: white;
+    }
+    #btn3{
+       border-top-color: white;
+       border-right-color: white;
+    }
+    #btn4
+    {
+      border-left-color: white;
+    }
+    #btn6{
+      border-right-color: white;
+    }
+    #btn7
+    {
+      border-bottom-color: white;
+      border-left-color: white;
+    }
+    #btn8
+    {
+      border-bottom-color: white;
+    }
+    #btn9{
+      border-bottom-color: white;
+      border-right-color:white;
+    }
+
+:root {
+  --animate-duration: 1.5s;
+}
+  </style>
+  <body>
+
+<div class="container-fluid" style="margin-top: 50px;margin-bottom: 100px;text-align: center;">
+  <h1 style="text-align: center;">Tic-Tac-Toe V/s Computer</h1>
+  <div class="back">
+    <div class="d-flex align-items-center justify-content-center">
+      <button class="btn  block animate__animated animate__zoomIn" id="btn1" onclick="get(1)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn2" onclick="get(2)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn3" onclick="get(3)"></button>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <button class="btn  block animate__animated animate__zoomIn" id="btn4" onclick="get(4)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn5" onclick="get(5)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn6" onclick="get(6)"></button>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <button class="btn  block animate__animated animate__zoomIn" id="btn7" onclick="get(7)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn8" onclick="get(8)"></button>
+      <button class="btn  block animate__animated animate__zoomIn" id="btn9" onclick="get(9)"></button>
+    </div>
+  </div>
+  <button class="btn btn-outline-dark mt-3" style="border-radius: 50px;padding: 10px;font-size: 20px;" onClick="window.location.reload();">Reset</button>
+  <h1 id="p1" style="text-align: center;margin-top: 10px;"></h1>
+</div>
+
+<script type="text/javascript">
+  var arr = [];
+  var arr_user = [];
+  var arr_computer = [];
+  var numbers = [1,2,3,4,5,6,7,8,9];
+  function get(value)
+  {
+    var x = value;
+    var y = "btn"+value;
+    document.getElementById(y).disabled = true;
+    document.getElementById(y).innerHTML = "X";
+
+    arr.push(x);
+    arr_user.push(x);
+
+
+      var x1 = arr_user.indexOf(1);
+      var x2 = arr_user.indexOf(2);
+      var x3 = arr_user.indexOf(3);
+      var x4 = arr_user.indexOf(4);
+      var x5 = arr_user.indexOf(5);
+      var x6 = arr_user.indexOf(6);
+      var x7 = arr_user.indexOf(7);
+      var x8 = arr_user.indexOf(8);
+      var x9 = arr_user.indexOf(9);
+
+      if((x1!=-1&&x2!=-1&&x3!=-1)||(x4!=-1&&x5!=-1&&x6!=-1)||(x7!=-1&&x8!=-1&&x9!=-1)||(x1!=-1&&x4!=-1&&x7!=-1)||(x1!=-1&&x5!=-1&&x9!=-1)||(x2!=-1&&x5!=-1&&x8!=-1)||(x3!=-1&&x6!=-1&&x9!=-1)||(x3!=-1&&x5!=-1&&x7!=-1))
+      {
+        document.getElementById("p1").innerHTML ="Congratulations You Won";
+        for(i=1;i<10;i++)
+        {
+          var w = "btn"+i;
+          document.getElementById(w).disabled = true;
+        }
+      }
+      else
+      {
+        setTimeout( computer, 400 );
+      }
+
+  }
+  let odd = [1,3,7,9];
+  let even = [2,4,6,8];
+    function shuffle(array) {
+      array.sort(() => Math.random() - 0.5);
+      }
+ 
+  function computer()
+  {
+    shuffle(odd);
+    shuffle(even);
+    var a = -2;
+    if(arr.length<9){
+        while(a!=-1)
+        {
+          var b = Math.floor(Math.random() * (9 - 1 + 1) ) + 1;
+          var a = arr.indexOf(b);
+        }
+        if(arr_user[0]==5&&arr.length<2)
+        {
+          var b = odd[0];
+        }
+        else if(arr_user[0]!=5&&arr.length<2)
+        {
+          var b = 5;
+        }
+        else if(arr_user[arr_user.length-1]%2==0&&arr_user[0]==5)
+        {
+          var s = even[0];
+          if(arr.indexOf(2)==-1||arr.indexOf(4)==-1||arr.indexOf(6)==-1||arr.indexOf(8)==-1){
+          while(arr.indexOf(s)!=-1)
+          {
+            shuffle(even);
+            s = even[0];
+          }
+          var b = s;
+        }
+        }
+        else if(arr_user[arr_user.length-1]%2==1&&arr_user[0]==5)
+        {
+          var r = odd[0];
+          if(arr.indexOf(1)==-1||arr.indexOf(3)==-1||arr.indexOf(7)==-1||arr.indexOf(9)==-1){
+          while(arr.indexOf(r)!=-1)
+          {
+            shuffle(odd);
+            r = odd[0];
+          }
+          var b = r;
+          }
+        }
+        else if(arr_user[arr_user.length-1]%2==1&&arr_user[0]!=5&&arr_user[0]%2==0)
+        {
+          var s = even[0];
+          if(arr.indexOf(2)==-1||arr.indexOf(4)==-1||arr.indexOf(6)==-1||arr.indexOf(8)==-1){
+          while(arr.indexOf(s)!=-1)
+          {
+            shuffle(even);
+            s = even[0];
+          }
+          var b = s;
+        }
+        }
+        else if(arr_user[arr_user.length-1]%2==0&&arr_user[0]!=5&&arr_user[0]%2==1)
+        {
+          var r = odd[0];
+          if(arr.indexOf(1)==-1||arr.indexOf(3)==-1||arr.indexOf(7)==-1||arr.indexOf(9)==-1){
+          while(arr.indexOf(r)!=-1)
+          {
+            shuffle(odd);
+            r = odd[0];
+          }
+          var b = r;
+          }
+        }
+
+
+        var u = "btn"+b;
+        document.getElementById(u).innerHTML = "O";
+        document.getElementById(u).disabled = true;
+        arr.push(b);
+        arr_computer.push(b);
+
+
+      var c1 = arr_computer.indexOf(1);
+      var c2 = arr_computer.indexOf(2);
+      var c3 = arr_computer.indexOf(3);
+      var c4 = arr_computer.indexOf(4);
+      var c5 = arr_computer.indexOf(5);
+      var c6 = arr_computer.indexOf(6);
+      var c7 = arr_computer.indexOf(7);
+      var c8 = arr_computer.indexOf(8);
+      var c9 = arr_computer.indexOf(9);
+
+      
+      if((c1!=-1&&c2!=-1&&c3!=-1)||(c4!=-1&&c5!=-1&&c6!=-1)||(c7!=-1&&c8!=-1&&c9!=-1)||(c1!=-1&&c4!=-1&&c7!=-1)||(c1!=-1&&c5!=-1&&c9!=-1)||(c2!=-1&&c5!=-1&&c8!=-1)||(c3!=-1&&c6!=-1&&c9!=-1)||(c3!=-1&&c5!=-1&&c7!=-1))
+      {
+        document.getElementById("p1").innerHTML= "You Lose Too Close Try Again.";
+        for(i=1;i<10;i++)
+        {
+          var w = "btn"+i;
+          document.getElementById(w).disabled = true;
+        }
+      }
+          }
+    else
+    {
+      document.getElementById("p1").innerHTML= "Its a Draw";
+    }
+
+  }
+
+</script>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
