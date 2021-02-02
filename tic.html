@@ -104,6 +104,7 @@
   var arr_user = [];
   var arr_computer = [];
   var numbers = [1,2,3,4,5,6,7,8,9];
+  var b;
   function get(value)
   {
     var x = value;
@@ -154,66 +155,312 @@
     if(arr.length<9){
         while(a!=-1)
         {
-          var b = Math.floor(Math.random() * (9 - 1 + 1) ) + 1;
+         b = Math.floor(Math.random() * (9 - 1 + 1) ) + 1;
           var a = arr.indexOf(b);
         }
+
+        // For Computer to complete the row
+        // For Computer to complete the row
+        // For Computer to complete the row
+        // For Computer to complete the row
+        // For Computer to complete the row
+        // For Computer to complete the row
+        // For Computer to complete the row
+
+
+        var d1 = arr_computer.indexOf(1);
+        var d2 = arr_computer.indexOf(2);
+        var d3 = arr_computer.indexOf(3);
+        var d4 = arr_computer.indexOf(4);
+        var d5 = arr_computer.indexOf(5);
+        var d6 = arr_computer.indexOf(6);
+        var d7 = arr_computer.indexOf(7);
+        var d8 = arr_computer.indexOf(8);
+        var d9 = arr_computer.indexOf(9);
+
+
+        var e1 = arr_user.indexOf(1);
+        var e2 = arr_user.indexOf(2);
+        var e3 = arr_user.indexOf(3);
+        var e4 = arr_user.indexOf(4);
+        var e5 = arr_user.indexOf(5);
+        var e6 = arr_user.indexOf(6);
+        var e7 = arr_user.indexOf(7);
+        var e8 = arr_user.indexOf(8);
+        var e9 = arr_user.indexOf(9);
+
+        var f1 = arr.indexOf(1);
+        var f2 = arr.indexOf(2);
+        var f3 = arr.indexOf(3);
+        var f4 = arr.indexOf(4);
+        var f5 = arr.indexOf(5);
+        var f6 = arr.indexOf(6);
+        var f7 = arr.indexOf(7);
+        var f8 = arr.indexOf(8);
+        var f9 = arr.indexOf(9);
+
+
+
         if(arr_user[0]==5&&arr.length<2)
         {
-          var b = odd[0];
+          b = odd[0];
         }
         else if(arr_user[0]!=5&&arr.length<2)
         {
           var b = 5;
         }
-        else if(arr_user[arr_user.length-1]%2==0&&arr_user[0]==5)
+        else if((d1!=-1&&d2!=-1&&f3==-1)||(d1!=-1&&d3!=-1&&f2==-1)||(d3!=-1&&d2!=-1&&f1==-1))
         {
-          var s = even[0];
-          if(arr.indexOf(2)==-1||arr.indexOf(4)==-1||arr.indexOf(6)==-1||arr.indexOf(8)==-1){
-          while(arr.indexOf(s)!=-1)
+          if(f3==-1)
           {
-            shuffle(even);
-            s = even[0];
+            b = 3;
           }
-          var b = s;
+          else if (f2==-1) 
+          {
+            b=2;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
         }
-        }
-        else if(arr_user[arr_user.length-1]%2==1&&arr_user[0]==5)
+        else if((d4!=-1&&d5!=-1&&f6==-1)||(d4!=-1&&d6!=-1&&f5==-1)||(d6!=-1&&d5!=-1&&f4==-1))
         {
-          var r = odd[0];
-          if(arr.indexOf(1)==-1||arr.indexOf(3)==-1||arr.indexOf(7)==-1||arr.indexOf(9)==-1){
-          while(arr.indexOf(r)!=-1)
+          if(f6==-1)
           {
-            shuffle(odd);
-            r = odd[0];
+            b = 6;
           }
-          var b = r;
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f4==-1)
+          {
+            b=4;
           }
         }
-        else if(arr_user[arr_user.length-1]%2==1&&arr_user[0]!=5&&arr_user[0]%2==0)
+        else if((d7!=-1&&d8!=-1&&f9==-1)||(d7!=-1&&d9!=-1&&f8==-1)||(d9!=-1&&d8!=-1&&f7==-1))
         {
-          var s = even[0];
-          if(arr.indexOf(2)==-1||arr.indexOf(4)==-1||arr.indexOf(6)==-1||arr.indexOf(8)==-1){
-          while(arr.indexOf(s)!=-1)
+          if(f9==-1)
           {
-            shuffle(even);
-            s = even[0];
+            b = 9;
           }
-          var b = s;
+          else if (f8==-1) 
+          {
+            b=8;
+          }
+          else if(f7==-1)
+          {
+            b=7;
+          }
         }
-        }
-        else if(arr_user[arr_user.length-1]%2==0&&arr_user[0]!=5&&arr_user[0]%2==1)
+        else if((d1!=-1&&d4!=-1&&f7==-1)||(d1!=-1&&d7!=-1&&f4==-1)||(d7!=-1&&d4!=-1&&f1==-1))
         {
-          var r = odd[0];
-          if(arr.indexOf(1)==-1||arr.indexOf(3)==-1||arr.indexOf(7)==-1||arr.indexOf(9)==-1){
-          while(arr.indexOf(r)!=-1)
+          if(f7==-1)
           {
-            shuffle(odd);
-            r = odd[0];
+            b = 7;
           }
-          var b = r;
+          else if (f4==-1) 
+          {
+            b=4;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
+        }
+        else if((d1!=-1&&d5!=-1&&f9==-1)||(d1!=-1&&d9!=-1&&f5==-1)||(d9!=-1&&d5!=-1&&f1==-1))
+        {
+          if(f9==-1)
+          {
+            b = 9;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
+        }
+        else if((d2!=-1&&d5!=-1&&f8==-1)||(d2!=-1&&d8!=-1&&f5==-1)||(d8!=-1&&d5!=-1&&f2==-1))
+        {
+          if(f8==-1)
+          {
+            b = 8;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f2==-1)
+          {
+            b=2;
+          }
+        }
+        else if((d3!=-1&&d6!=-1&&f9==-1)||(d3!=-1&&d9!=-1&&f6==-1)||(d9!=-1&&d6!=-1&&f3==-1))
+        {
+          if(f9==-1)
+          {
+            b = 9;
+          }
+          else if (f6==-1) 
+          {
+            b=6;
+          }
+          else if(f3==-1)
+          {
+            b=3;
+          }
+        }
+        else if((d3!=-1&&d5!=-1&&f7==-1)||(d3!=-1&&d7!=-1&&f5==-1)||(d7!=-1&&d5!=-1&&f3==-1))
+        {
+          if(f7==-1)
+          {
+            b = 7;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f3==-1)
+          {
+            b=3;
           }
         }
 
+
+
+        // To restrict the user to complete the row
+        // To restrict the user to complete the row
+        // To restrict the user to complete the row
+        // To restrict the user to complete the row
+        // To restrict the user to complete the row
+        // To restrict the user to complete the row
+
+
+
+        else if((e1!=-1&&e2!=-1&&f3==-1)||(e1!=-1&&e3!=-1&&f2==-1)||(e3!=-1&&e2!=-1&&f1==-1))
+        {
+          if(f3==-1)
+          {
+            b = 3;
+          }
+          else if (f2==-1) 
+          {
+            b=2;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
+        }
+        else if((e4!=-1&&e5!=-1&&f6==-1)||(e4!=-1&&e6!=-1&&f5==-1)||(e6!=-1&&e5!=-1&&f4==-1))
+        {
+          if(f6==-1)
+          {
+            b = 6;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f4==-1)
+          {
+            b=4;
+          }
+        }
+        else if((e7!=-1&&e8!=-1&&f9==-1)||(e7!=-1&&e9!=-1&&f8==-1)||(e9!=-1&&e8!=-1&&f7==-1))
+        {
+          if(f9==-1)
+          {
+            b = 9;
+          }
+          else if (f8==-1) 
+          {
+            b=8;
+          }
+          else if(f7==-1)
+          {
+            b=7;
+          }
+        }
+        else if((e1!=-1&&e4!=-1&&f7==-1)||(e1!=-1&&e7!=-1&&f4==-1)||(e7!=-1&&e4!=-1&&f1==-1))
+        {
+          if(f7==-1)
+          {
+            b = 7;
+          }
+          else if (f4==-1) 
+          {
+            b=4;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
+        }
+        else if((e1!=-1&&e5!=-1&&f9==-1)||(e1!=-1&&e9!=-1&&f5==-1)||(e9!=-1&&e5!=-1&&f1==-1))
+        {
+          if(f9==-1)
+          {
+            b = 9;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f1==-1)
+          {
+            b=1;
+          }
+        }
+        else if((e2!=-1&&e5!=-1&&f8==-1)||(e2!=-1&&e8!=-1&&f5==-1)||(e8!=-1&&e5!=-1&&f2==-1))
+        {
+          if(f8==-1)
+          {
+            b = 8;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f2==-1)
+          {
+            b=2;
+          }
+        }
+        else if((e3!=-1&&e6!=-1&&f9==-1)||(e3!=-1&&e9!=-1&&f6==-1)||(e9!=-1&&e6!=-1&&f3==-1))
+        {
+          if(f9==-1)
+          {
+            b = 9;
+          }
+          else if (f6==-1) 
+          {
+            b=6;
+          }
+          else if(f3==-1)
+          {
+            b=3;
+          }
+        }
+        else if((e3!=-1&&e5!=-1&&f7==-1)||(e3!=-1&&e7!=-1&&f5==-1)||(e7!=-1&&e5!=-1&&f3==-1))
+        {
+          if(f7==-1)
+          {
+            b = 7;
+          }
+          else if (f5==-1) 
+          {
+            b=5;
+          }
+          else if(f3==-1)
+          {
+            b=3;
+          }
+        }
 
         var u = "btn"+b;
         document.getElementById(u).innerHTML = "O";
