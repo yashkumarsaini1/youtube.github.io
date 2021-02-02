@@ -36,7 +36,8 @@
       background-color: white;
       border-color: black;
       border-radius: 0px;
-      font-size: 40px;
+      font-size:65px;
+      font-weight: bold;
     }
     #btn1{
       border-left-color: white;
@@ -105,6 +106,8 @@
   var arr_computer = [];
   var numbers = [1,2,3,4,5,6,7,8,9];
   var b;
+  var i;
+  var j;
   function get(value)
   {
     var x = value;
@@ -494,8 +497,24 @@
     {
       document.getElementById("p1").innerHTML= "Its a Draw";
     }
+    for(j=1;j<10;j++)
+    {
+      var box = "btn"+j;
+      var box_v = document.getElementById(box).innerHTML;
+      if(box_v=="O")
+      {
+        document.getElementById(box).style.color = "#FF2626";
+      }
+      else
+      {
+        document.getElementById(box).style.color = "#2629FF";
+      }
+
+    }
+    
 
   }
+
 
 </script>
 
