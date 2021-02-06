@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,10 +22,7 @@
 
 
 
-    
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <title>Mathematics</title>
 <style> 
@@ -35,15 +34,12 @@ body
 }
 .menu
 {
-  padding: 10px;
-  background-image: url("5.jpg");
-  position: relative;
+  padding: 10px;  position: relative;
   opacity: 1;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   font-size: 25px;
 
 }
@@ -55,27 +51,23 @@ body
 .second
 {
    padding: 10px;
-  background-image: url("10.jpg");
   position: relative;
   opacity: 1;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   font-size: 25px;
 }
 .third
 {
    padding: 10px;
-  background-image: url("17.jpg");
   position: relative;
   opacity: 1;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   font-size: 25px;
 }
 .forth
@@ -222,69 +214,180 @@ html
     font-size: 25px;
     padding: 15px;
   }
+  .menu_btn
+    {
+        margin-right: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0 0 ;
+        transition: font-size 1s,box-shadow 1s,border-radius 1s;
+    }
+    .menu_btn:hover
+    {
+        font-size: 20px;
+        box-shadow: 0 0 5px,inset 0 0 5px;
+        border-radius: 10px;
+    }
+    .menu_itm
+    {
+        font-size: 20px;
+        transition: font-size 0.5s;
+    }
+    .menu_itm:hover
+    {
+        font-size: 30px;
+        color: blue;
+    }
+    #menu_block_item{
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        right: 0px;
+        top: 70px;
+        z-index:2;
+        transition: 0.5s;
+        display: none;
+    }
+    .profile_img
+    {
+      width: 250px;
+      height: 250px;
+      border-radius: 250px;
+      box-shadow: 0 0 15px,inset 0 0 15px ;
+    }
+    .profile_sec
+    {
+      text-align: center;
+      margin-top: 150px;
+      font-family:'Varela Round', sans-serif; 
+    }
+    .view1
+    {
+      padding:10px;
+      padding-right:20px;
+      font-size: 25px;
+      border-radius:200px;
+      margin-top: 100px;
+    }
+    .class_img
+    {
+      width: 70px;
+      height: 70px;
+    }
+    .student_sec
+    {
+      text-align: center;
+      font-family:'Varela Round', sans-serif;
+      color:#FF2626;
+      margin-top: 100px; 
+    }
+    @media only screen and (max-width:800px) 
+    {
+      .student_sec
+    {
+      margin-top: 30px;
+    }
+      .lec_head
+      {
+        display: none;
+      }
+      .menu_img
+      {
+        width: 40px;
+        height: 40px;
+      }
+      .lec_btn
+      {
+        font-size: 15px;
+        padding: 7px;
 
-@media only screen and (max-width:800px) 
-{
-  #menu_bar
-  {
-    font-size: 12px;
-  }
-  .menu-item
-  {
-    padding:5px;
-    margin-left: 4px;
-    margin-top: 5px;
-  }
-  .menu_img
-  {
-    width: 13px;
-    height: 13px;
-  }
-  .logo
-  {
-    display: none;
-  }
-  .title_h,h1
-  {
-    margin-top: 20px;
-    font-size: 30px;
-  }
-  .home_img
-  {
-    width: 80px;
-    height: 80px;
-    margin-top: -20px;
-  }
-  .lec_head
-  {
-    display: none;
-  }
-  .lec_btn
-  {
-    border-radius: 50px;
-    font-size: 15px;
-    padding: 10px;
+      }
+      .home_img
+      {
+        width: 80px;
+        height: 80px;
+      }
+      .profile_img
+    {
+      width: 150px;
+      height: 150px;
+    }
+     .profile_sec
+    {
+      margin-top: 50px;
+    }
+    .profile_sec,h1
+    {
+      font-size: 20px;
+    }
+    .profile_sec,h4
+    {
+      font-size: 15px;
+    }
+    .profile_sec,h5
+    {
+      font-size: 13px;
+    }
+    #menu_block_item
+    {
+      font-size: 20px;
+    }
+    .icons
+    {
+      display: none;
+    }
+    .view1
+    {
+      font-size: 20px;
+      padding: 5px;
+      padding-right:10px;
+    }
+    .class_img
+    {
+      width: 30px;
+      height: 30px;
+    }
+    .nav-link
+    {
+      font-size: 12px;
+    }
+    .tab-pane
+    {
+      font-size: 16px;
+    }
 
-  }
-
-}
+    }
 
 
 </style>
   </head>
   <body>
+    <nav  id="menu_block_item" class="menu_block_item animated fadeInRight">
+        <ul class="list-group" style="text-align: center;cursor: pointer;border-width: 1px;background-color: white;height: 100%;">
+            <br>
+            <br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#home" onclick="menu('2')"><img src="25.png"  class="menu_img"> HOME </a></li><br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#about" onclick="menu('2')"> ABOUT</li></a><br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#student1" onclick="menu('2')"><img src="26.png"  class="menu_img"> STUDENT</li></a><br>
+          <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#school" onclick="menu('2')"> SCHOOL</a></li><br>
+        </ul>
+    </nav>
 
     <section id="home">
     <div class="container-fluid menu">
-      <div class="fixed-top align-items-center justify-content-start">
+    
+      <div class="align-items-center justify-content-start fixed-top">
         <img src="6.png" class="logo">
       </div>
-      <div class="d-flex align-items-center justify-content-center fixed-top" id="menu_bar" >
-        <a href="#home"><div class="menu-item"><img src="25.png"  class="menu_img"> HOME</div></a>
-        <a href="#about"><div class="menu-item">ABOUT</div></a>
-        <a href="#student1"><div class="menu-item"><img src="26.png"  class="menu_img">STUDENT</div></a>
-        <div class="menu-item">SCHOOL</div>
-      </div>
+      <div class="d-flex justify-content-end fixed-top">
+         <div style="text-align: right;">
+            <svg  id="menu_btn" style="margin-right: 10px;background-color: white"  onclick="menu('1')" class="menu_btn animated fadeInRight" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg style="margin-right: 10px;background-color: white" class="menu_btn animated fadeInDown" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span>
+        </div>
+    </div>
       <div class="d-flex align-items-center justify-content-center title_h">
        <h1 style="">MATHEMATICS</h1>
       </div>
@@ -318,10 +421,10 @@ html
     </section>
     <section id="about">
     <div class="container-fluid second">
-      <div class="container-fluid" style="text-align: center;margin-top: 150px;font-family:'Varela Round', sans-serif; ">
+      <div class="container-fluid profile_sec">
         <div class="row">
           <div class="col-sm-5">
-            <img src="11.png" style="width: 250px;height: 250px;border-radius: 250px;box-shadow: 0 0 15px,inset 0 0 15px ;" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
+            <img src="11.png" class="profile_img"  data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
           </div>
           <div class="col-sm-7" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200">
             <h1>ABOUT ME</h1>
@@ -334,34 +437,31 @@ html
     </section>
     <section id="student1">
       <div class="container-fluid third">
-        <div class="container-fluid" style="text-align: center;font-family:'Varela Round', sans-serif;color:#FF2626; ">
+        <div class="container-fluid student_sec" >
           <div class="row">
             <div class="col-sm-6">
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 icons">
               <img src="19.png" style="margin-top:150px;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
-              <h3 data-aos="fade-down" data-aos-duration="1500" data-aos-offset="200">Easy to Access</h3>
+              <h3 data-aos="fade-down" data-aos-duration="1500" data-aos-offset="100">Easy to Access</h3>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 icons">
                <img src="20.png" style="margin-top: 50px;" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="200">
-               <h3 data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200">Detail Explaination</h3>
+               <h3 data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">Detail Explaination</h3>
              </div>
-             <div class="col-sm-4">
+             <div class="col-sm-4 icons">
                <img src="21.png" style="margin-top: 150px;" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="200">
-               <h3 data-aos="fade-down" data-aos-duration="2500" data-aos-offset="200">Step By Step Learning</h3>
+               <h3 data-aos="fade-down" data-aos-duration="2500" data-aos-offset="100">Step By Step Learning</h3>
              </div>
              </div>
             </div>
             <div class="col-sm-6">
-              <a href="#student2" class="btn btn-primary view1" style="padding:10px;padding-right:20px;font-size: 25px;border-radius:200px;margin-top: 100px; " data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" onclick="customClass(10)" ><img src="24.png" style="width: 70px;height: 70px;"
-                > Class 10</a>
+              <a href="#student2" class="btn btn-primary view1"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" onclick="customClass(10)" ><img src="24.png" class="class_img" > Class 10</a>
 
-              <a href="#student2" class="btn btn-danger view1" style="padding:10px;padding-right:20px;font-size: 25px;border-radius:200px;margin-top: 100px; " data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" onclick="customClass(11)" ><img src="24.png" style="width: 70px;height: 70px;"
-                > Class 11</a>
+              <a href="#student2" class="btn btn-danger view1" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" onclick="customClass(11)" ><img src="24.png" class="class_img"> Class 11</a>
               <br>
 
-              <a href="#student2" class="btn btn-warning view1" style="padding:10px;padding-right:20px;font-size: 25px;border-radius:200px;margin-top: 60px; " data-aos="fade-up" data-aos-duration="2500" data-aos-offset="0" onclick="customClass(12)"><img src="24.png" style="width: 70px;height: 70px;"
-               > Class 12</a>
+              <a href="#student2" class="btn btn-warning view1" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="0" onclick="customClass(12)"><img src="24.png" class="class_img" > Class 12</a>
             </div>
           </div>
         </div>
@@ -1281,6 +1381,22 @@ html
           document.getElementById("youtube").src = "https://www.youtube.com/embed/"+y;
         }
       }
+
+      function menu(value)
+        {
+            if(value==1)
+            {
+                document.getElementById("menu_btn").style.display="none";
+                document.getElementById("menu_cross").style.display="inline";
+                document.getElementById("menu_block_item").style.display="block";
+            }
+            else if(value==2)
+            {
+                document.getElementById("menu_block_item").style.display="none";
+                document.getElementById("menu_btn").style.display="inline";
+                document.getElementById("menu_cross").style.display="none";
+            }
+        }
 
     </script>
     <!-- Optional JavaScript; choose one of the two! -->
