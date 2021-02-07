@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -207,6 +206,7 @@ html
     margin-top: 70px;
     font-size: 50px;
     font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
   }
   .lec_btn
   {
@@ -244,7 +244,7 @@ html
         height: 100vh;
         position: fixed;
         right: 0px;
-        top: 70px;
+        top: 0px;
         z-index:2;
         transition: 0.5s;
         display: none;
@@ -305,8 +305,8 @@ html
       }
       .home_img
       {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
       }
       .profile_img
     {
@@ -315,7 +315,7 @@ html
     }
      .profile_sec
     {
-      margin-top: 50px;
+      margin-top: 15px;
     }
     .profile_sec,h1
     {
@@ -356,6 +356,17 @@ html
     {
       font-size: 16px;
     }
+    .title_h
+    {
+      font-size: 30px;
+      font-weight: bold;
+
+    }
+    .logo
+  {
+    width: 60px;
+    height: 60px;
+  }
 
     }
 
@@ -365,8 +376,7 @@ html
   <body>
     <nav  id="menu_block_item" class="menu_block_item animated fadeInRight">
         <ul class="list-group" style="text-align: center;cursor: pointer;border-width: 1px;background-color: white;height: 100%;">
-            <br>
-            <br>
+            <br><br><br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#home" onclick="menu('2')"><img src="25.png"  class="menu_img"> HOME </a></li><br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#about" onclick="menu('2')"> ABOUT</li></a><br>
           <li class="list-group-item menu_itm " style="border-width: 0px;"><a href="#student1" onclick="menu('2')"><img src="26.png"  class="menu_img"> STUDENT</li></a><br>
@@ -388,8 +398,8 @@ html
             <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg style="margin-right: 10px;background-color: white" class="menu_btn animated fadeInDown" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span>
         </div>
     </div>
-      <div class="d-flex align-items-center justify-content-center title_h">
-       <h1 style="">MATHEMATICS</h1>
+      <div class="d-flex align-items-center justify-content-center ">
+       <h1 class="title_h">MATHEMATICS</h1>
       </div>
       <div class="container-fluid mt-3 " style="text-align: center;"> 
         <div class="row">
@@ -427,7 +437,7 @@ html
             <img src="11.png" class="profile_img"  data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
           </div>
           <div class="col-sm-7" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200">
-            <h1>ABOUT ME</h1>
+            <h1 style="font-weight: bold;margin-top: 5px;margin-bottom: 5px;">ABOUT ME</h1>
             <h4 style="text-align: left">I am Babu Lal Mali, PGT(Mathematics), DMS RIE Ajmer. I have been teaching mathematics to classes X, XI, XII of CBSE Students of DMS Ajmer since 2009. Before this I worked as TGT (Mathematics) in the same school from 2004 to 2009.</h4><br>
             <h5 style="text-align: right" data-aos="fade-down" data-aos-duration="3000" data-aos-offset="0">" एक ही कदम चलना है सदा और एक ही कदम जो चलता चला जाता है, वह अनंत फासले तय कर लेता है । "</h5>
           </div>
