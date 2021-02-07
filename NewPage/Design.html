@@ -226,7 +226,7 @@ html
     .menu_btn:hover
     {
         font-size: 20px;
-        box-shadow: 0 0 5px,inset 0 0 5px;
+        box-shadow: 0 0 2px,inset 0 0 2px;
         border-radius: 10px;
     }
     .menu_itm
@@ -268,7 +268,7 @@ html
       padding-right:20px;
       font-size: 25px;
       border-radius:200px;
-      margin-top: 100px;
+      margin-top: 60px;
     }
     .class_img
     {
@@ -280,13 +280,21 @@ html
       text-align: center;
       font-family:'Varela Round', sans-serif;
       color:#FF2626;
-      margin-top: 100px; 
+      margin-top: 80px; 
+    }
+    .img1_s
+    {
+      margin-top: 130px;
+    }
+    .img2_s
+    {
+      margin-top: 30px;
     }
     @media only screen and (max-width:800px) 
     {
       .student_sec
     {
-      margin-top: 30px;
+      margin-top: 10px;
     }
       .lec_head
       {
@@ -315,7 +323,7 @@ html
     }
      .profile_sec
     {
-      margin-top: 15px;
+      margin-top: 0px;
     }
     .profile_sec,h1
     {
@@ -366,6 +374,22 @@ html
   {
     width: 60px;
     height: 60px;
+  }
+  .img1_s
+  {
+    width: 70px;
+    height: 70px;
+    margin-top: 60px;
+  }
+  .img2_s
+  {
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+  }
+  .img_s,h3
+  {
+    font-size: 13px;
   }
 
     }
@@ -449,24 +473,25 @@ html
       <div class="container-fluid third">
         <div class="container-fluid student_sec" >
           <div class="row">
-            <div class="col-sm-6">
-              <div class="row">
-                <div class="col-sm-4 icons">
-              <img src="19.png" style="margin-top:150px;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
-              <h3 data-aos="fade-down" data-aos-duration="1500" data-aos-offset="100">Easy to Access</h3>
+            <div class="col-sm-6 d-flex img_s">
+              <div>
+                <img src="19.png" class="img1_s"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
+                <h3 data-aos="fade-down" data-aos-duration="1500" data-aos-offset="100">Easy to Access</h3>
+              </div>
+
+              <div>
+                <img src="20.png" class="img2_s"  data-aos="fade-down" data-aos-duration="2000" data-aos-offset="200">
+                <h3 data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">Detail Explaination</h3>
+              </div>
+
+              <div>
+                <img src="21.png" class="img1_s"  data-aos="fade-up" data-aos-duration="2500" data-aos-offset="200">
+                <h3 data-aos="fade-down" data-aos-duration="2500" data-aos-offset="100">Step By Step Learning</h3>
+              </div>
+
             </div>
-            <div class="col-sm-4 icons">
-               <img src="20.png" style="margin-top: 50px;" data-aos="fade-down" data-aos-duration="2000" data-aos-offset="200">
-               <h3 data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100">Detail Explaination</h3>
-             </div>
-             <div class="col-sm-4 icons">
-               <img src="21.png" style="margin-top: 150px;" data-aos="fade-up" data-aos-duration="2500" data-aos-offset="200">
-               <h3 data-aos="fade-down" data-aos-duration="2500" data-aos-offset="100">Step By Step Learning</h3>
-             </div>
-             </div>
-            </div>
-            <div class="col-sm-6">
-              <a href="#student2" class="btn btn-primary view1"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" onclick="customClass(10)" ><img src="24.png" class="class_img" > Class 10</a>
+            <div class="col-sm-6 align-items-center justify-content-center">
+              <a href="#student2" class="btn btn-primary view1"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" onclick="customClass(10)"><img src="24.png" class="class_img" > Class 10</a>
 
               <a href="#student2" class="btn btn-danger view1" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" onclick="customClass(11)" ><img src="24.png" class="class_img"> Class 11</a>
               <br>
@@ -481,7 +506,7 @@ html
 
     <section id="student2">
     <div class="container-fluid forth ">
-      <div class="container-fluid bg-white " style="margin-top: 70px;height: 85vh;border-style: solid;border-width: 1px;border-color: #efefef;box-shadow: 0 0 10px;">
+      <div class="container-fluid bg-white "  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" style="margin-top: 70px;height: 85vh;border-style: solid;border-width: 1px;border-color: #efefef;box-shadow: 0 0 10px;">
         <div class="row">
           
           
