@@ -290,6 +290,28 @@ html
     {
       margin-top: 10px;
     }
+    .v_list
+    {
+      height: 69vh;
+      overflow-y: scroll;
+      text-align: left;
+    }
+    .left_v
+    {
+      margin-top: 70px;
+      height: 85vh;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #efefef;
+      box-shadow: 0 0 10px;
+    }
+    .col_v
+    {
+      height: 85vh;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #efefef;
+    }
     @media only screen and (max-width:800px) 
     {
       .student_sec
@@ -392,6 +414,10 @@ html
   {
     font-size: 13px;
   }
+  .v_list
+  {
+    height: 40vh;
+  }
    .v_list,h1,h2,h3,h4
     {
       font-size: 14px;
@@ -424,7 +450,15 @@ html
 {
   font-size: 11px;
 }
+.left_v
+    {
+      height: 52vh;
     }
+    .col_v
+    {
+      height: 52vh;
+    }
+  }
 
 
 </style>
@@ -537,13 +571,13 @@ html
     </section>
 
     <section id="student2">
-    <div class="container-fluid forth ">
-      <div class="container-fluid bg-white "  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" style="margin-top: 70px;height: 85vh;border-style: solid;border-width: 1px;border-color: #efefef;box-shadow: 0 0 10px;">
+    <div class="container-fluid ">
+      <div class="container-fluid left_v"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
         <div class="row">
           
           
-          <div class="col-sm-5 bg-light" style="height: 85vh;border-style: solid;border-width: 1px;border-color: #efefef;" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
-            <div class="bg-white d-flex align-items-center justify-content-center" style="height: 15vh">
+        <div class="col-sm-5 bg-light col_v"  data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
+            <div class="bg-white d-flex align-items-center justify-content-center" style="height: 10vh">
                 <ul class="nav nav-tabs" id="myTab" role="tablist" style="width: 100%;">
                   <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#class10" role="tab" aria-controls="home" aria-selected="true">Class 10</a>
@@ -557,11 +591,10 @@ html
                 </ul> 
 
             </div>
-            <div class="bg-white" class="v_list" style="overflow-y: scroll;height: 69vh;text-align: left;">
+            <div class="v_list">
               <div class="tab-content" id="myTabContent">
                 <!-- Class 10 Lectures Start -->
                   <div class="tab-pane fade show active" id="class10" role="tabpanel" aria-labelledby="home-tab">
-                    <h4 style="text-align: center;">Chapters</h4>
 
 <!-- Class 10 Chapter 0 Start-->
                     <div class="accordion" id="accordionExample">
@@ -847,8 +880,7 @@ html
 
                 <!--  Class 11 Lectures Start -->
                 <div class="tab-pane fade" id="class11" role="tabpanel" aria-labelledby="profile-tab">
-                  
-                  <h4 style="text-align: center;">Chapters</h4>
+
 <!-- Class 11 Chapter 1 Start-->
                     <div class="accordion" id="accordionExample">
                       <div class="accordion-item">
@@ -1024,8 +1056,6 @@ html
 
                 <!--  Class 12 Lectures Start -->
                 <div class="tab-pane fade" id="class12" role="tabpanel" aria-labelledby="contact-tab">
-                  
-                <h4 style="text-align: center;">Chapters</h4>
              
 <!-- Class 12 Chapter 1 Start-->
                     <div class="accordion" id="accordionExample">
@@ -1111,7 +1141,7 @@ html
 
                               <li class="list-group-item list_item" id="XSrx2Rlw2Yg" onclick="play('XSrx2Rlw2Yg')">7. Properties of Inverse Trigonometric Functions Part_5<span class="badge bg-dark float-end"> 14min <i class="far fa-play-circle"></i></span></li>
 
-                              <li class="list-group-item list_item" id="92wdcNLBe-o" onclick="play('92wdcNLBe-o')">8. Proof of tan^-1 (x)+tan^-1(y) =tan^-1((x+y)/(1-xy)) ,when xy<1 <span class="badge bg-dark float-end"> 16min <i class="far fa-play-circle"></i></span></li>
+                              <li class="list-group-item list_item" id="92wdcNLBe-o" onclick="play('92wdcNLBe-o')">8. Proof of tan^-1 (x)+tan^-1(y) =tan^-1((x+y)/(1-xy)) ,when xy less than 1 <span class="badge bg-dark float-end"> 16min <i class="far fa-play-circle"></i></span></li>
 
                               <li class="list-group-item list_item" id="kGDL1q-uPkM" onclick="play('kGDL1q-uPkM')">9. Proof of tan^-1 (x)+tan^-1(y) =? ,when xy>1 <span class="badge bg-dark float-end"> 19min <i class="far fa-play-circle"></i></span></li>
 
@@ -1383,9 +1413,9 @@ html
                 </div>
                 <!--  Class 12 Lectures End -->
               </div>
-
-            </div>
         </div>
+    </div>
+
 
         <div class="col-sm-7 " style="height: 85vh;padding: 20px;border-style: solid;border-width: 1px;border-color: #efefef;background-color: #BBBBBB"
         data-aos="fade-up" data-aos-duration="2500" data-aos-offset="200">
@@ -1404,7 +1434,7 @@ html
           </div>
         </div>
       </div>
-    </div>
+</div>
     </section>
 
 
