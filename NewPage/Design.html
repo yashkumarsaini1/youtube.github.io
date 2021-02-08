@@ -381,8 +381,12 @@ html
       }
       .home_img
       {
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
+      }
+      .home_icon
+      {
+        margin-top: -50px;
       }
       .profile_img
     {
@@ -577,7 +581,7 @@ html
       </div>
       <div class="container-fluid mt-3 " style="text-align: center;"> 
         <div class="row">
-          <div class="col-sm-4" >
+          <div class="col-sm-4 home_icon" >
             <div class="class-item animate__animated animate__zoomIn" >
             <img src="10th.png" class="home_img">
             <h1 style=" margin-top: -20px;" class="lec_head">Class 10 <br> Video Lectures</h1>
@@ -585,14 +589,14 @@ html
             </div>
 
           </div>
-          <div class="col-sm-4 " >
+          <div class="col-sm-4 home_icon" >
             <div class="class-item animate__animated animate__zoomIn" >
             <img src="11th.png" class="home_img">
             <h1 style=" margin-top: -20px;" class="lec_head">Class 11 <br> Video Lectures</h1>
             <a href="#student2"  class="view btn  animate__animated animate__fadeInDown lec_btn" onclick="customClass(11)">View Lectures</a>
           </div>
           </div>
-          <div class="col-sm-4 " >
+          <div class="col-sm-4 home_icon" >
             <div class="class-item animate__animated animate__zoomIn" >
             <img src="12th.png" class="home_img">
             <h1 style=" margin-top: -20px;" class="lec_head">Class 12 <br> Video Lectures</h1>
@@ -1067,11 +1071,11 @@ html
 
                               <li class="list-group-item list_item" id="57L4cgOWaTI" onclick="play('57L4cgOWaTI')">3. Function and its Domain, Codomain and Range <span class="badge bg-dark float-end"> 33min <i class="far fa-play-circle"></i></span></li>
 
-                              <li class="list-group-item list_item" id="cZZT7_F4z9Is" onclick="play('cZZT7_F4z9Is')">4. Some Real Functions, their graphs, domain, codomain and range<span class="badge bg-dark float-end"> 47min <i class="far fa-play-circle"></i></span></li>
+                              <li class="list-group-item list_item" id="cZZT7_F4z9I" onclick="play('cZZT7_F4z9I')">4. Some Real Functions, their graphs, domain, codomain and range<span class="badge bg-dark float-end"> 47min <i class="far fa-play-circle"></i></span></li>
 
                               <li class="list-group-item list_item" id="bEm9ON8539s" onclick="play('bEm9ON8539s')">5. Some Real Functions, their graphs, domain, codomain and range…continued <span class="badge bg-dark float-end"> 30min <i class="far fa-play-circle"></i></span></li>
 
-                              <li class="list-group-item list_item" id="SoU2bDaI0K0g" onclick="play('SoU2bDaI0K0g')">6. Finding Domain and Range of Real Functions <span class="badge bg-dark float-end"> 21min <i class="far fa-play-circle"></i></span></li>
+                              <li class="list-group-item list_item" id="SoU2bDaI0K0" onclick="play('SoU2bDaI0K0')">6. Finding Domain and Range of Real Functions <span class="badge bg-dark float-end"> 21min <i class="far fa-play-circle"></i></span></li>
                             </ul>
                           </div>
                         </div>
@@ -1554,7 +1558,7 @@ html
               <iframe id="youtube" src="https://www.youtube.com/embed/mcWXly_4K4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"  allowfullscreen></iframe>
               
             </div>
-            <div class="bg-light right_l">
+            <div class="bg-light right_l p-4">
               <h6 id="topic"></h6>
               <div class="d-flex align-items-center justify-content-end">
                 <h4 class="img_name">BABU LAL MALI</h4>
@@ -1576,7 +1580,7 @@ html
       function play(link)
       {
         var x = link;
-        document.getElementById("youtube").src = "https://www.youtube.com/embed/"+x;
+        document.getElementById("youtube").src = "https://www.youtube.com/embed/"+x+"?&autoplay=1&rel=0";
         document.getElementById("topic").innerHTML = document.getElementById(x).innerHTML;
         var all = document.getElementsByClassName('list_item');
           for (var i = 0; i < all.length; i++) 
