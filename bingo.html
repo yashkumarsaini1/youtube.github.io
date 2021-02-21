@@ -35,9 +35,9 @@
       height: 70px;
       background-color: white;
       border-color: black;
-      border-radius: 5px;
+      border-width: 0px;
       font-size: 30px;
-      box-shadow: inset 0 0 10px #5463FF;
+      box-shadow: inset 0 0 2px blue;
       color: #000;
     }
   </style>
@@ -45,7 +45,8 @@
 
 <div class="container-fluid" style="margin-top: 20px;margin-bottom: 20px;text-align: center;">
 
-  <h1 style="text-align: center; margin-top:10px;color: red;" id="p1"></h1>
+  <h1 style="text-align: center; margin-top:10px;color: green;" id="p1"></h1>
+  <p style="text-align: center;color: red" id="p2"></p>
   <div class="row">
     <div class="col-sm-6">
       <h1 class="mt-1 mb-1">Bingo Box</h1>
@@ -101,7 +102,7 @@
   <h3 style="text-align: center;" id="computer_last"></h3>
   <button class="btn btn-outline-dark mt-3" style="border-radius: 50px;padding: 10px;font-size: 20px;padding-left: 30px;padding-right: 30px;display: none" id="start" onclick="start()" >Start</button>
 </div>
-<div class="col-sm-6" style="text-align: center;display: none" id="computer">
+<div class="col-sm-6" style="text-align: center;display: none;" id="computer">
   <h1 class="mt-1 mb-1">Computer Bingo Box</h1>
 
   <div class="back">
@@ -272,8 +273,59 @@
   }
   function computer_turn()
   {
-        shuffle(arr1);
-        var k = arr1[0];
+    var ch1 = arr_computer_a.indexOf(1);
+    var ch5 = arr_computer_a.indexOf(5);
+    var ch21 = arr_computer_a.indexOf(21);
+    var ch25 = arr_computer_a.indexOf(25);
+    var ch7= arr_computer_a.indexOf(7);
+    var ch9 = arr_computer_a.indexOf(9);
+    var ch17 = arr_computer_a.indexOf(17);
+    var ch19 = arr_computer_a.indexOf(19);
+    var ch13 = arr_computer_a.indexOf(13);
+
+
+          shuffle(arr1);
+        
+        if(ch13==-1)
+        {
+          var k = arr[12];
+        }
+        else if(ch1==-1)
+        {
+          var k = arr[0];
+        }
+        else if(ch5==-1)
+        {
+          var k = arr[4];
+        }
+        else if(ch21==-1)
+        {
+          var k = arr[20];
+        }
+        else if(ch25==-1)
+        {
+          var k = arr[24];
+        }
+        else if(ch7==-1)
+        {
+          var k = arr[6];
+        }
+        else if(ch9==-1)
+        {
+          var k = arr[8];
+        }
+        else if(ch17==-1)
+        {
+          var k = arr[16];
+        }
+        else if(ch19==-1)
+        {
+          var k = arr[18];
+        }
+        else
+        {
+          var k = arr1[0];
+        }
         document.getElementById("computer_last").innerHTML = "Last Computer Cut : "+k;
 
         var b2 = arr.indexOf(k);
@@ -297,6 +349,7 @@
         var u1 = arr1.indexOf(k);
         arr1.splice(u1,1);
         key--;
+
 
         checkWinner();
 
@@ -535,19 +588,20 @@
 
   if(user_count>=5 && cser_count<5)
   {
-    document.getElementById("p1").innerHTML = "BINGO ! You Win";
+    document.getElementById("p1").innerHTML = "BINGO ! You Win ( "+user_count+" - " +cser_count +" )";
     win=1;
   }
   else if(cser_count>=5 && user_count<5)
   {
-    document.getElementById("p1").innerHTML = "OOPs You Lost Soo Close";
+    document.getElementById("p1").innerHTML = "OOPs You Loose Soo Close ( "+user_count+" - " +cser_count +" )";
     win =1;
   }
   else if(cser_count>=5 && user_count>=5)
   {
-    document.getElementById("p1").innerHTML = "WoooW Double BINGO";
+    document.getElementById("p1").innerHTML = "WoooW Double BINGO ( "+user_count+" - " +cser_count +" )";
     win=1;
   }
+    
 
   if(win==1)
   {
@@ -559,6 +613,7 @@
           document.getElementById(b).disabled = true;
         }
         document.getElementById("computer").style.display = "block";
+        document.getElementById("p2").innerHTML = "(Scroll Down to See Computer Bingo Box) ";
   }
 
 
