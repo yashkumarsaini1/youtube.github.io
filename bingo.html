@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-    <title>Bingo</title>
+    <title>BINGO Vs Computer</title>
   </head>
   <style type="text/css">
       body
@@ -44,10 +44,13 @@
   <body>
 
 <div class="container-fluid" style="margin-top: 20px;margin-bottom: 20px;text-align: center;">
+  <h1 style="text-align: center;font-size: 45px;">BINGO</h1>
+  <p style="text-align: center;color: red;">Scroll Down for rules</p>
 
   <h1 style="text-align: center; margin-top:10px;color: green;" id="p1"></h1>
   <p style="text-align: center;color: red" id="p2"></p>
   <div class="row">
+    <div class="col-sm-3" id="temp"></div>
     <div class="col-sm-6">
       <h1 class="mt-1 mb-1">Bingo Box</h1>
   <div class="back">
@@ -156,6 +159,22 @@
   </div>
 </div>
 </div>
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-6 bg-white shadow-lg mt-5">
+    <h2 style="text-align: center;color: blue">Rules</h2>
+    <ul style="text-align: left;">
+      <li>Start by filling your bingo box.</li>
+      <li>Just click on the bingo box to fill it with number.</li>
+      <li>Fill all 25 boxes then the start button will appear.</li>
+      <li>After clicking start, now you can click a box out of 25.</li>
+      <li>Computer's box also cutted in your bingo box.</li>
+      <li>Try to make line of 5 boxes in horizontal or vertical or digonal of boxes.</li>
+      <li>Score increases automatically.</li>
+      <li>Play and enjoy BINGO! </li>
+    </ul>
+  </div>
 
 </div>
 
@@ -634,6 +653,7 @@
           document.getElementById(b).disabled = true;
         }
         document.getElementById("computer").style.display = "block";
+        document.getElementById("temp").style.display = "none";
         document.getElementById("p2").innerHTML = "(Scroll Down to See Computer Bingo Box) ";
   }
 
