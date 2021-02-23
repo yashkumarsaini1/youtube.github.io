@@ -44,15 +44,14 @@
   <body>
 
 <div class="container-fluid" style="margin-top: 20px;margin-bottom: 20px;text-align: center;">
-  <h1 style="text-align: center;font-size: 45px;">BINGO</h1>
-  <p style="text-align: center;color: red;">Scroll Down for rules</p>
 
-  <h1 style="text-align: center; margin-top:10px;color: green;" id="p1"></h1>
+  <h3 style="text-align: center; margin-top:10px;color: green;" id="p1"></h3>
   <p style="text-align: center;color: red" id="p2"></p>
   <div class="row">
     <div class="col-sm-3" id="temp"></div>
     <div class="col-sm-6">
       <h1 class="mt-1 mb-1">Bingo Box</h1>
+    <p style="text-align: center;color: red;">Scroll Down for rules</p>
   <div class="back">
     <div class="d-flex align-items-center justify-content-center">
       <button class="btn  block" id="btnt1" >B</button>
@@ -106,7 +105,7 @@
   <button class="btn btn-outline-dark mt-3" style="border-radius: 50px;padding: 10px;font-size: 20px;padding-left: 30px;padding-right: 30px;display: none" id="start" onclick="start()" >Start</button>
 </div>
 <div class="col-sm-6" style="text-align: center;display: none;" id="computer">
-  <h1 class="mt-1 mb-1">Computer Bingo Box</h1>
+  <h1 class="mt-3 mb-2" style="color: blue">Computer Bingo Box</h1>
 
   <div class="back">
     <div class="d-flex align-items-center justify-content-center">
@@ -302,9 +301,13 @@
     var ch19 = arr_computer_a.indexOf(19);
     var ch13 = arr_computer_a.indexOf(13);
 
-    var ch8 = arr_computer_a.indexOf(8);
-    var ch12 = arr_computer_a.indexOf(12);
-    var ch14 = arr_computer_a.indexOf(14);
+    var ch6 = arr_computer_a.indexOf(6);
+    var ch10 = arr_computer_a.indexOf(10);
+    var ch16 = arr_computer_a.indexOf(16);
+    var ch20 = arr_computer_a.indexOf(20);
+
+    var ch11 = arr_computer_a.indexOf(11);
+    var ch15 = arr_computer_a.indexOf(15);
     var ch18 = arr_computer_a.indexOf(18);
 
 
@@ -346,17 +349,29 @@
         {
           var k = arr[18];
         }
-        else if(ch8==-1)
+        else if(ch6==-1)
         {
-          var k = arr[7];
+          var k = arr[5];
         }
-        else if(ch12==-1)
+        else if(ch10==-1)
         {
-          var k = arr[11];
+          var k = arr[9];
         }
-        else if(ch14==-1)
+        else if(ch16==-1)
         {
-          var k = arr[13];
+          var k = arr[15];
+        }
+        else if(ch20==-1)
+        {
+          var k = arr[19];
+        }
+        else if(ch11==-1)
+        {
+          var k = arr[10];
+        }
+        else if(ch15==-1)
+        {
+          var k = arr[14];
         }
         else if(ch18==-1)
         {
