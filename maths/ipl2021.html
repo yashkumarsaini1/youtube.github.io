@@ -340,7 +340,10 @@
         <div id="p_2team" class="teamName"></div>
       </div>
       <div style="padding: 20px;" class="d-grid mx-auto col-5">
-        <button class="btn-outline-primary btn animated zoomIn " style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;" >Toss</button>
+        <button class="btn-outline-primary btn animated zoomIn " id="toss_btn" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;" onclick="toss()">Toss</button>
+      </div>
+      <div style=",margin-top: 20px;">
+        <h1 id="toss_win" style="text-align: center;display: none;" class="animated zoomIn"></h1>
       </div>
     </div>
 
@@ -413,6 +416,20 @@
           document.getElementById("p_2team").innerHTML = teams[b-1];
           document.getElementById("toss").style.display = "block";
         }
+      }
+      function toss()
+      {
+       var toss = Math.floor(Math.random() * 2) + 1;
+       document.getElementById("toss_win").style.display = "block";
+       if(toss==1)
+       {
+          document.getElementById("toss_win").innerHTML = teams[a-1]+" ( Player 1 WON the toss )";
+       }
+       else
+       {
+         document.getElementById("toss_win").innerHTML = teams[b-1]+" ( Player 2 WON the toss )";
+       }
+       document.getElementById("toss_btn").style.display = "none";
       }
     </script>
 
