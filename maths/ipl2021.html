@@ -330,6 +330,37 @@
             <li class="list-group-item"> After 20 Overs or 10 Wickets, Innings will switch.</li>
           </ul>
       </div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <ul class="list-group">
+          <li class="list-group-item " id="p1"></li>
+          <li class="list-group-item " id="p2"></li>
+          <li class="list-group-item " id="p3"></li>
+          <li class="list-group-item " id="p4"></li>
+          <li class="list-group-item " id="p5"></li>
+          <li class="list-group-item " id="p6"></li>
+          <li class="list-group-item " id="p7"></li>
+          <li class="list-group-item " id="p8"></li>
+          <li class="list-group-item " id="p9"></li>
+          <li class="list-group-item " id="p10"></li>
+          <li class="list-group-item " id="p11"></li>
+          <li class="list-group-item " id="p12"></li>
+          <li class="list-group-item " id="p13"></li>
+          <li class="list-group-item " id="p14"></li>
+          <li class="list-group-item " id="p15"></li>
+          <li class="list-group-item " id="p16"></li>
+          <li class="list-group-item " id="p17"></li>
+          <li class="list-group-item " id="p18"></li>
+          <li class="list-group-item " id="p19"></li>
+          <li class="list-group-item " id="p20"></li>
+          <li class="list-group-item " id="p21"></li>
+          <li class="list-group-item " id="p22"></li>
+          <li class="list-group-item " id="p23"></li>
+          <li class="list-group-item " id="p24"></li>
+          <li class="list-group-item " id="p25"></li>
+        </ul>
+      </div>
+
     </div>
 
     </div>
@@ -404,12 +435,36 @@
         clearInterval(t);
       }
 
-    </script>
-
-    <script type="text/javascript">
-
 
       var a,b;
+      var team = 
+      '{"CSK":[' +
+                      '{"Name":"Hari Nishanth","Type":"1","overseas":"0","power":"60" },' +
+                      '{"Name":"Bhagath Verma","Type":"2","overseas":"0","power":"60" },' +
+                      '{"Name":"Harishankar Reddy","Type":"3","overseas":"0","power":"60" },' +
+                      '{"Name":"Cheteshwar Pujara","Type":"1","overseas":"0","power":"80" },' +
+                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0","power":"80" },' +
+                      '{"Name":"Moeen Ali ","Type":"2","overseas":"1","power":"80" },' +
+                      '{"Name":"KM Asif","Type":"3","overseas":"No","power":"60" },' +
+                      '{"Name":"Josh Hazlewood","Type":"3","overseas":"1","power":"80" },' +
+                      '{"Name":"Lungi Ngidi ","Type":"3","overseas":"1","power":"80" },' +
+                      '{"Name":"Shardul Thakur","Type":"3","overseas":"0","power":"70" },' +
+                      '{"Name":"Deepak Chahar","Type":"3","overseas":"0","power":"70" },' +
+                      '{"Name":"Imran Tahir","Type":"3","overseas":"1","power":"80" },' +
+                      '{"Name":"Mitchell Santner","Type":"2","overseas":"1","power":"60" },' +
+                      '{"Name":"R Sai Kishore","Type":"3","overseas":"0","power":"60" },' +
+                      '{"Name":"Karn Sharma","Type":"3","overseas":"0","power":"70" },' +
+                      '{"Name":"Dwayne Bravo","Type":"2","overseas":"1","power":"80" },' +
+                      '{"Name":"Sam Curran","Type":"2","overseas":"1","power":"80" },' +
+                      '{"Name":"Ravindra Jadeja","Type":"2","overseas":"0","power":"90" },' +
+                      '{"Name":"MS Dhoni","Type":"4","overseas":"0","power":"90" },' +
+                      '{"Name":"Robin Uthappa","Type":"4","overseas":"0","power":"80" },' +
+                      '{"Name":"N Jagadeesan","Type":"4","overseas":"0","power":"60" },' +
+                      '{"Name":"Ambati Rayudu","Type":"1","overseas":"0","power":"80" },' +
+                      '{"Name":"Suresh Raina","Type":"2","overseas":"0","power":"90" },' +
+                      '{"Name":"Ruturaj Gaikwad","Type":"1","overseas":"0","power":"60" },' +
+                      '{"Name":"Faf du Plessis","Type":"1","overseas":"1","power":"90" }]}';
+
       function select_teams()
       {
         a = document.getElementById("p_1_team").value;        
@@ -441,6 +496,15 @@
        document.getElementById("toss_btn").style.display = "none";
        document.getElementById("toss_bat").style.display = "inline";
        document.getElementById("toss_bowl").style.display = "inline";
+       document.getElementById("team_select").style.display = "block";
+
+      obj = JSON.parse(team);
+       for(var i=0;i<obj.CSK.length;i++)
+       {
+        var y = i+1;
+        var x = "p"+y;
+        document.getElementById(x).innerHTML = "Name: "+ obj.CSK[i].Name +" Power "+obj.CSK[i].power;
+       }
       }
     </script>
 
