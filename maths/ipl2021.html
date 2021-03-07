@@ -343,8 +343,17 @@
         <button class="btn-outline-primary btn animated zoomIn " id="toss_btn" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;" onclick="toss()">Toss</button>
       </div>
       <div style=",margin-top: 20px;">
-        <h1 id="toss_win" style="text-align: center;display: none;" class="animated zoomIn"></h1>
+        <h3 id="toss_win" style="text-align: center;display: none;" class="animated zoomIn"></h3>
       </div>
+      <div class="d-flex justify-content-center lign-items-center " style="margin-top: 50px;">
+
+        <button class="btn-outline-primary btn animated zoomIn " id="toss_bat" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(1)">BAT</button>
+
+        <button class="btn-outline-warning btn animated zoomIn " id="toss_bowl" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(2)">BOWL</button>
+
+      </div>
+      
+
     </div>
 
     <script type="text/javascript">
@@ -430,6 +439,8 @@
          document.getElementById("toss_win").innerHTML = teams[b-1]+" ( Player 2 WON the toss )";
        }
        document.getElementById("toss_btn").style.display = "none";
+       document.getElementById("toss_bat").style.display = "inline";
+       document.getElementById("toss_bowl").style.display = "inline";
       }
     </script>
 
