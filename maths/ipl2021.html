@@ -478,7 +478,7 @@
                       '{"Name":"Cheteshwar Pujara","Type":"1","overseas":"0" },' +
                       '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
                       '{"Name":"Moeen Ali ","Type":"2","overseas":"1" },' +
-                      '{"Name":"KM Asif","Type":"3","overseas":"No" },' +
+                      '{"Name":"KM Asif","Type":"3","overseas":"0" },' +
                       '{"Name":"Josh Hazlewood","Type":"3","overseas":"1" },' +
                       '{"Name":"Lungi Ngidi ","Type":"3","overseas":"1" },' +
                       '{"Name":"Shardul Thakur","Type":"3","overseas":"0" },' +
@@ -539,7 +539,7 @@
         var z = obj.CSK[i].Type;
         var w = obj.CSK[i].overseas;
         if(w==0){
-                document.getElementById(x).innerHTML =  obj.CSK[i].Name +" <br> "+type_player[z] ;}
+                document.getElementById(x).innerHTML =  obj.CSK[i].Name +" <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>";}
         else
         {
           document.getElementById(x).innerHTML =  obj.CSK[i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
