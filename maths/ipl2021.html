@@ -384,18 +384,17 @@
       </div>
       <div style="height: 450px;width:150px ;overflow-y: scroll;font-size: 10px;">
         <ul class="list-group" id="playing_list">
-
-          <li class="list-group-item " id="cp1"></li>
-          <li class="list-group-item " id="cp2"></li>
-          <li class="list-group-item " id="cp3"></li>
-          <li class="list-group-item " id="cp4"></li>
-          <li class="list-group-item " id="cp5"></li>
-          <li class="list-group-item " id="cp6"></li>
-          <li class="list-group-item " id="cp7"></li>
-          <li class="list-group-item " id="cp8"></li>
-          <li class="list-group-item " id="cp9"></li>
-          <li class="list-group-item " id="cp10"></li>
-          <li class="list-group-item " id="cp11"></li>
+          <li class="list-group-item " id="cp1" onclick="dselect(1)"></li><p style="display: none;" id="pid1"></p>
+          <li class="list-group-item " id="cp2" onclick="dselect(2)"></li><p style="display: none;" id="pid2"></p>
+          <li class="list-group-item " id="cp3" onclick="dselect(3)"></li><p style="display: none;" id="pid3"></p>
+          <li class="list-group-item " id="cp4" onclick="dselect(4)"></li><p style="display: none;" id="pid4"></p>
+          <li class="list-group-item " id="cp5" onclick="dselect(5)"></li><p style="display: none;" id="pid5"></p>
+          <li class="list-group-item " id="cp6" onclick="dselect(6)"></li><p style="display: none;" id="pid6"></p>
+          <li class="list-group-item " id="cp7" onclick="dselect(7)"></li><p style="display: none;" id="pid7"></p>
+          <li class="list-group-item " id="cp8" onclick="dselect(8)"></li><p style="display: none;" id="pid8"></p>
+          <li class="list-group-item " id="cp9" onclick="dselect(9)"></li><p style="display: none;" id="pid9"></p>
+          <li class="list-group-item " id="cp10" onclick="dselect(10)"></li><p style="display: none;" id="pid10"></p>
+          <li class="list-group-item " id="cp11" onclick="dselect(11)"></li><p style="display: none;" id="pid11"></p>
         </ul>
       </div>
     </div>
@@ -563,15 +562,45 @@
         for(var i=1;i<12;i++)
         { 
           var sel_p = "cp" + i;
+          var p_id = "pid"+i;
           var c_list = document.getElementById(sel_p).innerHTML ;
           
           if( c_list =="")
           {
             document.getElementById(sel_p).innerHTML = document.getElementById(p_s).innerHTML;
+            document.getElementById(p_id).innerHTML = btn;
             i = 15;
           }
           
         }
+
+        var count_over =  $('#playing_list').find(":contains('*')").length;
+
+        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length ;
+
+        var count_bowler =  $('#playing_list').find(":contains('Bowler')").length + $('#playing_list').find(":contains('All Rounder')").length ;
+
+        var count_WK = $('#playing_list').find(":contains('WK')").length;
+        document.getElementById("c_overseas").innerHTML = count_over/2;
+        document.getElementById("c_batsman").innerHTML = count_batsman/2;
+        document.getElementById("c_bowler").innerHTML = count_bowler/2;
+        document.getElementById("c_wk").innerHTML = count_WK/2;
+      }
+
+      function dselect(value)
+      {
+        var ds = "pid"+value;
+        var dp = "cp"+value;
+        var dv = document.getElementById(ds).innerHTML;
+        var rm = "p"+dv;
+
+        document.getElementById(rm).style.pointerEvents  = "auto";
+
+        document.getElementById(rm).style.opacity = 1;
+
+        document.getElementById(dp).innerHTML = "";
+        document.getElementById(ds).innerHTML = "";
+
 
         var count_over =  $('#playing_list').find(":contains('*')").length;
 
