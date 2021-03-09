@@ -117,10 +117,11 @@
     .teams_status
     {
       padding: 5px;
-      background-color: #5D5B5B;
+      background-color: #4E7FF0;
       border-radius: 2px;
       margin-left: 5px;
       color: white;
+      font-size: 10px;
     }
 </style>
   <body onload="change()">
@@ -343,7 +344,7 @@
       </div>
       <div class="col-sm-3"></div>
       <div class="container-fluid" style="padding: 20px;">
-        <div class="d-flex justify-content-center lign-items-center mb-2">
+        <div class="d-flex justify-content-center lign-items-center">
           <div class="teams_status">Overseas <p id="c_overseas"></p></div>
           <div  class="teams_status">BAT <p id="c_batsman"></p></div>
           <div class="teams_status">BOWL <p id="c_bowler"></p></div>
@@ -351,7 +352,7 @@
 
         </div>
       </div>
-      <div class="d-flex justify-content-center lign-items-center mt-5 mb-2">
+      <div class="d-flex justify-content-center lign-items-center">
       
       <div style="height: 450px;width:150px ;overflow-y: scroll;font-size: 10px;">
         <ul class="list-group">
@@ -478,21 +479,7 @@
       var a,b;
       var team = 
       '{"CSK":[' +
-                      '{"Name":"Hari Nishanth","Type":"1","overseas":"0" },' +
-                      '{"Name":"Bhagath Verma","Type":"2","overseas":"0" },' +
-                      '{"Name":"Harishankar Reddy","Type":"3","overseas":"0" },' +
-                      '{"Name":"Cheteshwar Pujara","Type":"1","overseas":"0" },' +
-                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
-                      '{"Name":"Moeen Ali ","Type":"2","overseas":"1" },' +
-                      '{"Name":"KM Asif","Type":"3","overseas":"0" },' +
-                      '{"Name":"Josh Hazlewood","Type":"3","overseas":"1" },' +
-                      '{"Name":"Lungi Ngidi ","Type":"3","overseas":"1" },' +
-                      '{"Name":"Shardul Thakur","Type":"3","overseas":"0" },' +
-                      '{"Name":"Deepak Chahar","Type":"3","overseas":"0" },' +
-                      '{"Name":"Imran Tahir","Type":"3","overseas":"1" },' +
-                      '{"Name":"Mitchell Santner","Type":"2","overseas":"1" },' +
-                      '{"Name":"R Sai Kishore","Type":"3","overseas":"0" },' +
-                      '{"Name":"Karn Sharma","Type":"3","overseas":"0" },' +
+                      '{"Name":"Faf du Plessis","Type":"1","overseas":"1" },'+
                       '{"Name":"Dwayne Bravo","Type":"2","overseas":"1" },' +
                       '{"Name":"Sam Curran","Type":"2","overseas":"1" },' +
                       '{"Name":"Ravindra Jadeja","Type":"2","overseas":"0" },' +
@@ -501,8 +488,22 @@
                       '{"Name":"N Jagadeesan","Type":"0","overseas":"0" },' +
                       '{"Name":"Ambati Rayudu","Type":"1","overseas":"0" },' +
                       '{"Name":"Suresh Raina","Type":"2","overseas":"0" },' +
+                      '{"Name":"Cheteshwar Pujara","Type":"1","overseas":"0" },' +
+                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
+                      '{"Name":"Moeen Ali ","Type":"2","overseas":"1" },' +
+                      '{"Name":"Josh Hazlewood","Type":"3","overseas":"1" },' +
+                      '{"Name":"Lungi Ngidi ","Type":"3","overseas":"1" },' +
+                      '{"Name":"Shardul Thakur","Type":"3","overseas":"0" },' +
+                      '{"Name":"Deepak Chahar","Type":"3","overseas":"0" },' +
+                      '{"Name":"Imran Tahir","Type":"3","overseas":"1" },' +
+                      '{"Name":"Mitchell Santner","Type":"2","overseas":"1" },' +
                       '{"Name":"Ruturaj Gaikwad","Type":"1","overseas":"0" },' +
-                      '{"Name":"Faf du Plessis","Type":"1","overseas":"1" }]}';
+                      '{"Name":"Karn Sharma","Type":"3","overseas":"0" },' +
+                      '{"Name":"Bhagath Verma","Type":"2","overseas":"0" },' +
+                      '{"Name":"Harishankar Reddy","Type":"3","overseas":"0" },' +
+                      '{"Name":"KM Asif","Type":"3","overseas":"0" },' +
+                      '{"Name":"R Sai Kishore","Type":"3","overseas":"0" },' +
+                      '{"Name":"Hari Nishanth","Type":"1","overseas":"0" }]}';
 
       function select_teams()
       {
@@ -576,7 +577,7 @@
 
         var count_over =  $('#playing_list').find(":contains('*')").length;
 
-        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length ;
+        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length + $('#playing_list').find(":contains('WK')").length ;
 
         var count_bowler =  $('#playing_list').find(":contains('Bowler')").length + $('#playing_list').find(":contains('All Rounder')").length ;
 
@@ -604,7 +605,7 @@
 
         var count_over =  $('#playing_list').find(":contains('*')").length;
 
-        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length ;
+        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length +$('#playing_list').find(":contains('WK')").length ;
 
         var count_bowler =  $('#playing_list').find(":contains('Bowler')").length + $('#playing_list').find(":contains('All Rounder')").length ;
 
