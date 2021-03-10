@@ -123,6 +123,12 @@
       color: white;
       font-size: 10px;
     }
+    .lists
+    {
+      border-width: 1px;
+      border-style: solid;
+      border-color: grey;
+    }
 </style>
   <body onload="change()">
     <div class="logo" id="loadpage" >
@@ -354,8 +360,8 @@
       </div>
       <div class="d-flex justify-content-center lign-items-center">
       
-      <div style="height: 450px;width:150px ;overflow-y: scroll;font-size: 10px;">
-        <ul class="list-group">
+      <div style="height: 500px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+        <ul class="list-group ">
           <li class="list-group-item " id="p1" onclick="select_player(1)"></li>
           <li class="list-group-item " id="p2" onclick="select_player(2)"></li>
           <li class="list-group-item " id="p3" onclick="select_player(3)"></li>
@@ -383,8 +389,8 @@
           <li class="list-group-item " id="p25" onclick="select_player(25)"></li>
         </ul>
       </div>
-      <div style="height: 450px;width:150px ;overflow-y: scroll;font-size: 10px;">
-        <ul class="list-group" id="playing_list">
+      <div style="height: 500px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+        <ul class="list-group " id="playing_list">
           <li class="list-group-item " id="cp1" onclick="dselect(1)"></li><p style="display: none;" id="pid1"></p>
           <li class="list-group-item " id="cp2" onclick="dselect(2)"></li><p style="display: none;" id="pid2"></p>
           <li class="list-group-item " id="cp3" onclick="dselect(3)"></li><p style="display: none;" id="pid3"></p>
@@ -558,7 +564,7 @@
         var p_s = "p"+btn;
         document.getElementById(p_s).style.pointerEvents  = "none";
 
-        document.getElementById(p_s).style.opacity = 0.6;
+        document.getElementById(p_s).style.opacity = 0.5;
 
         for(var i=1;i<12;i++)
         { 
