@@ -122,6 +122,7 @@
       margin-left: 5px;
       color: white;
       font-size: 10px;
+      width: 75px;
     }
     .lists
     {
@@ -442,7 +443,7 @@
       function change()
       {
         
-        var p = setTimeout(stop,300);
+        var p = setTimeout(stop,3000);
       }
       function move()
       {
@@ -483,7 +484,7 @@
 
 
       var a,b;
-      var team = 
+       var team1 = 
       '{"CSK":[' +
                       '{"Name":"Faf du Plessis","Type":"1","overseas":"1" },'+
                       '{"Name":"Dwayne Bravo","Type":"2","overseas":"1" },' +
@@ -510,6 +511,57 @@
                       '{"Name":"KM Asif","Type":"3","overseas":"0" },' +
                       '{"Name":"R Sai Kishore","Type":"3","overseas":"0" },' +
                       '{"Name":"Hari Nishanth","Type":"1","overseas":"0" }]}';
+      var team2 = 
+      '{"RCB":[' +
+                      '{"Name":"Virat Kohli","Type":"1","overseas":"0" },'+
+                      '{"Name":"AB de Villiers","Type":"0","overseas":"1" },' +
+                      '{"Name":"Devdutt Padikkal","Type":"1","overseas":"0" },' +
+                      '{"Name":"Mohammed Siraj","Type":"3","overseas":"0" },' +
+                      '{"Name":"Washington Sundar","Type":"2","overseas":"0" },' +
+                      '{"Name":"Yuzvendra Chahal","Type":"3","overseas":"0" },' +
+                      '{"Name":"Pavan Deshpande","Type":"1","overseas":"0" },' +
+                      '{"Name":"Josh Philippe","Type":"0","overseas":"1" },' +
+                      '{"Name":"Shahbaz Ahmed","Type":"2","overseas":"0" },' +
+                      '{"Name":"Adam Zampa","Type":"3","overseas":"1" },' +
+                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
+                      '{"Name":"Kane Richardson ","Type":"3","overseas":"1" },' +
+                      '{"Name":"Harshal Patel","Type":"3","overseas":"0" },' +
+                      '{"Name":"Daniel Sams","Type":"2","overseas":"1" },' +
+                      '{"Name":"Navdeep Saini","Type":"3","overseas":"0" },' +
+                      '{"Name":"Glenn Maxwell ","Type":"2","overseas":"1" },' +
+                      '{"Name":"Sachin Baby","Type":"1","overseas":"0" },' +
+                      '{"Name":"Kyle Jamieson","Type":"3","overseas":"1" },' +
+                      '{"Name":"Mohammed Azharuddeen","Type":"0","overseas":"0" },' +
+                      '{"Name":"Daniel Christian","Type":"2","overseas":"1" },' +
+                      '{"Name":"Suyash Prabhudessai","Type":"1","overseas":"0" },' +
+                      '{"Name":"Srikar Bharat","Type":"0","overseas":"0" }]}';
+
+      var team3 = 
+      '{"DC":[' +
+                      '{"Name":"Shikhar Dhawan","Type":"1","overseas":"0" },'+
+                      '{"Name":"Prithvi Shaw","Type":"1","overseas":"0" },' +
+                      '{"Name":"Ajinkya Rahane","Type":"1","overseas":"0" },' +
+                      '{"Name":"Shreyas Iyer","Type":"1","overseas":"0" },' +
+                      '{"Name":"Rishabh Pant","Type":"0","overseas":"0" },' +
+                      '{"Name":"Shimron Hetmyer","Type":"1","overseas":"1" },' +
+                      '{"Name":"Marcus Stoinis","Type":"2","overseas":"1" },' +
+                      '{"Name":"Chris Woakes","Type":"2","overseas":"1" },' +
+                      '{"Name":"Ravichandran Ashwin","Type":"2","overseas":"0" },' +
+                      '{"Name":"Axar Patel","Type":"2","overseas":"0" },' +
+                      '{"Name":"Amit Mishra","Type":"3","overseas":"0" },' +
+                      '{"Name":"Lalit Yadav","Type":"2","overseas":"0" },' +
+                      '{"Name":"Kagiso Rabada","Type":"3","overseas":"1" },' +
+                      '{"Name":"Anrich Nortje","Type":"3","overseas":"1" },' +
+                      '{"Name":"Ishant Sharma","Type":"3","overseas":"0" },' +
+                      '{"Name":"Avesh Khan","Type":"3","overseas":"0" },' +
+                      '{"Name":"Steven Smith ","Type":"1","overseas":"1" },' +
+                      '{"Name":"Umesh Yadav","Type":"3","overseas":"0" },' +
+                      '{"Name":"Sam Billings ","Type":"0","overseas":"1" },' +
+                      '{"Name":"Tom Curran","Type":"2","overseas":"1" },' +
+                      '{"Name":"Ripal Patel","Type":"3","overseas":"0" },' +
+                      '{"Name":"Vishnu Vinod ","Type":"0","overseas":"0" },' +
+                      '{"Name":"Manimaran Siddharth","Type":"3","overseas":"0" },' +
+                      '{"Name":"Lukman Meriwala","Type":"3","overseas":"0" }]}';
 
       function select_teams()
       {
@@ -544,18 +596,18 @@
        document.getElementById("toss_bowl").style.display = "inline";
        document.getElementById("team_select").style.display = "block";
 
-      obj = JSON.parse(team);
-       for(var i=0;i<obj.CSK.length;i++)
+      obj = JSON.parse(team3);
+       for(var i=0;i<obj.DC.length;i++)
        {
         var y = i+1;
         var x = "p"+y;
-        var z = obj.CSK[i].Type;
-        var w = obj.CSK[i].overseas;
+        var z = obj.DC[i].Type;
+        var w = obj.DC[i].overseas;
         if(w==0){
-                document.getElementById(x).innerHTML =  obj.CSK[i].Name +" <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>";}
+                document.getElementById(x).innerHTML =  obj.DC[i].Name +" <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>";}
         else
         {
-          document.getElementById(x).innerHTML =  obj.CSK[i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
+          document.getElementById(x).innerHTML =  obj.DC[i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
         }
        }
       }
