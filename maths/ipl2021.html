@@ -22,115 +22,7 @@
 
     <title>IPL 2021</title>
   </head>
-<style type="text/css">
-  body
-  {
-    font-family: 'Varela Round', sans-serif;
-  }
-    .logo
-    {
-      margin:auto;
-      text-align: center;
-    }
-    #c1
-    {
-      width: 30px;
-      border-radius: 50px;
-      height: 30px;
-      background-color: black;
-      margin-left: 20px;
-
-      animation-name: color;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-    #c2
-    {
-      width: 15px;
-      border-radius: 50px;
-      height: 15px;
-      background-color: black;
-      margin-left: 20px;
-
-      animation-name: color;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-
-    #c3
-    {
-      width: 30px;
-      border-radius: 50px;
-      height: 30px;
-      background-color: black;
-      margin-left: 20px;
-      animation-name: color;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-    @keyframes color {
-      0%
-      {
-        background-color: black;
-      }
-      10%
-      {
-        background-color: green;
-      }
-      30%
-      {
-        background-color: blue;
-      }
-      40%
-      {
-        background-color: yellow;
-      }
-      50%
-      {
-        background-color: red;
-      }
-      60%
-      {
-        background-color: red;
-      }
-      70%
-      {
-        background-color: green;
-      }
-      80%
-      {
-        background-color: blue;
-      }
-      90%
-      {
-        background-color: yellow;
-      }
-      100%
-      {
-        background-color: red;
-      }
-    }
-    .teamName
-    {
-      font-size: 30px;padding: 10px;background-color: #2c5ba7;border-radius: 15px;color: white;margin-left: 20px;
-    }
-    .teams_status
-    {
-      padding: 5px;
-      background-color: #4E7FF0;
-      border-radius: 2px;
-      margin-left: 5px;
-      color: white;
-      font-size: 10px;
-      width: 75px;
-    }
-    .lists
-    {
-      border-width: 1px;
-      border-style: solid;
-      border-color: grey;
-    }
-</style>
+  <link rel="stylesheet" type="text/css" href="ipl.css">
   <body onload="change()">
     <div class="logo" id="loadpage" >
 
@@ -307,7 +199,7 @@
             <option value="3">DC</option>
             <option value="4" >RR</option>
             <option value="5">KKR</option>
-            <option value="6">PK</option>
+            <option value="6">PBKS</option>
             <option value="7">SRH</option>
             <option value="8">MI</option>
         </select>
@@ -323,7 +215,7 @@
             <option value="3">DC</option>
             <option value="4" >RR</option>
             <option value="5">KKR</option>
-            <option value="6" >PK</option>
+            <option value="6" >PBKS</option>
             <option value="7">SRH</option>
             <option value="8">MI</option>
         </select>
@@ -361,7 +253,7 @@
       </div>
       <div class="d-flex justify-content-center lign-items-center">
       
-      <div style="height: 500px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+      <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
         <ul class="list-group ">
           <li class="list-group-item " id="p1" onclick="select_player(1)"></li>
           <li class="list-group-item " id="p2" onclick="select_player(2)"></li>
@@ -390,8 +282,9 @@
           <li class="list-group-item " id="p25" onclick="select_player(25)"></li>
         </ul>
       </div>
-      <div style="height: 500px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+      <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
         <ul class="list-group " id="playing_list">
+          <li class="list-group-item" id="para"> <span>Players Left - 11</span></li>
           <li class="list-group-item " id="cp1" onclick="dselect(1)"></li><p style="display: none;" id="pid1"></p>
           <li class="list-group-item " id="cp2" onclick="dselect(2)"></li><p style="display: none;" id="pid2"></p>
           <li class="list-group-item " id="cp3" onclick="dselect(3)"></li><p style="display: none;" id="pid3"></p>
@@ -433,246 +326,7 @@
 
     </div>
 
-    <script type="text/javascript">
-      
-      var rad =30;
-      var cad =1;
-      var teams = ["CSK","RCB","DC","RR","KKR","PK","SRH","MI"];
-      var type_player = ["WK","Batsman","All Rounder","Bowler"];
-      var t = setInterval(move,18);
-      function change()
-      {
-        
-        var p = setTimeout(stop,3000);
-      }
-      function move()
-      {
-        rad--;
-        if(rad>1){
-        document.getElementById('c1').style.width = rad+"px";
-        document.getElementById('c1').style.height = rad+"px";
-
-        document.getElementById('c3').style.width = 30-rad+"px";
-        document.getElementById('c3').style.height = 30-rad+"px";
-
-      }
-      else if (rad<2 && cad>0 )
-      {
-        cad = 30+rad;
-        
-        document.getElementById('c1').style.width = 30-cad+"px";
-        document.getElementById('c1').style.height = 30-cad+"px";
-
-        document.getElementById('c3').style.width = cad+"px";
-        document.getElementById('c3').style.height = cad+"px";
-
-      }
-      else
-      {
-        rad =30;
-        cad =1;
-      }
-
-      }
-      function stop()
-      {
-        document.getElementById("loadpage").style.display = "none" ;
-
-        document.getElementById("team_select").style.display = "block" ;
-        clearInterval(t);
-      }
-
-
-      var a,b;
-       var team1 = 
-      '{"CSK":[' +
-                      '{"Name":"Faf du Plessis","Type":"1","overseas":"1" },'+
-                      '{"Name":"Dwayne Bravo","Type":"2","overseas":"1" },' +
-                      '{"Name":"Sam Curran","Type":"2","overseas":"1" },' +
-                      '{"Name":"Ravindra Jadeja","Type":"2","overseas":"0" },' +
-                      '{"Name":"MS Dhoni","Type":"0","overseas":"0" },' +
-                      '{"Name":"Robin Uthappa","Type":"0","overseas":"0" },' +
-                      '{"Name":"N Jagadeesan","Type":"0","overseas":"0" },' +
-                      '{"Name":"Ambati Rayudu","Type":"1","overseas":"0" },' +
-                      '{"Name":"Suresh Raina","Type":"2","overseas":"0" },' +
-                      '{"Name":"Cheteshwar Pujara","Type":"1","overseas":"0" },' +
-                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
-                      '{"Name":"Moeen Ali ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Josh Hazlewood","Type":"3","overseas":"1" },' +
-                      '{"Name":"Lungi Ngidi ","Type":"3","overseas":"1" },' +
-                      '{"Name":"Shardul Thakur","Type":"3","overseas":"0" },' +
-                      '{"Name":"Deepak Chahar","Type":"3","overseas":"0" },' +
-                      '{"Name":"Imran Tahir","Type":"3","overseas":"1" },' +
-                      '{"Name":"Mitchell Santner","Type":"2","overseas":"1" },' +
-                      '{"Name":"Ruturaj Gaikwad","Type":"1","overseas":"0" },' +
-                      '{"Name":"Karn Sharma","Type":"3","overseas":"0" },' +
-                      '{"Name":"Bhagath Verma","Type":"2","overseas":"0" },' +
-                      '{"Name":"Harishankar Reddy","Type":"3","overseas":"0" },' +
-                      '{"Name":"KM Asif","Type":"3","overseas":"0" },' +
-                      '{"Name":"R Sai Kishore","Type":"3","overseas":"0" },' +
-                      '{"Name":"Hari Nishanth","Type":"1","overseas":"0" }]}';
-      var team2 = 
-      '{"RCB":[' +
-                      '{"Name":"Virat Kohli","Type":"1","overseas":"0" },'+
-                      '{"Name":"AB de Villiers","Type":"0","overseas":"1" },' +
-                      '{"Name":"Devdutt Padikkal","Type":"1","overseas":"0" },' +
-                      '{"Name":"Mohammed Siraj","Type":"3","overseas":"0" },' +
-                      '{"Name":"Washington Sundar","Type":"2","overseas":"0" },' +
-                      '{"Name":"Yuzvendra Chahal","Type":"3","overseas":"0" },' +
-                      '{"Name":"Pavan Deshpande","Type":"1","overseas":"0" },' +
-                      '{"Name":"Josh Philippe","Type":"0","overseas":"1" },' +
-                      '{"Name":"Shahbaz Ahmed","Type":"2","overseas":"0" },' +
-                      '{"Name":"Adam Zampa","Type":"3","overseas":"1" },' +
-                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
-                      '{"Name":"Kane Richardson ","Type":"3","overseas":"1" },' +
-                      '{"Name":"Harshal Patel","Type":"3","overseas":"0" },' +
-                      '{"Name":"Daniel Sams","Type":"2","overseas":"1" },' +
-                      '{"Name":"Navdeep Saini","Type":"3","overseas":"0" },' +
-                      '{"Name":"Glenn Maxwell ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Sachin Baby","Type":"1","overseas":"0" },' +
-                      '{"Name":"Kyle Jamieson","Type":"3","overseas":"1" },' +
-                      '{"Name":"Mohammed Azharuddeen","Type":"0","overseas":"0" },' +
-                      '{"Name":"Daniel Christian","Type":"2","overseas":"1" },' +
-                      '{"Name":"Suyash Prabhudessai","Type":"1","overseas":"0" },' +
-                      '{"Name":"Srikar Bharat","Type":"0","overseas":"0" }]}';
-
-      var team3 = 
-      '{"DC":[' +
-                      '{"Name":"Shikhar Dhawan","Type":"1","overseas":"0" },'+
-                      '{"Name":"Prithvi Shaw","Type":"1","overseas":"0" },' +
-                      '{"Name":"Ajinkya Rahane","Type":"1","overseas":"0" },' +
-                      '{"Name":"Shreyas Iyer","Type":"1","overseas":"0" },' +
-                      '{"Name":"Rishabh Pant","Type":"0","overseas":"0" },' +
-                      '{"Name":"Shimron Hetmyer","Type":"1","overseas":"1" },' +
-                      '{"Name":"Marcus Stoinis","Type":"2","overseas":"1" },' +
-                      '{"Name":"Chris Woakes","Type":"2","overseas":"1" },' +
-                      '{"Name":"Ravichandran Ashwin","Type":"2","overseas":"0" },' +
-                      '{"Name":"Axar Patel","Type":"2","overseas":"0" },' +
-                      '{"Name":"Amit Mishra","Type":"3","overseas":"0" },' +
-                      '{"Name":"Lalit Yadav","Type":"2","overseas":"0" },' +
-                      '{"Name":"Kagiso Rabada","Type":"3","overseas":"1" },' +
-                      '{"Name":"Anrich Nortje","Type":"3","overseas":"1" },' +
-                      '{"Name":"Ishant Sharma","Type":"3","overseas":"0" },' +
-                      '{"Name":"Avesh Khan","Type":"3","overseas":"0" },' +
-                      '{"Name":"Steven Smith ","Type":"1","overseas":"1" },' +
-                      '{"Name":"Umesh Yadav","Type":"3","overseas":"0" },' +
-                      '{"Name":"Sam Billings ","Type":"0","overseas":"1" },' +
-                      '{"Name":"Tom Curran","Type":"2","overseas":"1" },' +
-                      '{"Name":"Ripal Patel","Type":"3","overseas":"0" },' +
-                      '{"Name":"Vishnu Vinod ","Type":"0","overseas":"0" },' +
-                      '{"Name":"Manimaran Siddharth","Type":"3","overseas":"0" },' +
-                      '{"Name":"Lukman Meriwala","Type":"3","overseas":"0" }]}';
-
-      function select_teams()
-      {
-        a = document.getElementById("p_1_team").value;        
-        b = document.getElementById("p_2_team").value;
-        if(a==b)
-        {
-          alert("Please Select Different Teams");
-        }
-        else
-        {
-          document.getElementById("team_select").style.display = "none";
-          document.getElementById("p_1team").innerHTML = teams[a-1];
-          document.getElementById("p_2team").innerHTML = teams[b-1];
-          document.getElementById("toss").style.display = "block";
-        }
-      }
-      function toss()
-      {
-       var toss = Math.floor(Math.random() * 2) + 1;
-       document.getElementById("toss_win").style.display = "block";
-       if(toss==1)
-       {
-          document.getElementById("toss_win").innerHTML = teams[a-1]+" ( Player 1 WON the toss )";
-       }
-       else
-       {
-         document.getElementById("toss_win").innerHTML = teams[b-1]+" ( Player 2 WON the toss )";
-       }
-       document.getElementById("toss_btn").style.display = "none";
-       document.getElementById("toss_bat").style.display = "inline";
-       document.getElementById("toss_bowl").style.display = "inline";
-       document.getElementById("team_select").style.display = "block";
-
-      obj = JSON.parse(team3);
-       for(var i=0;i<obj.DC.length;i++)
-       {
-        var y = i+1;
-        var x = "p"+y;
-        var z = obj.DC[i].Type;
-        var w = obj.DC[i].overseas;
-        if(w==0){
-                document.getElementById(x).innerHTML =  obj.DC[i].Name +" <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>";}
-        else
-        {
-          document.getElementById(x).innerHTML =  obj.DC[i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
-        }
-       }
-      }
-      function select_player(btn)
-      {
-        var p_s = "p"+btn;
-        document.getElementById(p_s).style.pointerEvents  = "none";
-
-        document.getElementById(p_s).style.opacity = 0.5;
-
-        for(var i=1;i<12;i++)
-        { 
-          var sel_p = "cp" + i;
-          var p_id = "pid"+i;
-          var c_list = document.getElementById(sel_p).innerHTML ;
-          
-          if( c_list =="")
-          {
-            document.getElementById(sel_p).innerHTML = document.getElementById(p_s).innerHTML;
-            document.getElementById(p_id).innerHTML = btn;
-            i = 15;
-          }
-          
-        }
-
-        var count_over =  $('#playing_list').find(":contains('*')").length;
-
-        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length + $('#playing_list').find(":contains('WK')").length ;
-
-        var count_bowler =  $('#playing_list').find(":contains('Bowler')").length + $('#playing_list').find(":contains('All Rounder')").length ;
-
-        var count_WK = $('#playing_list').find(":contains('WK')").length;
-        document.getElementById("c_overseas").innerHTML = count_over/2;
-        document.getElementById("c_batsman").innerHTML = count_batsman/2;
-        document.getElementById("c_bowler").innerHTML = count_bowler/2;
-        document.getElementById("c_wk").innerHTML = count_WK/2;
-      }
-
-      function dselect(value)
-      {
-        var ds = "pid"+value;
-        var dp = "cp"+value;
-        var dv = document.getElementById(ds).innerHTML;
-        var rm = "p"+dv;
-
-        document.getElementById(rm).style.pointerEvents  = "auto";
-
-        document.getElementById(rm).style.opacity = 1;
-
-        document.getElementById(dp).innerHTML = "";
-        document.getElementById(ds).innerHTML = "";
-
-
-        var count_over =  $('#playing_list').find(":contains('*')").length;
-
-        var count_batsman =  $('#playing_list').find(":contains('Batsman')").length + $('#playing_list').find(":contains('All Rounder')").length +$('#playing_list').find(":contains('WK')").length ;
-
-        var count_bowler =  $('#playing_list').find(":contains('Bowler')").length + $('#playing_list').find(":contains('All Rounder')").length ;
-
-        var count_WK = $('#playing_list').find(":contains('WK')").length;
-        document.getElementById("c_overseas").innerHTML = count_over/2;
-        document.getElementById("c_batsman").innerHTML = count_batsman/2;
-        document.getElementById("c_bowler").innerHTML = count_bowler/2;
-        document.getElementById("c_wk").innerHTML = count_WK/2;
-      }
+    <script type="text/javascript" src="ipl.js">
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
