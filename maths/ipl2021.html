@@ -269,7 +269,8 @@
     </div>
     <div id="play_squad" style="display: none;">
       <div class="container-fluid" style="padding: 20px;">
-        <h5 id="toss_det" class="animated zoomIn " style="text-align: center;"></h5>
+        <h5 id="toss_det" class="animated zoomIn " style="text-align: center;color:red;"></h5>
+        <h3 id="select_t_p" class="animated zoomIn " style="text-align: center;"></h3>
         <div class="d-flex justify-content-center lign-items-center">
           <div class="teams_status animated zoomIn">Overseas <p id="c_overseas"></p></div>
           <div  class="teams_status animated zoomIn">BAT <p id="c_batsman"></p></div>
@@ -280,7 +281,7 @@
       </div>
       <div class="d-flex justify-content-center lign-items-center">
       
-      <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+      <div style="height: 400px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
         <ul class="list-group animated zoomIn">
           <li class="list-group-item " id="p1" onclick="select_player(1)"></li>
           <li class="list-group-item " id="p2" onclick="select_player(2)"></li>
@@ -309,7 +310,7 @@
           <li class="list-group-item " id="p25" onclick="select_player(25)"></li>
         </ul>
       </div>
-      <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
+      <div style="height: 400px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
         <ul class="list-group animated slideInUp" id="playing_list">
           <li class="list-group-item " id="para"> <span>Players Left - 11</span></li>
           <li class="list-group-item " id="cp1" onclick="dselect(1)"></li><p style="display: none;" id="pid1"></p>
