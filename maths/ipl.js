@@ -10,7 +10,7 @@
       function change()
       {
         
-        var p = setTimeout(stop,300);
+        var p = setTimeout(stop,3000);
       }
       function move()
       {
