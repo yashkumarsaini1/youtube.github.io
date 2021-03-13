@@ -1,4 +1,10 @@
-
+      var team1 = [];
+      var team2 = [];
+      var team1_bowl = [];
+      var team2_bowl = [];
+      var team1_id = [];
+      var team2_id = [];
+      var sn = 0;
       
       var rad =30;
       var cad =1;
@@ -255,6 +261,9 @@
                       '{"Name":"Jalaj Saxena","Type":"2","overseas":"0" },' +
                       '{"Name":"Utkarsh Singh","Type":3,"overseas":"0" },' +
                       '{"Name":"Fabian Allen ","Type":"2","overseas":"1" }]}';
+
+
+        obj = JSON.parse(team);
             
 
       function select_teams()
@@ -312,7 +321,6 @@
       function curr_team(value)
       {
 
-        obj = JSON.parse(team);
           for(var i=0;i<obj[value].length;i++)
        {
         var y = i+1;
@@ -509,5 +517,83 @@
         {
           document.getElementById("c_wk").style.backgroundColor = "#46DA01";
         }
+
+      }
+      function selected_team()
+      {
+        sn++;
+        if(sn==1)
+        {
+                for(var i = 1;i<12;i++)
+                {
+                  var z = "pid"+i;
+                  team1_id[i-1] = document.getElementById(z).innerHTML;
+                }
+        
+                for(var i = 0;i<11;i++)
+                {
+                  var u = team1_id[i]-1;
+                  var v = teams[a-1];
+                  team1[i] = obj[v][u].Name;
+                  var y = obj[v][u].Type;
+                  if(y==2|| y ==3)
+                  {
+                    team1_bowl.push(team1[i]);
+                  }
+                }
+                document.getElementById("snb").disabled = false;
+
+                for(i=1;i<12;i++)
+                {
+                  var t = "pid"+i;
+                  var u = "cp"+i;
+                  document.getElementById(t).innerHTML = "";
+                  document.getElementById(u).innerHTML = "";
+                }
+                for(i=1;i<26;i++)
+                {
+                  var v = "p"+i;
+                  document.getElementById(v).innerHTML = "";
+
+            document.getElementById(v).style.pointerEvents = "auto";
+            document.getElementById(v).style.opacity = "1";
+            document.getElementById(v).style.display = "inline";
+                }
+                document.getElementById("para").innerHTML = "Players Left - 11";
+
+
+        document.getElementById("c_overseas").innerHTML = "";
+        document.getElementById("c_batsman").innerHTML ="";
+        document.getElementById("c_bowler").innerHTML = "";
+        document.getElementById("c_wk").innerHTML = "";
+
+        document.getElementById("select_t_p").innerHTML = "Player 2 ( "+ teams[b-1] + " ) Select Playing 11";
+        curr_team(teams[b-1]);
+
+
+        
+        }
+        else if(sn==2)
+        {
+
+                for(var i = 1;i<12;i++)
+                {
+                  var z = "pid"+i;
+                  team2_id[i-1] = document.getElementById(z).innerHTML;
+                }
+        
+                for(var i = 0;i<11;i++)
+                {
+                  var u = team2_id[i]-1;
+                  var v = teams[b-1];
+                  team2[i] = obj[v][u].Name;
+                  var y = obj[v][u].Type;
+                  if(y==2|| y ==3)
+                  {
+                    team2_bowl.push(team2[i]);
+                  }
+                }
+        }
+
 
       }
