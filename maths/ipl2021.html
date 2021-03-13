@@ -242,19 +242,46 @@
           </ul>
       </div>
       <div class="col-sm-3"></div>
+    </div>
+
+    </div>
+    <div class="container-fluid mt-5" id="toss" style="display: none;">
+      <div class="d-flex justify-content-center lign-items-center " style="margin-top: 150px;">
+        <div id="p_1team" class="teamName"></div>
+        <div style="font-size: 40px;margin-left: 20px;">V/s</div>
+        <div id="p_2team" class="teamName"></div>
+      </div>
+      <div style="padding: 20px;" class="d-grid mx-auto col-5">
+        <button class="btn-outline-primary btn animated zoomIn " id="toss_btn" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;" onclick="toss()">Toss</button>
+      </div>
+      <div style=",margin-top: 20px;">
+        <h3 id="toss_win" style="text-align: center;display: none;" class="animated zoomIn"></h3>
+      </div>
+      <div class="d-flex justify-content-center lign-items-center " style="margin-top: 50px;">
+
+        <button class="btn-outline-primary btn animated zoomIn " id="toss_bat" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(1)">BAT</button>
+
+        <button class="btn-outline-warning btn animated zoomIn " id="toss_bowl" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(2)">BOWL</button>
+
+      </div>
+      
+
+    </div>
+    <div id="play_squad" style="display: none;">
       <div class="container-fluid" style="padding: 20px;">
+        <h5 id="toss_det" class="animated zoomIn " style="text-align: center;"></h5>
         <div class="d-flex justify-content-center lign-items-center">
-          <div class="teams_status">Overseas <p id="c_overseas"></p></div>
-          <div  class="teams_status">BAT <p id="c_batsman"></p></div>
-          <div class="teams_status">BOWL <p id="c_bowler"></p></div>
-          <div class="teams_status">WK <p id="c_wk"></p></div>
+          <div class="teams_status animated zoomIn">Overseas <p id="c_overseas"></p></div>
+          <div  class="teams_status animated zoomIn">BAT <p id="c_batsman"></p></div>
+          <div class="teams_status animated zoomIn">BOWL <p id="c_bowler"></p></div>
+          <div class="teams_status animated zoomIn">WK <p id="c_wk"></p></div>
 
         </div>
       </div>
       <div class="d-flex justify-content-center lign-items-center">
       
       <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
-        <ul class="list-group ">
+        <ul class="list-group animated zoomIn">
           <li class="list-group-item " id="p1" onclick="select_player(1)"></li>
           <li class="list-group-item " id="p2" onclick="select_player(2)"></li>
           <li class="list-group-item " id="p3" onclick="select_player(3)"></li>
@@ -283,8 +310,8 @@
         </ul>
       </div>
       <div style="height: 460px;width:150px ;overflow-y: scroll;font-size: 12px;" class="lists">
-        <ul class="list-group " id="playing_list">
-          <li class="list-group-item" id="para"> <span>Players Left - 11</span></li>
+        <ul class="list-group animated slideInUp" id="playing_list">
+          <li class="list-group-item " id="para"> <span>Players Left - 11</span></li>
           <li class="list-group-item " id="cp1" onclick="dselect(1)"></li><p style="display: none;" id="pid1"></p>
           <li class="list-group-item " id="cp2" onclick="dselect(2)"></li><p style="display: none;" id="pid2"></p>
           <li class="list-group-item " id="cp3" onclick="dselect(3)"></li><p style="display: none;" id="pid3"></p>
@@ -299,31 +326,6 @@
         </ul>
       </div>
     </div>
-
-    </div>
-
-    </div>
-    <div class="container-fluid mt-5" id="toss" style="display: none;">
-      <div class="d-flex justify-content-center lign-items-center " style="margin-top: 150px;">
-        <div id="p_1team" class="teamName"></div>
-        <div style="font-size: 40px;margin-left: 20px;">V/s</div>
-        <div id="p_2team" class="teamName"></div>
-      </div>
-      <div style="padding: 20px;" class="d-grid mx-auto col-5">
-        <button class="btn-outline-primary btn animated zoomIn " id="toss_btn" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;" onclick="toss()">Toss</button>
-      </div>
-      <div style=",margin-top: 20px;">
-        <h3 id="toss_win" style="text-align: center;display: none;" class="animated zoomIn"></h3>
-      </div>
-      <div class="d-flex justify-content-center lign-items-center " style="margin-top: 50px;">
-
-        <button class="btn-outline-primary btn animated zoomIn " id="toss_bat" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(1)">BAT</button>
-
-        <button class="btn-outline-warning btn animated zoomIn " id="toss_bowl" style="padding: 10px;font-size: 30px;border-radius: 30px;box-shadow: 0 0 2px ;margin-top: 50px;display: none;margin-left: 20px;" onclick="play(2)">BOWL</button>
-
-      </div>
-      
-
     </div>
 
     <script type="text/javascript" src="ipl.js">
