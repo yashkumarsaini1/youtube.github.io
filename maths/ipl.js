@@ -2,6 +2,8 @@
       
       var rad =30;
       var cad =1;
+      var toss_winner;
+      var toss_loser;
       var teams = ["CSK","RCB","DC","RR","KKR","PK","SRH","MI"];
       var type_player = ["WK","Batsman","All Rounder","Bowler"];
       var t = setInterval(move,18);
@@ -289,15 +291,16 @@
        if(toss==1)
        {
           document.getElementById("toss_win").innerHTML = teams[a-1]+" ( Player 1 WON the toss )";
+          toss_winner = teams[a-1];
        }
        else
        {
          document.getElementById("toss_win").innerHTML = teams[b-1]+" ( Player 2 WON the toss )";
+         toss_winner = teams[b-1];
        }
        document.getElementById("toss_btn").style.display = "none";
        document.getElementById("toss_bat").style.display = "inline";
        document.getElementById("toss_bowl").style.display = "inline";
-       document.getElementById("team_select").style.display = "block";
 
       obj = JSON.parse(team3);
        for(var i=0;i<obj.DC.length;i++)
@@ -313,6 +316,19 @@
           document.getElementById(x).innerHTML =  obj.DC[i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
         }
        }
+      }
+      function play(value)
+      {
+        document.getElementById("play_squad").style.display = "inline";
+        document.getElementById("toss").style.display = "none";
+        if(value == 1)
+        {
+          document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bat First ";
+        }
+        else
+        {
+          document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bowl First ";
+        }
       }
       function select_player(btn)
       {
@@ -355,6 +371,7 @@
           {
             var too = "p"+i;
             document.getElementById(too).style.pointerEvents = "auto";
+            document.getElementById(too).style.opacity = "1";
           }
         }
         else
@@ -363,6 +380,7 @@
           {
             var too = "p"+i;
             document.getElementById(too).style.pointerEvents = "none";
+            document.getElementById(too).style.opacity = "0.5";
           }
         }
 
@@ -412,6 +430,7 @@
           {
             var too = "p"+i;
             document.getElementById(too).style.pointerEvents = "auto";
+            document.getElementById(too).style.opacity = "1";
 
           }
         }
@@ -421,6 +440,7 @@
           {
             var too = "p"+i;
             document.getElementById(too).style.pointerEvents = "none";
+            document.getElementById(too).style.opacity = "0.5";
           }
         }
 
