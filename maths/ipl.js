@@ -302,6 +302,7 @@
 
       
       }
+      var bat_first = teams[b-1];
       function play(value)
       {
         document.getElementById("play_squad").style.display = "inline";
@@ -309,10 +310,18 @@
         if(value == 1)
         {
           document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bat First ";
+          if(toss_winner==teams[a-1])
+          {
+             bat_first = toss_winner;
+          }
         }
         else
         {
           document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bowl First ";
+          if(toss_winner==teams[b-1])
+          {
+             bat_first = teams[a-1];
+          }
         }
         document.getElementById("select_t_p").innerHTML = "Player 1 ( "+ teams[a-1] + " ) Select Playing 11";
         curr_team(teams[a-1]);
@@ -593,7 +602,19 @@
                     team2_bowl.push(team2[i]);
                   }
                 }
+
+                var temp = [];
+        if(teams[a-1]!=bat_first)
+        {
+          temp = [...team1];
+          team1 = [...team2];
+          team2 = [...temp];
+          
+          temp = [...team1_bowl];
+          team1_bowl = [...team2_bowl];
+          team2_bowl = [...team1_bowl];
         }
-
-
+        document.getElementById("play_squad").style.display = "none";
+        document.getElementById("main_game").style.display = "block";
+        }
       }
