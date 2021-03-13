@@ -10,7 +10,7 @@
       function change()
       {
         
-        var p = setTimeout(stop,3000);
+        var p = setTimeout(stop,1000);
       }
       function move()
       {
@@ -326,6 +326,7 @@
           document.getElementById(x).innerHTML =  obj[value][i].Name + "<span style='color:green;font-size:16px;'>*</span> <br> "+ "<span style='color:red;'>"+type_player[z]+ "</span>" ;
         }
        }
+       document.getElementById("snb").disabled = true;
 
       }
       function select_player(btn)
@@ -393,7 +394,10 @@
         document.getElementById("c_batsman").innerHTML = count_batsman/2;
         document.getElementById("c_bowler").innerHTML = count_bowler/2;
         document.getElementById("c_wk").innerHTML = count_WK/2;
+
+        check_team_con();
       }
+      
 
       function dselect(value)
       {
@@ -455,4 +459,55 @@
         document.getElementById("c_bowler").innerHTML = count_bowler/2;
         document.getElementById("c_wk").innerHTML = count_WK/2;
       }
+      check_team_con();
     }
+    function check_team_con()
+      {
+        var k =0;
+        for(i=1;i<12;i++)
+        {
+          var to = "cp"+i;
+          var z = document.getElementById(to).innerHTML;
+          if(z!="")
+          {
+            k++;
+          }
+        }
+        var l = document.getElementById("c_overseas").innerHTML;
+        var m = document.getElementById("c_bowler").innerHTML;
+        var n = document.getElementById("c_wk").innerHTML;
+
+        if(k==11&&l<5&&m>4&&n>0)
+        {
+          document.getElementById("snb").disabled = false;
+        }
+        else
+        {
+          document.getElementById("snb").disabled = true;
+        }
+        if(l>4)
+        {
+          document.getElementById("c_overseas").style.backgroundColor = "red";
+        }
+        else
+        {
+          document.getElementById("c_overseas").style.backgroundColor = "#46DA01";
+        }
+        if(m<5)
+        {
+          document.getElementById("c_bowler").style.backgroundColor = "red";
+        }
+        else
+        {
+          document.getElementById("c_bowler").style.backgroundColor = "#46DA01";
+        }
+        if(n<1)
+        {
+          document.getElementById("c_wk").style.backgroundColor = "red";
+        }
+        else
+        {
+          document.getElementById("c_wk").style.backgroundColor = "#46DA01";
+        }
+
+      }
