@@ -112,3 +112,30 @@
     {
       cursor: pointer;
     }
+    .score
+    {
+      padding: 7px;font-size: 12px; border-radius: 5px;background-color: #2A5EAE;color: white;
+      width: 40%;
+
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .overs
+    {
+      padding: 7px;font-size: 12px; border-radius: 5px;background-color: #2A5EAE;color: white;
+      width: 40%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+    .c_bat1
+    {
+      padding: 5px;font-size: 9px; border-radius: 100px;background-color: #D5E2F7;
+      width: 60%;
+      text-align: center;
+    }
+    .c_bat2
+    {
+      padding: 5px;font-size: 9px; border-radius: 100px;background-color: #D7D7D7;
+      width: 60%;
+      text-align: center;
+    }
