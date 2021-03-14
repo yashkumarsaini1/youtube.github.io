@@ -194,7 +194,6 @@
       padding: 20px;
       font-size: 40px;
       color: white;
-      background-color: #0053A0;
       margin-left: 20px;
     }
     .bat_btn
@@ -204,4 +203,10 @@
       padding-right: 50px;
       padding-left: 50px;
 
+    }
+    #ba1{
+      background-color: #3DB42E;
+    }
+    #ba2{
+      background-color: #2A198B;
     }
