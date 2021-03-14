@@ -183,7 +183,25 @@
     .c_bowl
     {
       padding: 5px;font-size: 10px; border-radius: 100px;
-      background-color: #9DC2E4;
+      background-color: #585858;
       width: 60%;
+      color: white;
       text-align: center;
+    }
+    .curr_run
+    {
+      border-radius: 500px;
+      padding: 20px;
+      font-size: 40px;
+      color: white;
+      background-color: #0053A0;
+      margin-left: 20px;
+    }
+    .bat_btn
+    {
+      padding: 20px;
+      margin-left: 20px;
+      padding-right: 50px;
+      padding-left: 50px;
+
     }
