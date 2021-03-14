@@ -618,3 +618,20 @@
         document.getElementById("main_game").style.display = "block";
         }
       }
+      var batting = 0;
+      function bat()
+      {
+        batting++;
+        if(batting%2!=0)
+        {
+          document.getElementById("ba1").style.display = "inline";
+
+          document.getElementById("ba2").style.display = "none";
+        }
+        else
+        {
+           document.getElementById("ba1").style.display = "none";
+
+          document.getElementById("ba2").style.display = "inline";
+        }
+      }
