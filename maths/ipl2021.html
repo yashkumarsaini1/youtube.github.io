@@ -374,6 +374,7 @@
             <div class="c_o_ball1" id="Runs" style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;">14 Runs </div>
         </div>
         <div class="c_o d-flex justify-content-center align-items-center">
+          
             <div class="c_o_ball " id="ball1" style="background-color: #2A198B">4</div>
             <div class="c_o_ball" id="ball2" style="background-color: #8A8A8A">1</div>
             <div class="c_o_ball" id="ball3" style="background-color: #BABABA">0</div>
@@ -383,11 +384,14 @@
         </div>
       </div>
       <div class="d-flex justify-content-center align-items-center mt-4">
-         <div class="curr_run animated zoomIn">
+         <div class="curr_run animated zoomIn" id="ba1" style="display: none;">
            &nbsp; <span> 6 </span> &nbsp;
          </div>
+         <div class="curr_run animated zoomIn" id="ba2" style="display: none;">
+           &nbsp; <span> 4 </span> &nbsp;
+         </div>
         <div  >
-            <button class="btn btn-outline-success bat_btn">BAT</button>
+            <button class="btn btn-outline-success bat_btn" onclick="bat()" >BAT</button>
         </div>
       </div>
 
