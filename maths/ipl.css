@@ -114,21 +114,21 @@
     }
     .score
     {
-      padding: 10px;font-size:18px;
+      padding: 8px;font-size:15px;
        border-radius: 15px;background-color: #2A5EAE;color: white;
       width: 50%;
 
-      border-bottom-left-radius: 0px;
+      border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
       text-align: center;
     }
     .overs
     {
-      padding: 10px;font-size: 18px; border-radius: 15px;
+      padding: 8px;font-size: 15px; border-radius: 15px;
       background-color: #2A5EAE;color: white;
       width: 50%;
       border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
       text-align: center;
     }
     .c_bat1
