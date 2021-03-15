@@ -681,6 +681,14 @@
       function current_over(value)
       {
         ov_ball++;
+        if(ov_ball==1)
+        {
+          for(var j = 1;j<7;j++)
+          {
+            var s = "ball"+j;
+            document.getElementById(s).innerHTML = "";
+          }
+        }
         for(var i=1;i<7;i++)
         {
           var f = "ball"+i;
@@ -694,15 +702,22 @@
           }
         }
         var g = "ball"+ov_ball;
+        var o = 0;
         document.getElementById(g).innerHTML = value;
         document.getElementById(g).style.backgroundColor = check_color(value);
-
-        if (ov_ball==6){
-          ov_ball =0;
-          for(var i;i<7;i++)
+        for(var k=1;k<7;k++)
+        {
+          var u = "ball"+k;
+          var v = document.getElementById(u).innerHTML;
+          if(v!="W")
           {
-            var h = "ball"+i;
-            document.getElementById(g).innerHTML = "";
+            o = +o + +v;
           }
         }
+        document.getElementById("Runs").innerHTML = o + " Runs";
+        if (ov_ball==6)
+        {
+          ov_ball =0;
+        }
+
       }
