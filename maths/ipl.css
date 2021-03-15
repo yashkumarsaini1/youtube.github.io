@@ -114,9 +114,9 @@
     }
     .score
     {
-      padding: 15px;font-size:18px;
+      padding: 10px;font-size:18px;
        border-radius: 15px;background-color: #2A5EAE;color: white;
-      width: 40%;
+      width: 50%;
 
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
@@ -124,9 +124,9 @@
     }
     .overs
     {
-      padding: 15px;font-size: 18px; border-radius: 15px;
+      padding: 10px;font-size: 18px; border-radius: 15px;
       background-color: #2A5EAE;color: white;
-      width: 40%;
+      width: 50%;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       text-align: center;
