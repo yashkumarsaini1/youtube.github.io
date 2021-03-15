@@ -5,6 +5,7 @@
       var team1_id = [];
       var team2_id = [];
       var sn = 0;
+      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,4,6,'W','W','W'];
       
       var rad =30;
       var cad =1;
@@ -622,16 +623,86 @@
       function bat()
       {
         batting++;
-        if(batting%2!=0)
+        var run = myArray[Math.floor(Math.random() * myArray.length)];
+        check_run(run);
+
+      }
+      var ball_number = 0;
+      function check_run(value)
+      {
+        ball_number++;
+        if(ball_number%2!=0)
         {
           document.getElementById("ba1").style.display = "inline";
-
           document.getElementById("ba2").style.display = "none";
+          document.getElementById("ba1").innerHTML = value;
+          var bcolor = check_color(value);
+            document.getElementById("ba1").style.backgroundColor = bcolor;
         }
         else
         {
-           document.getElementById("ba1").style.display = "none";
-
           document.getElementById("ba2").style.display = "inline";
+          document.getElementById("ba1").style.display = "none";
+          document.getElementById("ba2").innerHTML = value;
+          var bcolor = check_color(value);
+          
+            document.getElementById("ba2").style.backgroundColor = bcolor;
+
+        }
+
+        current_over(value);
+      }
+      function check_color(value)
+      {
+        var bcolor;
+        if(value=="0")
+          {
+            bcolor = "#BABABA";
+          }
+          else if(value=="1"||value=="2"||value=="3")
+          {
+            bcolor = "#8A8A8A";
+          }
+          else if(value=="4")
+          {
+            bcolor = "#2A198B";
+          }
+          else if(value=="6")
+          {
+            bcolor = "#3DB42E";
+          }
+          else if(value=="W")
+          {
+            bcolor = "#DE0000";
+          }
+          return bcolor;
+      }
+      var ov_ball =  0;
+      function current_over(value)
+      {
+        ov_ball++;
+        for(var i=1;i<7;i++)
+        {
+          var f = "ball"+i;
+          if(i<=ov_ball)
+          {
+            document.getElementById(f).style.display = "inline";
+          }
+          else
+          {
+            document.getElementById(f).style.display = "none";
+          }
+        }
+        var g = "ball"+ov_ball;
+        document.getElementById(g).innerHTML = value;
+        document.getElementById(g).style.backgroundColor = check_color(value);
+
+        if (ov_ball==6){
+          ov_ball =0;
+          for(var i;i<7;i++)
+          {
+            var h = "ball"+i;
+            document.getElementById(g).innerHTML = "";
+          }
         }
       }
