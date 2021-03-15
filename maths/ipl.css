@@ -200,6 +200,9 @@
       font-size: 40px;
       color: white;
       margin-left: 20px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
     }
     .bat_btn
     {
