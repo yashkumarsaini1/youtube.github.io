@@ -376,7 +376,7 @@
           <tr>
             <th scope="col">Bowler</th>
             <th scope="col"><span style="color: #DF0000">Ov</span></th>
-            <th scope="col" style="color: #00DFA2"><b>Runs</b></th>
+            <th scope="col" style="color: black"><b>Runs</b></th>
             <th scope="col" style="color: red;">W</th>
             <th scope="col" style="color: #3DB42E">Eco</th>
           </tr>
@@ -433,6 +433,7 @@
             <button class="btn btn-outline-dark bat_btn" onclick="bat()" >BAT</button>
         </div>
       </div>
+      <div class="mt-1 mb-5">
 <nav style="text-align: center;font-size: 10px;" class="mt-2">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Overs</button>
@@ -441,6 +442,9 @@
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
+
+  <!-- Overs Status start -->
+
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="c_o d-flex justify-content-center align-items-center mt-1">
             <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
@@ -452,68 +456,107 @@
             <div class="c_o_ball2 animated zoomIn">5</div>
             <div class="c_o_ball2 animated zoomIn">6</div>
         </div>
-
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
-        </div>
-
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
-        </div>
-
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
-        </div>
-
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
-        </div>
-
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
-        </div>
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+
+
+  <!-- Overs Status End -->
+
+  <!-- First Innings Score Card -->
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    
+    <nav style="font-size: 10px"  class="mt-2">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav_bat1" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Batting</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav_bowl1" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bowling</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav_bat1" role="tabpanel" aria-labelledby="nav-home-tab">
+
+          <div class="table-responsive " style="text-align: center;font-size: 12px;">
+        <div class="d-flex justify-content-center align-items-center">
+          <div style="color: black;font-size: 15px;"><b>CSK</b></div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+
+        </div>
+        
+         <table class="table" style="text-align: center;">
+          <tr>
+            <th scope="col">Batsman</th>
+            <th scope="col"><span style="color: #DF0000">Runs</span></th>
+            <th scope="col" style="color: #00DFA2"><b>SR</b></th>
+            <th scope="col" style="color: #2A198B">4s</th>
+            <th scope="col" style="color: #3DB42E">6s</th>
+          </tr>
+          <tr>
+            <td> Suresh Raina <br><span style="background-color: green;padding: 3px;font-size: 12px;color: white;border-radius: 5px; ">Playing</span></td>
+            <td>15 (10)</td>
+            <td>150.00</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td> MS Dhoni <br><span style="background-color: green;padding: 3px;font-size: 12px;color: white;border-radius: 5px; ">Playing</span></td>
+            <td>12 (10)</td>
+            <td>120.00</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+         </table>
+  </div>
+</div>
+  <div class="tab-pane fade" id="nav_bowl1" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+    <div class="table-responsive " style="text-align: center;font-size: 12px;">
+        <div class="d-flex justify-content-center align-items-center">
+          <div style="color: black;font-size: 15px;"><b>CSK</b></div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+
+        </div>
+
+         <table class="table" style="text-align: center;">
+          <tr>
+            <th scope="col">Bowler</th>
+            <th scope="col"><span style="color: #DF0000">Ov</span></th>
+            <th scope="col" style="color: black"><b>Runs</b></th>
+            <th scope="col" style="color: red;">W</th>
+            <th scope="col" style="color: #3DB42E">Eco</th>
+          </tr>
+          <tr>
+            <td> Jofra Archer</td>
+            <td>1.3</td>
+            <td>9</td>
+            <td>1</td>
+            <td>6.00</td>
+          </tr>
+
+         </table>
+  </div>
+  </div>
+</div>
+  </div>
+  <!-- Seocond Innings Scorecard -->
+
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <nav style="font-size: 10px"  class="mt-2">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav_bat2" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Batting</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav_bowl2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bowling</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav_bat2" role="tabpanel" aria-labelledby="nav-home-tab">Batting</div>
+  <div class="tab-pane fade" id="nav_bowl2" role="tabpanel" aria-labelledby="nav-profile-tab">Bowing </div>
+</div>
+    
+  </div>
 </div>
 
 
     </div>
+  </div>
 
     <script type="text/javascript" src="ipl.js">
     </script>
