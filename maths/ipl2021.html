@@ -341,7 +341,7 @@
           <div style="background-color:   #000080;font-size: 12px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;vertical-align: sub;">CRR 8.20</div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-          <div style="color: black;font-size: 15px;"><b>CSK</b></div>
+          <div style="color: black;font-size: 15px;" id="bat_t1"><b>CSK</b></div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
 
@@ -357,18 +357,18 @@
             <th scope="col" style="color: #3DB42E">6s</th>
           </tr>
           <tr>
-            <td> Suresh Raina</td>
-            <td>15 (10)</td>
-            <td>150.00</td>
-            <td>1</td>
-            <td>1</td>
+            <td ><span id="c_b_name1"></span><span id="star1" style="font-size: 20px; color: red;">*</span></td>
+            <td id="c_b_run1"></td>
+            <td id="c_b_sr1"></td>
+            <td id="c_b_41"></td>
+            <td id="c_b_61"></td>
           </tr>
           <tr>
-            <td> MS Dhoni</td>
-            <td>12 (10)</td>
-            <td>120.00</td>
-            <td>0</td>
-            <td>2</td>
+            <td><span id="c_b_name2"> </span><span id="star2" style="font-size: 20px; color: red;display: none;">*</span></td>
+            <td id="c_b_run2"></td>
+            <td id="c_b_sr2"></td>
+            <td id="c_b_42"></td>
+            <td id="c_b_62"></td>
           </tr>
          </table>
 
@@ -381,11 +381,11 @@
             <th scope="col" style="color: #3DB42E">Eco</th>
           </tr>
           <tr>
-            <td> Jofra Archer</td>
-            <td>1.3</td>
-            <td>9</td>
-            <td>1</td>
-            <td>6.00</td>
+            <td id="c_bo_name"></td>
+            <td id="c_bo_ov"></td>
+            <td id="c_bo_run"></td>
+            <td id="c_bo_w"></td>
+            <td id="c_bo_eco"></td>
           </tr>
          </table>
        </div>
@@ -396,8 +396,8 @@
           <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             Select Bowler
          </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" >Action</a></li>
+        <ul class="dropdown-menu bowler_list" aria-labelledby="dropdownMenuButton1">
+          <li id="bowl_sel" class="dropdown-item"  style="display: none;">Action</li>
         </ul>
         </div>
 
@@ -430,7 +430,7 @@
          <div class="curr_run animated zoomIn" id="ba2" style="display: none;">
          </div>
         <div  >
-            <button class="btn btn-outline-dark bat_btn" onclick="bat()" >BAT</button>
+            <button class="btn btn-outline-dark bat_btn" disabled id="bat_c_btn" onclick="bat()" >BAT</button>
         </div>
       </div>
       <div class="mt-1 mb-5">
@@ -446,16 +446,10 @@
   <!-- Overs Status start -->
 
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <div class="c_o d-flex justify-content-center align-items-center mt-1">
-            <div class="c_o_ball3 animated zoomIn">Ov - 5</div>
-            <div class="c_o_ball3 animated zoomIn">Jofra Archer</div>
-            <div class="c_o_ball2 animated zoomIn">1</div>
-            <div class="c_o_ball2 animated zoomIn">2</div>
-            <div class="c_o_ball2 animated zoomIn">3</div>
-            <div class="c_o_ball2 animated zoomIn">4</div>
-            <div class="c_o_ball2 animated zoomIn">5</div>
-            <div class="c_o_ball2 animated zoomIn">6</div>
+        <div class="c_o d-flex justify-content-center align-items-center mt-1" id="over_s" style="display: none;">
         </div>
+        <h1 id="pasa"></h1><br><br>
+        <h1 id="pasa1"></h1>
   </div>
 
 
@@ -475,12 +469,12 @@
 
           <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
-          <div style="color: black;font-size: 15px;"><b>CSK</b></div>
+          <div style="color: black;font-size: 15px;" id="bat_t2"><b>CSK</b></div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
 
         </div>
-        
+
          <table class="table" style="text-align: center;">
           <tr>
             <th scope="col">Batsman</th>
@@ -489,19 +483,12 @@
             <th scope="col" style="color: #2A198B">4s</th>
             <th scope="col" style="color: #3DB42E">6s</th>
           </tr>
-          <tr>
-            <td> Suresh Raina <br><span style="background-color: green;padding: 3px;font-size: 12px;color: white;border-radius: 5px; ">Playing</span></td>
+          <tr style="display: none;" id="inn1s">
+            <td> Suresh Raina <br><span class="bat_details">Playing</span></td>
             <td>15 (10)</td>
             <td>150.00</td>
             <td>1</td>
             <td>1</td>
-          </tr>
-          <tr>
-            <td> MS Dhoni <br><span style="background-color: green;padding: 3px;font-size: 12px;color: white;border-radius: 5px; ">Playing</span></td>
-            <td>12 (10)</td>
-            <td>120.00</td>
-            <td>0</td>
-            <td>2</td>
           </tr>
          </table>
   </div>
@@ -510,7 +497,7 @@
 
     <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
-          <div style="color: black;font-size: 15px;"><b>CSK</b></div>
+          <div style="color: black;font-size: 15px;" id="bat_t3"><b>CSK</b></div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
           <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
 
@@ -524,8 +511,8 @@
             <th scope="col" style="color: red;">W</th>
             <th scope="col" style="color: #3DB42E">Eco</th>
           </tr>
-          <tr>
-            <td> Jofra Archer</td>
+          <tr id="b_inns1" style="display: none;">
+            <td>Jofra Archer</td>
             <td>1.3</td>
             <td>9</td>
             <td>1</td>
@@ -547,8 +534,64 @@
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav_bat2" role="tabpanel" aria-labelledby="nav-home-tab">Batting</div>
-  <div class="tab-pane fade" id="nav_bowl2" role="tabpanel" aria-labelledby="nav-profile-tab">Bowing </div>
+  <div class="tab-pane fade show active" id="nav_bat2" role="tabpanel" aria-labelledby="nav-home-tab">
+    
+    <div class="table-responsive " style="text-align: center;font-size: 12px;">
+        <div class="d-flex justify-content-center align-items-center">
+          <div style="color: black;font-size: 15px;" id="bat_t2"><b>RCB 2nd Innings</b></div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+
+        </div>
+
+         <table class="table" style="text-align: center;">
+          <tr>
+            <th scope="col">Batsman</th>
+            <th scope="col"><span style="color: #DF0000">Runs</span></th>
+            <th scope="col" style="color: #00DFA2"><b>SR</b></th>
+            <th scope="col" style="color: #2A198B">4s</th>
+            <th scope="col" style="color: #3DB42E">6s</th>
+          </tr>
+          <tr style="display: none;" id="inn2s">
+            <td> Suresh Raina <br><span class="bat_details1">Playing</span></td>
+            <td>15 (10)</td>
+            <td>150.00</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+         </table>
+  </div>
+
+  </div>
+  <div class="tab-pane fade" id="nav_bowl2" role="tabpanel" aria-labelledby="nav-profile-tab">
+    
+    <div class="table-responsive " style="text-align: center;font-size: 12px;">
+        <div class="d-flex justify-content-center align-items-center">
+          <div style="color: black;font-size: 15px;" id="bat_t3"><b>CSK</b></div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
+          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+
+        </div>
+
+         <table class="table" style="text-align: center;">
+          <tr>
+            <th scope="col">Bowler</th>
+            <th scope="col"><span style="color: #DF0000">Ov</span></th>
+            <th scope="col" style="color: black"><b>Runs</b></th>
+            <th scope="col" style="color: red;">W</th>
+            <th scope="col" style="color: #3DB42E">Eco</th>
+          </tr>
+          <tr id="b_inns2" style="display: none;">
+            <td>Jofra Archer</td>
+            <td>1.3</td>
+            <td>9</td>
+            <td>1</td>
+            <td>6.00</td>
+          </tr>
+
+         </table>
+  </div>
+  </div>
 </div>
     
   </div>
