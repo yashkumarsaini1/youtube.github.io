@@ -4,8 +4,29 @@
       var team2_bowl = [];
       var team1_id = [];
       var team2_id = [];
+      var inngs = 1;
+      var curr_ov_by = -1;
+      var curr_ov = [];
+      var curr_ov_color = [];
+      var inn_overs=0;
+      var ov_complete = 0;
+
+      var last_over_by;
+
+      var ball_number = 0;
+      var strike = 1 ;
+
+      var batsman = [];
+      var bowler = [];
+
+      var batsman1 = [];
+      var bowler1 = [];
+
       var sn = 0;
-      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,4,6,'W','W','W'];
+      var myArray = [1,3,1,1,1,1,1,1,1,1,1,1,1,3,4,4,4,4,6,6,6,6,'W','W','W'];
+
+      var batting1 = 0;
+      var batting2 = 1;
       
       var rad =30;
       var cad =1;
@@ -96,7 +117,7 @@
                       '{"Name":"Josh Philippe","Type":"0","overseas":"1" },' +
                       '{"Name":"Shahbaz Ahmed","Type":"2","overseas":"0" },' +
                       '{"Name":"Adam Zampa","Type":"3","overseas":"1" },' +
-                      '{"Name":"Krishnappa Gowtham","Type":"2","overseas":"0" },' +
+                      '{"Name":"Rajat Patidar","Type":"1","overseas":"0" },' +
                       '{"Name":"Kane Richardson ","Type":"3","overseas":"1" },' +
                       '{"Name":"Harshal Patel","Type":"3","overseas":"0" },' +
                       '{"Name":"Daniel Sams","Type":"2","overseas":"1" },' +
@@ -303,7 +324,8 @@
 
       
       }
-      var bat_first = teams[b-1];
+      var bat_first ;
+      var bowl_first ;
       function play(value)
       {
         document.getElementById("play_squad").style.display = "inline";
@@ -313,15 +335,28 @@
           document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bat First ";
           if(toss_winner==teams[a-1])
           {
-             bat_first = toss_winner;
+             bat_first = teams[a-1];
+             bowl_first = teams[b-1];
+          }
+          else if(toss_winner==teams[b-1])
+          {
+            bat_first = teams[b-1];
+            bowl_first = teams[a-1];
           }
         }
         else
         {
           document.getElementById("toss_det").innerHTML = toss_winner + " won the toss and decided to Bowl First ";
-          if(toss_winner==teams[b-1])
+          if(toss_winner==teams[a-1])
           {
-             bat_first = teams[a-1];
+             bat_first = teams[b-1];
+             bowl_first = teams[a-1];
+          }
+
+          else if(toss_winner==teams[b-1])
+          {
+            bat_first = teams[a-1];
+            bowl_first = teams[b-1];
           }
         }
         document.getElementById("select_t_p").innerHTML = "Player 1 ( "+ teams[a-1] + " ) Select Playing 11";
@@ -564,10 +599,9 @@
                 {
                   var v = "p"+i;
                   document.getElementById(v).innerHTML = "";
-
-            document.getElementById(v).style.pointerEvents = "auto";
-            document.getElementById(v).style.opacity = "1";
-            document.getElementById(v).style.display = "inline";
+                  document.getElementById(v).style.pointerEvents = "auto";
+                  document.getElementById(v).style.opacity = "1";
+                  document.getElementById(v).style.display = "inline";
                 }
                 document.getElementById("para").innerHTML = "Players Left - 11";
 
@@ -598,7 +632,7 @@
                   var v = teams[b-1];
                   team2[i] = obj[v][u].Name;
                   var y = obj[v][u].Type;
-                  if(y==2|| y ==3)
+                  if(y==2||y==3)
                   {
                     team2_bowl.push(team2[i]);
                   }
@@ -610,14 +644,105 @@
           temp = [...team1];
           team1 = [...team2];
           team2 = [...temp];
-          
+        }
+        else if(teams[b-1]!=bat_first)
+        {
+
           temp = [...team1_bowl];
           team1_bowl = [...team2_bowl];
           team2_bowl = [...team1_bowl];
         }
+
+        
         document.getElementById("play_squad").style.display = "none";
         document.getElementById("main_game").style.display = "block";
+        for(var j=0;j<11;j++)
+{
+  batsman[j] = new Object();
+  batsman[j].b_name = team1[j];
+  batsman[j].b_run = 0;
+  batsman[j].b_balls = 0;
+  batsman[j].b_sr = 0;
+  batsman[j].b_four = 0;
+  batsman[j].b_six = 0;
+  batsman[j].b_out = "Yet to Play";
+  batsman[j].b_status = "grey";
+}
+batsman[batting2].b_out = "Batting";
+batsman[batting2].b_status = "green";
+
+batsman[batting1].b_out = "Batting";
+batsman[batting1].b_status = "green";
+
+
+for(var i=0;i<team1_bowl.length;i++)
+{
+   bowler[i] = new Object();
+   bowler[i].b_name = team1_bowl[i];
+   bowler[i].b_run = 0;
+   bowler[i].b_wick = 0;
+   bowler[i].b_eco = 0;
+   bowler[i].b_over = 0;
+   bowler[i].b_balls = 0;
+   bowler[i].b_ball = 0;
+}
+
+// 2nd Innings Scorecard 
+
+for(var j=0;j<11;j++)
+{
+  batsman1[j] = new Object();
+  batsman1[j].b_name = team2[j];
+  batsman1[j].b_run = 0;
+  batsman1[j].b_balls = 0;
+  batsman1[j].b_sr = 0;
+  batsman1[j].b_four = 0;
+  batsman1[j].b_six = 0;
+  batsman1[j].b_out = "Yet to Play";
+  batsman1[j].b_status = "grey";
+}
+
+
+for(var i=0;i<team2_bowl.length;i++)
+{
+   bowler1[i] = new Object();
+   bowler1[i].b_name = team2_bowl[i];
+   bowler1[i].b_run = 0;
+   bowler1[i].b_wick = 0;
+   bowler1[i].b_eco = 0;
+   bowler1[i].b_over = 0;
+   bowler1[i].b_balls = 0;
+   bowler1[i].b_ball = 0;
+}
+
+document.getElementById("c_bo_name").innerHTML = bowler[0].b_name;
+document.getElementById("c_bo_ov").innerHTML = bowler[0].b_over +"."+bowler[0].b_balls;
+document.getElementById("c_bo_run").innerHTML = bowler[0].b_run;
+document.getElementById("c_bo_w").innerHTML = bowler[0].b_wick;
+document.getElementById("c_bo_eco").innerHTML = bowler[0].b_eco;
+
+
+document.getElementById("c_b_name1").innerHTML = batsman[0].b_name;
+document.getElementById("c_b_run1").innerHTML = batsman[0].b_run+" ("+batsman[0].b_balls+")";
+document.getElementById("c_b_sr1").innerHTML = batsman[0].b_sr;
+document.getElementById("c_b_41").innerHTML = batsman[0].b_four;
+document.getElementById("c_b_61").innerHTML = batsman[0].b_six;
+
+
+document.getElementById("c_b_name2").innerHTML = batsman[1].b_name;
+document.getElementById("c_b_run2").innerHTML = batsman[1].b_run+" ("+batsman[0].b_balls+")";
+document.getElementById("c_b_sr2").innerHTML = batsman[1].b_sr;
+document.getElementById("c_b_42").innerHTML = batsman[1].b_four;
+document.getElementById("c_b_62").innerHTML = batsman[1].b_six;
+document.getElementById("bat_t1").innerHTML = bat_first;
+document.getElementById("bat_t2").innerHTML = bat_first;
+document.getElementById("bat_t3").innerHTML = bat_first;
+
+select_bowler();
+
+scorecard_update();
         }
+
       }
       var batting = 0;
       function bat()
@@ -627,9 +752,10 @@
         check_run(run);
 
       }
-      var ball_number = 0;
       function check_run(value)
       {
+        change_strike(value);
+        
         ball_number++;
         if(ball_number%2!=0)
         {
@@ -650,7 +776,37 @@
 
         }
 
+        curr_ov.push(value);
+        var g = check_color(value);
+        curr_ov_color.push(g);
+        document.getElementById("pasa").innerHTML = curr_ov;
+        document.getElementById("pasa1").innerHTML = curr_ov_color;
+
         current_over(value);
+      }
+      function change_strike(value)
+      {
+        if(value%2!=0 && value!="W")
+        {
+          if(strike==1)
+          {
+            strike = 2;
+          }
+          else if(strike==2)
+          {
+            strike=1;
+          }
+          if(strike==1)
+          {
+            document.getElementById("star1").style.display = "inline";
+            document.getElementById("star2").style.display = "none";
+          }
+          else if(strike==2)
+          {
+            document.getElementById("star1").style.display = "none";
+            document.getElementById("star2").style.display = "inline";
+          }
+        }
       }
       function check_color(value)
       {
@@ -678,6 +834,8 @@
           return bcolor;
       }
       var ov_ball =  0;
+
+      
       function current_over(value)
       {
         ov_ball++;
@@ -688,6 +846,7 @@
             var s = "ball"+j;
             document.getElementById(s).innerHTML = "";
           }
+
         }
         for(var i=1;i<7;i++)
         {
@@ -718,6 +877,96 @@
         if (ov_ball==6)
         {
           ov_ball =0;
+          inn_overs++;
+           document.getElementById("bat_c_btn").disabled = true;
+           over_finish();
+
+
         }
 
       }
+      function over_finish()
+      {
+
+           $(function(){       
+            $("#over_s").after("<div class='c_o d-flex justify-content-center align-items-center mt-1'><div class='c_o_ball3 animated zoomIn'>Ov - "+inn_overs+"</div><div class='c_o_ball3 animated zoomIn'>"+last_over_by+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[0]+"'>"+curr_ov[0]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[1]+"'>"+curr_ov[1]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[2]+"'>"+curr_ov[2]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[3]+"'>"+curr_ov[3]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[4]+"'>"+curr_ov[4]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[5]+"'>"+curr_ov[5]+"</div></div>");                         
+          });
+      }
+      function scorecard_update()
+      {
+        $(function(){
+            $(".batsman_scorecard").remove();});
+
+        $(function(){
+            $(".batsman_scorecard1").remove();});
+
+        $(function(){
+            $(".bowling_scorecard").remove();});
+
+        $(function(){
+            $(".bowling_scorecard1").remove();});
+
+          $(function(){
+      for(var j=0;j<11;j++){
+      $("#inn1s").before("<tr class='batsman_scorecard'><td> "+batsman[j].b_name+" <br><span class='bat_details' style='background-color:"+batsman[j].b_status+";'>"+batsman[j].b_out+"</span></td><td>"+batsman[j].b_run+" ("+batsman[j].b_balls+")</td><td>"+batsman[j].b_sr+"</td><td>"+batsman[j].b_four+"</td><td>"+batsman[j].b_six+"</td></tr>");                         
+      }});
+
+     $(function(){
+      for(var j=0;j<11;j++){
+      $("#inn2s").before("<tr class='batsman_scorecard1'><td> "+batsman1[j].b_name+" <br><span class='bat_details' style='background-color:"+batsman1[j].b_status+";'>"+batsman1[j].b_out+"</span></td><td>"+batsman1[j].b_run+" ("+batsman1[j].b_balls+")</td><td>"+batsman1[j].b_sr+"</td><td>"+batsman1[j].b_four+"</td><td>"+batsman1[j].b_six+"</td></tr>");                         
+      }});
+
+          $(function(){
+      for(var j=0;j<team1_bowl.length;j++){
+      $("#b_inns1").before("<tr class='bowling_scorecard'><td> "+bowler[j].b_name+"</td><td>"+bowler[j].b_over+"."+bowler[j].b_ball+"</td><td>"+bowler[j].b_run+"</td><td>"+bowler[j].b_wick+"</td><td>"+bowler[j].b_eco+"</td></tr>");                         
+      }});
+
+     $(function(){
+      for(var j=0;j<team2_bowl.length;j++){
+      $("#b_inns2").before("<tr class='bowling_scorecard1'><td> "+bowler1[j].b_name+"</td><td>"+bowler1[j].b_over+"."+bowler1[j].b_ball+"</td><td>"+bowler1[j].b_run+"</td><td>"+bowler1[j].b_wick+"</td><td>"+bowler1[j].b_eco+"</td></tr>");                         
+      }});
+      }
+      function select_bowler()
+      {
+        if(inngs==1)
+        {
+           $(function(){
+      for(var j=0;j<team1_bowl.length;j++){
+     $("#bowl_sel").before("<li class='dropdown-item'  onclick = "+"Select_bowler("+j+")"+">"+bowler[j].b_name+"</li>");                         
+      }});
+        }
+        else if(inngs==2)
+        {
+
+        $(function(){
+            $(".bowler_list").remove();});
+
+           $(function(){
+      for(var j=0;j<team2_bowl.length;j++){
+      $("#bowl_sel").before("<li class='dropdown-item'  onclick = "+"Select_bowler("+j+")"+">"+bowler1[j].b_name+"</li>");                         
+      }});
+        }
+       
+      }
+      function Select_bowler(value)
+      {
+        
+        curr_ov.length=0;
+        curr_ov_color.length=0;
+        if(inngs==1)
+        {
+          if(bowler[value].b_over==4)
+        {
+          alert("All 4 overs completed. Please Select Another Bowler");
+        }
+        else if(bowler[value].b_over!=4){
+        document.getElementById("bat_c_btn").disabled = false;
+         last_over_by = bowler[value].b_name;
+        document.getElementById("c_bo_name").innerHTML = bowler[value].b_name;
+        document.getElementById("c_bo_run").innerHTML = bowler[value].b_run;
+        document.getElementById("c_bo_w").innerHTML = bowler[value].b_wick;
+        document.getElementById("c_bo_eco").innerHTML = bowler[value].b_eco;
+        document.getElementById("c_bo_ov").innerHTML = bowler[value].b_over;
+        }
+      }
+    }
