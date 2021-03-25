@@ -23,7 +23,7 @@
       var bowler1 = [];
 
       var sn = 0;
-      var myArray = [1,3,1,1,1,1,1,1,1,1,1,1,1,3,4,4,4,4,6,6,6,6,'W','W','W'];
+      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,1,1,1,1,1,1,1,1,1,1,1,3,4,4,4,4,6,6,6,6,'W','W','W'];
 
       var batting1 = 0;
       var batting2 = 1;
@@ -887,9 +887,9 @@ scorecard_update();
       }
       function over_finish()
       {
-
+        var f = document.getElementById("Runs").innerHTML;
            $(function(){       
-            $("#over_s").after("<div class='c_o d-flex justify-content-center align-items-center mt-1'><div class='c_o_ball3 animated zoomIn'>Ov - "+inn_overs+"</div><div class='c_o_ball3 animated zoomIn'>"+last_over_by+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[0]+"'>"+curr_ov[0]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[1]+"'>"+curr_ov[1]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[2]+"'>"+curr_ov[2]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[3]+"'>"+curr_ov[3]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[4]+"'>"+curr_ov[4]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[5]+"'>"+curr_ov[5]+"</div></div>");                         
+            $("#over_s").after("<div class='c_o d-flex justify-content-center align-items-center mt-1'><div class='c_o_ball3 animated zoomIn'>Ov - "+inn_overs+" ( "+f+" )</div><div class='c_o_ball3 animated zoomIn'>"+last_over_by+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[0]+"'>"+curr_ov[0]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[1]+"'>"+curr_ov[1]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[2]+"'>"+curr_ov[2]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[3]+"'>"+curr_ov[3]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[4]+"'>"+curr_ov[4]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[5]+"'>"+curr_ov[5]+"</div></div>");                         
           });
       }
       function scorecard_update()
@@ -950,7 +950,7 @@ scorecard_update();
       }
       function Select_bowler(value)
       {
-        
+
         curr_ov.length=0;
         curr_ov_color.length=0;
         if(inngs==1)
