@@ -779,8 +779,6 @@ scorecard_update();
         curr_ov.push(value);
         var g = check_color(value);
         curr_ov_color.push(g);
-        document.getElementById("pasa").innerHTML = curr_ov;
-        document.getElementById("pasa1").innerHTML = curr_ov_color;
 
         current_over(value);
       }
