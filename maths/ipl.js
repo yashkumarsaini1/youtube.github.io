@@ -799,23 +799,25 @@ scorecard_update();
           if(first_inn_w==10&&runs_to_chase==1)
           {
             document.getElementById("left_run").innerHTML = "Match Tie";
-            document.getElementById("dropdownMenuButton1").display = "none";
-            document.getElementById("bat_c_btn").display = "none";
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
 
           }
           else if(first_inn_w==10||balls_left==0)
           {
             var m = sec_inn_run - first_inn_run;
             document.getElementById("left_run").innerHTML = bat_first + " won by "+ m + " runs.";
-
+            
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
           }
           else if(runs_to_chase<=0)
           {
             var n = 10 - first_inn_w;
             document.getElementById("left_run").innerHTML = bowl_first + " won by "+ n + " wickets.";
 
-            document.getElementById("dropdownMenuButton1").display = "none";
-            document.getElementById("bat_c_btn").display = "none";
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
           }
           else 
           {
