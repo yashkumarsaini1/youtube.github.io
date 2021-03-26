@@ -332,7 +332,7 @@
     <button class="btn btn-outline-primary  mt-3 mb-4 animated zoomIn" id="snb" style="border-radius: 5px;padding: 5px;" onclick="selected_team();">Save & Next</button>
   </div>
     </div>
-    <div class="container-fluid mb-2" id="main_game" >
+    <div class="container-fluid mb-2" id="main_game" style="display: none;">
 
        <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
@@ -349,6 +349,7 @@
           <div id="pship"  style="background-color: #000;font-size: 12px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">P'ship 0(0)</div>
 
         </div>
+        <div class="mt-2 mb-2" style="color: green;" ><p id="left_run"></p></div>
          <table class="table">
           <tr>
             <th scope="col">Batsman</th>
@@ -456,7 +457,15 @@
 
   <!-- First Innings Score Card -->
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
     
+        <div class="d-flex justify-content-center align-items-center" style="display: none;margin-top: 15px;margin-bottom: 10px;" id="first_inn">
+          <div style="color: black;font-size: 15px;" id="bat_t11"><b>CSK</b></div>
+          <div style="background-color: #000080;font-size:20px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;" id="inn_score1">0/0</div>
+          <div id="inn_over1" style="background-color: #000080;font-size: 20px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">0.0</div>
+
+        </div> 
+
     <nav style="font-size: 10px"  class="mt-2">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav_bat1" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Batting</button>
@@ -469,8 +478,7 @@
           <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
           <div style="color: black;font-size: 15px;" id="bat_t2"><b>CSK</b></div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+          <div style="margin-left: 15px;"> Batting</div>
 
         </div>
 
@@ -497,8 +505,8 @@
     <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
           <div style="color: black;font-size: 15px;" id="bat_t3"><b>CSK</b></div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+
+          <div style="margin-left: 15px;"> Bowling</div>
 
         </div>
 
@@ -537,9 +545,9 @@
     
     <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
-          <div style="color: black;font-size: 15px;" id="bat_t2"><b>RCB 2nd Innings</b></div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+          <div style="color: black;font-size: 15px;" id="bat_t4"><b>RCB 2nd Innings</b></div>
+
+          <div style="margin-left: 15px;"> Batting</div>
 
         </div>
 
@@ -566,9 +574,9 @@
     
     <div class="table-responsive " style="text-align: center;font-size: 12px;">
         <div class="d-flex justify-content-center align-items-center">
-          <div style="color: black;font-size: 15px;" id="bat_t3"><b>CSK</b></div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">18/1</div>
-          <div style="background-color: #000080;font-size: 15px; padding: 5px; margin-left: 15px;border-radius: 5px;color: white;">4.3</div>
+          <div style="color: black;font-size: 15px;" id="bat_t5"><b>CSK</b></div>
+
+          <div style="margin-left: 15px;"> Bowling</div>
 
         </div>
 
