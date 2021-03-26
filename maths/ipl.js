@@ -11,6 +11,19 @@
       var inn_overs=0;
       var ov_complete = 0;
 
+      var balls_left = 120;
+      var runs_to_chase ;
+
+      var ov_ball =  0;
+      var inngs_over =0;
+
+      var check_last_bowler ;
+
+      var batting_first = [];
+      var batting_sec = [];
+      var bowling_first = [];
+      var bowling_sec = [];
+
       var first_inn_run = 0;
       var first_inn_w = 0;
       var sec_inn_run = 0;
@@ -34,7 +47,7 @@
       var bowler1 = [];
 
       var sn = 0;
-      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,1,1,1,1,1,1,1,1,1,1,1,3,4,4,4,4,6,6,6,6,'W','W','W'];
+      var myArray = [0,1,2,3,4,6,'W'];
 
       var batting1 = 0;
       var batting2 = 1;
@@ -50,7 +63,7 @@
       function change()
       {
         
-        var p = setTimeout(stop,1000);
+        var p = setTimeout(stop,3000);
       }
       function move()
       {
@@ -651,18 +664,19 @@
                 }
 
                 var temp = [];
-        if(teams[a-1]!=bat_first)
+        if(teams[a-1]==bat_first)
         {
-          temp = [...team1];
-          team1 = [...team2];
-          team2 = [...temp];
+          batting_first = [...team1];
+          bowling_first = [...team2_bowl];
+          batting_sec = [...team2];
+          bowling_sec= [...team1_bowl];
         }
-        else if(teams[b-1]!=bat_first)
+        else if(teams[b-1]==bat_first)
         {
-
-          temp = [...team1_bowl];
-          team1_bowl = [...team2_bowl];
-          team2_bowl = [...team1_bowl];
+          batting_first = [...team2];
+          bowling_first = [...team1_bowl];
+          batting_sec = [...team1];
+          bowling_sec= [...team2_bowl];
         }
 
         
@@ -671,7 +685,7 @@
         for(var j=0;j<11;j++)
 {
   batsman[j] = new Object();
-  batsman[j].b_name = team1[j];
+  batsman[j].b_name = batting_first[j];
   batsman[j].b_run = 0;
   batsman[j].b_balls = 0;
   batsman[j].b_sr = 0;
@@ -687,10 +701,10 @@ batsman[batting1].b_out = "Batting";
 batsman[batting1].b_status = "green";
 
 
-for(var i=0;i<team1_bowl.length;i++)
+for(var i=0;i<bowling_first.length;i++)
 {
    bowler[i] = new Object();
-   bowler[i].b_name = team1_bowl[i];
+   bowler[i].b_name =bowling_first[i];
    bowler[i].b_run = 0;
    bowler[i].b_wick = 0;
    bowler[i].b_eco = 0;
@@ -704,7 +718,7 @@ for(var i=0;i<team1_bowl.length;i++)
 for(var j=0;j<11;j++)
 {
   batsman1[j] = new Object();
-  batsman1[j].b_name = team2[j];
+  batsman1[j].b_name = batting_sec[j];
   batsman1[j].b_run = 0;
   batsman1[j].b_balls = 0;
   batsman1[j].b_sr = 0;
@@ -715,10 +729,10 @@ for(var j=0;j<11;j++)
 }
 
 
-for(var i=0;i<team2_bowl.length;i++)
+for(var i=0;i<bowling_sec.length;i++)
 {
    bowler1[i] = new Object();
-   bowler1[i].b_name = team2_bowl[i];
+   bowler1[i].b_name = bowling_sec[i];
    bowler1[i].b_run = 0;
    bowler1[i].b_wick = 0;
    bowler1[i].b_eco = 0;
@@ -748,7 +762,9 @@ document.getElementById("c_b_42").innerHTML = batsman[1].b_four;
 document.getElementById("c_b_62").innerHTML = batsman[1].b_six;
 document.getElementById("bat_t1").innerHTML = bat_first;
 document.getElementById("bat_t2").innerHTML = bat_first;
-document.getElementById("bat_t3").innerHTML = bat_first;
+document.getElementById("bat_t3").innerHTML = bowl_first;
+document.getElementById("bat_t4").innerHTML = bowl_first;
+document.getElementById("bat_t5").innerHTML = bat_first;
 
 select_bowler();
 
@@ -760,12 +776,55 @@ scorecard_update();
       function bat()
       {
         batting++;
+        balls_left--;
         var run = myArray[Math.floor(Math.random() * myArray.length)];
         check_run(run);
+
+        complete_inngs();
 
       }
       function check_run(value)
       {
+          
+        if(value=="W")
+        {
+          first_inn_w++;
+        }
+        else 
+        {
+          runs_to_chase = runs_to_chase - value;
+        }
+        if(inngs==2)
+        {
+          if(first_inn_w==10&&runs_to_chase==1)
+          {
+            document.getElementById("left_run").innerHTML = "Match Tie";
+            document.getElementById("dropdownMenuButton1").display = "none";
+            document.getElementById("bat_c_btn").display = "none";
+
+          }
+          else if(first_inn_w==10||balls_left==0)
+          {
+            var m = sec_inn_run - first_inn_run;
+            document.getElementById("left_run").innerHTML = bat_first + " won by "+ m + " runs.";
+
+          }
+          else if(runs_to_chase<=0)
+          {
+            var n = 10 - first_inn_w;
+            document.getElementById("left_run").innerHTML = bowl_first + " won by "+ n + " wickets.";
+
+            document.getElementById("dropdownMenuButton1").display = "none";
+            document.getElementById("bat_c_btn").display = "none";
+          }
+          else 
+          {
+            document.getElementById("left_run").innerHTML = bowl_first + " needed "+runs_to_chase + " in "+ balls_left +" balls to win." ;
+          }
+        
+
+
+        }
         change_strike(value);
         change_score(value);
         
@@ -872,7 +931,6 @@ scorecard_update();
           return bcolor;
 
       }
-      var ov_ball =  0;
 
       
       function current_over(value)
@@ -880,7 +938,9 @@ scorecard_update();
         ov_ball++;
         if(ov_ball==1)
         {
+          check_last_bowler = last_over_by;
           var xy = inn_overs+1;
+          document.getElementById("dropdownMenuButton1").disabled = true;
           document.getElementById("Over_no").innerHTML = "Ov - "+ xy;
           for(var j = 1;j<7;j++)
           {
@@ -920,19 +980,18 @@ scorecard_update();
           ov_ball =0;
           inn_overs++;
            document.getElementById("bat_c_btn").disabled = true;
+
+          document.getElementById("dropdownMenuButton1").disabled = false;
            change_strike1(value);
-           over_finish();
 
-
-        }
-
-      }
-      function over_finish()
-      {
         var f = document.getElementById("Runs").innerHTML;
            $(function(){       
             $("#over_s").after("<div class='c_o d-flex justify-content-center align-items-center mt-1'><div class='c_o_ball3 animated zoomIn'>Ov - "+inn_overs+" ( "+f+" )<br>"+last_over_by+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[0]+"'>"+curr_ov[0]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[1]+"'>"+curr_ov[1]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[2]+"'>"+curr_ov[2]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[3]+"'>"+curr_ov[3]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[4]+"'>"+curr_ov[4]+"</div><div class='c_o_ball2 animated zoomIn' style='background-color:"+curr_ov_color[5]+"'>"+curr_ov[5]+"</div></div>");                         
           });
+
+
+        }
+
       }
       function scorecard_update()
       {
@@ -959,12 +1018,12 @@ scorecard_update();
       }});
 
           $(function(){
-      for(var j=0;j<team1_bowl.length;j++){
+      for(var j=0;j<bowling_first.length;j++){
       $("#b_inns1").before("<tr class='bowling_scorecard'><td> "+bowler[j].b_name+"</td><td>"+bowler[j].b_over+"."+bowler[j].b_ball+"</td><td>"+bowler[j].b_run+"</td><td>"+bowler[j].b_wick+"</td><td>"+bowler[j].b_eco+"</td></tr>");                         
       }});
 
      $(function(){
-      for(var j=0;j<team2_bowl.length;j++){
+      for(var j=0;j<bowling_sec.length;j++){
       $("#b_inns2").before("<tr class='bowling_scorecard1'><td> "+bowler1[j].b_name+"</td><td>"+bowler1[j].b_over+"."+bowler1[j].b_ball+"</td><td>"+bowler1[j].b_run+"</td><td>"+bowler1[j].b_wick+"</td><td>"+bowler1[j].b_eco+"</td></tr>");                         
       }});
       }
@@ -973,19 +1032,8 @@ scorecard_update();
         if(inngs==1)
         {
            $(function(){
-      for(var j=0;j<team1_bowl.length;j++){
-     $("#bowl_sel").before("<li class='dropdown-item'  onclick = "+"Select_bowler("+j+")"+">"+bowler[j].b_name+"</li>");                         
-      }});
-        }
-        else if(inngs==2)
-        {
-
-        $(function(){
-            $(".bowler_list").remove();});
-
-           $(function(){
-      for(var j=0;j<team2_bowl.length;j++){
-      $("#bowl_sel").before("<li class='dropdown-item'  onclick = "+"Select_bowler("+j+")"+">"+bowler1[j].b_name+"</li>");                         
+      for(var j=0;j<bowling_first.length;j++){
+     $("#bowl_sel").before("<li class='dropdown-item b_l'  onclick = "+"Select_bowler("+j+")"+">"+bowler[j].b_name+"</li>");                         
       }});
         }
        
@@ -1001,6 +1049,10 @@ scorecard_update();
         {
           alert("All 4 overs completed. Please Select Another Bowler");
         }
+        else if(bowler[value].b_name == check_last_bowler)
+        {
+          alert("Same Bolwer, please select another bowler");
+        }
         else if(bowler[value].b_over!=4){
         document.getElementById("bat_c_btn").disabled = false;
          last_over_by = bowler[value].b_name;
@@ -1011,12 +1063,33 @@ scorecard_update();
         document.getElementById("c_bo_ov").innerHTML = bowler[value].b_over + "."+bowler[value].b_ball;
         }
       }
+      else if(inngs==2)
+      {
+        if(bowler1[value].b_over==4)
+        {
+          alert("All 4 overs completed. Please Select Another Bowler");
+        }
+        else if(bowler1[value].b_name == check_last_bowler)
+        {
+          alert("Same Bolwer, please select another bowler");
+        }
+        else if(bowler1[value].b_over!=4){
+        document.getElementById("bat_c_btn").disabled = false;
+         last_over_by = bowler1[value].b_name;
+        document.getElementById("c_bo_name").innerHTML = bowler1[value].b_name;
+        document.getElementById("c_bo_run").innerHTML = bowler1[value].b_run;
+        document.getElementById("c_bo_w").innerHTML = bowler1[value].b_wick;
+        document.getElementById("c_bo_eco").innerHTML = bowler1[value].b_eco;
+        document.getElementById("c_bo_ov").innerHTML = bowler1[value].b_over + "."+bowler1[value].b_ball;
+        }
+      }
     }
     function update_curr_bat(value)
     {
+      if(inngs==1){
       if(strike==1)
       {
-        if(value=="W")
+        if(value=="W"&&first_inn_w<10)
         {
           batsman[batting1].b_balls += 1;
           batsman[batting1].b_status = "red";
@@ -1025,6 +1098,13 @@ scorecard_update();
           batting1 = curr_batsman;
           batsman[batting1].b_status = "green";
           batsman[batting1].b_out = "Batting";
+        }
+
+        else if(value=="W"&& first_inn_w==10)
+        {
+           batsman[batting1].b_balls += 1;
+          batsman[batting1].b_status = "red";
+          batsman[batting1].b_out = "b "+last_over_by;
         }
         else
         {
@@ -1045,7 +1125,7 @@ scorecard_update();
     }
       else if(strike==2)
       {
-        if(value=="W")
+        if(value=="W"&& first_inn_w<10)
         {
           batsman[batting2].b_balls += 1;
           batsman[batting2].b_status = "red";
@@ -1055,6 +1135,12 @@ scorecard_update();
 
           batsman[batting2].b_status = "green";
           batsman[batting2].b_out = "Batting";
+        }
+        else if(value=="W"&& first_inn_w==10)
+        {
+           batsman[batting2].b_balls += 1;
+          batsman[batting2].b_status = "red";
+          batsman[batting2].b_out = "b "+last_over_by;
         }
         else
         {
@@ -1106,7 +1192,121 @@ bowler[curr_bowler_no].b_eco = l.toFixed(2);
   document.getElementById("c_bo_run").innerHTML = bowler[curr_bowler_no].b_run;
   document.getElementById("c_bo_w").innerHTML = bowler[curr_bowler_no].b_wick;
   document.getElementById("c_bo_eco").innerHTML = bowler[curr_bowler_no].b_eco;
+  
   document.getElementById("c_bo_ov").innerHTML = bowler[curr_bowler_no].b_over + "."+bowler[curr_bowler_no].b_ball;
+}
+else if(inngs==2)
+{
+
+  if(strike==1)
+      {
+        if(value=="W"&&first_inn_w<10)
+        {
+          batsman1[batting1].b_balls += 1;
+          batsman1[batting1].b_status = "red";
+          batsman1[batting1].b_out = "b "+last_over_by;
+          curr_batsman++;
+          batting1 = curr_batsman;
+          batsman1[batting1].b_status = "green";
+          batsman1[batting1].b_out = "Batting";
+        }
+
+        else if(value=="W"&& first_inn_w==10)
+        {
+           batsman1[batting1].b_balls += 1;
+          batsman1[batting1].b_status = "red";
+          batsman1[batting1].b_out = "b "+last_over_by;
+        }
+        else
+        {
+        batsman1[batting1].b_run += value;
+        batsman1[batting1].b_balls += 1;
+        var rr = (batsman1[batting1].b_run*100)/batsman1[batting1].b_balls;
+
+        batsman1[batting1].b_sr =rr.toFixed(2) ;
+        if(value==4)
+        {
+          batsman1[batting1].b_four +=1;
+        }
+        if(value==6)
+        {
+          batsman1[batting1].b_six +=1;
+        }
+      }
+    }
+      else if(strike==2)
+      {
+        if(value=="W"&& first_inn_w<10)
+        {
+          batsman1[batting2].b_balls += 1;
+          batsman1[batting2].b_status = "red";
+          batsman1[batting2].b_out = "b "+last_over_by;
+          curr_batsman++;
+          batting2 = curr_batsman;
+
+          batsman1[batting2].b_status = "green";
+          batsman1[batting2].b_out = "Batting";
+        }
+        else if(value=="W"&& first_inn_w==10)
+        {
+           batsman1[batting2].b_balls += 1;
+          batsman1[batting2].b_status = "red";
+          batsman1[batting2].b_out = "b "+last_over_by;
+        }
+        else
+        {
+        batsman1[batting2].b_run += value;
+        batsman1[batting2].b_balls += 1;
+        var rr = (batsman1[batting2].b_run*100)/batsman1[batting2].b_balls;
+
+        batsman1[batting2].b_sr =rr.toFixed(2) ;
+        if(value==4)
+        {
+          batsman1[batting2].b_four +=1;
+        }
+        if(value==6)
+        {
+          batsman1[batting2].b_six +=1;
+        }
+      }
+      }
+
+document.getElementById("c_b_name1").innerHTML = batsman1[batting1].b_name;
+document.getElementById("c_b_run1").innerHTML = batsman1[batting1].b_run+" ("+batsman1[batting1].b_balls+")";
+document.getElementById("c_b_sr1").innerHTML = batsman1[batting1].b_sr;
+document.getElementById("c_b_41").innerHTML = batsman1[batting1].b_four;
+document.getElementById("c_b_61").innerHTML = batsman1[batting1].b_six;
+
+
+document.getElementById("c_b_name2").innerHTML = batsman1[batting2].b_name;
+document.getElementById("c_b_run2").innerHTML = batsman1[batting2].b_run+" ("+batsman1[batting2].b_balls+")";
+document.getElementById("c_b_sr2").innerHTML = batsman1[batting2].b_sr;
+document.getElementById("c_b_42").innerHTML = batsman1[batting2].b_four;
+document.getElementById("c_b_62").innerHTML = batsman1[batting2].b_six;
+if(value=="W")
+{
+  bowler1[curr_bowler_no].b_wick += 1;
+  value = 0;
+}
+bowler1[curr_bowler_no].b_run += value;
+bowler1[curr_bowler_no].b_balls += 1;
+bowler1[curr_bowler_no].b_ball = bowler1[curr_bowler_no].b_balls%6;
+var k = parseInt(bowler1[curr_bowler_no].b_balls/6);
+bowler1[curr_bowler_no].b_over = k;
+var l = (bowler1[curr_bowler_no].b_run*6)/bowler1[curr_bowler_no].b_balls;
+bowler1[curr_bowler_no].b_eco = l.toFixed(2);
+
+
+
+
+  document.getElementById("c_bo_name").innerHTML = bowler1[curr_bowler_no].b_name;
+  document.getElementById("c_bo_run").innerHTML = bowler1[curr_bowler_no].b_run;
+  document.getElementById("c_bo_w").innerHTML = bowler1[curr_bowler_no].b_wick;
+  document.getElementById("c_bo_eco").innerHTML = bowler1[curr_bowler_no].b_eco;
+  
+  document.getElementById("c_bo_ov").innerHTML = bowler1[curr_bowler_no].b_over + "."+bowler1[curr_bowler_no].b_ball;
+
+}
 scorecard_update();
       }
       function change_score(value)
@@ -1115,7 +1315,6 @@ scorecard_update();
         p_ship_ball++;
         if(value=="W")
         {
-          first_inn_w++;
           value = 0;
 
         p_ship_run= 0;
@@ -1131,5 +1330,96 @@ scorecard_update();
         var x = (first_inn_run*6)/first_inn_ball;
         document.getElementById("crr").innerHTML = "CRR "+x.toFixed(2);
         document.getElementById("pship").innerHTML = "P'ship "+p_ship_run+"("+p_ship_ball+")";
+
       }
+
+      function complete_inngs(){
+        if(inn_overs==20||first_inn_w==10)
+        {
+
+            inngs_over++;
+        if(inngs_over==1)
+        {
+          for(var j = 1;j<7;j++)
+            {
+              var s = "ball"+j;
+              document.getElementById(s).innerHTML = "";
+              document.getElementById(s).style.display = "none";
+            }
+            sec_inn_run = first_inn_run ;
+            sec_inn_w = first_inn_w;
+            document.getElementById("first_inn").style.display = "inline";
+            document.getElementById("bat_t11").innerHTML = bat_first;
+            document.getElementById("inn_score1").innerHTML = sec_inn_run+"/"+sec_inn_w;
+            document.getElementById("inn_over1").innerHTML = document.getElementById("inn_over").innerHTML;
+          inn_overs =0;
+          first_inn_w = 0;
+          inngs =2;
+          ov_ball = 0;
+          var ko = sec_inn_run+1;
+          runs_to_chase = ko;
+
+          first_inn_run =0;
+          strike=1;
+          first_inn_ball =0;
+
+          batting1 =0 ;
+          batting2 =1;
+          curr_batsman =1;
+          balls_left =120;
+          document.getElementById("left_run").innerHTML = bowl_first + " needed "+ko + " in "+ balls_left +" balls to win." ;
+
+          document.getElementById("c_bo_name").innerHTML = bowler1[0].b_name;
+          document.getElementById("c_bo_ov").innerHTML = bowler1[0].b_over +"."+bowler1[0].b_balls;
+          document.getElementById("c_bo_run").innerHTML = bowler1[0].b_run;
+          document.getElementById("c_bo_w").innerHTML = bowler1[0].b_wick;
+          document.getElementById("c_bo_eco").innerHTML = bowler1[0].b_eco;
+
+
+          document.getElementById("c_b_name1").innerHTML = batsman1[0].b_name;
+          document.getElementById("c_b_run1").innerHTML = batsman1[0].b_run+" ("+batsman1[0].b_balls+")";
+          document.getElementById("c_b_sr1").innerHTML = batsman1[0].b_sr;
+          document.getElementById("c_b_41").innerHTML = batsman1[0].b_four;
+          document.getElementById("c_b_61").innerHTML = batsman1[0].b_six;
+
+
+          document.getElementById("c_b_name2").innerHTML = batsman1[1].b_name;
+          document.getElementById("c_b_run2").innerHTML = batsman1[1].b_run+" ("+batsman1[0].b_balls+")";
+          document.getElementById("c_b_sr2").innerHTML = batsman1[1].b_sr;
+          document.getElementById("c_b_42").innerHTML = batsman1[1].b_four;
+          document.getElementById("c_b_62").innerHTML = batsman1[1].b_six;
+
+
+          batsman1[batting1].b_status = "green";
+          batsman1[batting1].b_out = "Batting";
+
+          batsman1[batting2].b_status = "green";
+          batsman1[batting2].b_out = "Batting";
+
+
+
+        $(function(){
+            $(".b_l").remove();});
+
+           $(function(){
+      for(var j=0;j<bowling_sec.length;j++){
+      $("#bowl_sel").before("<li class='dropdown-item b_l'  onclick = "+"Select_bowler("+j+")"+">"+bowler1[j].b_name+"</li>");                         
+      }});
+
+           document.getElementById("bat_c_btn").disabled = true;
+
+           document.getElementById("dropdownMenuButton1").disabled = false;
+
+document.getElementById("bat_t1").innerHTML = bowl_first;
+
+           scorecard_update();
+           document.getElementById("pship").innerHTML= "P'ship 0(0)";
+           document.getElementById("inn_score").innerHTML = "0/0";
+           document.getElementById("inn_over").innerHTML = "0.0";
+           document.getElementById("crr").innerHTML = "CRR 0.00";
+
+
+        }
+      }
+    }
     
