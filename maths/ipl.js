@@ -827,6 +827,8 @@ scorecard_update();
 
 
         }
+        
+        update_array();
 
       }
       function check_run(value)
@@ -868,7 +870,6 @@ scorecard_update();
         curr_ov_color.push(g);
 
         current_over(value);
-        update_array();
       }
       function change_strike(value)
       {
@@ -1384,6 +1385,9 @@ scorecard_update();
           batting2 =1;
           curr_batsman =1;
           balls_left =120;
+          p_ship_run = 0;
+          p_ship_ball =0;
+        document.getElementById("pship").innerHTML = "P'ship "+p_ship_run+"("+p_ship_ball+")";
           document.getElementById("left_run").innerHTML = bowl_first + " needed "+ko + " in "+ balls_left +" balls to win." ;
 
           document.getElementById("c_bo_name").innerHTML = bowler1[0].b_name;
@@ -1441,18 +1445,18 @@ document.getElementById("bat_t1").innerHTML = bowl_first;
     }
     function update_array()
     {
-      if(inngs_over>=14&& first_inn_w<6)
+            if(inn_overs>=14&& first_inn_w<6)
       {
        myArray.length = 0;
        myArray = [0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,4,6,6,6,4,4,3,4,6,6,6,'W','W'];
       }
-       else if(inngs_over>9&& first_inn_w<1)
+       else if(inn_overs>9&& first_inn_w<1)
       {
        myArray.length = 0;
        myArray = [0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,4,6,6,6,4,4,3,4,6,6,6,6,6,6,6,6,6,4,4,4,4,4,4,4,4,'W','W'];
       }
 
-       else if(inngs_over>6&& first_inn_w>=3)
+       else if(inn_overs>6&& first_inn_w>=3)
       {
        myArray.length = 0;
        myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,4,4,3,6,'W','W','W','W'];
