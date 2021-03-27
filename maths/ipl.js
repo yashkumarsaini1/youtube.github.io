@@ -47,7 +47,7 @@
       var bowler1 = [];
 
       var sn = 0;
-      var myArray = [0,1,2,3,4,6,'W'];
+      var myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,3,4,6,'W','W','W'];
 
       var batting1 = 0;
       var batting2 = 1;
@@ -257,57 +257,57 @@
                       '{"Name":"Utkarsh Singh","Type":3,"overseas":"0" },' +
                       '{"Name":"Fabian Allen ","Type":"2","overseas":"1" }],'+
       '"SRH":[' +
-                      '{"Name":"Chris Gayle","Type":"1","overseas":"1" },'+
-                      '{"Name":"Nicholas Pooran","Type":"0","overseas":"1" },' +
-                      '{"Name":"KL Rahul","Type":"0","overseas":"0" },' +
-                      '{"Name":"Mayank Agarwal","Type":"1","overseas":"0" },' +
-                      '{"Name":"Mandeep Singh","Type":"1","overseas":"0" },' +
-                      '{"Name":"Dawid Malan","Type":"1","overseas":"1" },' +
-                      '{"Name":"Arshdeep Singh","Type":"3","overseas":"0" },' +
-                      '{"Name":"Darshan Nalkande","Type":"3","overseas":"0" },' +
-                      '{"Name":"Simran Singh","Type":"0","overseas":"0" },' +
-                      '{"Name":"Saurabh Kumar","Type":"2","overseas":"0" },' +
-                      '{"Name":"Harpreet Brar","Type":"2","overseas":"0" },' +
-                      '{"Name":"Ravi Bishnoi","Type":"3","overseas":"0" },' +
-                      '{"Name":"Chris Jordan ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Mohammed Shami","Type":"3","overseas":"0" },' +
-                      '{"Name":"Deepak Hooda","Type":"2","overseas":"0" },' +
-                      '{"Name":"Murugan Ashwin","Type":"3","overseas":"0" },' +
-                      '{"Name":"Sarfaraz Khan ","Type":"1","overseas":"0" },' +
-                      '{"Name":"Ishan Porel","Type":"3","overseas":"0" },' +
-                      '{"Name":"Jhye Richardson ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Shahrukh Khan","Type":"2","overseas":"0" },' +
-                      '{"Name":"Riley Meredith","Type":"3","overseas":"1" },' +
-                      '{"Name":"Moises Henriques","Type":"2","overseas":"1" },' +
-                      '{"Name":"Jalaj Saxena","Type":"2","overseas":"0" },' +
-                      '{"Name":"Utkarsh Singh","Type":3,"overseas":"0" },' +
-                      '{"Name":"Fabian Allen ","Type":"2","overseas":"1" }],'+
+                      '{"Name":"David Warner","Type":"1","overseas":"1" },'+
+                      '{"Name":"Kane Williamson","Type":"1","overseas":"1" },' +
+                      '{"Name":"Priyam Garg","Type":"1","overseas":"0" },' +
+                      '{"Name":"Abhishek Sharma","Type":"2","overseas":"0" },' +
+                      '{"Name":"Abdul Samad","Type":"1","overseas":"0" },' +
+                      '{"Name":"Mohammad Nabi","Type":"2","overseas":"1" },' +
+                      '{"Name":"Mitchell Marsh","Type":"2","overseas":"1" },' +
+                      '{"Name":"Wriddhiman Saha","Type":"0","overseas":"0" },' +
+                      '{"Name":"Manish Pandey","Type":"1","overseas":"0" },' +
+                      '{"Name":"Jonny Bairstow","Type":"0","overseas":"1" },' +
+                      '{"Name":"Shreevats Goswami","Type":"0","overseas":"0" },' +
+                      '{"Name":"Shahbaz Nadeem","Type":"3","overseas":"0" },' +
+                      '{"Name":"Bhuvneshwar Kumar","Type":"3","overseas":"0" },' +
+                      '{"Name":"Siddarth Kaul","Type":"3","overseas":"0" },' +
+                      '{"Name":"Jason Holder ","Type":"2","overseas":"1" },' +
+                      '{"Name":"Sandeep Sharma","Type":"3","overseas":"0" },' +
+                      '{"Name":"Vijay Shankar ","Type":"2","overseas":"0" },' +
+                      '{"Name":"Virat Singh","Type":"1","overseas":"0" },' +
+                      '{"Name":"Rashid Khan  ","Type":"1","overseas":"1" },' +
+                      '{"Name":"Basil Thampi","Type":"3","overseas":"0" },' +
+                      '{"Name":"T Natarajan","Type":"3","overseas":"0" },' +
+                      '{"Name":"Khaleel Ahmed","Type":"3","overseas":"0" },' +
+                      '{"Name":"Jagadeesha Suchith","Type":"3","overseas":"0" },' +
+                      '{"Name":"Kedar Jadhav","Type":2,"overseas":"0" },' +
+                      '{"Name":"Mujeeb Ur Rahman","Type":"3","overseas":"1" }],'+
       '"MI":[' +
-                      '{"Name":"Chris Gayle","Type":"1","overseas":"1" },'+
-                      '{"Name":"Nicholas Pooran","Type":"0","overseas":"1" },' +
-                      '{"Name":"KL Rahul","Type":"0","overseas":"0" },' +
-                      '{"Name":"Mayank Agarwal","Type":"1","overseas":"0" },' +
-                      '{"Name":"Mandeep Singh","Type":"1","overseas":"0" },' +
-                      '{"Name":"Dawid Malan","Type":"1","overseas":"1" },' +
-                      '{"Name":"Arshdeep Singh","Type":"3","overseas":"0" },' +
-                      '{"Name":"Darshan Nalkande","Type":"3","overseas":"0" },' +
-                      '{"Name":"Simran Singh","Type":"0","overseas":"0" },' +
-                      '{"Name":"Saurabh Kumar","Type":"2","overseas":"0" },' +
-                      '{"Name":"Harpreet Brar","Type":"2","overseas":"0" },' +
-                      '{"Name":"Ravi Bishnoi","Type":"3","overseas":"0" },' +
-                      '{"Name":"Chris Jordan ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Mohammed Shami","Type":"3","overseas":"0" },' +
-                      '{"Name":"Deepak Hooda","Type":"2","overseas":"0" },' +
-                      '{"Name":"Murugan Ashwin","Type":"3","overseas":"0" },' +
-                      '{"Name":"Sarfaraz Khan ","Type":"1","overseas":"0" },' +
-                      '{"Name":"Ishan Porel","Type":"3","overseas":"0" },' +
-                      '{"Name":"Jhye Richardson ","Type":"2","overseas":"1" },' +
-                      '{"Name":"Shahrukh Khan","Type":"2","overseas":"0" },' +
-                      '{"Name":"Riley Meredith","Type":"3","overseas":"1" },' +
-                      '{"Name":"Moises Henriques","Type":"2","overseas":"1" },' +
-                      '{"Name":"Jalaj Saxena","Type":"2","overseas":"0" },' +
-                      '{"Name":"Utkarsh Singh","Type":3,"overseas":"0" },' +
-                      '{"Name":"Fabian Allen ","Type":"2","overseas":"1" }]}';
+                      '{"Name":"Rohit Sharma","Type":"1","overseas":"0" },'+
+                      '{"Name":"Aditya Tare","Type":"0","overseas":"0" },' +
+                      '{"Name":"Quinton de Kock","Type":"0","overseas":"1" },' +
+                      '{"Name":"Suryakumar Yadav","Type":"1","overseas":"0" },' +
+                      '{"Name":"Ishan Kishan","Type":"0","overseas":"0" },' +
+                      '{"Name":"Hardik Pandya","Type":"2","overseas":"0" },' +
+                      '{"Name":"Anmolpreet Singh","Type":"1","overseas":"0" },' +
+                      '{"Name":"Dhawal Kulkarni","Type":"3","overseas":"0" },' +
+                      '{"Name":"Rahul Chahar","Type":"3","overseas":"0" },' +
+                      '{"Name":"Anukul Roy","Type":"2","overseas":"0" },' +
+                      '{"Name":"Jasprit Bumrah","Type":"3","overseas":"0" },' +
+                      '{"Name":"Kieron Pollard","Type":"2","overseas":"1" },' +
+                      '{"Name":"Jayant Yadav","Type":"3","overseas":"0" },' +
+                      '{"Name":"Krunal Pandya","Type":"2","overseas":"0" },' +
+                      '{"Name":"Trent Boult","Type":"3","overseas":"1" },' +
+                      '{"Name":"Chris Lynn","Type":"1","overseas":"1" },' +
+                      '{"Name":"Saurabh Tiwary ","Type":"1","overseas":"0" },' +
+                      '{"Name":"Mohsin Khan","Type":"3","overseas":"0" },' +
+                      '{"Name":"Adam Milne","Type":"3","overseas":"1" },' +
+                      '{"Name":"Nathan Coulter-Nile","Type":"3","overseas":"1" },' +
+                      '{"Name":"James Neesham","Type":"2","overseas":"1" },' +
+                      '{"Name":"Marco Jansen","Type":"2","overseas":"1" },' +
+                      '{"Name":"Piyush Chawla","Type":"2","overseas":"0" },' +
+                      '{"Name":"Yudhvir Singh","Type":3,"overseas":"0" },' +
+                      '{"Name":"Arjun Tendulkar ","Type":"2","overseas":"0" }]}';
 
 
         obj = JSON.parse(team);
@@ -555,7 +555,7 @@
         var m = document.getElementById("c_bowler").innerHTML;
         var n = document.getElementById("c_wk").innerHTML;
 
-        if(k==11&&l<5&&m>4&&n>0)
+        if(k==11&&l<5&&m>5&&n>0)
         {
           document.getElementById("snb").disabled = false;
         }
@@ -571,7 +571,7 @@
         {
           document.getElementById("c_overseas").style.backgroundColor = "#46DA01";
         }
-        if(m<5)
+        if(m<6)
         {
           document.getElementById("c_bowler").style.backgroundColor = "red";
         }
@@ -780,7 +780,53 @@ scorecard_update();
         var run = myArray[Math.floor(Math.random() * myArray.length)];
         check_run(run);
 
+
         complete_inngs();
+
+        if(inngs==2)
+        {
+          if(first_inn_w==10&&runs_to_chase==1)
+          {
+            document.getElementById("left_run").innerHTML = "Match Tie";
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
+
+
+            document.getElementById("bat_t12").innerHTML = bowl_first;
+            document.getElementById("inn_score2").innerHTML = first_inn_run+"/"+first_inn_w;
+            document.getElementById("inn_over2").innerHTML = document.getElementById("inn_over").innerHTML;
+
+          }
+          else if(first_inn_w==10||balls_left==0)
+          {
+            var m = sec_inn_run - first_inn_run;
+            document.getElementById("left_run").innerHTML = bat_first + " won by "+ m + " runs.";
+
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
+            document.getElementById("bat_t12").innerHTML = bowl_first;
+            document.getElementById("inn_score2").innerHTML = first_inn_run+"/"+first_inn_w;
+            document.getElementById("inn_over2").innerHTML = document.getElementById("inn_over").innerHTML;
+          }
+          else if(runs_to_chase<=0)
+          {
+            var n = 10 - first_inn_w;
+            document.getElementById("left_run").innerHTML = bowl_first + " won by "+ n + " wickets.";
+
+            document.getElementById("dropdownMenuButton1").style.display = "none";
+            document.getElementById("bat_c_btn").style.display = "none";
+            document.getElementById("bat_t12").innerHTML = bowl_first;
+            document.getElementById("inn_score2").innerHTML = first_inn_run+"/"+first_inn_w;
+            document.getElementById("inn_over2").innerHTML = document.getElementById("inn_over").innerHTML;
+          }
+          else 
+          {
+            document.getElementById("left_run").innerHTML = bowl_first + " needed "+runs_to_chase + " in "+ balls_left +" balls to win." ;
+          }
+        
+
+
+        }
 
       }
       function check_run(value)
@@ -793,39 +839,6 @@ scorecard_update();
         else 
         {
           runs_to_chase = runs_to_chase - value;
-        }
-        if(inngs==2)
-        {
-          if(first_inn_w==10&&runs_to_chase==1)
-          {
-            document.getElementById("left_run").innerHTML = "Match Tie";
-            document.getElementById("dropdownMenuButton1").style.display = "none";
-            document.getElementById("bat_c_btn").style.display = "none";
-
-          }
-          else if(first_inn_w==10||balls_left==0)
-          {
-            var m = sec_inn_run - first_inn_run;
-            document.getElementById("left_run").innerHTML = bat_first + " won by "+ m + " runs.";
-            
-            document.getElementById("dropdownMenuButton1").style.display = "none";
-            document.getElementById("bat_c_btn").style.display = "none";
-          }
-          else if(runs_to_chase<=0)
-          {
-            var n = 10 - first_inn_w;
-            document.getElementById("left_run").innerHTML = bowl_first + " won by "+ n + " wickets.";
-
-            document.getElementById("dropdownMenuButton1").style.display = "none";
-            document.getElementById("bat_c_btn").style.display = "none";
-          }
-          else 
-          {
-            document.getElementById("left_run").innerHTML = bowl_first + " needed "+runs_to_chase + " in "+ balls_left +" balls to win." ;
-          }
-        
-
-
         }
         change_strike(value);
         change_score(value);
@@ -855,6 +868,7 @@ scorecard_update();
         curr_ov_color.push(g);
 
         current_over(value);
+        update_array();
       }
       function change_strike(value)
       {
@@ -1338,7 +1352,8 @@ scorecard_update();
       function complete_inngs(){
         if(inn_overs==20||first_inn_w==10)
         {
-
+          myArray.length =0;
+          myArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,4,4,3,3,4,6,6,6,4,4,3,3,4,6,'W','W','W'];
             inngs_over++;
         if(inngs_over==1)
         {
@@ -1423,5 +1438,31 @@ document.getElementById("bat_t1").innerHTML = bowl_first;
 
         }
       }
+    }
+    function update_array()
+    {
+      if(inngs_over>=14&& first_inn_w<6)
+      {
+       myArray.length = 0;
+       myArray = [0,0,0,0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,4,6,6,6,4,4,3,4,6,6,6,'W','W'];
+      }
+       else if(inngs_over>9&& first_inn_w<1)
+      {
+       myArray.length = 0;
+       myArray = [0,1,1,1,1,1,2,2,2,2,2,2,4,4,3,4,6,6,6,4,4,3,4,6,6,6,6,6,6,6,6,6,4,4,4,4,4,4,4,4,'W','W'];
+      }
+
+       else if(inngs_over>6&& first_inn_w>=3)
+      {
+       myArray.length = 0;
+       myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,4,4,3,6,'W','W','W','W'];
+      }
+
+       else if(first_inn_w>6)
+      {
+       myArray.length = 0;
+       myArray = [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,4,4,3,6,'W','W','W','W'];
+      }
+
     }
     
