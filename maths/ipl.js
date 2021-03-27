@@ -57,7 +57,7 @@
       var cad =1;
       var toss_winner;
       var toss_loser;
-      var teams = ["CSK","RCB","DC","RR","KKR","PK","SRH","MI"];
+      var teams = ["CSK","RCB","DC","RR","KKR","PBKS","SRH","MI"];
       var type_player = ["WK","Batsman","All Rounder","Bowler"];
       var t = setInterval(move,18);
       function change()
