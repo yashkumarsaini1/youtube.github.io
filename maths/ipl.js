@@ -275,7 +275,7 @@
                       '{"Name":"Sandeep Sharma","Type":"3","overseas":"0" },' +
                       '{"Name":"Vijay Shankar ","Type":"2","overseas":"0" },' +
                       '{"Name":"Virat Singh","Type":"1","overseas":"0" },' +
-                      '{"Name":"Rashid Khan  ","Type":"1","overseas":"1" },' +
+                      '{"Name":"Rashid Khan  ","Type":"3","overseas":"1" },' +
                       '{"Name":"Basil Thampi","Type":"3","overseas":"0" },' +
                       '{"Name":"T Natarajan","Type":"3","overseas":"0" },' +
                       '{"Name":"Khaleel Ahmed","Type":"3","overseas":"0" },' +
