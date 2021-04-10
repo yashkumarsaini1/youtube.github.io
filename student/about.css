@@ -1,0 +1,59 @@
+body
+{
+	font-family: arial;
+}
+.head
+{
+	padding: 20px;
+	font-size: 20px;
+}
+.hed
+{
+	color: white;
+}
+.hed:hover
+{
+	color: #ffd305;
+	cursor: pointer;
+}
+.head_img1
+{
+	height: 800px;
+	width: 100%;
+}
+.head_txt
+{
+	background-color: #ffd305;
+}
+.navs
+{
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+}
+.navs:hover
+{
+	color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.contact
+{
+	background-color: #ffd305;
+	padding-right: 50px;
+	padding-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	 border-radius: 0px;
+}
+.badges
+{
+	background-color:#ffd305;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
