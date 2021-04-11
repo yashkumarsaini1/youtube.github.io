@@ -3,6 +3,23 @@ body
 	font-family: arial;
 	
 }
+#menu_block_item{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        z-index:2;
+        transition: 0.5s;
+        display: none;
+    }
+    #menu_block_item a
+    {
+    	text-decoration: none;
+    	color: white;
+    	font-weight: bold;
+    }
+
 .head
 {
 	padding: 20px;
@@ -86,6 +103,16 @@ body
 	position: absolute;
 	left:45% ;
 	font-size: 40px;
+}
+.menu_icon
+{
+	position: absolute;
+	left: 10px;
+	top: 30px;
+}
+.menu_itm
+{
+	font-size: 25px;
 }
 @media only screen and (max-width: 992px) {
 	.rowl
