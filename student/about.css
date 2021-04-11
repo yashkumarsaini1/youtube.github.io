@@ -1,6 +1,7 @@
 body
 {
 	font-family: arial;
+	
 }
 .head
 {
@@ -20,10 +21,12 @@ body
 {
 	height: 800px;
 	width: 100%;
+	min-height: 250px;
 }
 .head_txt
 {
 	background-color: #ffd305;
+	font-size: 65px;
 }
 .navs
 {
@@ -34,6 +37,13 @@ body
 .navs:hover
 {
 	color: black;
+}
+.head_cont
+{
+	position: absolute;
+	top: 120px;
+	left: 80px;
+	line-height: 1.2;
 }
 
 .sticky {
@@ -56,4 +66,132 @@ body
 	border-radius: 3px;
 	font-weight: bold;
 }
+.rowl
+{
+	font-size: 60px;
+}
+.img_curve
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.right_nav
+{
+	position: absolute;
+	right: 20px;
+}
+.logo
+{
+	position: absolute;
+	left:45% ;
+	font-size: 40px;
+}
+@media only screen and (max-width: 992px) {
+	.rowl
+	{
+		font-size: 30px;
+	}
+	.head_txt
+	{
+		font-size: 35px;
+	}
+	.head_img1
+	{
+		height: auto;
+	}
+	.head_cont
+	{
+		top: 80px;
+		left: 60px;
+	}
+	.curves
+	{
+		height: 300px;
+		width: auto;
+	}
+	.img_curve
+	{
+		top: 0px;
+	}
+	.nav_below
+	{
+		display: none;
+	}
+	.head
+	{
+		display: none;
+	}
+	.menu_icon
+	{
+		position: absolute;
+		right: 10px;
+		top: 5px;
+	}
+  
+}
+@media only screen and (max-width: 768px) {
+	.rowl
+	{
+		font-size: 18px;
+	}
+	.head_txt
+	{
+		font-size: 20px;
+	}
+	.head_img1
+	{
+		height: auto;
+	}
 
+	.head_cont
+	{
+		top: 50px;
+		left: 30px;
+	}
+	.curves
+	{
+		height: 250px;
+		width: auto;
+	}
+	.img_curve
+	{
+		top: 0px;
+	}
+  
+}
+@media only screen and (max-width: 576px) {
+	.logo
+	{
+		left: 15px;
+	}
+	.rowl
+	{
+		font-size: 20px;
+	}
+
+	.head_txt
+	{
+		font-size: 20px;
+	}
+
+	.head_img1
+	{
+		height: auto;
+	}
+	.head_cont
+	{
+		top: 30px;
+		left: 15px;
+	}
+	.curves
+	{
+		height: 250px;
+		width: auto;
+	}
+	.img_curve
+	{
+		top: 0px;
+	}
+  
+}
