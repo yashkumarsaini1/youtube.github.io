@@ -10,15 +10,39 @@
 
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="about.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
   <body class="bg-light">
   	<header>
+  		<nav  id="menu_block_item" class="menu_block_item animated fadeInDown ">
+        <ul class="list-group bg-dark" style="text-align: center;cursor: pointer;border-width: 1px;height: 100%;">
+            <br><br><br>
+          <li class="list-group-item menu_itm bg-dark" style="border-width: 0px;"><a href="#" onclick="menu('2')"> Industries</a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> News </a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Exhibitions </a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> About</a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Investor </a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Career</a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Contact </a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Downloads</a></li>
+          <li class="list-group-item menu_itm bg-dark " style="border-width: 0px;"><a href="#" onclick="menu('2')"> Search</a></li>
+        </ul>
+    </nav>
   		<div class="container-fluid d-flex align-items-center bg-dark" style="padding: 25px;color: white;">
 
   			<div class="logo"><p><img src="https://www.roblon.com/Files/Templates/Designs/roblon/assets/images/logo.svg"><p></div>
   			<div>
   				<p >
-  				<button class="btn menu_icon"><svg class='hed ' xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg></button></p>
+  				<button class="btn menu_icon" style="z-index: 3;">
+
+  					<span id="menu_btn" onclick="menu('1')"><svg class="animated fadeInRight hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg></span>
+            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg   class=" animated fadeInDown hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span></button>
+  				
+        
+  			</p>
   			</div>
   			<div class="d-flex align-items-center" style="margin-left: 60px;">
   				<div class="head">
@@ -361,6 +385,21 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+function menu(value)
+        {
+            if(value==1)
+            {
+                document.getElementById("menu_btn").style.display="none";
+                document.getElementById("menu_cross").style.display="inline";
+                document.getElementById("menu_block_item").style.display="block";
+            }
+            else if(value==2)
+            {
+                document.getElementById("menu_block_item").style.display="none";
+                document.getElementById("menu_btn").style.display="inline";
+                document.getElementById("menu_cross").style.display="none";
+            }
+        }
 </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
