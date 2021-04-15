@@ -31,7 +31,7 @@ body
 }
 .hed:hover
 {
-	color: #6970E7;
+	color: #424BE8;
 	cursor: pointer;
 }
 .head_img1
@@ -46,22 +46,27 @@ body
 	width: 100%;
 	min-height: 250px;
 }
-.head_img3
+.head_img2:hover
 {
-	height: 450px;
-	width: 100%;
-	min-height: 250px;
+	
+}
+@keyframes change
+{
+	100%
+	{
+		filter: brightness(50%);
+	}
 }
 .head_txt
 {
-	background-color: #6970E7;
+	background-color: #424BE8;
 	font-size: 65px;
 }
 .head_txt2
 {
 	font-size: 45px;
 	line-height: 1.2;
-	text-shadow: 0px 1px 5px #6970E7;
+	text-shadow: 0px 1px 5px #424BE8;
 }
 
 .navs
@@ -102,7 +107,7 @@ body
 }
 .contact
 {
-	background-color: #6970E7;
+	background-color: #424BE8;
 	padding-right: 50px;
 	padding-left: 50px;
 	padding-top: 20px;
@@ -111,7 +116,7 @@ body
 }
 .badges
 {
-	background-color:#6970E7;
+	background-color:#424BE8;
 	border-radius: 3px;
 	font-weight: bold;
 }
@@ -134,7 +139,7 @@ body
 .logo
 {
 	position: absolute;
-	left:40% ;
+	left:45% ;
 	font-size: 40px;
 }
 .logo1
@@ -161,16 +166,20 @@ body
 }
 .arrow
 {
-	color: blue; font-size: 20px;margin-left: 10px;
+	color: white; font-size: 30px;margin-left: 10px;
+	font-weight: bolder;
 }
 .cards
 {
 	padding: 15px;
 	position: relative;
 }
-.cards:hover
+.cards:hover img
 {
 	cursor: pointer;
+	animation-name: change;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
 }
 @media only screen and (max-width: 992px) {
 	.rowl
