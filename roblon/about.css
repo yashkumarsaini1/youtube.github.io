@@ -40,6 +40,18 @@ body
 	width: 100%;
 	min-height: 250px;
 }
+.head_img2
+{
+	height: 450px;
+	width: 100%;
+	min-height: 250px;
+}
+.head_img3
+{
+	height: 450px;
+	width: 100%;
+	min-height: 250px;
+}
 .head_txt
 {
 	background-color: #ffd305;
@@ -68,6 +80,19 @@ body
 	top: 120px;
 	left: 80px;
 	line-height: 1.2;
+}
+.img_content
+{
+	position: absolute;
+	bottom: 15px;
+	padding: 15px;
+	color: white;
+	text-shadow: 0 0 5px black;
+}
+.img_back1
+{
+	position: absolute;
+	bottom: 20px;
 }
 
 .sticky {
@@ -125,6 +150,19 @@ body
 .content_2
 {
 	padding-right: 350px;
+}
+.arrow
+{
+	color: blue; font-size: 20px;margin-left: 10px;
+}
+.cards
+{
+	padding: 15px;
+	position: relative;
+}
+.cards:hover
+{
+	cursor: pointer;
 }
 @media only screen and (max-width: 992px) {
 	.rowl
@@ -211,10 +249,19 @@ body
 	{
 		bottom: 0px;
 	}
+	.head_img3
+{ height: 300px;
+}
+.head_img2
+{
+	height: 300px;
+}
+
 	
   
 }
 @media only screen and (max-width: 576px) {
+
 	.logo
 	{
 		right:  15px;
