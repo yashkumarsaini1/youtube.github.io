@@ -16,7 +16,7 @@ body
     #menu_block_item a
     {
     	text-decoration: none;
-    	color: white;
+    	color: black;
     	font-weight: bold;
     }
 
@@ -139,7 +139,7 @@ body
 }
 .logo1
 {
-	width: 200px;
+	width: 180px;
 	height: auto;
 }
 .menu_icon
