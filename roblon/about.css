@@ -174,9 +174,7 @@ body
 }
 .logo
 {
-	position: absolute;
-	left:40% ;
-	font-size: 40px;
+	margin: auto;
 }
 .logo1
 {
