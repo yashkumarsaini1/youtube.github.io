@@ -164,12 +164,12 @@ body
 .logo
 {
 	position: absolute;
-	left:45% ;
+	left:40% ;
 	font-size: 40px;
 }
 .logo1
 {
-	width: 180px;
+	width: 250px;
 	height: auto;
 }
 .menu_icon
@@ -256,6 +256,11 @@ body
 }
 
 @media only screen and (max-width: 768px) {
+	.logo1
+{
+	width: 180px;
+	height: auto;
+}
 	.rowl
 	{
 		font-size: 40px;
