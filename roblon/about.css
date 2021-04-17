@@ -47,7 +47,7 @@ body
 }
 .hed:hover
 {
-	color: #424BE8;
+	color: #4775b8;
 	cursor: pointer;
 }
 .logo2
@@ -86,14 +86,14 @@ body
 }
 .head_txt
 {
-	background-color: #424BE8;
+	background-color: #4775b8;
 	font-size: 63px;
 }
 .head_txt2
 {
 	font-size: 46px;
 	line-height: 1.2;
-	text-shadow: 0px 1px 5px #424BE8;
+	text-shadow: 0px 1px 5px #4775b8;
 }
 
 .navs
@@ -144,7 +144,7 @@ body
 }
 .badges
 {
-	background-color:#424BE8;
+	background-color:#4775b8;
 	border-radius: 3px;
 	font-weight: bold;
 }
@@ -198,14 +198,18 @@ body
 }
 #menu_block_item a:hover 
 {
-	color: #424BE8;
+	color: #4775b8;
 }
 .accordion-header, .accordion , .accordion-item,.accordion-button
 {
 	border-width: 0px;
 	border-radius: 0px;
-	background-color: #424BE8;
+	background-color: #4775b8;
 	color: white;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 .accordion-button
 {
