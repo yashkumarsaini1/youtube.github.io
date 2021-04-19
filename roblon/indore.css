@@ -151,3 +151,20 @@ html, body {
 	font-size: 20px;
 	color: #4775b8;
 }
+.nav-bar-item a:hover
+{
+	color: #4775b8;
+}
+.about-img
+{
+	height:250px; 
+	width: 100%;
+}
+.img-content1
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 250px;
+	width: 100%;
+}
