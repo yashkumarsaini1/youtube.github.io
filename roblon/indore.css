@@ -1,6 +1,45 @@
-body
+html, body {
+    margin:0; padding:0;
+    min-width: 100%;
+    font-family: Raleway, sans-serif;
+}
+.sticky-top {
+  
+  background-color: white;
+  border-bottom-width: 1px;
+  border-color: lightgray;
+  border-style: solid;
+  border-top-width:  0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  font-weight: 700;
+}
+/* Accordion */
+.accordion-header, .accordion , .accordion-item
 {
-	font-family: Raleway, sans-serif;
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: #4775b8;
+	color: white;
+}
+.accordion-button, .accordion-body
+{
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: #5385CF;
+	color: white;
+}
+.accordion-item
+{
+	padding-top: 20px;
+}
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.about-con
+{
+	background-color: #4775b8;
+	padding: 20px;
 }
 .top-nav
 {
@@ -9,6 +48,11 @@ body
 	background-color: #4775b8;
 	color: white;
 	padding-top: 10px;
+}
+.top-navbar
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .top-nav-icon
 {
@@ -40,4 +84,70 @@ body
 .nav-bar-item
 {
 	padding-left: 100px;
+}
+.con-carousel
+{
+	height: 600px;
+}
+.img-carousel
+{
+	height: 600px;
+}
+.carousel-item
+{
+	height: 600px;
+}
+.img-content
+{
+	top: 80px;
+	left: 180px;
+	position: absolute;
+}
+.card
+{
+	box-shadow: 0 0 7px gray;
+	height: 500px;
+	border-radius: 0px;
+}
+.cards
+{
+	padding: 20px;
+}
+.card-row
+{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.img-card
+{
+	height: 180px;
+	width: 100%;
+}
+.card-btn
+{
+	border-radius: 0px;
+	font-size: 15px;
+}
+.footer-tab
+{
+	padding: 20px;
+}
+.head-footer
+{
+	color:#4775b8;
+}
+.card-columns
+{
+	column-count: 2;
+}
+.fa-caret-right
+{
+	font-size: 15px;
+	color: lightgrey;
+}
+.bottom-icons
+{
+	padding-left: 15px;
+	font-size: 20px;
+	color: #4775b8;
 }
