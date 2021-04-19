@@ -107,7 +107,12 @@ html, body {
 {
 	box-shadow: 0 0 7px gray;
 	border-radius: 0px;
-	height: 600px;
+	height: 500px;
+}
+.card p
+{
+	font-size: 15px;
+	color: grey;
 }
 .cards
 {
@@ -121,7 +126,7 @@ html, body {
 .img-card
 {
 	height: 250px;
-	width: 100%;
+	overflow: hidden;
 }
 .card-btn
 {
