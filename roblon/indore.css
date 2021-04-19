@@ -1,0 +1,43 @@
+body
+{
+	font-family: Raleway, sans-serif;
+}
+.top-nav
+{
+	height: 35px;
+	font-size: 14px;
+	background-color: #4775b8;
+	color: white;
+	padding-top: 10px;
+}
+.top-nav-icon
+{
+	padding-left: 60px;
+}
+.contact-top
+{
+	padding-left: 110px;
+	font-weight: 200;
+}
+.top-icons
+{
+	padding-left: 15px;
+	font-size: 15px;
+}
+.top-logo
+{
+	width: 300px;
+	height: auto;
+	padding-left: 50px;
+}
+.nav-bar-item a
+{
+	text-decoration: none;
+	color: black;
+	padding: 15px;
+	font-size: 13px;
+}
+.nav-bar-item
+{
+	padding-left: 100px;
+}
