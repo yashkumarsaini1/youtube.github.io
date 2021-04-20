@@ -126,6 +126,9 @@ html, body {
 {
 	height: 250px;
 	overflow: hidden;
+	/*
+	border-top-right-radius:125px;
+	border-top-left-radius:125px;*/
 }
 .card-btn
 {
