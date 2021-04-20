@@ -47,8 +47,27 @@
     </div>
     <div class="container-fluid top-navbar" id="navbar">
       <div class="row d-flex align-items-center">
-        <div class="col-md-4" >
+        <div class="col-lg-4" >
           <img src="logo.png" class="top-logo">
+      <nav  id="menu_block_item" class="menu_block_item animate__animated animate__fadeIn " >
+        <ul class="list-group bg-white list_ul">
+            <br><br>
+          <li class="list-group-item menu_itm bg-white" style="color:#8489EB;"><a href="indore.html" onclick="menu('2')" > HOME </a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="about.html" onclick="menu('2')"> ABOUT </a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="products.html" onclick="menu('2')"> PRODUCTS </a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="#" onclick="menu('2')"> NEWS</a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="carrer.html" onclick="menu('2')"> CAREER </a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="#" onclick="menu('2')"> CONTACT</a></li>
+        </ul>
+    </nav>
+    <button class="btn menu_icon" style="z-index: 3;">
+
+            <span id="menu_btn" onclick="menu('1')"><svg class="animated zoomIn hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg></span>
+            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg   class=" animated zoomIn hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span>
+  </button>
+
         </div>
         <div class="col-md-8">
           <nav class="nav-bar-item">
@@ -143,7 +162,8 @@
     <div class="row">
       <div class="col-md-4">
         <img src="logo.png" class="top-logo"><br><br>
-        <p>Indore has one of the largest rod manufacturing facilities globally which allows it to have a very fast response time especially in emergency situations.</p>
+        <p>Fibure is the brand name of Mangalchand Tubes Pvt. Ltd.
+Our team has experience of well over 20 years in manufacturing high quality products to secure your fibre & power cable. You can visit product pages or download Company Brochure for more information.</p>
         <button class="btn btn-primary card-btn">Read More</button>
 
       </div>
@@ -209,6 +229,25 @@ function myFunction() {
     navbar.classList.remove("sticky-top");
   }
 }
+</script>
+<script type="text/javascript">
+function menu(value)
+        {
+            if(value==1)
+            {
+                document.getElementById("menu_btn").style.display="none";
+                document.getElementById("menu_cross").style.display="inline";
+                document.getElementById("menu_block_item").style.display="block";
+                document.body.classList.add("stop-scrolling");
+            }
+            else if(value==2)
+            {
+                document.getElementById("menu_block_item").style.display="none";
+                document.getElementById("menu_btn").style.display="inline";
+                document.getElementById("menu_cross").style.display="none";
+                document.body.classList.remove("stop-scrolling");
+            }
+        }
 </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
