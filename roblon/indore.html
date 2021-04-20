@@ -26,7 +26,7 @@
     <title>Fibure</title>
   </head>
   <body>
-    <div class="container-fluid top-navbar" id="navbar">
+   <div class="container-fluid top-navbar" id="navbar">
       <div class="row d-flex align-items-center">
         <div class="col-lg-4" >
           <img src="logo.png" class="top-logo">
@@ -38,7 +38,7 @@
           <li class="list-group-item menu_itm bg-white"><a href="products.html" onclick="menu('2')"> PRODUCTS </a></li>
           <li class="list-group-item menu_itm bg-white"><a href="#" onclick="menu('2')"> NEWS</a></li>
           <li class="list-group-item menu_itm bg-white"><a href="career.html" onclick="menu('2')"> CAREER </a></li>
-          <li class="list-group-item menu_itm bg-white"><a href="#" onclick="menu('2')"> CONTACT</a></li>
+          <li class="list-group-item menu_itm bg-white"><a href="#contact" onclick="menu('2')"> CONTACT</a></li>
         </ul>
     </nav>
     <button class="btn menu_icon" style="z-index: 3;">
@@ -57,7 +57,7 @@
             <a href="products.html"> PRODUCTS </a>
             <a href="#"> NEWS </a>
             <a href="career.html"> CAREER </a>
-            <a href="#"> CONTACT </a>
+            <a href="#contact"> CONTACT </a>
           </nav>
         </div>
       </div>
@@ -72,7 +72,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div style="position: relative;">
-        <img src="Slider 1.jpg" class="d-block" alt="..." style="margin:auto">
+        <img src="Slider 1.jpg" class="d-block" alt="..." style="right: 0px;position: absolute;">
         <div class="img-content row animate__animated animate__fadeInUp">
           <div class="col-sm-2 slider_col"></div>
           <div class="col-sm-5">
@@ -84,7 +84,7 @@
     </div>
     <div class="carousel-item">
       <div style="position: relative;">
-        <img src="Slider 2.jpg" class="d-block " alt="..." style="margin: auto;">
+        <img src="Slider 2.jpg" class="d-block " alt="..." style="left: 0px;position: absolute;">
         <div class="img-content row animate__animated animate__fadeInUp">
           <div class="col-sm-4">
         </div>
@@ -140,7 +140,7 @@
         </div>
           <div style="padding: 10px;padding-top: 20px;">
           <h4>RIPCORDS & YARNS</h4>
-          <p>Fibure offers two types of ripcords. Polyester Ripcord is polyester based, continuous filament yarn designed specifically for fiber optic and power cable ripcord application.They are for the easy removal of PE Jackets. Fibure Aramid Ripcord is an aramid based, continuous filament yarn designed specifically for fiber optic and power cable ripcord application. Fibure Aramid Ripcord for ripping through steel armour or PE Jacket.
+          <p>Fibure offers two types of ripcords. Polyester Ripcord is polyester based, continuous filament yarn designed specifically for fiber optic and power cable ripcord application.They are for the easy removal of PE Jackets.
 </p>
           <button class="btn btn-primary card-btn" onclick="location.href='pr.html';">Know More</button>
           </div>
@@ -149,24 +149,26 @@
 
     </div>
   </div>
+ 
+<section id="contact">
   <div class="container-fluid bg-light" style="padding-top: 50px;margin-top: 50px;">
     <div class="container">
     <div class="row">
       <div class="col-md-4 footer-tab" >
         <h6 class="head-footer"><i class="fa fa-location-arrow" aria-hidden="true" style="font-size: 25px;"></i>
-        Corporate Office
+        Address
         </h6>
-        <p>F- 443 Road No.- 13 Vishwakarma Industrial Area Jaipur</p>
+        <p>F- 443 Road No.- 13 Vishwakarma Industrial Area Jaipur, Rajasthan, India</p>
       </div>
       <div class="col-md-5 footer-tab">
          <h6 class="head-footer"><i class="fa fa-phone" aria-hidden="true" style="font-size: 25px;"></i>
-        Call Us On
+        Call
         </h6>
         <p>+91-141-4086453</p>
       </div>
       <div class="col-md-3 footer-tab">
         <h6 class="head-footer"><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 25px;"></i>
-        Email Us
+        Email
         </h6>
         <p>careers@fibure.com</p>
       </div>
@@ -179,45 +181,42 @@
         <img src="logo.png" class="top-logo"><br><br>
         <p>Fibure is the brand name of Mangalchand Tubes Pvt. Ltd.
 Our team has experience of well over 20 years in manufacturing high quality products to secure your fibre & power cable. You can visit product pages or download Company Brochure for more information.</p>
-        <button class="btn btn-primary card-btn">Read More</button>
+        <button class="btn btn-primary card-btn" onclick="location.href='about.html';">Read More</button>
 
       </div>
       <div class="col-md-5">
-        <h5 class="head-footer mt-3">USEFUL LINKS</h5><br>
+        <br><br><br>
         <div class="row">
             <ul class="list-unstyled card-columns">
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> HOME</li><br>
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> ABOUT</li><br>
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> PRODUCTS</li><br>
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> NEWS</li><br>
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> CAREER</li><br>
-              <li><i class="fa fa-caret-right" aria-hidden="true"></i> CONTACT</li><br>
+              <li onclick="location.href='indore.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> HOME</li><br>
+              <li onclick="location.href='about.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> ABOUT</li><br>
+              <li onclick="location.href='products.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> PRODUCTS</li><br>
+              <li onclick="location.href='#';"><i class="fa fa-caret-right" aria-hidden="true"></i> NEWS</li><br>
+              <li onclick="location.href='career.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> CAREER</li><br>
+              <li onclick="location.href='#contact';"><i class="fa fa-caret-right" aria-hidden="true"></i> CONTACT</li><br>
             </ul>
           </div>
-      </div>
-      <div class="col-md-3">
 
-        <h5 class="head-footer mt-3">REACH US</h5><br>
+
+      </div>
+      <div class="col-md-3 top-nav-icon mt-5">
+            <div class="d-flex align-items-center justify-content-right">
+          <div class="bottom-icons"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+          <div class="bottom-icons"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+          <div class="bottom-icons"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+          <div class="bottom-icons"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
       </div>
     </div>
   </div>
   </div>
   <div class="container-fluid bg-light" >
       <div class="row">
-        <div class="col-md-5 contact-top">
+        <div class="col-sm-5 contact-top">
           <p>Copyright © 2020. All rights reserved.</p>
        </div>
-       <div class="col-md-4"></div>
-        <div class="col-md-3 top-nav-icon">
-          <div class="d-flex align-items-center justify-content-right">
-          <div class="bottom-icons"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-          <div class="bottom-icons"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-          <div class="bottom-icons"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
-          <div class="bottom-icons"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-        </div>
-        </div>
       </div>
     </div>
+    </section>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
