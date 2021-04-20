@@ -12,7 +12,6 @@ html, body {
   border-top-width:  0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  font-weight: 700;
 }
 /* Accordion */
 .accordion-header, .accordion , .accordion-item
@@ -207,6 +206,11 @@ html, body {
 	}
 }
 
+.list-unstyled li:hover
+{
+	cursor: pointer;
+}
+
 /* Navbar button */
 #menu_block_item
 {
@@ -265,6 +269,16 @@ html, body {
 	.carousel
 	{
 		height: 600px;
+	}
+	.carousel1
+	{
+		height: 400px;
+	}
+	.carousel1 img
+	{
+		height: 400px;
+		width: 50%;
+		margin-left: 25%;
 	}
 
 
@@ -344,6 +358,12 @@ html, body {
 	.carousel
 	{
 		height: 400px;
+	}
+	.carousel1 img
+	{
+		height: 400px;
+		width: 90%;
+		margin-left: 5%;
 	}
 }
 @media only screen and (max-width: 576px) {}
