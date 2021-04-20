@@ -135,6 +135,15 @@ html, body {
 	border-radius: 0px;
 	font-size: 15px;
 }
+.head-text
+{
+	font-size: 32px;
+}
+.head-text1
+{
+	font-size: 32px;
+	padding-left: 400px;
+}
 .footer-tab
 {
 	padding: 20px;
@@ -344,6 +353,12 @@ html, body {
 	{
 		height: 250px;
 	}
+	.head-text, .head-text1
+	{
+		font-size: 20px;
+		padding: 5px;
+	}
+
 	.card-row
 	{
 		padding-left: 2px;
