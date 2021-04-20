@@ -262,6 +262,11 @@ html, body {
     overflow: hidden;
 }
 
+	.carousel
+	{
+		height: 600px;
+	}
+
 
 
 /*****************************************************/
@@ -331,6 +336,14 @@ html, body {
 	{
 		padding-left: 20px;
 		padding-right: 2px;
+	}
+	.carousel-item img
+	{
+		height: 400px;
+	}
+	.carousel
+	{
+		height: 400px;
 	}
 }
 @media only screen and (max-width: 576px) {}
