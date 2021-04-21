@@ -140,7 +140,21 @@ html, body {
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
 }
-
+.e-p
+{
+	margin-left: 20%;
+	width: 60%;
+	height: 300px;
+}
+.each-p
+{
+	height: 400px;
+	overflow: hidden;
+}
+.core
+{
+	padding: 60px;
+}
 /* Image carousel button color */
 .carousel-item
 {
@@ -422,6 +436,20 @@ html, body {
 	}
 }
 @media only screen and (max-width: 768px) {
+	.core
+{
+	padding: 20px;
+}
+	.e-p
+{
+	margin-left: 2%;
+	width: 96%;
+	height: 180px;
+}
+.each-p
+{
+	height: 180px;
+}
 	.img-row
 	{
 		height: 250px;
