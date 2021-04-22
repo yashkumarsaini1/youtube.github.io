@@ -151,6 +151,54 @@ html, body {
 	max-height: 400px;
 }
 
+
+/* Slider -btn */
+
+.slider-btn
+{
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	background-color: red;
+	opacity: 0.4;
+}
+#slider-btn1
+{
+	top: 15px;
+	left: 700px;
+}
+#slider-btn2
+{
+	top: 95px;
+	left: 700px;
+}
+#slider-btn3
+{
+	top:295px;
+	left: 180px;
+}
+#slider-btn4
+{
+	top:50px;
+	left: 450px;
+}
+#slider-btn5
+{
+	top:110px;
+	left: 735px;
+}
+#slider-btn6
+{
+	top:270px;
+	left: 535px;
+}
+#slider-btn7
+{
+	top:325px;
+	left: 795px;
+}
+
+
 /* Image carousel button color */
 
 
