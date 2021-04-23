@@ -509,7 +509,12 @@ html, body {
 	}
 	.dropdown
 	{
-		margin-left: -8px;
+		margin-left: 0px;
+		font-weight: 700;
+	}
+	.dropdown a
+	{
+		font-weight: 700;
 	}
 }
 @media only screen and (max-width: 768px) {
