@@ -547,7 +547,6 @@ html, body {
 	.head-text, .head-text1
 	{
 		font-size: 20px;
-		padding: 5px;
 	}
 
 	.card-row
@@ -579,6 +578,13 @@ html, body {
 {
 	width: 100%;
 	height: auto;
+}
+.head-text,.head-text1
+{
+	margin-top: 220px;
+	padding-left: 10px;
+
+
 }
 }
 @media only screen and (max-width: 576px) {}
