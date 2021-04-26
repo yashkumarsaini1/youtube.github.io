@@ -95,3 +95,14 @@ body
 {
 	font-size: 16px;
 }
+
+
+/* About Section */
+.card
+{
+	border-radius: 10px;
+	box-shadow: 0 2px 10px grey;
+	width: 100%;
+	padding: 40px;
+	padding-top: 60px;
+}
