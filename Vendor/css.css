@@ -22,6 +22,10 @@ body
 	font-weight: 500;
 	color: white;
 }
+.box-c:hover
+{
+	cursor: pointer;
+}
 .box-logo
 {
 	left: 20px;
@@ -106,3 +110,89 @@ body
 	padding: 40px;
 	padding-top: 60px;
 }
+.box3{
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.card1
+{
+	padding: 40px;
+}
+.card2
+{
+	padding: 60px;
+	margin-top: 50px;
+}
+.card3
+{
+	width: 100%;
+	height: auto;
+	border-radius:20px;
+	padding: 60px;
+	background-color: blue;
+	color: white;
+}
+.card3 h1
+{
+	font-size: 54px;
+	font-weight: 400;
+}
+.card3 p
+{
+	font-size: 18px;
+	line-height: 31.5px;
+}
+@media only screen and (max-width: 1124px) 
+{
+	.box4
+	{
+		display: none;
+	}
+	.box3
+	{
+		display: inline;
+	}
+
+}
+@media only screen and (max-width: 768px) {
+	.head-text
+	{
+		font-size: 48px;
+	}
+	.head-text2
+	{
+		font-size: 30px;
+	}
+	.head-text3 h1
+	{
+		font-size: 25px;
+	}
+	.head-text3 p
+	{
+		font-size: 14px;
+	}
+	.card2
+	{
+		padding: 30px;
+		margin-top: 0px;
+	}
+	.card3 h1
+	{
+		font-size: 25px;
+	}
+	.card p
+	{
+		font-size: 16px;
+	}
+	.card1
+	{
+		padding: 20px;
+	}
+	.card3
+	{
+		padding: 30px;
+	}
+}
+@media only screen and (max-width: 576px) {}
