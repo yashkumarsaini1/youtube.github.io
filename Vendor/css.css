@@ -225,11 +225,13 @@ body
 	}
 	.card3 h1
 	{
-		font-size: 25px;
+		font-size: 20px;
+		font-weight: 400;
 	}
 	.card p
 	{
-		font-size: 16px;
+		font-size: 13px;
+		font-weight: 300;
 	}
 	.card1
 	{
