@@ -12,34 +12,142 @@
     <link href="http://fonts.cdnfonts.com/css/circular-std-book" rel="stylesheet">
 
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
     <title>About</title>
   </head>
   <body class="bg-light">
     <header>
+      <div  class="bg-primary" id="navbar">
+        <div style="margin-top: 100px;">
+          <div class="d-flex justify-content-center align-items-center " style="color: white;">
+            <div>Login&nbsp;&nbsp;&nbsp;</div>
+            <div>|&nbsp;&nbsp;&nbsp;Support</div>
+          </div>
+        <button class="btn nav_btn" >
+
+              <a href="#"><div class="dropdown">
+              <a class="dropbtn">Product <i class="fas fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="#" onclick="menu('2');">Platform</a>
+                  <a href="#" onclick="menu('2');">Integraion</a>
+                  <a href="#" onclick="menu('2');">Security</a>
+                </div>
+            </div></a>
+          
+        </button><br>
+        <button class="btn nav_btn">
+                <a href="#">
+                  <div class="dropdown">
+                    <a class="dropbtn">Learn <i class="fas fa-angle-down"></i></a>
+                      <div class="dropdown-content">
+                        <a href="#" onclick="menu('2');">Customer Stories</a>
+                        <a href="#" onclick="menu('2');">Procedure Insights</a>
+                        <a href="#" onclick="menu('2');">Blog</a>
+                      </div>
+                  </div>
+                </a>
+          
+        </button><br>
+        <button class="btn nav_btn">
+              <a href="#">
+                  <div class="dropdown">
+                    <a class="dropbtn">Company <i class="fas fa-angle-down"></i></a>
+                      <div class="dropdown-content">
+                        <a href="about.html" onclick="menu('2');">About</a>
+                        <a href="#" onclick="menu('2');">News</a>
+                        <a href="#" onclick="menu('2');">Contact</a>
+                        <a href="#" onclick="menu('2');">Partners</a>
+                      </div>
+                  </div>
+                </a>
+          
+        </button><br>
+
+        <div class="d-flex justify-content-center align-items-center" style="padding: 10px;">
+          <div style="padding: 20px;">
+            <button class="btn btn-outline-light">Supplier Info</button>
+          </div>
+          <div style="padding: 20px;">
+            <button class="btn btn-success">Get a Demo</button>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
       <div class="container-fluid bg-primary" style="height: cover;">
         <div class="box1">
           <div class="box2">
-            <div class="box-logo box-c">VendorPanel</div>
-            <div class="box-c" id="box-c1">Product</div>
-            <div class="box-c" id="box-c2">Learn</div>
-            <div class="box-c" id="box-c3">Company</div>
+            <div class="box-logo box-c" style="z-index: 3;" onclick="location.href='Vendor.html';">VendorPanel</div>
+            <div class="box4">
+            <div class="box-c" id="box-c1">
+              <a href="#"><div class="dropdown">
+              <a class="dropbtn">Product <i class="fas fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="#">Platform</a>
+                  <a href="#">Integraion</a>
+                  <a href="#">Security</a>
+                </div>
+            </div></a>
+            </div>
+            <div class="box-c" id="box-c2">
+                <a href="#">
+                  <div class="dropdown">
+                    <a class="dropbtn">Learn <i class="fas fa-angle-down"></i></a>
+                      <div class="dropdown-content">
+                        <a href="#">Customer Stories</a>
+                        <a href="#">Procedure Insights</a>
+                        <a href="#">Blog</a>
+                      </div>
+                  </div>
+                </a>
+            </div>
+            <div class="box-c" id="box-c3">
+              <a href="#">
+                  <div class="dropdown">
+                    <a class="dropbtn">Company <i class="fas fa-angle-down"></i></a>
+                      <div class="dropdown-content">
+                        <a href="about.html">About</a>
+                        <a href="#">News</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Partners</a>
+                      </div>
+                  </div>
+                </a>
+            </div>
 
 
             <div class="box-c" id="box-c4">Login</div>
             <div class="box-c" id="box-c5">|&nbsp;&nbsp;&nbsp;Support</div>
             <button class="btn btn-outline-light box-c" id="box-c6">Supplier Info</button>
             <button class="btn btn-success box-c" id="box-c7">Get a Demo</button>
+          </div>
+          </div>
+          <div class="box3" style="z-index: 3;">
+            <button style="height: 70px;width: 70px;" class="btn">
 
+            <!-- Bars Icon -->
+
+            <svg  id="menu_btn" style="margin-right: 10px;color: white;"  onclick="menu('1')" class="menu_btn animated fadeInRight bg-primary" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+
+            <!-- Cross Icon -->
+
+            <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg style="margin-right: 10px;color: white" class="menu_btn animated fadeInDown  bg-primary" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></span>
+        
+          </button>
           </div>
         </div>
         <div class="row">
-          <div class="col-xl-5" style="padding: 15px;color: white;">
-            <h1 style="font-size: 54px;font-weight: 700;">We're shaping the New Procurement.
-            </h1>
-            <h3>Join Us!</h3>
-            
+          <div class="col-xl-5" style="padding: 25px;">
+            <h1 class="about-header">We're shaping the New Procurement.</h1>
+            <p class="head-text2">Join Us!<br>
+            </p>
           </div>
           <div class="col-xl-7">
             <img src="https://s3.ap-southeast-2.amazonaws.com/vpweb/uploads/Skyline.png?mtime=20210203141642&focal=none" style="width: 100%;height: auto;">
@@ -47,7 +155,7 @@
         </div>
       </div>
     </header>
-
+    
     <div class="container-fluid" style="margin-top: 150px;">
       <div class="row">
         <div class="col-md-3"></div>
@@ -63,64 +171,63 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p>James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p>James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p>James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p >James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p>James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
-        <div class="col-md-4" style="padding: 40px;">
+        <div class="col-md-4 about-card">
           <div class="bg-white card">
             <h3>James Leathem </h3> <h4>Founder & CEO</h4><br>
-            <p style="font-size: 18px;">James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
+            <p>James drives strategy and growth, with a background in procurement consulting and leadership development.</p>
             <button style="width: 100%;" class="btn">Connect to Linkedin</button>
           </div>
         </div>
       </div>
     </div>
 
-
-
     <div class="container-fluid bg-primary" style="margin-top: 100px;">
       <div class="row">
-        <div class="col-md-4"  style="margin-top: 200px; padding: 20px;color: white;">
+        <div class="col-md-4 footer-text">
           <h1>LOGO</h1><br>
           <div class="d-flex justify-content-left align-items-center">
-           <div style="font-size: 20px;padding: 10px;"> <i class="fa fa-linkedin" aria-hidden="true"></i></div>
-           <div style="font-size: 20px;padding: 10px;"> <i class="fa fa-linkedin" aria-hidden="true"></i></div>
-           <div style="font-size: 20px;padding: 10px;"> <i class="fa fa-linkedin" aria-hidden="true"></i></div>
+           <div style="font-size: 20px;padding: 10px;"> <i class="fab fa-linkedin"></i></div>
+           <div style="font-size: 20px;padding: 10px;"> <i class="fab fa-linkedin"></i></div>
+           <div style="font-size: 20px;padding: 10px;"> <i class="fab fa-linkedin"></i></div>
           </div>
         </div>
-         <div class="col-md-3 footer-text" style="margin-top: 200px;color: white;">
+        <div class="col-1 footer-div"></div>
+         <div class="col-3 footer-text ">
           <h3>PRODUCTS</h3>
           <p>PRODUCT1</p>
           <p>PRODUCT1</p>
@@ -128,14 +235,15 @@
           <p>PRODUCT1</p>
           <p>PRODUCT1</p>
         </div>
-         <div class="col-md-3 footer-text" style="margin-top: 200px;color: white;">
+        <div class="col-1 footer-div"></div>
+         <div class="col-3 footer-text">
           <h3>LEARN</h3>
           <p>Learn1</p>
           <p>Learn1</p>
           <p>Learn1</p>
 
         </div>
-         <div class="col-md-2 footer-text" style="margin-top: 200px;color: white;">
+         <div class="col-2 footer-text">
           <h3>COMPANY</h3>
           <p>Company1</p>
           <p>Company1</p>
@@ -145,7 +253,7 @@
           <p>Company1</p>
 
         </div>
-        <div class="col-md-6" style="padding: 40px;color: white;">
+        <div class="col-md-8" style="padding: 40px;color: white;">
           <h5>© 2021 VendorPanel   |   Privacy Policy</h5>
         </div>
       </div>
@@ -158,6 +266,23 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    function menu(value)
+        {
+            if(value==1)
+            {
+                document.getElementById("menu_btn").style.display="none";
+                document.getElementById("menu_cross").style.display="inline";
+                document.getElementById("navbar").style.display="block";
+            }
+            else if(value==2)
+            {
+                document.getElementById("navbar").style.display="none";
+                document.getElementById("menu_btn").style.display="inline";
+                document.getElementById("menu_cross").style.display="none";
+            }
+        }
+      </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
