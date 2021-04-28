@@ -331,7 +331,40 @@ body
 }
 /* Product Section CSS End */
 
+/* News Section Start */
 
+.news_card
+{
+	padding: 20px;
+}
+.news_card2
+{
+	padding: 20px;
+	box-shadow: 0 1px 3px grey;
+	width: 100%;
+	height: 500px;
+	border-radius: 15px;
+}
+.news_card2:hover
+{
+	background-color: lightgrey;
+	cursor: pointer;
+}
+.news_card2 h1
+{
+	font-size: 25px;
+
+}
+.news_card2 p
+{
+	font-size: 20px;
+}
+.header-news
+{
+	padding: 80px;
+}
+
+/* News Section End */
 
 
 
@@ -347,6 +380,10 @@ body
 	{
 		display: inline;
 	}
+	.header-news
+{
+	padding: 40px;
+}
 
 }
 @media only screen and (max-width: 768px) {
@@ -494,7 +531,25 @@ body
 {
 	padding: 15px;
 }
+.news_card2
+{
+	padding: 10px;
+	height: auto;
+	border-radius: 10px;
+}
+.news_card2 h1
+{
+	font-size: 20px;
 
+}
+.news_card2 p
+{
+	font-size: 15px;
+}
+.header-news
+{
+	padding: 20px;
+}
 
 }
 @media only screen and (max-width: 576px) {}
