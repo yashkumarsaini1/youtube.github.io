@@ -279,6 +279,7 @@ p
 {
 	font-size: 54px;
 	color: white;
+	font-weight: 700;
 }
 .about-card
 {
@@ -369,7 +370,65 @@ p
 
 /* News Section End */
 
+/* Login Section Start */
 
+.login-content
+{
+	padding: 80px;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px; 
+}
+.login-form
+{
+	padding: 80px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px; 
+}
+.login-know
+{
+	border-radius: 150px;
+	font-size: 18px;
+	padding: 15px;
+}
+.form-input
+{
+	padding: 15px;
+	border-bottom-width: 2px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-radius: 0px;
+}
+.form-input:focus{
+        box-shadow: none;
+    }
+.login-btn
+{
+	width: 100%;
+	padding: 15px;
+	font-size: 25px;
+	border-radius: 30px;
+	box-shadow: 0 0 2px 3px lightgrey;
+	margin-top: 20px;
+}
+.login-link:hover
+{
+	cursor: pointer;
+}
+.line1
+{
+	height: 5px;
+	background-color: #000080;
+	width: 60px;
+	margin:auto;
+}
+.line2
+{
+	height: 4px;
+	background-color: white;
+	width: 120px;
+}
+/* Login Section End */
 
 
 
@@ -552,6 +611,14 @@ p
 .header-news
 {
 	padding: 20px;
+}
+.login-content
+{
+	padding: 25px;
+}
+.login-form
+{
+	padding: 25px;
 }
 
 }
