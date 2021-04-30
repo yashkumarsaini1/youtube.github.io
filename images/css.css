@@ -8,6 +8,24 @@
       right: 80px;
       top: 20px;
     }
+    #navbar
+    {
+      width: 100%;
+      height: 100vh;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .nav_div
+    {
+       text-align: left;
+       width: 100%;
+       padding: 40px;
+       color: white;
+       margin-top: 100px;
+    }
     .header_img
     {
       margin-left: 10%;
@@ -312,7 +330,7 @@
     }
     .footer-text
     {
-      font-size: 14px;
+      font-size: 11px;
     }
     .header_btn
     {
@@ -323,8 +341,8 @@
     }
     .t_btn
     {
-      width: 80px;
-      font-size: 12px;
+      width: 60px;
+      font-size: 9px;
       padding: 5px;
     }
     .t_con
