@@ -8,6 +8,12 @@
       right: 20px;
       top: 20px;
     }
+    .header_img
+    {
+      margin-left: 10%;
+      height: auto;
+      width: 80%;
+    }
     .header nav,a
     {
       padding: 10px;
@@ -32,6 +38,30 @@
        margin-top: 40px;
        color: #0000ff;
     }
+    .about-col
+    {
+      margin-top:30px;
+      padding: 20px;
+    }
+    .about-col h1
+    {
+      font-size: 60px;
+      color: #000080;
+    }
+    .about-col p
+    {
+      font-size: 25px;
+      margin-top: 20px;
+      color: #0000ff;
+    }
+    .about-col span
+    {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #000080;
+      text-align: right;
+    }
+
     .menu_bar
     {
       height: 70px;
@@ -59,11 +89,6 @@
       top: 25px;
       font-size: 25px;
       font-weight: 900;
-    }
-    .header-img
-    {
-      height: 550px;
-      overflow: hidden;
     }
     .logo-img
     {
@@ -95,6 +120,14 @@
       font-size: 25px;
       color: white;
       padding-top: 10px;
+    }
+    .about_img
+    {
+      width: 60%;
+      margin-left: 20%;
+      height:auto;
+      box-shadow: 0 0 20px lightgrey;
+      border-radius: 40px;
     }
 
 
@@ -164,6 +197,15 @@
     font-size: 30px;
   }
 }
+@media only screen and (max-width: 1100px) 
+{
+  .about_img
+    {
+      width: 80%;
+      margin-left: 10%;
+    }
+}
+
 @media only screen and (max-width: 768px)
 {
   .header-col h1
@@ -173,10 +215,6 @@
   .header-col p
   {
     font-size: 25px;
-  }
-  .header-img
-  {
-    height: 300px;
   }
   .header nav
   {
@@ -190,6 +228,45 @@
   {
     font-size: 20px;
   }
+  .about-col
+    {
+      margin-top:15px;
+      padding: 25px;
+    }
+    .about-col h1
+    {
+      font-size: 30px;
+    }
+    .about-col p
+    {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    .about-col span
+    {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    .about_img
+    {
+      width: 90%;
+      margin-left: 5%;
+    }
 
 }
-
+@media only screen and (max-width: 576px)
+{
+  .header-col
+    {
+      margin-top: 10px;
+    }
+  .header-col h1
+  {
+    font-size: 30px;
+  }
+  .header-col p
+  {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+}
