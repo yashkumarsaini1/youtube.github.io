@@ -1,12 +1,11 @@
  body
     {
       font-family: 'Nunito', sans-serif;
-      padding: 0px;
     }
     .header
     {
       position: absolute;
-      right: 20px;
+      right: 80px;
       top: 20px;
     }
     .header_img
@@ -22,10 +21,11 @@
       text-decoration: none;
       color: #000080;
       font-size:20px;
+      text-align: left;
     }
     .header-col
     {
-      margin-top: 60px;
+      margin-top: 20px;
       padding: 20px;
     }
     .header-col h1
@@ -195,6 +195,41 @@
 .menu_bar:focus{
         box-shadow: none;
     }
+.header_btn
+{
+  padding: 15px;
+  width: 160px;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-left: 30px;
+  background-color: #000080;
+  color: white;
+  border-style: solid;
+  border-width: 0px;
+}
+.header_btn:hover
+{
+  color: white;
+  background-color: #0000ff;
+  box-shadow: 2px 5px 5px grey;
+}
+.t_btn
+{
+  width: 160px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 0px;
+  font-size: 18px;
+}
+.t_btn:hover
+{
+  box-shadow: 2px 5px 5px grey;
+}
+
+    .t_con
+    {
+      font-size: 20px;
+    }
 
 
 /** Responsiveness Starts  **/
@@ -219,6 +254,14 @@
       width: 80%;
       margin-left: 10%;
     }
+  .header_btn
+    {
+      margin-left: 10px;
+      width: 140px;
+      font-size: 18px;
+      padding: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 768px)
@@ -271,8 +314,23 @@
     {
       font-size: 14px;
     }
-
-}
+    .header_btn
+    {
+      margin-left: 5px;
+      width: 100px;
+      font-size: 16px;
+      padding: 6px;
+    }
+    .t_btn
+    {
+      width: 80px;
+      font-size: 12px;
+      padding: 5px;
+    }
+    .t_con
+    {
+      font-size: 13px;
+    }
 @media only screen and (max-width: 576px)
 {
   .header-col
@@ -288,4 +346,11 @@
     font-size: 18px;
     margin-top: 15px;
   }
+    .header_btn
+    {
+      margin-left: 4px;
+      width: 120px;
+      font-size: 14px;
+      padding: 6px;
+    }
 }
