@@ -1,6 +1,7 @@
  body
     {
       font-family: 'Nunito', sans-serif;
+      padding: 0px;
     }
     .header
     {
@@ -129,6 +130,12 @@
       box-shadow: 0 0 20px lightgrey;
       border-radius: 40px;
     }
+    .footer-text
+    {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
 
 
 .dropbtn {
@@ -251,6 +258,10 @@
     {
       width: 90%;
       margin-left: 5%;
+    }
+    .footer-text
+    {
+      font-size: 14px;
     }
 
 }
