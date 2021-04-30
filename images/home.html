@@ -32,18 +32,18 @@
     <div  class="bg-white animate__animated animate__slideInRight" id="navbar" style="width: 100%;height: 100vh;display: none;position: absolute;top: 0;left: 0;z-index: 2;">
         <div style=" text-align: center;color: white;margin-top: 120px">
           <nav>
-            <a href="#home" onclick="menu('2');">HOME</a><br><br>
-            <a href="#about" onclick="menu('2');">ABOUT</a><br><br>
+            <a href="#home" onclick="menu('2');">Home</a><br><br>
+            <a href="#about" onclick="menu('2');">About</a><br><br>
 
               <div class="dropdown">
-              <a class="dropbtn" style="margin-left: 0px;">STUDENT <i class="fas fa-angle-down"></i></a>
+              <a class="dropbtn" style="margin-left: 0px;">Student <i class="fas fa-angle-down"></i></a>
                 <div class="dropdown-content">
-                  <a href="#" onclick="menu('2');">CLASS 10</a>
-                  <a href="#" onclick="menu('2');">CLASS 11</a>
-                  <a href="#" onclick="menu('2');">CLASS 12</a>
+                  <a href="#" onclick="menu('2');">Class 10</a>
+                  <a href="#" onclick="menu('2');">Class 11</a>
+                  <a href="#" onclick="menu('2');">Class 12</a>
                 </div>
               </div><br><br>
-            <a href="#" onclick="menu('2');">SCHOOL</a>
+            <a href="#school" onclick="menu('2');">School</a>
           </nav>
 
       </div>
@@ -59,18 +59,18 @@
 
         <div class="header">
           <nav>
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
 
               <div class="dropdown">
-              <a class="dropbtn" >STUDENT <i class="fas fa-angle-down"></i></a>
+              <a class="dropbtn" >Student<i class="fas fa-angle-down"></i></a>
                 <div class="dropdown-content">
-                  <a href="#">CLASS 10</a>
-                  <a href="#">CLASS 11</a>
-                  <a href="#">CLASS 12</a>
+                  <a href="#">Class 10</a>
+                  <a href="#">Class 11</a>
+                  <a href="#">Class 12</a>
                 </div>
               </div>
-            <a href="#">SCHOOL</a>
+            <a href="#school">School</a>
           </nav>
         </div>
         <div class="menu_button">
@@ -91,15 +91,20 @@
       </div>
     </header>
     <section id="home">
-      <div class="container-fluid" style="padding-top: 120px;padding-bottom: 100px;">
+      <div class="container-fluid" style="padding-top: 80px;padding-bottom: 100px;">
         <div class="row">
           <div class="col-lg-6">
 
           <img src="play-logo.png" class=" mt-2 header_img">
           </div>
           <div class="col-lg-6 header-col">
-            <h1>MATHEMATICS</h1>
-            <p>This site contains video lectures of Mathematics of class 10<sup>th</sup> , 11<sup>th</sup>,12<sup>th</sup> for CBSE Students.</p>
+            <h1><b>Mathematics</b></h1>
+            <p>This site contains video lectures of Mathematics of class 10<sup>th</sup> , 11<sup>th</sup>,12<sup>th</sup> .</p>
+            <div class="d-flex justify-content-left align-items-center">
+            	<a href="#" class="btn header_btn">Class 10</a>
+            	<a href="#" class="btn header_btn">Class 11</a>
+            	<a href="#" class="btn header_btn">Class 12</a>
+            </div>
           </div>
         </div>
       </div>
@@ -109,7 +114,7 @@
         <div class="row ">
           
           <div class="col-lg-6 about-col">
-            <h1>ABOUT ME</h1>
+            <h1>About Me</h1>
             <p>I am Babu Lal Mali, PGT(Mathematics), DMS RIE Ajmer. I have been teaching mathematics to classes X, XI, XII of CBSE Students of DMS Ajmer since 2009. Before this I worked as TGT (Mathematics) in the same school from 2004 to 2009.</p>
             <br>
             <span>" एक ही कदम चलना है सदा और एक ही कदम जो चलता चला जाता है, वह अनंत फासले तय कर लेता है । "</span>
@@ -121,10 +126,57 @@
         </div>
       </div>
       </section>
+      <section id="school">
+      	<div class="container-fluid header-col" style="padding-top: 100px;padding-bottom: 100px;">
+
+            <h1 style="text-align: center;"><b>School</b></h1>
+
+      		<div class="table-responsive">
+       <table class="table-bordered table">
+        <thead >
+        <tr>
+          <th><strong>S.No</strong></th>
+          <th style="text-align: center;" ><strong>Topic</strong></th>
+          <th><strong>Link</strong></th>
+        </tr>
+    </thead>
+          <tr>
+              <td>1.</td>
+              <td class="t_con">Student Exam Seating Arrangement of Annual Exam 2020-21 </td>
+              <td style="text-align: center;"><a class="btn btn-primary t_btn" href="https://drive.google.com/file/d/1Ec1TPujAn2uMJh0eKIVbHgbfT4ZYioWr/view?usp=sharing">Click Here</a></td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td class="t_con">Excel Sheet for Test/Exam Marks entry by the subject teacher</td>
+              <td style="text-align: center;"><a class="btn btn-success t_btn" href="main/MarksEntry_Sheet.xlsx">Download</a></td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td class="t_con">Google form for setting password before uploading excel sheet with marks/grades by the subject teacher</td>
+              <td style="text-align: center;"><a class="btn btn-primary t_btn"href="https://forms.gle/iW7r88qtF7Pgg1ef8">Click here</a></td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td class="t_con">Google form for uploading excel sheet filled with marks/grades by the subject teacher</td>
+              <td style="text-align: center;"><a class="btn btn-primary t_btn"href="https://forms.gle/tecxMaxFj2tigCoB8">Click here</a></td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td class="t_con">Test Names, Subject Names and Maximum Marks for various Tests and Subjects</td>
+              <td style="text-align: center;"><a class="btn btn-dark t_btn"href="https://drive.google.com/file/d/1HSt29kKSEzVeSlavL5-p2m7yzqcuXT3t/view?usp=sharing">Link</a></td>
+            </tr>
+       </table>
+   </div>
+        
+      	</div>
+      	
+      </section>
 
       	<div class="container-fluid" style="background-color: #0000ff;padding-top: 30px;padding-bottom: 60px;">
         	<p  class="footer-text">Designed and Developed by Yash Kumar Saini <br> © 2021 All Rights Reserved.</p>
       	</div>
+
+
 
 
 
