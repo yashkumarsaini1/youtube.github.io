@@ -9,10 +9,12 @@
 
 .class_play_container
 {
-	padding: 40px;
+	padding: 20px;
 }
+
 #youtube
 {
+	z-index: 3;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -33,6 +35,11 @@
 	width: 100%;
 	height: auto;
 	padding: 20px;
+	font-size: 20px;
+}
+#topic
+{
+	font-size: 20px;
 }
  .accordion-item
  {
@@ -50,6 +57,9 @@
 	border-bottom-width: 2px;
 	border-color: #000080;
 }
+.accordion-button:focus{
+        box-shadow: none;
+    }
 .badge
 {
 	padding: 10px;
@@ -58,13 +68,10 @@
 }
 .list_item
 {
-	border-style: solid;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
 	border-radius: 0px;
 	border-bottom-width: 1px;
 	border-color: #000080;
+	font-size: 18px;
 }
 .list_item:hover
 {
@@ -72,10 +79,29 @@
 	background-color: #0000ff;
 	color: white;
 }
+.list_group
+{
+	border-radius: 0px;
+}
 @media only screen and (max-width: 768px)
 {
 	.class_play_container
 	{
-		padding: 10px;
+		padding: 0px;
 	}
+	.list_item
+	{
+		font-size: 14px;
+	}
+	#topic
+	{
+		font-size: 12px;
+	}
+	#youtube
+{
+	height: 100%;
+	border-style: solid;
+	border-width: 0px;
+}
+
 }
