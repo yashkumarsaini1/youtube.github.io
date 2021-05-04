@@ -131,10 +131,10 @@
   </button>
 </div>
 <nav style="text-align: center;">
-  <a href=""><img src="Images/2.png" class="gallery_img"></a>
-  <a href=""><img src="Images/ar-s2.png" class="gallery_img"></a>
-  <a href=""><img src="Images/3.png" class="gallery_img"></a>
-  <a href=""><img src="Images/22.png" class="gallery_img"></a>
+  <img src="Images/2.png" class="gallery_img" onclick="add(0)">
+  <img src="Images/ar-s2.png" class="gallery_img" onclick="add(1)">
+  <img src="Images/3.png" class="gallery_img" onclick="add(2)">
+  <img src="Images/22.png" class="gallery_img" onclick="add(3)">
 </nav>
         </div>
         <div class="col-md-6" style="margin-top: 60px;color: white;padding: 20px;">
@@ -252,6 +252,20 @@ function menu(value)
                 document.body.classList.remove("stop-scrolling");
             }
         }
+</script>
+<script type="text/javascript">
+  
+  function add(value)
+  {
+     var el = document.getElementsByClassName("carousel-item");
+
+     for(var i=0;i<el.length;i++)
+     {
+      el[i].classList.remove("active");
+     }
+
+      el[value].classList.add("active");
+  }
 </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
