@@ -24,6 +24,18 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900" rel="stylesheet" type="text/css" />
 
     <title>Fibure</title>
+    <style type="text/css">
+      .second
+{
+  background-image: url("Images/bg-1.jpg");
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
   </head>
   <body>
    <div class="container-fluid top-navbar" id="navbar">
@@ -87,7 +99,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-light" >
+    <div class="container-fluid second" >
       <div class="row">
         <div class="col-md-6 core">
           <div id="carouselExampleControls" class="carousel slide each-p" data-bs-ride="carousel">
@@ -116,17 +128,26 @@
     </div>
 
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"style=" filter: invert(0%);">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"style=" filter: invert(0%);">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<nav style="text-align: center;">
+  <img src="Images/pr-s1.png" class="gallery_img" onclick="add(0)">
+  <img src="Images/7.png" class="gallery_img" onclick="add(1)">
+  <img src="Images/17.png" class="gallery_img" onclick="add(2)">
+  <img src="Images/12.png" class="gallery_img" onclick="add(3)">
+  <img src="Images/6.png" class="gallery_img" onclick="add(4)">
+  <img src="Images/5.png" class="gallery_img" onclick="add(5)">
+  <img src="Images/11.png" class="gallery_img" onclick="add(6)">
+</nav>
         </div>
-        <div class="col-md-6" style="margin-top: 60px;">
+        <div class="col-md-6"  style="margin-top: 60px;color: white;padding: 20px;">
           <h1>POLYESTER RIPCORD</h1><br>
           <p>Fibure Polyester Ripcord is polyester based, continuous filament yarn designed specifically for fiber optic cable ripcord application.</p><br>
 
@@ -142,7 +163,7 @@ Due to the premium quality of twisting, the Fibure polyester ripcords are also a
 
           <div class="d-flex justify-content-left align-items-center">
             <div>
-            <button class="btn btn-outline-dark" style="border-radius: 0px" onclick="window.open('Brochures/fibure polyester brochure.pdf', '_blank');">View Brochure</button>
+            <button class="btn btn-outline-light" style="border-radius: 0px" onclick="window.open('Brochures/fibure polyester brochure.pdf', '_blank');">View Brochure</button>
           </div>
           </div>
         </div>
@@ -240,6 +261,20 @@ function menu(value)
                 document.body.classList.remove("stop-scrolling");
             }
         }
+</script>
+<script type="text/javascript">
+  
+  function add(value)
+  {
+     var el = document.getElementsByClassName("carousel-item");
+
+     for(var i=0;i<el.length;i++)
+     {
+      el[i].classList.remove("active");
+     }
+
+      el[value].classList.add("active");
+  }
 </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
