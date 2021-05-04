@@ -24,6 +24,19 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900" rel="stylesheet" type="text/css" />
 
     <title>Fibure</title>
+
+    <style type="text/css">
+      .second
+{
+  background-image: url("Images/bg-2.jpg");
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
   </head>
   <body>
     <div class="container-fluid top-navbar" id="navbar">
@@ -88,7 +101,7 @@
       </div>
     </div>
     
-    <div class="container-fluid bg-light" >
+    <div class="container-fluid second" >
       <div class="row">
         <div class="col-md-6 core">
           <div id="carouselExampleControls" class="carousel slide each-p" data-bs-ride="carousel" >
@@ -105,17 +118,21 @@
     </div>
 
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"style=" filter: invert(0%);">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"style=" filter: invert(0%);">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div><nav style="text-align: center;">
+  <img src="Images/wsy-s1.png" class="gallery_img" onclick="add(0)">
+  <img src="Images/8.png" class="gallery_img" onclick="add(1)">
+  <img src="Images/15.png" class="gallery_img" onclick="add(2)">
+</nav>
         </div>
-        <div class="col-md-6" style="margin-top: 60px;">
+        <div class="col-md-6" style="margin-top: 60px;color: white;padding: 20px;">
           <h1>WATER SWELLABLE YARN</h1><br>
           <p>Fibure Water- Swellable Yarn is put- to- use in cables to prevent water penetration and eliminates the risk of revelation of the cable centre to water.</p>
           <p>Fibure Water Swellable Yarn is ideal for use inside the cable as it swells instantly when it comes in contact with water and prevents the cable from damage.</p>
@@ -127,7 +144,7 @@
 
           <div class="d-flex justify-content-left align-items-center">
             <div>
-            <button class="btn btn-outline-dark" style="border-radius: 0px"  onclick="window.open('Brochures/fibure WS yarn.pdf', '_blank');">View Brochure</button>
+            <button class="btn btn-outline-light" style="border-radius: 0px"  onclick="window.open('Brochures/fibure WS yarn.pdf', '_blank');">View Brochure</button>
           </div>
           </div>
         </div>
@@ -136,7 +153,7 @@
 
 
 <section id="contact">
-  <div class="container-fluid bg-light" style="padding-top: 50px;margin-top: 50px;">
+  <div class="container-fluid " style="padding-top: 50px;margin-top: 50px;background-color:#000;color: white; ">
     <div class="container">
     <div class="row">
       <div class="col-md-4 footer-tab" >
@@ -158,8 +175,8 @@
     <div class="row">
 
       <div class="col-md-4 top-nav-icon">
-        <h4 style="margin-bottom: 10px;color: #4775b8">Follow Us On</h4>
-        <div class="d-flex align-items-center justify-content-right">
+        <h4 style="margin-bottom: 10px;">Follow Us On</h4>
+        <div class="d-flex align-items-center justify-content-right mb-4">
           <div class="bottom-icons" onclick="location.href='https://twitter.com/Fibure_official';"><i class="fa fa-twitter" aria-hidden="true"></i></div>
           <div class="bottom-icons" onclick="location.href='https://www.linkedin.com/mwlite/company/fibure';"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
       </div>
@@ -179,7 +196,7 @@
   </div>
 </div>
 
-  <div class="container-fluid bg-light" >
+  <div class="container-fluid" style="background-color: #000;" >
       <div class="row">
         <div class="col-sm-12 contact-top" style="text-align: center;">
           <p>Copyright  Mangalchand Tubes Pvt. Ltd. © 2021. All rights reserved.</p>
@@ -187,8 +204,6 @@
       </div>
     </div>
     </section>
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -227,6 +242,20 @@ function menu(value)
                 document.body.classList.remove("stop-scrolling");
             }
         }
+</script>
+<script type="text/javascript">
+  
+  function add(value)
+  {
+     var el = document.getElementsByClassName("carousel-item");
+
+     for(var i=0;i<el.length;i++)
+     {
+      el[i].classList.remove("active");
+     }
+
+      el[value].classList.add("active");
+  }
 </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
