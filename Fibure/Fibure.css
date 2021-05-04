@@ -458,6 +458,10 @@ html, body {
 		margin-top: 10px;
 		border-color: white;
 	}
+	.gallery_img:hover
+	{
+		cursor: pointer;
+	}
 
 /*****************************************************/
 /**********************                      **********/
