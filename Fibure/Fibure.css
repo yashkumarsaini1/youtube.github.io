@@ -136,6 +136,11 @@ html, body {
 	height: 400px;
 	margin-bottom: 40px;
 }
+.home-carousel
+{
+	height: 600px;
+	margin-bottom: 40px;
+}
 .carousel-item1
 {
 	height: 600px;
@@ -281,7 +286,7 @@ html, body {
 .card-btn
 {
 	border-radius: 0px;
-	font-size: 15px;
+	font-size: 12px;
 }
 .head-text
 {
@@ -466,7 +471,10 @@ html, body {
 /*****************************************************/
 /**********************                      **********/
 
-
+.home-carousel img
+{
+	top:120px;
+}
 
 
 
@@ -606,5 +614,15 @@ html, body {
 {
 	margin-top: 70px;
 }
+.home-carousel
+{
+	height: 400px;
+	margin-bottom: 10px;
+}
+.home-carousel img
+{
+	top:0px;
+}
+
 }
 @media only screen and (max-width: 576px) {}
