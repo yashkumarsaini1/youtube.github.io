@@ -6,12 +6,6 @@ html, body {
 .sticky-top {
   
   background-color: white;
-  border-bottom-width: 1px;
-  border-color: lightgray;
-  border-style: solid;
-  border-top-width:  0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
 }
 .video-slider
 {
@@ -135,6 +129,7 @@ html, body {
 .nav-bar-item
 {
 	padding-left: 100px;
+	margin-top: 20px;
 }
 .con-carousel
 {
@@ -149,8 +144,7 @@ html, body {
 }
 .home-carousel1
 {
-	height: 450px;
-	margin-bottom: 40px;
+	height: 400px;
 }
 .carousel-item1
 {
@@ -159,7 +153,7 @@ html, body {
 }
 .carousel-item2
 {
-	height: 600px;
+	height: 400px;
 	overflow: hidden;
 }
 .carousel-item5
@@ -172,7 +166,11 @@ html, body {
 	max-height: 400px;
 }
 
-
+.text_head2
+{
+	text-align: center;color:white;
+	font-size: 25px;
+}
 /* Slider -btn */
 
 .slider-btn
@@ -669,6 +667,11 @@ html, body {
 		width: 98%;
 		margin-left: 1%;
 	}
-
+.text_head2
+{
+	text-align: center;
+	color:white;
+	font-size: 18px;
+}
 }
 @media only screen and (max-width: 576px) {}
