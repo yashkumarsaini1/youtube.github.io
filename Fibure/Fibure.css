@@ -16,7 +16,7 @@ html, body {
 .video-slider
 {
 	width: 100%;
-	height: 100%;
+	max-height: auto;
 }
 
 
@@ -144,11 +144,12 @@ html, body {
 .home-carousel
 {
 	height: 600px;
-	margin-bottom: 200px;
+	overflow: hidden;
+	margin-bottom: 40px;
 }
 .home-carousel1
 {
-	height: 500px;
+	height: 450px;
 	margin-bottom: 40px;
 }
 .carousel-item1
@@ -450,6 +451,17 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+.carousel4
+	{
+		height: 600px;
+	}
+	.carousel4 img
+	{
+		height: 600px;
+		width: 80%;
+		margin-left: 10%;
+	}
+
 
 	.carousel2
 	{
@@ -642,6 +654,21 @@ html, body {
 {
 	height: auto;
 }
+.home-carousel1
+{
+	height: 280px;
+	overflow: hidden;
+}
+.carousel4
+	{
+		height: auto;
+	}
+	.carousel4 img
+	{
+		height: auto;
+		width: 98%;
+		margin-left: 1%;
+	}
 
 }
 @media only screen and (max-width: 576px) {}
