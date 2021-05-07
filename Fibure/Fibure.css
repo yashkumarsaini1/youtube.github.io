@@ -319,11 +319,11 @@ body {
 }
 
 .head-text {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .head-text1 {
-    font-size: 40px;
+    font-size: 50px;
     padding-left: 400px;
 }
 
@@ -462,11 +462,12 @@ body {
 }
 
 .carousel4 {
-    height: 600px;
+    height: 700px;
+    overflow: hidden;
 }
 
 .carousel4 img {
-    height: 600px;
+    height: auto;
     width: 100%;
 }
 
@@ -670,7 +671,8 @@ body {
     }
 
     .carousel4 {
-        height: auto;
+        height: 300px;
+        overflow: hidden;
     }
 
     .carousel4 img {
