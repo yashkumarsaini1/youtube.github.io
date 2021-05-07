@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Fibure.css -->
     <link rel="stylesheet" type="text/css" href="Fibure.css">
     <!-- Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -23,7 +24,7 @@
     <div class="container-fluid top-navbar" id="navbar">
         <div class="row d-flex align-items-center">
             <div class="col-lg-4">
-                <img src="Images/logo.png" class="top-logo">
+                <img src="Images/logo.png" class="top-logo" onclick="location.href='Fibure.html';">
                 <nav id="menu_block_item" class="menu_block_item animate__animated animate__fadeIn ">
                     <ul class="list-group bg-white list_ul">
                         <br><br>
@@ -82,54 +83,118 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-4 p-0">
-        <div id="carouselExampleControls" class="carousel carousel4 slide" data-bs-ride="carousel">
+    <div class="container-fluid home-carousel p-0" style="margin-top: 20px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Images/about-s1.jpg" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Images/about-s2.jpg" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="Images/about-s3.JPG" class="d-block" alt="...">
+                <div class="carousel-item   active">
+                    <div style="text-align: center;">
+                        <video class="video-slider" muted autoplay loop>
+                            <source src="Videos/5.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div class="container-fluid home-carousel1 p-0">
+        <div id="carouselExampleIndicators1" class="carousel slide carousel2" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item  carousel-item2 active">
+                    <div style="position: relative;">
+                        <img src="Images/Slider-1.jpg" class="d-block slider p-s_image slider-home" alt="..." style="right: 0px;position: absolute;">
+                        <div class="img-content row animate__animated animate__fadeInUp">
+                            <div>
+                                <h4 class="head-text">Securing Optical Fiber and <br>Power Cables Worldwide</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item2 ">
+                    <div style="position: relative;">
+                        <img src="Images/Slider-2.jpg" class="d-block slider p-s_image  slider-home" alt="..." style="left: 0px;position: absolute;">
+                        <div class="img-content row animate__animated animate__fadeInUp">
+                            <div>
+                                <h4 class="head-text1">Securing Optical Fiber and <br>Power Cables Worldwide</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev" style="display: none;">
+                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next" style="display: none;">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
-    <div class="container">
-        <br><br><br>
-        <p>Mangal Chand Tubes Private Limited (MTPL) was incorporated on 18thJune 1971 and since its inception is in the business of manufacturing & marketing of copper wire, cables, tubes, rods and alloys. Under the stewardship of Mr. Bhaskar Choudhari, the company has maintained its leadership in special alloys for Lighting and electrical Industry.
-        </p><br>
-        <p>MTPL is among few companies in India to produce Copper alloy wires for electric bulb industry. These wires are the key input for the manufacturing of bulbs used for residential purpose & for automobile industry. The company has been maintaining highest standards of manufacturing to cater to the requirements of Auto Industry. For ensuring consistent quality standards, MTPL has gone in for backward integration & has installed melting furnace for making alloys. This also ensures that the proprietary technology remains within the promoters of the company providing an edge over the competitors. MTPL products are used in telecommunication industry. It produces very fine copper wires required in manufacturing of Fibre glass rods for FIBRE Optic Cable. </p>
-        <br>
-        <p>In 2016 company started manufacturing of raw material for FIBRE OPTIC CABLES viz Polyester Ripcords, Binder yarns and water swellable yarns.</p>
+    <div class="container-fluid mt-4 mb-5" style="background-color: black;padding-top: 60px;padding-bottom: 60px;">
+        <h2 class="text_head2">We help optical fiber and power cable manufacturers <br> deliver great products.</h2>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="row card-row">
+            <div class="col-md-4 cards" onclick="location.href='frp.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/frp-home.png" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">FRP</h4>
+                        <p>Fibure FRP, is a composite material made of a polymer matrix reinforced with fiberglass, used as a central strength member in fiber optic cables.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 cards" onclick="location.href='igfr.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/9.png" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">IGFR</h4>
+                        <p>IGFR has a special smooth, flexible coating which improves handling and eliminates dust and loose fiber generation during cable production even at high speeds, leading to high productivity and ultimate cable strength.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 cards" onclick="location.href='pr.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/r&y-home.jpg" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">RIPCORDS & YARNS</h4>
+                        <p>They are for the easy removal of PE Jackets. Due to the premium quality of twisting, the Fibure polyester ripcords are also available in water-blocking variants.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <section id="contact">
         <div class="container-fluid " style="padding-top: 50px;margin-top: 50px;background-color:#000;color: white; ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-tab" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+            <div class="row">
+                <div class="col-md-4 footer-tab d-flex justify-content-center align-items-center" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                    <div>
                         <h6 class="head-footer" style="font-size: 16px;"><i class="fa fa-location-arrow" aria-hidden="true"></i>
                             Address
                         </h6>
-                        <p style="font-size: 15px;">F- 443 Road No.- 13 Vishwakarma Industrial Area Jaipur, Rajasthan, India</p>
+                        <p style="font-size: 15px;">F- 443 Road No.- 13 <br>Vishwakarma Industrial Area<br> Jaipur, Rajasthan,<br> India</p>
                     </div>
-                    <div class="col-md-4 footer-tab" style="border-width: 0px;border-color: grey;border-right-width:1px;border-style: solid;padding:20px;">
+                </div>
+                <div class="col-md-4 footer-tab  d-flex justify-content-center align-items-center" style="border-width: 0px;border-color: grey;border-right-width:1px;border-style: solid;padding:20px;">
+                    <div>
                         <h6 class="head-footer" style="font-size: 16px;"><i class="fa fa-envelope-o" aria-hidden="true"></i>
                             Email
                         </h6>
                         <p style="font-size: 15px;">cc@fibure.com</p>
                     </div>
-                    <div class="col-md-4 footer-tab" style="padding: 20px;">
+                </div>
+                <div class="col-md-4 footer-tab  d-flex justify-content-center align-items-center" style="padding: 20px;">
+                    <div>
                         <h6 class="head-footer"><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 25px;"></i>
                             Email
                         </h6>
@@ -138,31 +203,31 @@
                 </div>
             </div>
             <hr>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 top-nav-icon" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+            <div class="row">
+                <div class="col-md-4 top-nav-icon  d-flex justify-content-center align-items-center" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                    <div>
                         <h4 style="margin-bottom: 10px; font-size: 16px;">Follow Us On</h4>
                         <div class="d-flex align-items-center justify-content-right mb-4">
                             <div class="bottom-icons" onclick="location.href='https://twitter.com/Fibure_official';"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                             <div class="bottom-icons" onclick="location.href='https://www.linkedin.com/mwlite/company/fibure';"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
-                        <div class="row" style="font-size: 15px;">
-                            <ul class="list-unstyled card-columns">
-                                <li onclick="location.href='Fibure.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> HOME</li><br>
-                                <li onclick="location.href='about.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> ABOUT</li><br>
-                                <li onclick="location.href='products.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> PRODUCTS</li><br>
-                                <li onclick="location.href='#';"><i class="fa fa-caret-right" aria-hidden="true"></i> NEWS</li><br>
-                                <li onclick="location.href='career.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> CAREER</li><br>
-                                <li onclick="location.href='#contact';"><i class="fa fa-caret-right" aria-hidden="true"></i> CONTACT</li><br>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-md-4  d-flex justify-content-center align-items-center" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                    <div class="row" style="font-size: 15px;">
+                        <ul class="list-unstyled card-columns">
+                            <li onclick="location.href='Fibure.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> HOME</li><br>
+                            <li onclick="location.href='about.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> ABOUT</li><br>
+                            <li onclick="location.href='products.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> PRODUCTS</li><br>
+                            <li onclick="location.href='#';"><i class="fa fa-caret-right" aria-hidden="true"></i> NEWS</li><br>
+                            <li onclick="location.href='career.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> CAREER</li><br>
+                            <li onclick="location.href='#contact';"><i class="fa fa-caret-right" aria-hidden="true"></i> CONTACT</li><br>
+                        </ul>
                     </div>
-                    <div class="col-md-4" style="padding: 20px;">
-                        <h6 style="font-size: 16px;">Reach Us</h6>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.5086617002016!2d72.82269041531241!3d18.997294759377393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8da76aa5e5%3A0xdf0700cf117d1f6e!2sMarathon%20Icon!5e0!3m2!1sen!2sin!4v1599914448894!5m2!1sen!2sin" width="100%" height="200" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
+                </div>
+                <div class="col-md-4" style="padding: 20px;">
+                    <h6 style="font-size: 16px;">Reach Us</h6>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.5086617002016!2d72.82269041531241!3d18.997294759377393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8da76aa5e5%3A0xdf0700cf117d1f6e!2sMarathon%20Icon!5e0!3m2!1sen!2sin!4v1599914448894!5m2!1sen!2sin" style="width: 100%; height: 200px;" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
             <hr>
