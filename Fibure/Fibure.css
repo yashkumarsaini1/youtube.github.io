@@ -467,8 +467,7 @@ body {
 
 .carousel4 img {
     height: 600px;
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
 }
 
 
@@ -676,8 +675,6 @@ body {
 
     .carousel4 img {
         height: auto;
-        width: 98%;
-        margin-left: 1%;
     }
 
     .text_head2 {
