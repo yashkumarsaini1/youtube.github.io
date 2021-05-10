@@ -2,6 +2,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Animation Duration for 
+all effects */
+:root {
+    --animate-duration: 0.1s;
+}
+
 .sticky-top {
     box-shadow: 0 1px 10px #efefef;
 }
@@ -184,3 +190,49 @@ body {
 }
 
 /* Services CSS Ends */
+/* About Us */
+.about_txt h1 {
+    font-family: 'Arvo', serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.about_txt p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #abacae;
+}
+
+.home_txt {
+    padding: 150px 10px 150px 130px;
+}
+
+.about_btn1 {
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: #000080;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.about_btn1:hover {
+    background-color: white;
+    color: #000080;
+    border-width: 1px;
+    border-color: #000080;
+}
+
+.about_img {
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.about_img img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Us Ends*/
