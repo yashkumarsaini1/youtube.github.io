@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- Lines Icon CSS -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <!-- Animate.style Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <title>Kodago</title>
 </head>
 
@@ -36,7 +38,7 @@
                     <nav>
                         <a href="#home">Home</a>
                         <a href="#Services">Services</a>
-                        <a href="#">Team</a>
+                        <a href="#about">About</a>
                         <a href="#">Pricing</a>
                         <a href="#">Testimonial</a>
                         <a href="#">Contact</a>
@@ -65,11 +67,11 @@
         </div>
     </section>
     <section id="Services">
-        <div class="container" style="padding-top: 70px; margin-bottom: 150px;">
+        <div class="container" style="padding-top: 70px;">
             <h1 class="Servies_h1">Our Services</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="0.2s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-cog"></i>
@@ -80,7 +82,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="0.4s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-stats-up"></i>
@@ -91,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="0.6s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-users"></i>
@@ -102,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="0.8s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-layers"></i>
@@ -113,7 +115,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="1.0s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-mobile"></i>
@@ -124,7 +126,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6  Services_col">
-                    <div class="Services_card">
+                    <div class="Services_card wow zoomIn" data-wow-delay="1.2s">
                         <div class="d-flex justify-content-center">
                             <div class="Card_icon">
                                 <i class="lni lni-rocket"></i>
@@ -135,6 +137,27 @@
                     </div>
                 </div>
             </div>
+    </section>
+    <section id="about">
+        <div class="container-fluid bg-light" style="padding-top: 70px; margin-bottom: 200px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 about_txt d-flex align-items-center justify-content-center">
+                        <div>
+                            <p>Manage Statistics</p>
+                            <h1>Detailed Statistics of your<br> Company</h1>
+                            <p>Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio.</p>
+                            <div class="d-flex justify-content-left align-items-center mt-3">
+                                <button class="btn about_btn1">READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about_img ">
+                        <img src="Images/2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -166,6 +189,10 @@
             document.getElementById("menu_cross").style.display = "none";
         }
     }
+    </script>
+    <script src="wow.min.js"></script>
+    <script>
+    new WOW().init();
     </script>
 </body>
 
