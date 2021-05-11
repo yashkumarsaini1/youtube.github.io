@@ -30,8 +30,8 @@ all effects */
 }
 
 .nav_logo img {
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 50px;
 }
 
 .nav_content a {
