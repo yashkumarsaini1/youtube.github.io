@@ -129,7 +129,7 @@ all effects */
 .Services_card {
     box-shadow: 0 2px 18px 0 rgb(198 198 198 / 30%);
     padding: 20px;
-    height: 250px;
+    height: auto;
     border-radius: 5px;
     justify-content: center;
 }
@@ -365,3 +365,82 @@ all effects */
 }
 
 /* Contact Us CSS Ends */
+
+/* work CSS */
+.Servies_h1 {
+    font-family: 'Arvo', serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.work_col {
+    padding: 20px;
+}
+
+.work_card {
+    box-shadow: 0 2px 18px 0 rgb(198 198 198 / 30%);
+    padding: 20px;
+    height: 300px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.work_card h1 {
+    font-weight: 700;
+    font-family: 'Arvo', serif;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #585b60;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.work_card p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #abacae;
+    text-align: center;
+}
+
+.Card_icon {
+    padding: 5px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.work_card i {
+    color: #000080;
+}
+
+.work_card:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 18px 0 #c8c8c8;
+    transition: box-shadow 0.8s;
+}
+
+.work_card:hover h1 {
+    color: #000080;
+    transition: color 0.7s;
+}
+
+.work_card:hover i {
+    color: white;
+    transition: color 0.9s;
+}
+
+.work_card:hover .Card_icon {
+    background-color: #000080;
+    transition: background-color 0.6s;
+}
+
+/* work CSS Ends */
