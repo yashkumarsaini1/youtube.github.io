@@ -236,3 +236,89 @@ all effects */
 }
 
 /* About Us Ends*/
+
+/* Testimonial CSS */
+
+
+.test_card {
+    padding: 20px;
+    height: 250px;
+    border-radius: 2px;
+    justify-content: center;
+    background-color: white;
+}
+
+.test_card h1 {
+    font-weight: 700;
+    font-family: 'Arvo', serif;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #585b60;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.test_card p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #abacae;
+    text-align: center;
+}
+
+.test_card_img {
+    padding: 0px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 40px;
+    overflow: hidden;
+}
+
+.test_card_img img {
+    width: 70px;
+    height: auto;
+
+}
+
+.test_btn1 {
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: #000080;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.test_btn1:hover {
+    background-color: white;
+    color: #000080;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000080;
+}
+
+.test_txt h1 {
+    font-weight: 700;
+    font-family: 'Arvo', serif;
+    font-size: 38px;
+    line-height: 45.6px;
+
+}
+
+.test_txt p {
+    font-size: 16px;
+    color: #abacae;
+}
+
+.test_txt {
+    padding: 20px;
+}
+
+
+
+/* Testimonial CSS Ends */
