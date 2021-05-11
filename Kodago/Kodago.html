@@ -24,6 +24,12 @@
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <!-- Animate.style Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <!-- Owl Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- Owl CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <!-- Owl CSS Ends -->
     <title>Kodago</title>
 </head>
 
@@ -40,7 +46,7 @@
                         <a href="#Services">Services</a>
                         <a href="#about">About</a>
                         <a href="#">Pricing</a>
-                        <a href="#">Testimonial</a>
+                        <a href="#Testimonial">Testimonial</a>
                         <a href="#">Contact</a>
                     </nav>
                 </div>
@@ -139,7 +145,7 @@
             </div>
     </section>
     <section id="about">
-        <div class="container-fluid bg-light" style="padding-top: 70px; margin-bottom: 200px;">
+        <div class="container-fluid bg-light" style="padding-top: 70px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 about_txt d-flex align-items-center justify-content-center">
@@ -154,6 +160,75 @@
                     </div>
                     <div class="col-lg-6 about_img ">
                         <img src="Images/2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Testimonial" style="padding-top: 70px;margin-bottom: 400px;">
+        <div class="container-fluid" style="padding-top:70px;background-color: #000080;">
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    <div class="item" style="padding: 15px;">
+                        <div class="test_card">
+                            <div class="d-flex justify-content-center">
+                                <div class="test_card_img">
+                                    <img src="Images/3.jpg">
+                                </div>
+                            </div>
+                            <h1>EASY TO USED1</h1>
+                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="padding: 15px;">
+                        <div class="test_card">
+                            <div class="d-flex justify-content-center">
+                                <div class="test_card_img">
+                                    <img src="Images/3.jpg">
+                                </div>
+                            </div>
+                            <h1>EASY TO USED2</h1>
+                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="padding: 15px;">
+                        <div class="test_card">
+                            <div class="d-flex justify-content-center">
+                                <div class="test_card_img">
+                                    <img src="Images/3.jpg">
+                                </div>
+                            </div>
+                            <h1>EASY TO USED3</h1>
+                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="padding: 15px;">
+                        <div class="test_card">
+                            <div class="d-flex justify-content-center">
+                                <div class="test_card_img">
+                                    <img src="Images/3.jpg">
+                                </div>
+                            </div>
+                            <h1>EASY TO USED4</h1>
+                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid shadow-l">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 test_txt">
+                        <h1>Get 30 days free trial</h1>
+                        <p>Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam.</p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                            <button class="btn test_btn1">REGISTER NOW</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,6 +268,26 @@
     <script src="wow.min.js"></script>
     <script>
     new WOW().init();
+    </script>
+    <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        dots: true,
+        stopOnHover: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
     </script>
 </body>
 
