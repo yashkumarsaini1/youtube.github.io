@@ -528,4 +528,81 @@ all effects */
         left: 20px;
     }
 
+    /* Home Section */
+    .home_txt {
+        padding: 40px 15px 10px 15px;
+    }
+
+    .home_txt h1 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .home_txt p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /* Home Section Ends*/
+    /* About Section Start */
+    .about_txt h1 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .about_txt p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /* About Section Ends */
+    /* Works Start */
+    #work p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .Servies_h1 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .work_card {
+        height: auto;
+    }
+
+    /* Works End */
+    /* Testimonial Start */
+    .test_card {
+        height: auto;
+    }
+
+    .test_card p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .test_txt h1 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .test_txt p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /* Testimonial Ends */
+    /* Services Start */
+    #Services p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .Services_card p {
+        font-size: 12px;
+    }
+
+    /* Services Ends */
+
     /*////// Responsivness End /////////*/
