@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -35,7 +36,17 @@
 <body>
     <header>
         <div class="fixed-top">
-            <div class="navbar container-fluid" id="navbar">
+            <div class="bg-white animate__animated animate__slideInRight" id="navbar">
+                <div class="nav_div">
+                    <a href="#home" onclick="menu(2)">Home</a><br><br>
+                    <a href="#about" onclick="menu(2)">About</a><br><br>
+                    <a href="#work" onclick="menu(2)">How It Works</a><br><br>
+                    <a href="#Testimonial" onclick="menu(2)">Testimonial</a><br><br>
+                    <a href="#Services" onclick="menu(2)">Services</a><br><br>
+                    <a href="#Contact" onclick="menu(2)">Contact</a><br><br>
+                </div>
+            </div>
+            <div class="navbar container-fluid" id="navbar1">
                 <div class="nav_logo d-flex align-items-center">
                     <img src="Images/Logo.png">
                 </div>
@@ -50,6 +61,14 @@
                     </nav>
                 </div>
             </div>
+        </div>
+        <div class="menu_button">
+            <button class="btn menu_bar">
+                <!-- Bars Icon -->
+                <i class="lni lni-menu" id="menu_btn" onclick="menu('1')"></i>
+                <!-- Cross Icon -->
+                <i class="lni lni-close" style="display: none;" id="menu_cross" onclick="menu('2');"></i>
+            </button>
         </div>
     </header>
     <section id="home">
@@ -143,57 +162,46 @@
             </div>
     </section>
     <section id="Testimonial" style="padding-top: 70px;">
-        <div class="container-fluid" style="padding-top:70px;background-color: #000080;">
+        <div class="container-fluid test_slider">
             <div class="container">
                 <div class="owl-carousel owl-theme">
-                    <div class="item" style="padding: 15px;">
+                    <div class="item">
                         <div class="test_card">
                             <div class="d-flex justify-content-center">
                                 <div class="test_card_img">
-                                    <img src="Images/3.jpg">
+                                    <i class="lni lni-headphone-alt"></i>
                                 </div>
                             </div>
-                            <h1>EASY TO USED1</h1>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                            <p>We choose Kodago for its performance and cost efficiency compared to the solutions it provides. The data collection process is simply quick and seamless. Beyond that, we are fully satisfied with the customer service that we have received throughout our initial days using the platform. </p>
+                            <h1>Data Architect Manager</h1>
                         </div>
                     </div>
-                    <div class="item" style="padding: 15px;">
+                    <div class="item">
                         <div class="test_card">
                             <div class="d-flex justify-content-center">
                                 <div class="test_card_img">
-                                    <img src="Images/3.jpg">
+                                    <i class="lni lni-headphone-alt"></i>
                                 </div>
                             </div>
-                            <h1>EASY TO USED2</h1>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                            <p>The tool is amazing. We have been using the tool for quite some time and we have collected tons of data seamlessly. The internal group chat feature works really well for us as we have quite a diverse data collection network and communication is the key to successful data collection for us. </p>
+                            <h1>Information Acquisition Lead</h1>
                         </div>
                     </div>
-                    <div class="item" style="padding: 15px;">
+                    <div class="item">
                         <div class="test_card">
                             <div class="d-flex justify-content-center">
                                 <div class="test_card_img">
-                                    <img src="Images/3.jpg">
+                                    <i class="lni lni-headphone-alt"></i>
                                 </div>
                             </div>
-                            <h1>EASY TO USED3</h1>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
-                        </div>
-                    </div>
-                    <div class="item" style="padding: 15px;">
-                        <div class="test_card">
-                            <div class="d-flex justify-content-center">
-                                <div class="test_card_img">
-                                    <img src="Images/3.jpg">
-                                </div>
-                            </div>
-                            <h1>EASY TO USED4</h1>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida.</p>
+                            <p>The data reports are expansive and insightful. The diversity of file racks for different types of data collection makes it a perfect choice for us to gather visual and textual data. Reports have helped us make many resourceful projections and bring in beneficial returns.</p>
+                            <h1>Chief Technical Manager</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid shadow-l">
+        <div class="container-fluid mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 test_txt">
@@ -286,7 +294,7 @@
                 </div>
             </div>
     </section>
-    <section id="Contact" style="padding-top: 70px;margin-bottom: 400px;">
+    <section id="Contact" style="padding-top: 70px;">
         <div class="container-fluid bg-light">
             <div class="container">
                 <h1 class="Contact_h1">Contact Us</h1>
@@ -324,7 +332,7 @@
     <script>
     window.onscroll = function() { myFunction() };
 
-    var navbar = document.getElementById("navbar");
+    var navbar = document.getElementById("navbar1");
     var sticky = navbar.offsetTop;
 
     function myFunction() {
@@ -335,26 +343,13 @@
         }
     }
     </script>
-    <script type="text/javascript">
-    function menu(value) {
-        if (value == 1) {
-            document.getElementById("menu_btn").style.display = "none";
-            document.getElementById("menu_cross").style.display = "inline";
-            document.getElementById("menu_block_item").style.display = "block";
-        } else if (value == 2) {
-            document.getElementById("menu_block_item").style.display = "none";
-            document.getElementById("menu_btn").style.display = "inline";
-            document.getElementById("menu_cross").style.display = "none";
-        }
-    }
-    </script>
     <script src="wow.min.js"></script>
     <script>
     new WOW().init();
     </script>
     <script type="text/javascript">
     $('.owl-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         nav: false,
         autoplay: true,
         dots: true,
@@ -371,6 +366,19 @@
             }
         }
     })
+    </script>
+    <script type="text/javascript">
+    function menu(value) {
+        if (value == 1) {
+            document.getElementById("menu_btn").style.display = "none";
+            document.getElementById("menu_cross").style.display = "inline";
+            document.getElementById("navbar").style.display = "block";
+        } else if (value == 2) {
+            document.getElementById("navbar").style.display = "none";
+            document.getElementById("menu_btn").style.display = "inline";
+            document.getElementById("menu_cross").style.display = "none";
+        }
+    }
     </script>
 </body>
 
