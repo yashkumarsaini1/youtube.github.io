@@ -119,6 +119,7 @@ all effects */
     width: 90%;
     height: auto;
     margin-left: 5%;
+    filter: hue-rotate(220deg);
 }
 
 .home_txt h1 {
