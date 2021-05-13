@@ -323,11 +323,13 @@ all effects */
     border-radius: 2px;
     justify-content: center;
     background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #086db5;
 }
 
 .test_slider {
     padding-top: 70px;
-    background-color: #086db5;
     padding-bottom: 70px;
 }
 
