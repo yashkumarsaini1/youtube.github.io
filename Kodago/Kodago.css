@@ -129,9 +129,21 @@ all effects */
     font-family: 'Arvo', serif;
 }
 
+.home_txt h2 {
+
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #222222;
+    font-family: 'Arvo', serif;
+
+}
+
 .home_txt p {
     font-size: 14px;
     color: #abacae;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .home_txt {
@@ -194,7 +206,7 @@ all effects */
     justify-content: center;
 }
 
-.Services_card h1 {
+.Services_card h3 {
     font-weight: 700;
     font-family: 'Arvo', serif;
     font-size: 16px;
@@ -318,7 +330,7 @@ all effects */
     padding: 15px;
 }
 
-.test_card h1 {
+.test_card h4 {
     font-weight: 700;
     font-family: 'Arvo', serif;
     font-size: 16px;
@@ -371,11 +383,12 @@ all effects */
     border-color: #086db5;
 }
 
-.test_txt h1 {
+.test_txt h2 {
     font-weight: 700;
     font-family: 'Arvo', serif;
     font-size: 38px;
     line-height: 45.6px;
+    color: #086db5;
 
 }
 
@@ -457,7 +470,7 @@ all effects */
     justify-content: center;
 }
 
-.work_card h1 {
+.work_card h3 {
     font-weight: 700;
     font-family: 'Arvo', serif;
     font-size: 16px;
@@ -538,6 +551,11 @@ all effects */
         line-height: 36px;
     }
 
+    .home_txt h2 {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
     .home_txt p {
         font-size: 14px;
         line-height: 25px;
@@ -582,7 +600,7 @@ all effects */
         line-height: 20px;
     }
 
-    .test_txt h1 {
+    .test_txt h2 {
         font-size: 22px;
         line-height: 36px;
     }
