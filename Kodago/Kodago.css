@@ -119,7 +119,11 @@ all effects */
     width: 90%;
     height: auto;
     margin-left: 5%;
-    filter: hue-rotate(220deg);
+}
+
+.home_img iframe {
+    width: 100%;
+    height: 320px;
 }
 
 .home_txt h1 {
@@ -568,6 +572,11 @@ all effects */
     .about_txt h1 {
         font-size: 22px;
         line-height: 36px;
+    }
+
+    .home_img iframe {
+        width: 100%;
+        height: 250px;
     }
 
     .about_txt p {
