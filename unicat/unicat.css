@@ -470,6 +470,10 @@ all effects */
     margin-left: -30px;
 }
 
+ul.a {
+    list-style-type: none;
+}
+
 .footer_social ul li {
     display: inline-block;
     width: 45px;
