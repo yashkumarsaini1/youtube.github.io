@@ -218,6 +218,7 @@
             }
 
             function change_song(value) {
+                document.documentElement.scrollTop = 0;
                 var x = "songs/" + value + ".mp3";
                 current_song_no = value;
                 document.getElementById("current_audio").src = x;
