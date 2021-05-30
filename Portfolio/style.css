@@ -1,0 +1,487 @@
+ body {
+     font-family: 'Nunito', sans-serif;
+ }
+
+ /* width */
+ body::-webkit-scrollbar {
+     width: 8px;
+ }
+
+ /* Track */
+ body::-webkit-scrollbar-track {
+     background: lightgrey;
+ }
+
+ /* Handle */
+ body::-webkit-scrollbar-thumb {
+     background: #2d2d2d;
+ }
+
+ /* Handle on hover */
+ body::-webkit-scrollbar-thumb:hover {
+     background: black;
+ }
+
+ /* Navbar */
+
+ /* 1. LOGO */
+ .logo {
+     position: relative;
+     z-index: 4;
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+
+ .logo-text {
+     position: absolute;
+     left: 10px;
+     top: 25px;
+     font-size: 25px;
+     font-weight: 900;
+     color: white;
+ }
+
+ /* 2. Navigation Buttons */
+ .header_content {
+     height: 80px;
+     box-shadow: 0 0 1px white;
+ }
+
+ .header {
+     position: absolute;
+     right: 40px;
+     top: 20px;
+ }
+
+ .nav_btn {
+     padding: 10px;
+     padding-left: 20px;
+     text-decoration: none;
+     color: white;
+     font-size: 20px;
+     text-align: left;
+ }
+
+ .nav_btn:hover {
+     letter-spacing: 2px;
+     color: white;
+     font-weight: 500;
+     transition: letter-spacing 0.5s, font-weight 0.1s;
+ }
+
+ /* 3. Menu Button */
+ .menu_bar:focus {
+     box-shadow: none;
+ }
+
+ .menu_button {
+     position: absolute;
+     right: 10px;
+     top: 7.5px;
+     height: 60px;
+     width: 60px;
+     z-index: 3;
+ }
+
+ .menu_icon {
+     font-size: 25px;
+     color: white;
+ }
+
+ .menu_bar {
+     height: 60px;
+     width: 60px;
+     display: none;
+ }
+
+ .menu_button {
+     display: none;
+ }
+
+ /* 4. Responsive Navbar */
+ #navbar {
+     width: 100%;
+     height: 100vh;
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 2;
+     background-color: black;
+ }
+
+ .nav_content {
+     text-align: left;
+     width: 100%;
+     padding-left: 80px;
+     margin-top: 100px;
+ }
+
+ .nav_content a {
+     color: white;
+     font-size: 20px;
+     line-height: 42px;
+     text-decoration: none;
+ }
+
+ /* Home */
+ .home_img {
+     width: 90%;
+     height: auto;
+     padding-top: 10px;
+     filter: grayscale(100%);
+ }
+
+ /* 1. Home Content */
+ .home_content {
+     padding: 100px 40px 20px 20px;
+ }
+
+ .home_content h1 {
+     font-size: 45px;
+     line-height: 65px;
+     font-weight: 700;
+ }
+
+ .home_content h2 {
+     font-size: 26px;
+     line-height: 36px;
+     font-weight: 600;
+     color: #2D2D2D;
+ }
+
+ .home_content h3 {
+     font-size: 22px;
+     line-height: 36px;
+ }
+
+ .home_content h4 {
+     font-size: 16px;
+     text-align: right;
+ }
+
+ /* 2. Lines and boxes */
+ #line1 {
+     width: 100%;
+     height: 2px;
+     background-color: black;
+ }
+
+ #box1 {
+     background-color: black;
+     width: 15px;
+     height: 15px;
+ }
+
+ #box2 {
+     background-color: black;
+     width: 15px;
+     height: 15px;
+     float: right;
+ }
+
+ /* About Section */
+ /* 1. Profile Image */
+ .about_img {
+     margin-top: 60px;
+     box-shadow: 1px 2px 5px grey, -1px -2px 5px lightgrey;
+ }
+
+ /* 2. About Content */
+ .about_content {
+     padding: 60px 40px 20px 20px;
+ }
+
+ .about_content h1 {
+     font-size: 45px;
+     line-height: 65px;
+     font-weight: 700;
+ }
+
+ .about_content h2 {
+     font-size: 26px;
+     line-height: 36px;
+     font-weight: 600;
+     color: #2D2D2D;
+ }
+
+ .about_content h3 {
+     font-size: 22px;
+     line-height: 36px;
+ }
+
+ .about_content h4 {
+     font-size: 16px;
+     text-align: right;
+ }
+
+ /* Skills */
+ .skill_head {
+     font-size: 45px;
+     line-height: 65px;
+     font-weight: 700;
+     text-align: center;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+ .col_card {
+     text-align: center;
+     padding: 20px 5px 5px 5px;
+     justify-content: center;
+ }
+
+ .skill_icon {
+     font-size: 80px;
+ }
+
+ .skill_icon:hover {
+     cursor: pointer;
+     transform: scale(1.1);
+     transition: transform 0.5s;
+ }
+
+ .skill_text {
+     font-size: 20px;
+     font-weight: 700;
+ }
+
+ /* Projects */
+ .project_card {
+     padding: 10px;
+     box-shadow: 0px 2px 5px #C0C0C0;
+     border-radius: 5px;
+     background-color: #303030;
+     color: white;
+     text-align: center;
+ }
+
+ .project_card:hover {
+     box-shadow: 0px 12px 12px black, 0px -12px 12px black;
+     transition: box-shadow 0.5s;
+     cursor: pointer;
+ }
+
+ .project_card a:hover {
+     letter-spacing: 2px;
+     transition: letter-spacing 0.5s;
+     cursor: pointer;
+     color: #56ead1;
+ }
+
+ .project_card h3 {
+     text-align: center;
+     font-size: 25px;
+     line-height: 36px;
+     padding-top: 5px;
+ }
+
+ .project_card h4 {
+     text-align: left;
+     font-size: 18px;
+     line-height: 30px;
+     padding-top: 5px;
+ }
+
+ .project_card a {
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ }
+
+
+
+ .project_card h6 span {
+     font-size: 16px;
+     line-height: 25px;
+     padding-left: 10px;
+ }
+
+ .project_col {
+     padding: 20px;
+     padding-top: 25px;
+
+ }
+
+ /* Contact */
+ .contact_img {
+     width: 100%;
+     height: auto;
+     filter: grayscale(100%);
+     padding-top: 0px;
+ }
+
+ .contact_icon {
+     padding: 15px;
+ }
+
+ .contact_logo {
+     padding-top: 30px;
+ }
+
+ .footer_text {
+     font-size: 22px;
+     text-align: center;
+     padding: 20px;
+ }
+
+ .contact_logo a {
+     color: #525252;
+ }
+
+
+
+
+
+ /*//////////////////// Responsive Start ////////////////////
+ //////////////    
+ ////////                          
+ /////
+ // 
+ / */
+ @media only screen and (max-width: 768px) {
+     .header {
+         display: none;
+     }
+
+     .header_content {
+         height: 70px;
+         box-shadow: 0 0 1px white;
+     }
+
+     .menu_bar {
+         display: block;
+     }
+
+     .menu_button {
+         display: block;
+     }
+
+     .logo-text {
+         left: 10px;
+         top: 20px;
+         font-size: 20px;
+     }
+
+     /* Home */
+     .home_img {
+         width: 250px;
+         height: auto;
+         padding-top: 10px;
+     }
+
+     /* 1. Home Content */
+     .home_content {
+         padding: 25px;
+     }
+
+     .home_content h1 {
+         font-size: 22px;
+         line-height: 30px;
+         font-weight: 600;
+         text-align: center;
+     }
+
+     .home_content h2 {
+         font-size: 18px;
+         line-height: 25px;
+         font-weight: 600;
+         color: #2D2D2D;
+     }
+
+     .home_content h3 {
+         font-size: 16px;
+         line-height: 20px;
+     }
+
+     .home_content h4 {
+         font-size: 14px;
+         text-align: right;
+     }
+
+     /* 1. About Content */
+     .about_content {
+         padding: 25px;
+     }
+
+     .about_content h1 {
+         font-size: 22px;
+         line-height: 30px;
+         font-weight: 600;
+         text-align: center;
+     }
+
+     .about_content h2 {
+         font-size: 18px;
+         line-height: 25px;
+         font-weight: 500;
+         color: #2D2D2D;
+     }
+
+     .about_content h3 {
+         font-size: 16px;
+         line-height: 20px;
+     }
+
+     .about_content h4 {
+         font-size: 14px;
+         text-align: right;
+     }
+
+     .about_img {
+         margin-top: 20px;
+         width: 200px;
+         height: auto;
+     }
+
+     /* Skills */
+     .skill_icon {
+         font-size: 40px;
+     }
+
+     .skill_text {
+         font-size: 14px;
+         font-weight: 600;
+     }
+
+     .skill_head {
+         font-size: 22px;
+         padding-bottom: 0px;
+     }
+
+     /* Projects */
+
+     .project_card h3 {
+         font-size: 18px;
+     }
+
+     .project_card h4 {
+         font-size: 14px;
+     }
+
+     .project_card a {
+         font-size: 15px;
+     }
+
+
+
+     .project_card h6 span {
+         font-size: 13px;
+     }
+
+     /* Contact */
+     .contact_img {
+         width: 250px;
+         padding-top: 0px;
+     }
+
+     .contact_logo {
+         padding-top: 0px;
+     }
+
+     .footer_text {
+         font-size: 12px;
+     }
+
+ }
