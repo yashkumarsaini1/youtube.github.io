@@ -117,7 +117,7 @@
  .nav_content a {
      color: white;
      font-size: 20px;
-     line-height: 36px;
+     line-height: 42px;
      text-decoration: none;
  }
 
@@ -211,8 +211,46 @@
      text-align: right;
  }
 
+ /* Skills */
+ .skill_head {
+     font-size: 45px;
+     line-height: 65px;
+     font-weight: 700;
+     text-align: center;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+ .col_card {
+     text-align: center;
+     padding: 10px 5px 5px 5px;
+     justify-content: center;
+ }
+
+ .skill_icon {
+     font-size: 80px;
+ }
+
+ .skill_icon:hover {
+     cursor: pointer;
+     transform: scale(1.1);
+     transition: transform 0.5s;
+ }
+
+ .skill_text {
+     font-size: 20px;
+     font-weight: 700;
+ }
 
 
+
+
+ /*//////////////////// Responsive Start ////////////////////
+ //////////////    
+ ////////                          
+ /////
+ // 
+ / */
  @media only screen and (max-width: 768px) {
      .header {
          display: none;
@@ -302,6 +340,21 @@
          margin-top: 20px;
          width: 200px;
          height: auto;
+     }
+
+     /* Skills */
+     .skill_icon {
+         font-size: 40px;
+     }
+
+     .skill_text {
+         font-size: 14px;
+         font-weight: 600;
+     }
+
+     .skill_head {
+         font-size: 22px;
+         padding-bottom: 0px;
      }
 
  }
