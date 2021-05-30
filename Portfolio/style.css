@@ -242,6 +242,65 @@
      font-weight: 700;
  }
 
+ /* Projects */
+ .project_card {
+     padding: 10px;
+     box-shadow: 0px 2px 5px #C0C0C0;
+     border-radius: 5px;
+     background-color: #303030;
+     color: white;
+     text-align: center;
+ }
+
+ .project_card:hover {
+     box-shadow: 0px 12px 12px black, 0px -12px 12px black;
+     transition: box-shadow 0.5s;
+     cursor: pointer;
+ }
+
+ .project_card a:hover {
+     letter-spacing: 2px;
+     transition: letter-spacing 0.5s;
+     cursor: pointer;
+     color: #56ead1;
+ }
+
+ .project_card h3 {
+     text-align: center;
+     font-size: 25px;
+     line-height: 36px;
+     padding-top: 5px;
+ }
+
+ .project_card h4 {
+     text-align: left;
+     font-size: 18px;
+     line-height: 30px;
+     padding-top: 5px;
+ }
+
+ .project_card a {
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ }
+
+
+
+ .project_card h6 span {
+     font-size: 16px;
+     line-height: 25px;
+     padding-left: 10px;
+ }
+
+ .project_col {
+     padding: 20px;
+     padding-top: 25px;
+
+ }
+
+
+
 
 
 
@@ -355,6 +414,26 @@
      .skill_head {
          font-size: 22px;
          padding-bottom: 0px;
+     }
+
+     /* Projects */
+
+     .project_card h3 {
+         font-size: 18px;
+     }
+
+     .project_card h4 {
+         font-size: 14px;
+     }
+
+     .project_card a {
+         font-size: 15px;
+     }
+
+
+
+     .project_card h6 span {
+         font-size: 13px;
      }
 
  }
