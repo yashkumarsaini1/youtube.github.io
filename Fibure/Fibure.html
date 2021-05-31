@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Fibure.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900" rel="stylesheet" type="text/css" />
+    <title>Fibure</title>
+</head>
+
+<body>
+    <div class="container-fluid top-navbar" id="navbar">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-4">
+                <img src="Images/logo.png" class="top-logo">
+                <nav id="menu_block_item" class="menu_block_item animate__animated animate__fadeIn ">
+                    <ul class="list-group bg-white list_ul">
+                        <br><br>
+                        <li class="list-group-item menu_itm bg-white" style="color:#8489EB;"><a href="Fibure.html" onclick="menu('2')"> HOME </a></li>
+                        <li class="list-group-item menu_itm bg-white"><a href="about.html" onclick="menu('2')"> ABOUT </a></li>
+                        <li class="list-group-item menu_itm bg-white products"><a href="products.html" onclick="menu('2')">
+                                <div class="dropdown">
+                                    <a class="dropbtn">PRODUCTS</a>
+                                    <div class="dropdown-content">
+                                        <a href="products.html">ALL</a>
+                                        <a href="frp.html">FRP</a>
+                                        <a href="igfr.html">IGFR</a>
+                                        <a href="pr.html">Polyster Ripcord</a>
+                                        <a href="ar.html">Aramid Ripcord</a>
+                                        <a href="br.html">Binder yarn</a>
+                                        <a href="wsy.html">Water Swellable Yarn</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="list-group-item menu_itm bg-white"><a href="#" onclick="menu('2')"> NEWS</a></li>
+                        <li class="list-group-item menu_itm bg-white"><a href="career.html" onclick="menu('2')"> CAREER </a></li>
+                        <li class="list-group-item menu_itm bg-white"><a href="#contact" onclick="menu('2')"> CONTACT</a></li>
+                    </ul>
+                </nav>
+                <button class="btn menu_icon" style="z-index: 3;">
+                    <span id="menu_btn" onclick="menu('1')"><svg class="animated zoomIn hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg></span>
+                    <span id="menu_cross" onclick="menu('2');" style="display: none;"><svg class=" animated zoomIn hed" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <nav class="nav-bar-item">
+                    <a href="Fibure.html"> HOME </a>
+                    <a href="about.html"> ABOUT </a>
+                    <a href="products.html" class="products">
+                        <div class="dropdown">
+                            <a class="dropbtn">PRODUCTS</a>
+                            <div class="dropdown-content">
+                                <a href="products.html">ALL</a>
+                                <a href="frp.html">FRP</a>
+                                <a href="igfr.html">IGFR</a>
+                                <a href="pr.html">Polyster Ripcord</a>
+                                <a href="ar.html">Aramid Ripcord</a>
+                                <a href="br.html">Binder yarn</a>
+                                <a href="wsy.html">Water Swellable Yarn</a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"> NEWS </a>
+                    <a href="career.html"> CAREER </a>
+                    <a href="#contact"> CONTACT </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid home-carousel p-0" style="margin-top: 20px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item   active">
+                    <div style="text-align: center;">
+                        <video class="video-slider" muted autoplay loop>
+                            <source src="Videos/5.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid home-carousel1 p-0">
+        <div id="carouselExampleIndicators1" class="carousel slide carousel2" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item  carousel-item2 active">
+                    <div style="position: relative;">
+                        <img src="Images/Slider-1.jpg" class="d-block slider p-s_image slider-home" alt="..." style="right: 0px;position: absolute;">
+                        <div class="img-content row animate__animated animate__fadeInUp">
+                            <div>
+                                <h4 class="head-text">Securing Optical Fiber and <br> Power Cables Worldwide</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item2 ">
+                    <div style="position: relative;">
+                        <img src="Images/Slider-2.jpg" class="d-block slider p-s_image  slider-home" alt="..." style="left: 0px;position: absolute;">
+                        <div class="img-content row animate__animated animate__fadeInUp">
+                            <div>
+                                <h4 class="head-text1">Securing Optical Fiber and <br>Power Cables Worldwide</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev" style="display: none;">
+                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next" style="display: none;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid mt-4 mb-5" style="background-color: black;padding-top: 60px;padding-bottom: 60px;">
+        <h2 class="text_head2">We help optical fiber and power cable manufacturers <br> deliver great products.</h2>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="row card-row">
+            <div class="col-md-4 cards" onclick="location.href='frp.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/frp-home.png" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">FRP</h4>
+                        <p>Fibure FRP, is a composite material made of a polymer matrix reinforced with fiberglass, used as a central strength member in fiber optic cables.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 cards" onclick="location.href='igfr.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/9.png" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">IGFR</h4>
+                        <p>IGFR has a special smooth, flexible coating which improves handling and eliminates dust and loose fiber generation during cable production even at high speeds, leading to high productivity and ultimate cable strength.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 cards" onclick="location.href='pr.html';">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="Images/r&y-home.jpg" style="width: 100%;">
+                    </div>
+                    <div style="padding: 10px;padding-top: 20px;">
+                        <h4 style="font-size: 18px;">RIPCORDS & YARNS</h4>
+                        <p>They are for the easy removal of PE Jackets. Due to the premium quality of twisting, the Fibure polyester ripcords are also available in water-blocking variants.</p>
+                        <button class="btn btn-primary card-btn">Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contact">
+        <div class="container-fluid " style="padding-top: 50px;margin-top: 50px;background-color:#000;color: white; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-tab d-flex justify-content-left align-items-center" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                        <div>
+                            <h6 class="head-footer" style="font-size: 16px;"><i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                Address
+                            </h6>
+                            <p style="font-size: 15px;">F- 443 Road No.- 13 <br>Vishwakarma Industrial Area<br> Jaipur, Rajasthan,<br> India</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-tab  d-flex justify-content-left align-items-center" style="border-width: 0px;border-color: grey;border-right-width:1px;border-style: solid;padding:20px;">
+                        <div>
+                            <h6 class="head-footer" style="font-size: 16px;"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                Email
+                            </h6>
+                            <p style="font-size: 15px;">cc@fibure.com</p>
+                        </div>
+                        <div style="margin-left: 25px;">
+                            <h6 class="head-footer" style="font-size: 16px;"><i class="fa fa-phone" aria-hidden="true"></i>
+                                Call
+                            </h6>
+                            <p style="font-size: 15px;">+91-141-4086453</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-tab  d-flex justify-content-left align-items-center" style="padding: 20px;">
+                        <div>
+                            <h4 style="margin-bottom: 10px; font-size: 16px;">Follow Us On</h4>
+                            <div class="d-flex align-items-center justify-content-center mb-4">
+                                <div class="bottom-icons" onclick="location.href='https://twitter.com/Fibure_official';"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="bottom-icons" onclick="location.href='https://www.linkedin.com/mwlite/company/fibure';"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 top-nav-icon  d-flex justify-content-left align-items-center" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                        <div class="row" style="font-size: 15px;">
+                            <ul class="list-unstyled card-columns">
+                                <li onclick="location.href='Fibure.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> HOME</li><br>
+                                <li onclick="location.href='about.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> ABOUT</li><br>
+                                <li onclick="location.href='products.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> PRODUCTS</li><br>
+                                <li onclick="location.href='#';"><i class="fa fa-caret-right" aria-hidden="true"></i> NEWS</li><br>
+                                <li onclick="location.href='career.html';"><i class="fa fa-caret-right" aria-hidden="true"></i> CAREER</li><br>
+                                <li onclick="location.href='#contact';"><i class="fa fa-caret-right" aria-hidden="true"></i> CONTACT</li><br>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="border-width: 0px;border-color: grey;border-right-width: 0.1px;border-style: solid;padding:20px;">
+                        <h6 style="font-size: 16px;">Reach Us</h6>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.1747482614037!2d75.77261621504663!3d26.99302138309311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db26f1ffa8223%3A0x8d1c9a0929141479!2sMangal%20Chand%20Tubes%20P.%20Ltd.!5e0!3m2!1sen!2sin!4v1620381456847!5m2!1sen!2sin" style="width: 100%; height: 200px;" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                    <div class="col-md-4" style="padding: 20px;">
+                        <h6 style="font-size: 16px;">Reach Us</h6>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7116.4577667902695!2d75.7857725!3d26.8962302!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db41595555555%3A0xcecdb3acef540cd8!2sMangal%20Chand%20Tubes%20Private%20Limited!5e0!3m2!1sen!2sin!4v1620384970680!5m2!1sen!2sin" style="width: 100%; height: 200px;" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container-fluid" style="background-color:black;">
+                <div class="row">
+                    <div class="col-sm-12 contact-top" style="text-align: center;">
+                        <p>Copyright Mangalchand Tubes Pvt. Ltd. © 2021. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/479988039b.js"></script>
+    <script>
+    window.onscroll = function() { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky-top")
+        } else {
+            navbar.classList.remove("sticky-top");
+        }
+    }
+    </script>
+    <script type="text/javascript">
+    function menu(value) {
+        if (value == 1) {
+            document.getElementById("menu_btn").style.display = "none";
+            document.getElementById("menu_cross").style.display = "inline";
+            document.getElementById("menu_block_item").style.display = "block";
+        } else if (value == 2) {
+            document.getElementById("menu_block_item").style.display = "none";
+            document.getElementById("menu_btn").style.display = "inline";
+            document.getElementById("menu_cross").style.display = "none";
+        }
+    }
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
