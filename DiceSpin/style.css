@@ -1,0 +1,184 @@
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+}
+
+.outerBox {
+  flex: 100%;
+  padding: 0 10px;
+  background-color: #727171;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerScore {
+  height: 550px;
+  flex: 100%;
+  padding: 10px;
+  background-color: #727171;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.playerLeft {
+  width: 40%;
+  height: 550px;
+  background-color: #ebe8e8;
+  text-align: center;
+  padding: 10px;
+  color: #e74c3c;
+}
+.playerLeft h1 {
+  font-size: 45px;
+  font-weight: 300;
+}
+.playerLeft h2 {
+  font-size: 80px;
+  font-weight: 100;
+}
+.playerLeft h3 {
+  font-size: 30px;
+  text-align: left;
+  margin-left: 20px;
+  font-weight: 100;
+}
+
+.playerRight {
+  width: 40%;
+  height: 550px;
+  background-color: #fcfcfc;
+  text-align: center;
+  padding: 10px;
+  color: #3498db;
+}
+.playerRight h1 {
+  font-size: 45px;
+  font-weight: 300;
+}
+.playerRight h2 {
+  font-size: 80px;
+  font-weight: 100;
+}
+.playerRight h3 {
+  font-size: 30px;
+  text-align: right;
+  margin-right: 20px;
+  font-weight: 100;
+}
+
+.dice {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.dice_img {
+  color: #e74c3c;
+  font-size: 100px;
+}
+
+.save_btn {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  border-radius: 0px;
+  border-style: none;
+  background-color: #5f9e00;
+  color: white;
+  font-size: 18px;
+  margin-top: 250px;
+  font-family: "Barlow", sans-serif;
+}
+.save_btn:hover {
+  cursor: pointer;
+  background-color: #477500;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+
+#winner {
+  position: absolute;
+  margin-top: 350px;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.mainText {
+  position: absolute;
+  margin-bottom: 530px;
+  font-size: 60px;
+  color: #3498db;
+}
+.mainText span {
+  color: #e74c3c;
+}
+
+.restart_btn {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  border-radius: 0px;
+  border-style: none;
+  background-color: #6b6b6b;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 250px;
+  font-family: "Barlow", sans-serif;
+}
+.restart_btn:hover {
+  cursor: pointer;
+  background-color: black;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.roll_btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 500px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 25px;
+  font-weight: 10;
+  line-height: 40px;
+  border-style: none;
+  font-family: "Barlow", sans-serif;
+}
+.roll_btn:hover {
+  cursor: pointer;
+}
+.roll_btn:active {
+  box-shadow: 0 0 10px blue;
+}
+
+#roll_btn2 {
+  background-color: #3498db;
+}
+
+#player2 {
+  filter: grayscale(100%);
+}
+
+.rotate1 {
+  transform: rotate(-180deg);
+  transition: all 0.5s;
+}
+
+.rotate2 {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.winner {
+  transform: rotate(360deg);
+  transition: all 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */
