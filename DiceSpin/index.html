@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Spin Dice</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="outerBox">
+      <div class="playerScore">
+        <div class="playerLeft" id="player1">
+          <h1>
+            Player <b>1</b>
+            <span id="p1_current"><i class="fas fa-dice"></i></span>
+          </h1>
+          <h2 id="player1_score">0</h2>
+          <h3><b>Saved : </b> <span id="p1_saved">0</span></h3>
+          <button class="roll_btn" id="roll_btn1" onclick="roll()">
+            Roll <br /><i class="fas fa-dice-d6"></i>
+          </button>
+        </div>
+        <div class="playerRight" id="player2">
+          <h1>
+            Player <b>2</b>
+            <span id="p2_current" style="display: none"
+              ><i class="fas fa-dice"></i
+            ></span>
+          </h1>
+          <h2 id="player2_score">0</h2>
+          <h3><b>Saved : </b> <span id="p2_saved">0</span></h3>
+          <button class="roll_btn" id="roll_btn2" disabled onclick="roll()">
+            Roll <br /><i class="fas fa-dice-d6"></i>
+          </button>
+        </div>
+
+        <h1 class="mainText"><span>SPIN</span> DICE</h1>
+        <button class="restart_btn" onClick="window.location.reload();">
+          New Game
+        </button>
+        <div class="dice">
+          <i class="dice_img fas fa-dice-one" id="dice_icon"></i>
+        </div>
+        <button class="save_btn" id="save_btn" onclick="saveState()">
+          Save & Pass
+        </button>
+        <h1 id="winner"></h1>
+      </div>
+    </div>
+    <script type="text/javascript" src="roll.js"></script>
+  </body>
+</html>
