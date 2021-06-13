@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Editor</title>
+    <link rel="stylesheet" type="text/css" href="CodeMirror/lib/codemirror.css" />
+    <script type="text/javascript" src="CodeMirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/javascript/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body onload="start()">
+    <div class="back">
+        <div class="header_bar">
+            <div class="editor_controls">
+                <button class="toggle current" onclick="toggle(1)" id="btn1">
+                    HTML5
+                </button>
+                <button class="toggle" onclick="toggle(2)" id="btn2">CSS3</button>
+                <button class="toggle" onclick="toggle(3)" id="btn3">
+                    JavaScript
+                </button>
+            </div>
+            <div class="output_controls">
+                <button class="toggle" id="run-btn">RUN</button>
+                <button class="toggle" id="lp">Live<sup>@</sup></button>
+            </div>
+        </div>
+        <div class="code_content">
+            <div class="code_area">
+                <div id="code1">
+                    <textarea class="code_space" id="ht_code">
+<h1>This is an Simple HTML CSS JS Editor</h1>
+<button onclick="fun()">Click</button>
+            </textarea>
+                </div>
+                <div id="code2" style="display: none">
+                    <textarea class="code_space" id="css_code">
+/* CSS Code */
+h1{
+  color:green;
+}</textarea>
+                </div>
+                <div id="code3" style="display: none">
+                    <textarea class="code_space" id="js_code">
+/* JS Code */
+function fun(){
+  alert("Editor Works");
+}</textarea>
+                </div>
+            </div>
+            <div class="output_area">
+                <iframe id="preview-window"></iframe>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="editor.js"></script>
+</body>
+
+</html>
