@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Editor</title>
+    <link rel="stylesheet" type="text/css" href="CodeMirror/lib/codemirror.css" />
+    <script type="text/javascript" src="CodeMirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="CodeMirror/mode/javascript/javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="back">
+        <div class="header_bar">
+            <button class="toggle current" onclick="toggle(1)" id="btn1">
+                Code Window
+            </button>
+            <button class="toggle" onclick="toggle(2)" id="btn2">OUTPUT</button>
+            <button class="toggle" id="lp">
+                Live<sup>@</sup>
+            </button>
+        </div>
+        <div class="code_content">
+            <div id="code1">
+                <div class="code_box">
+                    <textarea class="code_space" id="ht_code">
+<!-- Paste HTML CSS JS Code here --></textarea>
+                </div>
+            </div>
+            <div id="code2" style="display: none">
+                <iframe id="preview-window"></iframe>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="editor.js"></script>
+</body>
+
+</html>
