@@ -1,0 +1,179 @@
+body,
+html {
+  font-family: "Mukta", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  width: 100%;
+  background-color: #585858;
+  text-align: center;
+  color: white;
+}
+.heading h1 {
+  padding: 20px;
+}
+.heading p {
+  padding: 10px;
+}
+
+.mark {
+  display: flex;
+}
+.mark .mark_left {
+  width: 50%;
+}
+.mark .mark_right {
+  width: 50%;
+}
+
+.info p {
+  font-size: 20px;
+  padding-left: 40px;
+}
+.info a {
+  font-size: 20px;
+  text-decoration: none;
+  padding-left: 40px;
+  color: mediumblue;
+  font-weight: bold;
+}
+
+.screen1 {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.content .con_left {
+  width: 50%;
+  height: auto;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  overflow-wrap: break-word;
+}
+.content .con_left h2 {
+  font-size: 25px;
+  padding-left: 30px;
+}
+.content .con_left::-webkit-scrollbar {
+  width: 2px;
+}
+.content .con_left::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.content .con_left::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+.content .con_left::-webkit-scrollbar-thumb:hover {
+  background: darkgrey;
+}
+.content .con_right {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+.content .con_right .frame {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+}
+
+.features {
+  padding: 0px 10px 1px 30px;
+}
+
+.screen2 {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+  border: none;
+  padding: 0 15px 0 5px;
+  font-size: 14px;
+  height: auto;
+  background-color: white;
+  font-family: "Source Code Pro", monospace;
+}
+code b1 {
+  font-weight: bold;
+}
+code b2 {
+  color: #ff3300;
+}
+code b3 {
+  color: orange;
+}
+code b4 {
+  color: grey;
+  font-size: 14px;
+}
+code b5 {
+  color: red;
+}
+code b6 {
+  font-style: italic;
+  font-weight: 500;
+  color: brown;
+}
+
+pre {
+  padding: 0px;
+}
+
+.code-elem {
+  color: brown;
+}
+
+.code-str {
+  color: blue;
+}
+
+.code-elem1 {
+  color: pink;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    display: inline;
+  }
+  .content .con_left {
+    width: 100%;
+  }
+  .content .con_right {
+    width: 100%;
+  }
+
+  .heading h1 {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .heading p {
+    padding: 3px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

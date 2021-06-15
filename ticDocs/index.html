@@ -1,0 +1,521 @@
+<html>
+  <head>
+    <title>Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="screen1">
+      <div class="content">
+        <div class="con_left">
+          <h2>How to build Tic Tac Toe?</h2>
+          <div class="info">
+            <p>To run the code use an online editor.</p>
+            <a
+              href="https://yashkumarsaini1.github.io/youtube.github.io/CodeEditor/"
+              target="_blank"
+              >Go to Editor >>
+            </a>
+          </div>
+          <h2>A preview is given.</h2>
+          <div class="features">
+            <h4>JS features used:</h4>
+            <ol>
+              <li>getElementsByClassName</li>
+              <li>getElementById</li>
+              <li>2D Arrays</li>
+              <li>functions</li>
+              <li>addEventListener</li>
+              <li>Dynamic Styling</li>
+            </ol>
+          </div>
+          <div class="features">
+            <h4>HTML features used:</h4>
+            <ol>
+              <li>Buttons</li>
+              <li>Divs</li>
+              <li>Nested Div</li>
+            </ol>
+          </div>
+          <div class="features">
+            <h4>CSS features used:</h4>
+            <ol>
+              <li>Style with element class</li>
+              <li>Styles with element id</li>
+              <li>flex properties</li>
+              <li>justify-content property</li>
+              <li>Dealing with positions</li>
+            </ol>
+          </div>
+        </div>
+        <div class="con_right">
+          <iframe
+            class="frame"
+            src="https://yashkumarsaini1.github.io/youtube.github.io/tictactoe/"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <h1>First Step is to build HTML and CSS for the project.</h1>
+      <div class="info">
+        <p>To run this code use an online editor.</p>
+        <a
+          href="https://yashkumarsaini1.github.io/youtube.github.io/CodeEditor/"
+          target="_blank"
+          style="color: aquamarine"
+          >Go to Editor >>
+        </a>
+      </div>
+
+      <div class="mark">
+        <div class="mark_left">
+          <h1>HTML Code with explanation.</h1>
+        </div>
+        <div class="mark_right">
+          <h1>CSS Code with explanation.</h1>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <div class="screen2">
+      <div class="content">
+        <div class="con_left">
+          <pre>
+          <code>
+&lt;!-- Basic HTML Structure with explanation --&gt;
+
+&lt;!-- Copy and paste the code in editor --&gt;
+&lt;!-- Google Fonts--&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; /&gt;
+    &lt;link
+      href=&quot;https://fonts.googleapis.com/css2?family=Spartan:wght@300&amp;display=swap&quot;
+      rel=&quot;stylesheet&quot;
+    /&gt;
+&lt;body onload='start()' &gt;
+&lt;div class=&quot;backGround&quot;&gt;
+  &lt;div class=&quot;ticGround&quot;&gt; &lt;!-- Contains every element in it --&gt;
+   &lt;div&gt;
+      &lt;h1&gt;TIC &lt;span style=&quot;color: #12e177&quot;&gt;TAC&lt;/span&gt; TOE&lt;/h1&gt;
+      &lt;p id=&quot;game&quot;&gt;Next Player is
+        &lt;span id=&quot;status&quot; style=&quot;color: #12e177&quot;&gt;X&lt;/span&gt;
+        &lt;!--To display the current player --&gt;
+      &lt;/p&gt;
+      &lt;p id=&quot;winner&quot;&gt;&lt;/p&gt;  &lt;!--To display the staus of winner --&gt;
+      &lt;div class=&quot;eachRow&quot;&gt; &lt;!--A row  to put 3 buttons in a row --&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt; &lt;!--Each button of game --&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+         &lt;div class=&quot;eachRow&quot;&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;eachRow&quot;&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+         &lt;button class=&quot;button&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;button class=&quot;restart&quot; onClick=&quot;window.location.reload();&quot;&gt;
+      Restart
+   &lt;/button&gt; &lt;!--To Reload the page --&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;top_left&quot;&gt;&lt;/div&gt; &lt;!-- Top left Orange circle --&gt;
+&lt;div class=&quot;bottom_right&quot;&gt;&lt;/div&gt; &lt;!--Bottom Right Green circle --&gt;
+
+&lt;/body&gt;
+</code>
+         </pre>
+        </div>
+        <div class="con_left">
+          <pre>
+          <code>
+/* CSS for the project */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #4c43d4;
+  font-family: "Spartan", sans-serif;
+}
+
+.backGround {
+  width: 100%;/* To Cover the entire width */
+  height: 100vh;/* To Cover the entire height */
+  display: flex;/* To use flex box */
+  align-items: top;/* align elements vertically  */
+  justify-content: center;/* align elements horizontally  */
+}
+
+
+.button {
+  background: none; /* Set background to none for all buttons of game */
+  font-family: "Spartan", sans-serif;
+}
+.button:hover {
+  cursor: pointer; /* On hover the cursor becomes pointer*/
+}
+
+.ticGround {
+  width: 300px; /* Given the width for playing ground */
+  height: auto;
+  text-align: center;
+}
+.ticGround h1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.ticGround p {
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+.ticGround .eachRow {
+  display: flex;
+  height: 100px; /* Each row for three buttons have fixed height */
+  width: 300px; /* Each row fixed width */
+}
+/* This is used for nested div classes */
+/* Here ticGround is parent and eachRow is parent for button */
+.ticGround .eachRow .button {
+  width: 100px; /* Each button is a square so height= width */
+  height: 100px;
+  font-size: 10px;
+  border-style: none;
+  border-right: 2px white solid;
+  border-bottom: 2px white solid;
+}
+.ticGround .eachRow .button:last-child {
+  border-right: none;
+}
+.ticGround .eachRow:last-child .button {
+  border-bottom: none;
+}
+
+.win {
+  font-weight: 700 !important;
+  text-shadow: 1px 1px;
+  transition: all 1s;
+}
+/* Css for the restart button at the bottom */
+.restart {
+  font-family: "Spartan", sans-serif;
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 100px;
+  border-style: none;
+  margin-top: 15px;
+}
+.restart:hover {
+  cursor: pointer;
+}
+/* This is our fixed top left Orange circle */
+.top_left {
+  width: 150px;
+  height: 150px;
+  background-color: #ffc72a;
+  position: fixed;
+  top: -75px;
+  left: -75px;
+  border-radius: 500px;
+  z-index: -1;
+}
+/* This is our fixed bottom right Green circle */
+.bottom_right {
+  width: 150px;
+  height: 150px;
+  background-color: #12e177;
+  position: fixed;
+  right: -75px;
+  bottom: -75px;
+  border-radius: 500px;
+  z-index: -1;
+}
+/* Used this for dynamic styling using js */
+.animate {
+  font-size: 40px !important;
+  transition: all 0.5s;
+}
+
+</code>
+         </pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading">
+      <h1>
+        Second Step is to build the functionality for the project with
+        JavaScript.
+      </h1>
+      <div class="info">
+        <p>To run this code use an online editor.</p>
+        <a
+          href="https://yashkumarsaini1.github.io/youtube.github.io/CodeEditor/"
+          target="_blank"
+          style="color: aquamarine"
+          >Go to Editor >>
+        </a>
+        <p>JavaScript Code explanation in parts of the code.</p>
+      </div>
+    </div>
+    <div class="screen2">
+      <div class="content">
+        <div class="con_left">
+          <pre>
+  <code>
+/* 'Variables used and there uses' */
+
+
+let player = true; /* It is boolean type variable */
+
+/* Used this variable for checking the current user. */
+/* If value of player is {true} then the chance is for 'X' and {false} then chance for 'O' */
+
+const box = document.getElementsByClassName("button");
+
+/* It stores the HTMLCollection for all the classes with name 'button' */
+/* Purpose of using this to handle 'click' event on each button with addEventListener */
+
+const current = document.getElementById("status");
+
+/* It is used to dynamically update the value of current user in the page */
+
+let winner = false; /* Used to check there is a winner or not in the current game */
+
+/* Value {false} means no winner, if value is {true} then there is a winner in the game */
+
+let moveCount = 0; /* To count the number of moves completed */
+/* It will increment by 1 after everymove. */
+
+const winningCombinations = [ /* This is a 2D Array that stores all the winning combinations. */
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+
+
+let moves = [];/* It is an array that stores the moves of the game */
+
+/* Loop is used to assign 9 value to 'null' in the moves array */
+for (let i = 0; i < 9; i++) {
+  moves[i] = null;
+}
+  </code>
+</pre>
+        </div>
+        <div class="con_left">
+          <pre>
+            <code>
+/* 'Functions used and there uses' */
+
+/* "start()" function explanation */
+
+/* This function is load when the body of the html load */
+/* `body onload='start()'` as it is mention here*/
+
+/* Use for this function is to create eventListener to all 9 buttons in the code */
+
+/* Loop is used for adding eventListener one by one */
+
+/* here 'box[i]' gets the element with class one by one */
+/* Eg. 'box[0]' refers to the first element with classname 'button' */
+
+/* addEventListener(arg1,arg2). It takes two arguments.*/
+/* arg1 #First Argument is event name, eg. 'click','onload',etc. */
+/* arg2 #Second Argument takes a function */
+
+/* here event name is 'click'*/
+/* function is () => { play(i) } */
+
+/* it is adding a function play(i) to every element with classname 'button' */
+/* in play(i), 'i' is an argument which is the element number from the above loop */
+/* we pass 'i' as argument to check which button is clicked */
+
+function start() {
+  for (let i = 0; i < 9; i++) {
+    box[i].addEventListener("click", () => {
+      play(i);
+    });
+  }
+}
+
+/* This function called everytime a buttom is clicked */
+function play(button) {
+  moveCount++; /* increment the moveCount on every click */ 
+
+  /* If player is "X" means value of player is (true) */
+  if (player) {
+    box[button].innerHTML = "X";/* Changing the text for the button clicked */
+    box[button].style.color = "#12e177"; /* Styling the text color with js */
+    current.innerHTML = "O"; /* Dispaying the next player name */
+    current.style.color = "#ffc72a"; /* Displaying the color of current player name */
+    moves[button] = "X"; /* Adding 'X' at the button value in the moves array */
+
+    /* Eg if button = 3 then moves array is [null,null,null,"X",null,null,null,null,null] */
+  } 
+  /* This will run when player is 'O' or player value is (false) */
+  else {
+    box[button].innerHTML = "O"; /* Changing the text for the button clicked */
+    box[button].style.color = "#ffc72a"; /* Styling the text when there is 'O' */
+    current.innerHTML = "X"; /* Displaying the next player name */
+    current.style.color = "#12e177"; /* Styling the  next player name */
+    moves[button] = "O"; /* Adding 'O' at button value in the moves array */
+  }
+  player = !player; /* Changing player after every move */
+  box[button].disabled = true; /* disabled the button which is clicked to prevent multiple clicking */
+  box[button].classList.add("animate"); /* Adding class to button for the animation */
+
+  checkWinner(); /* Calling checkWinner function everytime to check the winner */
+}
+
+/* This is a checkWinner function that check the winner for the game */
+function checkWinner() {
+  /* This loop run over all values in the 2D array winningCombinations */
+  /* Eg. winningCombinations[0] = [0,1,2]; this gives an array with three values in it */
+
+
+  for (let i = 0; i < 8; i++) {
+    let a = winningCombinations[i][0]; /* Storing first value in variable 'a' */
+    let b = winningCombinations[i][1]; /* Storing second value in variable 'b' */
+    let c = winningCombinations[i][2]; /* Storing third value in variable 'c' */
+
+    /* winner is when at loctions a,b,c in the array moves values are equal */
+    /* OR moves[a]=moves[b]=moves[c] */
+
+    /* In if statement we are checking the winning condition */
+    /* Condition is true when value at (moves[a] is not null) AND (value at location a and b is equal) AND (value at location b and c is equal)
+
+
+    if (moves[a] && moves[a] === moves[b] && moves[b] === moves[c]) {
+
+      /* Executed whenever there is winner */
+      /* Winner store that winner is "X" or "O" according to the value in moves[a] */
+
+      winner = moves[a];
+
+      /* We will call stop function to finish the game */
+
+      stop(winner, a, b, c); /* We pass 4 arguments in the stop function */  
+      /* now assgining winner true */
+
+      winner = true;
+    }
+    /* We are using this if statement to show there is tie between the players */
+
+    /* Executed when there is no winner and moveCount>8 means no button is empty */
+    if (!winner && moveCount > 8) {
+      /* We will remove the next chance status now by display ='none' property */
+
+      document.getElementById("game").style.display = "none";
+
+      /* To show text that there is a tie */
+
+      document.getElementById(
+        "winner"
+      ).innerHTML = `<b style='color:#12e177'>X</b> and <b style='color:#ffc72a'>O</b> Tied`;
+    }
+  }
+}
+/* Stop function is executed when there is a winner */
+
+function stop(winner, a, b, c) {
+  /* here a,b,c gives the winning combinations for the current game */
+  let color = "#12e177";
+  /* We will remove the next chance status now by display ='none' property */
+  document.getElementById("game").style.display = "none";
+  /* we are adding win class to the winning combination */
+  box[a].classList.add("win");
+  box[b].classList.add("win");
+  box[c].classList.add("win");
+
+  /* End of the game to disabled all the button on the board */
+  for (let i = 0; i < 9; i++) {
+    box[i].disabled = true;
+  }
+  /* Setting color for the winner */
+  if (winner === "O") {
+    color = "#ffc72a";
+  }
+  /* Displaying the winner on the screen */
+  document.getElementById("winner").innerHTML =
+    `Winner is <b style='color:` + color + `;'>` + winner + `</b>`;
+}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <h1>
+        Tic tac game is completed.<br />Good Luck for the next JavaScript
+        project.<br />
+        Please Execute the code for better understanding
+      </h1>
+      <div class="info">
+        <p>To run this code use an online editor.</p>
+        <a
+          href="https://yashkumarsaini1.github.io/youtube.github.io/CodeEditor/"
+          target="_blank"
+          style="color: aquamarine"
+          >Go to Editor >>
+        </a>
+        <p>Thank You</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <!--
+  <pre>
+   <code>
+.backGround {
+width: 100%;/* To Cover the entire width */
+height: 100vh;/* To Cover the entire height */
+display: flex;/* To use flex box */
+align-items: top;/* align elements vertically  */
+justify-content: center;/* align elements horizontally  */
+}
+.ticGround {
+width: 300px;
+height: auto;
+text-align: center;
+}
+.ticGround h1 {
+font-size: 35px;
+text-align: center;
+font-weight: bold;
+color: #fff;
+}
+.ticGround p {
+font-size: 25px;
+text-align: center;
+color: #fff;
+}
+   </code>
+</pre>-->
+</html>
