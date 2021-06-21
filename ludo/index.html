@@ -1,0 +1,280 @@
+<html>
+  <head>
+    <title>Ludo Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body onload="start()">
+    <div class="ground">
+      <div class="board">
+        <div class="row2">
+          <div class="col2-1 rollDie">
+            <div>
+              <button class="roll_btn" onclick="Roll()" id="red_dice">
+                <i class="fas fa-dice-d6"></i>
+              </button>
+            </div>
+            <div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="col2-2"></div>
+          <div class="col2-3 rollDie">
+            <div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+            </div>
+            <div>
+              <button class="roll_btn" onclick="Roll()" id="green_dice">
+                <i class="fas fa-dice-d6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+          <div class="col1-1">
+            <div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col1-2">
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+          </div>
+          <div class="col1-3">
+            <div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="col2-1">
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip">
+                <button class="button tooltiptext"></button>
+              </div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+          </div>
+          <div class="col2-2">
+            <div>
+              <div id="dice_value"></div>
+              <span id="current"></span>
+            </div>
+          </div>
+          <div class="col2-3">
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="row3">
+          <div class="col3-1">
+            <div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col3-2">
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+            <div class="line">
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+              <div class="tooltip"><button class="button"></button></div>
+            </div>
+          </div>
+          <div class="col3-3">
+            <div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+              <div class="line1">
+                <div class="tooltip"><button class="button"></button></div>
+                <div class="tooltip"><button class="button"></button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="col2-1 rollDie">
+            <div>
+              <button class="roll_btn" onclick="Roll()" id="blue_dice">
+                <i class="fas fa-dice-d6"></i>
+              </button>
+            </div>
+            <div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="col2-2"></div>
+          <div class="col2-3 rollDie">
+            <div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+              <div class="line1">
+                <button class="fbtn"></button>
+                <button class="fbtn"></button>
+              </div>
+            </div>
+            <div>
+              <button class="roll_btn" onclick="Roll()" id="yellow_dice">
+                <i class="fas fa-dice-d6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id="finished"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
